@@ -1,0 +1,11 @@
+/proc/sys/kernel/hung_task_all_cpu_backtrace
+/proc/sys/kernel/hung_task_check_count
+/proc/sys/kernel/hung_task_check_interval_secs
+/proc/sys/kernel/hung_task_detect_count
+/proc/sys/kernel/hung_task_panic
+/proc/sys/kernel/hung_task_sys_info
+/proc/sys/kernel/hung_task_timeout_secs
+/proc/sys/kernel/hung_task_warnings
+/proc/sys/kernel/task_delayacct
+/proc/sys/vm/oom_dump_tasks
+/proc/sys/vm/oom_kill_allocating_task
