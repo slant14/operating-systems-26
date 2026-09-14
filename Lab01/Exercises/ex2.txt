@@ -1,0 +1,50 @@
+  294  grep -i "expecto" --color=red Harry.txt 
+  295  grep -i "expecto" --color=auto Harry.txt 
+  296  cd /
+  297  ls ..
+  298  cd ..
+  299  ls
+  300  ls -la
+  301  man find
+  302  man grep
+  303  cd /proc/
+  304  ls
+  305  find "tasl"
+  306  find "task"
+  307  find -r "task"
+  308  man find
+  309  find -name "task"
+  310  find -name "task" > ~/output.txt
+  311  man find
+  312  find -name "task" 2> ~/errora.txt
+  313  ls
+  314  cd 1
+  315  ls
+  316  ls | grep "task"
+  317  cd task/
+  318  ls
+  319  c d1
+  320  cd 1
+  321  ls
+  322  ls | grep "task"
+  323  cd /proc/
+  324  ls
+  325  find -name "task" > ~/output.txt
+  326  find -name "*task*" > ~/output.txt
+  327  ls ~/.config/hypr/input.lua ~/.config/hypr/conf/keyboard.conf ~/.config/hypr/conf/custom.conf 2>/dev/null
+  328  vim /home/swapdakka/.config/hypr/input.lua
+  329  hyprctl reload
+  330  df -h
+  331  cd Projects/OpSystems/operating-systems-26/Lab01/Exercsises/
+  332  ls
+  333  ls 
+  334  la
+  335  ll
+  336  ls -la
+  337  ls -a
+  338  ls -a /usr/bin | grep "*gcc*" | sort -r 
+  339* man sor
+  340  ls -a /usr/bin | grep "*gcc*"
+  341  man ls
+  342  ls
+  343  history | tail -50 > ex2.txt

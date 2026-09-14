@@ -1,12 +1,3 @@
-󰡯 x86_64-pc-linux-gnu-gcc-ranlib
-󰡯 x86_64-pc-linux-gnu-gcc-nm
-󰡯 x86_64-pc-linux-gnu-gcc-ar
-󰡯 x86_64-pc-linux-gnu-gcc-16
-󰡯 x86_64-pc-linux-gnu-gcc
-󰡯 x86_64-linux-gnu-gcc -> /usr/bin/gcc
-󰡯 x86_64-linux-gnu-gcc-ranlib -> /usr/bin/gcc-ranlib
-󰡯 x86_64-linux-gnu-gcc-nm -> /usr/bin/gcc-nm
-󰡯 x86_64-linux-gnu-gcc-ar -> /usr/bin/gcc-ar
 󰡯 gcc-ranlib
 󰡯 gcc-nm
 󰡯 gcc-ar
