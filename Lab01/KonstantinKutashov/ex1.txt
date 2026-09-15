@@ -1,0 +1,5 @@
+aarch64-linux-gnu-gcc-nm
+aarch64-linux-gnu-gcc-ar-11
+aarch64-linux-gnu-gcc-ar
+aarch64-linux-gnu-gcc-11
+aarch64-linux-gnu-gcc
