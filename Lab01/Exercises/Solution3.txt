@@ -1,0 +1,17 @@
+1. Create ex3.sh: touch ex3.sh and write a script with: nano ex3.sh
+#!/bin/bash
+date
+sleep 3
+mkdir folder1
+date
+sleep 3
+mkdir folder2
+date
+sleep 3
+ls -l -t -r / > "folder1/root.txt"
+date
+sleep 3
+ls -l -t -r ~ > "folder2/home.txt"
+cat folder1
+cat folder2
+2. Run the script with: bash ex3.sh

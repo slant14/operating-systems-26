@@ -1,0 +1,5 @@
+1. Move to home directiry: cd ~
+2. Create "week01": mkdir week01
+3. Find gcc in /usr/bin and store in find.txt to better future work: grep -r -l 'gcc' /usr/bin > find.txt
+4. Sort and store:  sort -r -n find.txt > find.sorted.txt
+5. Store 5 last lines in ex1.txt: tail -n 5 find.sorted.txt > ex1.txt

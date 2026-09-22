@@ -1,0 +1,3 @@
+1. Write some commands...
+2. Save history in ex2.txt: history > ~/week01/ex2.txt
+3. Store in a script ex2.sh: nano ~/week01/ex2.sh

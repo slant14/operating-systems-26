@@ -1,0 +1,5 @@
+1. Create a new file: gedit main.c
+2. Write in open window our code: #include <stdio.h>... etc
+3. Create a file ex4: touch ex4
+4. Compile our code and save in ex4: gcc main.c -o ex4
+5. Display the answer: ./ex4
