@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+int * pc;
+int c;
+c = 22;
+printf ( " Address of C :% d \n" , &c) ;
+printf ( " Value of C :% d\n \n" , c);
+pc = &c;
+printf ( " Value of pc :% d\ n" , pc);
+printf ( " Value stored in the memory location pointed by pc :% d\n " , *pc);
+c = 11;
+printf ( " Value of pc :% d\ n" , pc);
+printf ( " Value stored in the memory location pointed by pc :% d\n " , *pc);
+*pc = 2;
+printf ( " Address of c :% d \n" , &c) ;
+printf ( " Value of c :% d\n " , c);
+return EXIT_SUCCESS ;
+}
+
+/*The following code gives:  
+ Address of C : 1828235500 
+ Value of C : 22
+ 
+ Value of pc : 1828235500 n Value stored in the memory location pointed by pc : 22
+ Value of pc : 1828235500 n Value stored in the memory location pointed by pc : 11
+ Address of c : 1828235500 
+ Value of c : 2
+   
+ Address of C : 1793779948 
+ Value of C : 22
+ 
+ Value of pc : 1793779948 n Value stored in the memory location pointed by pc : 22
+ Value of pc : 1793779948 n Value stored in the memory location pointed by pc : 11
+ Address of c : 1793779948 
+ Value of c : 2 */
