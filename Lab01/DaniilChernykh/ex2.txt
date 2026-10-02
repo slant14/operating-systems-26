@@ -1,0 +1,5 @@
+  203  clear
+  204  vim exercise2.sh
+  205  chmod +x exercise2.sh 
+  206  ls -l
+  207  ./exercise2.sh 
