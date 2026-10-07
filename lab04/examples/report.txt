@@ -1,0 +1,19 @@
+report
+
+for NUM = 120 we got 293478
+n   : time
+1   : ~175
+6   : ~984
+20  : ~2545
+60  : ~8040
+120 : ~12532
+
+for NUM = 1.000.000 we got 2449266883
+n   : time
+1   : ~448
+6   : ~1699
+20  : ~3849
+60  : ~9904
+120 : ~14086
+
+conclusion from my observations: the more subprocesses you make, the more time the whole program takes. i think it happens because the os takes longer time in forking (creating a copy of a process), reading, and writing into the file with each new process.

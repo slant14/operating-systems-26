@@ -1,0 +1,8 @@
+total 424
+drwxr-xr-x  8 me me   4096 Sep 11  2025 arch
+drwxr-xr-x 10 me me   4096 Aug 22 15:25 Hyprland-Dots
+drwxr-xr-x  3 me me   4096 Aug 22 15:32 Distro-Hyprland
+drwxr-xr-x  2 me me   4096 Sep  9 16:11 newdir
+drwxr-xr-x  2 me me   4096 Sep  9 16:12 my-things
+-rw-r--r--  1 me me 408770 Sep  9 16:39 F2026.OS.Lab01.OS.pdf
+drwxr-xr-x  4 me me   4096 Sep  9 16:45 week01

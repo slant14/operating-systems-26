@@ -1,0 +1,5 @@
+gcc-ranlib
+gcc-nm
+gcc-ar
+gcc
+cc -> gcc
