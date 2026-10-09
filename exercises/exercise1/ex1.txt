@@ -1,0 +1,7 @@
+We need n pipes for n subscribers because each of them needs its own pipe.
+When a process reads data from a pipe, the data is removed from the pipe.
+If all subscribers read from the same pipe, each message would be received
+by only one of them, and the others would get nothing.
+When I ran the publisher with several subscribers, all of them received the
+message because the publisher writes its own copy of the message to every
+pipe. I found that an unnamed pipe works only between related processes because the child gets the file descriptors from fork(), named pipe (fifo) has a name in the file system, so different programs can use it, the subscriber must open the pipe before the publisher writes to it, otherwise we get SIGPIPE.
