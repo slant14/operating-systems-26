@@ -1,0 +1,22 @@
+1. What is the relationship between the processes?
+The process created by fork() is the child. The original process is the parent.
+
+2. How to differentiate parent and child?
+By the return value of fork():
+
+pid < 0  - error
+pid == 0 - child
+pid > 0  - parent
+
+Both processes had n = 4 and the same virtual address for n,
+but different PIDs.
+
+3. What is the maximum process ID?
+It is defined by /proc/sys/kernel/pid_max.
+The highest allocatable PID is pid_max - 1.
+
+4. Which process has no parent?
+The init process (usually systemd) has PID = 1.
+
+5. What is its PPID?
+Its PPID is 0.
