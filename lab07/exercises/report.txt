@@ -1,0 +1,33 @@
+1. results:
+
+first fit
+total queries executed: 54
+total time taken: 0.475496 s
+throughput: 113.565624 q/s
+
+best fit
+total queries executed: 54
+total time taken: 1.087838 s
+throughput: 49.639744 q/s
+
+worst fit
+total queries executed: 54
+total time taken: 1.308922 s
+throughput: 41.255323 q/s
+
+2. findings:
+
+- throughput of the first fit is the biggest because this algorithm does not
+have to go through the whole array. it stops at the first hole that is big enough.
+it's about 2.3-2.8 times faster than other algorithms here.
+
+- best fit is a bit faster than the worst fit because it can stop early when 
+it finds a hole with exactly needed size.
+
+- a big part of the total time is spent on clear and not on allocation because
+clear goes through the whole array, for all three algorithms.
+
+- algorithms also use the memory differently, so speed is not the only thing.
+
+- in this test first fit is the fastest one. best fit is slower and saves big holes.
+worst fit is the slowest here and also breaks big holes.
