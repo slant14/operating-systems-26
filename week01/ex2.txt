@@ -1,0 +1,34 @@
+    1  gcc -v
+    2  cd /home/sofia-sokolova/Загрузки=
+    3  chmod -x qinst-lite-linux-24.1std-1077.run
+    4  chmod x qinst-lite-linux-24.1std-1077.run
+    5  qinst-lite-linux-24.1std-1077.run
+    6  chmod +x qinst-lite-linux-24.1std-1077.run
+    7  ./qinst-lite-linux-24.1std-1077.run
+    8  cd ~
+    9  dpkg --get-selections | grep happ
+   10  sudo apt remove happ
+   11  clear
+   12  cd ~
+   13  mkdir week01
+   14  tail --help
+   15  grep -r "gcc" | tail -n 5 > ~/week01/ex1.txt
+   16  man tail
+   17  clear
+   18  man grep
+   19  tail --help
+   20  ls --help
+   21  clear
+   22  grep "gcc" /usr/bin | sort -r | tail -n 5 > ~/week01/ex1.txt
+   23  ls /usr/bin | grep "gcc" | sort -n -r | tail -n 5 > ~/week01/ex1.txt
+   24  echo > ex2.sh
+   25  rm ex2.h
+   26  rm ex2.sh
+   27  cd week01
+   28  echo > ex2.sh
+   29  ls .
+   30  man grep
+   31  cd ..
+   32  touch temp
+   33  rm temp
+   34  history > ~/week01/ex2.txt
