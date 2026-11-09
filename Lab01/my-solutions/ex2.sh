@@ -1,0 +1,4621 @@
+cat ~/week01/ex2.sh
+cat ~/week01/ex2.txt
+history > ~/week01/ex2.txt
+history save ~/week01/ex2.txt
+man history
+cat vo.py
+cd my-things/
+mv vo.py  my-things/
+mv cv.pdf my-things/
+mkdir my-things
+exa
+rm -rf file2.txt
+rmdir file2.txt
+cd ..
+rm file2.txt
+helix file2.txt
+helix file1.txt
+cd newdir
+mkdir newdir
+pwd
+cd week01/
+cat ex1.txt
+exa /usr/bin | grep "gcc" | sort -r | tail -n 5 > ~/week01/ex1.txt
+mkdir week01
+rm Le\ 2.pdf
+rm Probability_and_Statistics_Tutorial_1.pdf
+nmcli d w c "InnoMeeting" --ask
+startx
+shutdown now
+nmcli d w c "Barbara's S25" --ask
+rm Le\ 1.pdf  OS_Lecture01.pdf
+rm Integrals_c800726d3f731eec270ecf0890af8076.pdf
+rm Innopolis_OS_F2025_L01_Tutorial.pdf
+rm F25\ -\ Intro\ to\ Opt\ -\ Lecture_1-1\ -\ Introduction.pdf  F25\ -\ Intro\ to\ Opt\ -\ Lecture_1-2\ -\ Graphical.pdf
+nmcli d w c "NOVA" --ask
+# Connect with your credentials
+nmcli connection up "UniversityStudent" --ask
+rm plan.pdf  plan.pdf
+ды
+telegram
+google-chrome-stable
+start-hyprland
+# 1. Clone the installer repository
+git clone https://github.com/JaKooLit/Distro-Hyprland.git
+
+# 2. Go into the directory
+cd Distro-Hyprland
+
+# 3. Run the install script with bash (not fish)
+bash install.sh
+sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Hyprland-Dots/main/Distro-Hyprland.sh)
+bash install.sh
+./install.sh
+makepkg -si install.sh
+cd Hyprland-Dots/
+install.sh
+git clone https://github.com/JaKooLit/Hyprland-Dots.git
+kitty
+fish
+code vo.py
+rm ISE\ final\ \(3\).pdf
+python vo.py
+sudo pacman -S python-flask
+nmcli d w c "Keenetic-0302" --ask
+pkill Hyprland
+Hyprland
+sudo pacman -S hyprland
+sudo pacman -Syu
+sudo pacman -Rs rust
+sudo pacman -Rs jdk-openjdk
+cat .xinitrc
+nmcli d w l
+ip a | grep wl
+ip a
+docker ps -a
+docker ps
+rm case-10-go.pdf
+rm 17_FaceGuard_DemoDay.pdf
+rm case-3-house.pdf
+rm case-1-badminton.pdf  case-2-lore.pdf
+rm -rf ise/
+rm Stay\ Hydrated.pptx  stay_hydrated_defense_presentation.md
+rm orekhvova_personal_cases.pdf  orekhova_cases.pdf
+rm кейсы_исправлено.docx  Механики.pdf  Эмма.pdf
+git push origin 235-update-docs
+paru -Suy
+sudo rm -rf FaceGuardV3/
+rm -rf FaceGuardV3/
+rm кейсы.docx
+rm кейсы_исправлено.docx
+rm 17_Faceguard.pdf
+rm -rf sofinno25/
+rm release.png
+rm tips_for_interview.docx
+rm stay_hydrated_system_explained.md
+rm sprint_milestone.png
+rm sofinno25.zip
+rm photo_2026-07-17_17-04-27.jpg
+rm pr_example.png
+rm FaceGuard_DemoDay_draft.pptx  ise_team_6_2026-07-14.md
+rm deployment_evidence.png  Demo_day_text.txt
+rm 17_FaceGuard_Demo\ \(1\).mp4  17_Faceguard.docx  17_FaceGuard_Demo.mp4  17_FaceGuard_DemoDay.pdf  17_FaceGuard_Slides.pdf
+open 17_FaceGuard_Demo.mp4
+open *.jpg
+open *.pdf
+open photo_1_2025-07-11_00-46-08.jpg
+open .
+cd sofinno25/
+unzip sofinno25.zip
+git commit -m "add docs links"
+git add .
+git checkout -b 235-update-docs
+git checkout 235-update-docs
+nmcli d w
+git checkout main
+sudo reboot now
+rm ise_team_6_2026-07-13.md
+git push origin create-structure
+git commit -m "add files"
+git checkout -bcreate-structure
+git pull origin main
+me
+l
+rm -rf Documents/ requirements/
+rm FaceGuard_Week6.pdf
+rm FaceGuard_Week6\ \(1\).pdf
+rm Assignment4-Team17.pdf
+rm 17_FaceGuard\ \(1\).pdf  17_FaceGuard.docx  17_FaceGuard.pdf
+git checkout 204-update-readme
+git pull
+git push origin 202-llm-report
+git commit -m "add reflection"
+git add reports/week6/reflection.md
+git branch --show-current && echo "===" && git diff main --stat 2>/dev/null | head -20
+git checkout 202-llm-report 2>&1
+git checkout 202-llm-report
+rm board.png
+rm pr_example.png  release.png
+rm FaceGuard_Week6_Presentation_Script_Final.md
+rm FaceGuardV3_Week6.pdf  FaceGuardV3_Week6.pptx
+mv pr_example\ \(4\).png  pr_example.png
+git push origin 203-update-changelog
+git commit -m "fix: instructions"
+git add README.md
+cd FaceGuardV3/
+exa -la backend/scripts/ 2>&1; echo "==="; git show main:backend/scripts/generate_hash.py 2>&1 | head -5
+git show main:backend/scripts/generate_hash.py 2>&1 | head -3; echo "==="; git show main:backend/.env.example 2>&1 | head -3
+git diff main --name-only 2>/dev/null | head -40
+exa -la backend/
+exa -la backend/scripts/generate_hash.py 2>/dev/null; echo "==="; exa -la backend/.env.example 2>/dev/null; echo "==="; exa backend/ 2>/dev/null
+git branch --show-current && echo "===" && head -10 README.md
+git checkout 203-update-changelog 2>&1
+git branch --show-current
+git push origin 204-update-readme 2>&1
+git pull --rebase origin 204-update-readme 2>&1
+git push origin 204-update-readme
+git pull origin 204-update-readme
+git commit -m "add info"
+git add reports/week6/README.md
+exa -la reports/week6/images/ 2>/dev/null; echo "==="; exa -la reports/week6/llm-report.md reports/week6/reflection.md reports/week6/retrospective.md reports/week6/sprint-review-summary.md reports/week6/sprint-review-transcript.md 2>/dev/null
+exa -la reports/week6/ && echo "===" && cat reports/week6/README.md 2>/dev/null | head -100
+git branch --show-current && echo "===" && git log --oneline -3
+git diff main --stat 2>/dev/null | head -40
+git stash && git checkout 204-update-readme 2>&1
+git push origin 209-update-docs
+git commit -m "fix: issues link"
+git add CONTRIBUTING.md
+cat .lycheeignore 2>/dev/null; echo "==="; cat .lychee.toml 2>/dev/null; echo "==="; head -20 .github/workflows/lychee.yml 2>/dev/null
+git diff main -- docs/user-acceptance-tests.md 2>/dev/null | head -20
+exa -la backend/.env.example 2>/dev/null; echo "==="; exa -la tests/quality/test_duplicate_registration.py 2>/dev/null; echo "==="; exa -la tests/quality/test_hardware_latency.py 2>/dev/null; echo "==="; exa -la backend/.streamlit/secrets.toml.example 2>/dev/null; echo "==="; exa -la backend/main.py 2>/dev/null
+git diff main -- docs/quality-requirements.md docs/quality-requirement-tests.md docs/user-acceptance-tests.md docs/architecture/README.md backend/main.py backend/faceguard/recognize.py 2>/dev/null
+git checkout 209-update-docs
+git commit -m "update information"
+git add CHANGELOG.md  README.md
+git status
+git branch --show-current 2>/dev/null; echo "---"; git log --oneline -1 2>/dev/null
+git branch -D 203-update-changelog 2>/dev/null; git checkout -b 203-update-changelog origin/203-update-changelog 2>&1
+head -5 CHANGELOG.md; echo "==="; head -5 README.md
+git cat-file -p v3.0.0 2>&1 | head -3
+git log --oneline -5
+git fetch origin 2>&1 | tail -5; git branch -r | grep 203
+git branch --show-current 2>/dev/null; echo "---"; git status --short 2>&1 | head -5
+git checkout -f 2>/dev/null; git clean -fd 2>/dev/null; git status 2>&1 | head -5
+git reset HEAD -- . 2>/dev/null; git checkout -- . 2>/dev/null; git status 2>&1 | head -5
+rm .git/HEAD && echo "ref: refs/heads/main" > .git/HEAD && git status 2>&1 | head -10
+cd /home/me/FaceGuardV3 && git stash list 2>/dev/null; cp CHANGELOG.md /tmp/changelog_fix.md && cp README.md /tmp/readme_fix.md && echo "FILES SAVED"
+echo "=== CURRENT HASH ===" && git rev-parse HEAD 2>&1 && echo "=== WORKING TREE ===" && git diff --cached 2>/dev/null | head -5 && echo "=== UNTRACKED ===" && git diff CHANGELOG.md 2>/dev/null | head -5
+git cat-file -t v3.0.0 2>&1; echo "---"; git rev-parse main 2>&1
+git branch --show-current 2>/dev/null; echo "---"; cat .git/HEAD 2>/dev/null
+rm -f .git/refs/heads/203-update-changelog && git gc --prune=now 2>/dev/null; git stash 2>/dev/null; git checkout main 2>/dev/null
+git branch -a
+rm -f .git/refs/heads/203-update-changelog && git branch -D 203-update-changelog 2>/dev/null; rm -f .git/index; git reset HEAD -- . 2>/dev/null; git fetch origin 203-update-changelog:refs/remotes/origin/203-update-changelog 2>&1 || git fetch origin 2>&1
+git log --oneline -1
+rm -f .git/refs/heads/203-update-changelog && rm -f .git/objects/38/fe658714923d33eb7173ded339c346b5a3a513 && rm -f .git/objects/1d/d40245c2af23828c91452c707f6057b8511e02 && rm -f .git/objects/5f/2021085f1a9ea3ded9d2c145121f89987ab5ee && rm -f .git/objects/b3/eba477c1b8fdfedfd3268bfb98721e3272c839 && git stash && git checkout main && git fetch origin && git branch -a
+git stash && git checkout main 2>/dev/null; git log --oneline -3 main
+git fsck --full 2>&1 | head -30
+rm -f .git/objects/38/fe658714923d33eb7173ded339c346b5a3a513 && git fetch origin 203-update-changelog && git branch -D 203-update-changelog 2>/dev/null; git checkout -b 203-update-changelog origin/203-update-changelog
+git pull origin 203-update-changelog
+git pull 203-update-changelog
+git diff main..HEAD --stat 2>/dev/null || git diff main --stat 2>/dev/null
+git log --oneline main..HEAD 2>/dev/null | head -20
+git branch -a | grep -i 203
+git checkout 203-update-changelog
+cat README.md
+exa -la /home/me/requirements/ 2>&1; echo "==="; file /home/me/requirements 2>&1
+find /home -type d -name "requirements" -maxdepth 5 2>/dev/null; echo "---"; find . -type d -name "me" -maxdepth 2 2>/dev/null; echo "---"; find ~ -type d -name "me" -maxdepth 3 2>/dev/null
+find /home/me -maxdepth 3 -type f 2>/dev/null | head -50
+exa --tree /home/me/requirements/
+exa /home/me/requirements/
+find /home -name "requirements" -maxdepth 4 -type d 2>/dev/null
+exa -la /home/me/requirements/ 2>/dev/null || echo "DIR NOT FOUND"
+find /home/me -name "requirements" -type d 2>/dev/null | head -20
+exa -la me/ 2>/dev/null; exa -la me/requirements/ 2>/dev/null; find . -path '*/me/requirements' -type d 2>/dev/null; find . -name '*requirements*' -path '*/me/*' 2>/dev/null
+rm -rf Documents/
+mv кейсы.pdf  ise/
+rm -rf goodnotes-electron/
+rm кейс3_house.png  кейс1_бадминтон.png  кейс2_ateez.png
+makepkg -si
+cd goodnotes-electron/
+git clone https://aur.archlinux.org/goodnotes-electron.git
+git clone 'https://aur.archlinux.org/goodnotes-electron.git '
+mkdir requirements
+rm photo_2026-07-10_10-23-08.jpg
+git pull 171-speed-up-the-system-response
+rm Assignment_06.md
+rm StayHydratedv1.pdf  StayHydratedv2.pdf
+rm cheshire-cats.pdf  kzn-msc.pdf  StayHydrated.pdf
+mkdir ise
+rm Varvara_Orekhova.mp4
+# Разблокируем pacman (если заблокирован)
+sudo rm -f /var/lib/pacman/db.lck
+
+# Удаляем ollama
+sudo pacman -Rns ollama
+
+# Удаляем кэш расширения
+rm -rf ~/.config/Code/CachedExtensionVSIXs/continue.continue-* 2>/dev/null
+
+# Проверяем результат
+echo "✅ Проверка:"
+which ollama 2>/dev/null && echo "❌ Ollama всё ещё установлен" || echo "✅ Ollama удален"
+ls ~/.config/Code/CachedExtensionVSIXs/ 2>/dev/null | grep continue && echo "❌ Continue в кэше есть" || echo "✅ Continue удален из кэша"
+
+echo ""
+df -h ~
+rm -rf ~/.config/Code/CachedExtensionVSIXs/continue.continue-* 2>/dev/null
+sudo pacman -Rns ollama
+#!/usr/bin/env fish
+
+echo "🧹 Финальная очистка от Continue и Ollama..."
+
+# Останавливаем процессы
+echo "🛑 Останавливаем процессы..."
+pkill -f ollama 2>/dev/null
+killall ollama 2>/dev/null
+
+# Удаляем бинарник (если есть)
+echo "🗑️ Удаляем бинарник..."
+sudo rm -f /usr/local/bin/ollama
+
+# Удаляем папку данных
+echo "🗑️ Удаляем ~/.ollama..."
+rm -rf ~/.ollama
+
+# Удаляем расширение VS Code
+echo "🗑️ Удаляем расширение Continue из VS Code..."
+# Fish fix: используем find вместо wildcard
+find ~/.vscode -name "continue.continue-*" -type d -exec rm -rf {} + 2>/dev/null
+find ~/.vscode-server -name "continue.continue-*" -type d -exec rm -rf {} + 2>/dev/null
+find ~/.config/Code/CachedExtensionVSIXs -name "continue.continue-*" -exec rm -rf {} + 2>/dev/null
+
+# Удаляем пакет через pacman
+echo "🗑️ Удаляем пакет ollama..."
+if test -f /var/lib/pacman/db.lck
+echo "🔓 Разблокируем pacman..."
+sudo rm -f /var/lib/pacman/db.lck
+end
+
+sudo pacman -Rns ollama 2>/dev/null
+
+echo ""
+echo "✅ Очистка завершена!"
+echo ""
+echo "📊 Проверка:"
+echo "Ollama: "(which ollama 2>/dev/null)
+echo "Папка .ollama: "(ls -la ~/.ollama 2>/dev/null)
+echo ""
+echo "📊 Свободное место:"
+df -h ~
+# Проверяем, установлен ли ollama
+pacman -Q ollama 2>/dev/null
+
+# Если установлен, удаляем
+sudo pacman -Rns ollama
+
+# Если pacman заблокирован, разблокируем
+sudo rm -f /var/lib/pacman/db.lck
+sudo pacman -Rns ollama
+# Проверяем ollama
+which ollama 2>/dev/null
+
+# Проверяем расширения VS Code
+ls ~/.vscode/extensions/ 2>/dev/null | grep -i continue
+ls ~/.config/Code/CachedExtensionVSIXs/ 2>/dev/null | grep -i continue
+
+# Проверяем папку .ollama
+ls -la ~/.ollama 2>/dev/null
+echo "🧹 Завершаем очистку от Continue и Ollama..."
+
+# 1. Удаляем расширение Continue из VS Code (исправлено для Fish)
+echo "🗑️ Удаляем расширение Continue..."
+rm -rf ~/.vscode/extensions/continue.continue-* 2>/dev/null
+rm -rf ~/.vscode-server/extensions/continue.continue-* 2>/dev/null
+rm -rf ~/.config/Code/CachedExtensionVSIXs/continue.continue-* 2>/dev/null
+
+# 2. Удаляем пакет ollama через paru (он есть в extra/ollama)
+echo "🗑️ Удаляем пакет ollama..."
+paru -Rns ollama 2>/dev/null
+
+# 3. Или через pacman, если paru не работает
+echo "🗑️ Удаляем через pacman..."
+sudo pacman -Rns ollama 2>/dev/null
+
+echo ""
+echo "✅ Очистка завершена!"
+echo ""
+echo "📊 Свободное место:"
+df -h ~
+# Проверяем, что ollama удален
+which ollama
+ollama --version 2>/dev/null
+
+# Проверяем, что Continue удален из VS Code
+ls ~/.vscode/extensions/ | grep continue
+ls ~/.config/Code/CachedExtensionVSIXs/ | grep continue
+
+# Проверяем, свободно ли место
+df -h ~
+#!/usr/bin/env fish
+
+echo "🧹 Начинаем очистку от Continue и Ollama..."
+
+# 1. Останавливаем процессы
+echo "🛑 Останавливаем процессы..."
+pkill -f ollama 2>/dev/null
+killall ollama 2>/dev/null
+
+# 2. Удаляем бинарник Ollama
+echo "🗑️ Удаляем ollama из /usr/local/bin..."
+sudo rm -f /usr/local/bin/ollama
+
+# 3. Удаляем папку .ollama
+echo "🗑️ Удаляем ~/.ollama..."
+rm -rf ~/.ollama
+
+# 4. Удаляем расширение Continue из VS Code
+echo "🗑️ Удаляем расширение Continue..."
+rm -rf ~/.vscode/extensions/continue.continue-* 2>/dev/null
+rm -rf ~/.vscode-server/extensions/continue.continue-* 2>/dev/null
+rm -rf ~/.config/Code/CachedExtensionVSIXs/continue.continue-* 2>/dev/null
+
+# 5. Ищем другие папки с continue (кроме системных)
+echo "🗑️ Ищем и удаляем папки continue..."
+find ~ -type d -name "*continue*" -not -path "*/.cargo/*" -not -path "*/.local/lib/python*" -exec rm -rf {} + 2>/dev/null
+
+# 6. Если pacman заблокирован, разблокируем
+if test -f /var/lib/pacman/db.lck
+echo "🔓 Разблокируем pacman..."
+sudo rm -f /var/lib/pacman/db.lck
+end
+
+# 7. Удаляем через paru (если установлены)
+echo "🗑️ Удаляем пакеты через paru..."
+paru -Rns ollama 2>/dev/null
+paru -Rns continue 2>/dev/null
+paru -Rns continue-bin 2>/dev/null
+
+echo ""
+echo "✅ Очистка завершена!"
+echo ""
+echo "📊 Проверяем результат:"
+which ollama 2>/dev/null
+ls -la ~/.ollama 2>/dev/null
+ls ~/.config/Code/CachedExtensionVSIXs/ | grep continue 2>/dev/null
+
+echo ""
+echo "📊 Свободное место:"
+df -h ~
+# Удаляем кэшированный файл расширения
+rm -rf ~/.config/Code/CachedExtensionVSIXs/continue.continue-*
+
+# Также удаляем само расширение (если есть)
+rm -rf ~/.vscode/extensions/continue.continue-* 2>/dev/null
+rm -rf ~/.vscode-server/extensions/continue.continue-* 2>/dev/null
+# 1. Удаляем сам бинарник ollama
+sudo rm -f /usr/local/bin/ollama
+
+# 2. Удаляем папку с данными (если есть)
+rm -rf ~/.ollama
+
+# 3. Проверяем, что ollama удален
+which ollama 2>/dev/null
+# Проверяем, установлен ли ollama через paru
+paru -Q ollama 2>/dev/null
+
+# Если да, удаляем
+paru -Rns ollama 2>/dev/null
+
+# Ищем пакеты с "continue"
+paru -Qs continue 2>/dev/null
+
+# Если есть, удаляем
+paru -Rns continue 2>/dev/null
+# 1. Проверяем, какой процесс использует pacman
+ps aux | grep pacman | grep -v grep
+
+# 2. Если это paru или yay, ждем завершения
+# Или закрываем все терминалы с обновлениями
+
+# 3. Если блокировка осталась после сбоя, удаляем файл блокировки
+sudo rm -f /var/lib/pacman/db.lck
+
+# 4. Теперь можно использовать pacman
+# Проверяем, есть ли еще файлы Ollama
+ls -la ~/.ollama 2>/dev/null
+which ollama 2>/dev/null
+ollama list 2>/dev/null
+
+# Проверяем, есть ли еще файлы Continue
+find ~ -name "*continue*" -type d 2>/dev/null | head -10
+find ~ -name "*continue*" -type f 2>/dev/null | head -10
+
+# Проверяем VS Code extensions
+ls ~/.vscode/extensions/ | grep -i continue 2>/dev/null
+# 1. Удаляем папку .ollama (если она еще существует)
+rm -rf ~/.ollama
+echo "Папка .ollama удалена"
+
+# 2. Проверяем и удаляем расширение Continue из VS Code
+rm -rf ~/.vscode/extensions/continue.continue-* 2>/dev/null
+rm -rf ~/.vscode-server/extensions/continue.continue-* 2>/dev/null
+echo "Расширение Continue удалено из VS Code"
+
+# 3. Ищем и удаляем все остатки Continue
+find ~ -type d -name "*continue*" -exec rm -rf {} + 2>/dev/null
+echo "Все папки с именем continue удалены"
+
+# 4. Удаляем сам пакет Ollama (если установлен)
+sudo pacman -Rns ollama 2>/dev/null
+paru -Rns ollama 2>/dev/null
+yay -Rns ollama 2>/dev/null
+echo "Пакет Ollama удален (если был установлен)"
+# Удаляем все три модели сразу
+ollama rm nomic-embed-text:latest
+ollama rm qwen2.5-coder:1.5b-base
+ollama rm llama3.1:8b
+systemctl --user status ollama
+# 4. Остановить Ollama (если он запущен)
+systemctl --user stop ollama 2>/dev/null
+# или
+pkill ollama 2>/dev/null
+
+# 5. Удалить все модели и данные Ollama
+sudo rm -rf ~/.ollama
+
+# 6. Удалить сам пакет Ollama (если установлен через pacman)
+sudo pacman -Rns ollama 2>/dev/null
+
+# 7. Или если через paru/yay
+paru -Rns ollama 2>/dev/null
+# или
+yay -Rns ollama 2>/dev/null
+# 1. Проверяем, что модели действительно есть
+ollama list
+
+# 2. Удаляем все три модели
+ollama rm nomic-embed-text:latest
+ollama rm qwen2.5-coder:1.5b-base
+ollama rm llama3.1:8b
+
+# 3. Проверяем, что модели удалены
+ollama list
+ollama list
+paru -Syy
+rm cheshire-cats.pdf
+rm wonderland_слайды_и_речь.md
+q
+rm Sofia_Kovalevskaya_Light.pptx
+rm Sofia_Kovalevskaya.pptx  Sofia_Kovalevskaya.pptx
+rm CSE\ 1\ курс.pdf  Sofia\ Kovalevskaya\ Presentation\ Generation\ -\ Google\ Gemini.pdf  Sofia\ Kovalevskaya.pdf
+open Sofia\ Kovalevskaya\ Presentation\ Generation\ -\ Google\ Gemini.pdf
+xrandr --output HDMI-1 --mode 1280x800
+xrandr --output eDP-1 --auto --output HDMI-1 --auto --right-of eDP-1
+ping google.com
+nmcli
+xrandr | grep " connected"
+xrandr --output HDMI-1 --auto --right-of eDP-1
+xrandr --output HDMI-1
+xrandr --output HDMI-1 --mode 1920x1080
+xrandr --verbose | grep -A 10 HDMI-1
+dmesg | grep -i HDMI
+xrandr --output HDMI-1 --same-as eDP-1
+xrandr --output HDMI-1 --auto
+xrandr
+xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1920x1080
+xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1920x1200
+xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 6384x16384
+xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 6384 x 16384
+xrandr --output
+rm Exercise_Physiology_Quiz_просмотр_попытки_IU_Moodle.html
+rm  cld_2_stalo.svg
+rm pitch_ISE-44_гонка_за_вовлеченность.md  wonderland_слайды_и_речь.md
+rm ISE\ -\ Lesson\ 13.pdf  ISE\ -\ Lesson\ 14.pdf  ISE\ -\ Lesson\ 15.pdf  ISE\ -\ Lesson\ 16.pdf
+reboot now
+exa -la --no-time
+rm -rf requirements/
+rm board.png  ci_run.png  hosted_docs.png  pr_example.png  release.png
+mkdocs gh-deploy --force
+mv milestone.png  sprint_milestone.png
+ollama pull nomic-embed-text:latest
+ollama pull qwen2.5-coder:1.5b-base
+ollama pull llama3.1:8b
+curl -fsSL https://ollama.com/install.sh | sh
+git push origin hosting-new-fix
+git commit -m "fix"
+git add .github/workflows/deploy-docs.yml
+git checkout -b hosting-new-fix
+git push origin hosting-fix
+git add .github/workflows/deploy-docs.yml && git commit -m "ci(docs): use upload+deploy-pages flow for GitHub Pages" || true && git push origin main
+git checkout -b hosting-fix
+git checkout hosting-fix
+# 1. Delete all Codeium-related files
+find ~ -type d -path "*/.codeium/database" -exec sudo rm -rf {} + 2>/dev/null
+find ~ -type d -path "*/.codeium/ws-browser" -exec sudo rm -rf {} + 2>/dev/null
+find ~ -type d -path "*/.codeium/*" -exec sudo rm -rf {} + 2>/dev/null
+
+# 2. Delete all VSCode C++ tools extensions
+find ~ -type d -path "*/.vscode/extensions/ms-vscode.cpptools-*" -exec sudo rm -rf {} + 2>/dev/null
+find ~ -type d -path "*/.config/Code/CachedExtensionVSIXs/ms-vscode.cpptools-*" -exec sudo rm -rf {} + 2>/dev/null
+
+# 3. Delete VSCode Java extension
+find ~ -type d -path "*/.config/Code/CachedExtensionVSIXs/redhat.java-*" -exec sudo rm -rf {} + 2>/dev/null
+
+# 4. Delete VSCode C++ IPCH cache
+find ~ -type d -path "*/.cache/vscode-cpptools" -exec sudo rm -rf {} + 2>/dev/null
+
+# 5. Delete old visual-studio-code-bin package files
+find ~/.cache/paru/clone/visual-studio-code-bin -type f \( -name "*.pkg.tar" -o -name "*.tar.gz" \) -exec sudo rm -f {} + 2>/dev/null
+
+# 6. Delete old google-chrome package files
+find ~/.cache/paru/clone/google-chrome -type f \( -name "*.pkg.tar" -o -name "*.pkg.tar.zst" -o -name "*.deb" \) -exec sudo rm -f {} + 2>/dev/null
+find ~/.cache/paru/clone/google-chrome -type d \( -name "src" -o -name "pkg" \) -exec sudo rm -rf {} + 2>/dev/null
+
+# 7. Delete old galaxybudsclient-bin files
+find ~/.cache/paru/clone/galaxybudsclient-bin -type f \( -name "*.pkg.tar" -o -name "*.bin" \) -exec sudo rm -f {} + 2>/dev/null
+
+# 8. Delete icaclient cache files
+find ~/.cache/paru/clone/icaclient -type f \( -name "*.tar.gz" -o -name "*.pkg.tar.zst" \) -exec sudo rm -f {} + 2>/dev/null
+
+# 9. Delete quartus-free cache (BIG savings!)
+find ~/.cache/yay/quartus-free -exec sudo rm -rf {} + 2>/dev/null
+
+# 10. Delete AWS toolkit language servers
+find ~/.cache/aws/toolkits/language-servers/AmazonQ -type d -name "*" -exec sudo rm -rf {} + 2>/dev/null
+
+# 11. Delete Google Chrome component cache
+find ~/.config/google-chrome/component_crx_cache -exec sudo rm -rf {} + 2>/dev/null
+
+# 12. Delete Playwright cache
+find ~/.cache/ms-playwright-go -exec sudo rm -rf {} + 2>/dev/null
+# Delete all buffalo directories anywhere in your home
+find ~ -type d -name "buffalo_*" -exec sudo rm -rf {} + 2>/dev/null
+
+# Delete all buffalo zip files
+find ~ -type f -name "buffalo_*.zip" -exec sudo rm -f {} + 2>/dev/null
+# Delete buffalo_l models
+sudo rm -rf ~/.insightface/models/"buffalo_l"*
+sudo rm -rf ~/.insightface/models/"buffalo_s"*
+
+# Delete FaceGuardV3 buffalo models
+sudo rm -rf ~/FaceGuardV3/docker/insightface_models/"buffalo_s"*
+sudo rm -rf ~/.insightface/models/buffalo_l*
+# Delete buffalo_l models (from your home directory)
+rm -rf ~/.insightface/models/buffalo_l*
+
+# Delete buffalo_s models (from FaceGuardV3)
+sudo rm -rf ~/FaceGuardV3/docker/insightface_models/buffalo_s*
+# Delete buffalo_l models (from your home directory)
+rm -rf ~/.insightface/models/buffalo_l*
+
+# Delete buffalo_s models (from FaceGuardV3)
+rm -rf ~/FaceGuardV3/docker/insightface_models/buffalo_s*
+find . -type f -size +100M -exec ls -lh {} \; | awk '{ print $5 ": " $9 }'
+sudo paccache -ruk0
+cd .
+git push origin update
+git commit -m ":D"
+git checkout -b "update"
+cd arch
+rm -rf Documents/ invitation/ ise/
+git push origin --delete gh-pages
+code .github/workflows/deploy-docs.yml
+Lumo: Sign in
+ils -la
+git log --oneline -20
+git checkout 159-update-testing-and-dod
+git push origin upd-readme
+git push origin upd-reame
+git commit -m "new version of report"
+git add reports/week5/README.md
+git checkout -b "upd-readme"
+git checkout "147-update-readme"
+git stash
+git pull --rebase origin 175-hosting-documentation
+git stash pop
+git add .
+git commit -m "docs: link changelog to root file instead of copying"
+git push origin 175-hosting-documentation
+git pull --rebase origin 175-hosting-documentation
+git push origin 175-hosting-documentation
+git pull origin 175-hosting-documentation
+git push origin 175-hosting-documentation
+git add .github/workflows/deploy-docs.yml
+git commit -m "fix: trigger docs deployment on feature branch"
+git push origin 175-hosting-documentation
+pipx inject mkdocs mkdocs-include-markdown-plugin
+mkdocs serve
+git push origin  175-hosting-documentation
+git commit -m "docs: configure MkDocs for hosted documentation site"
+git add mkdocs.yml docs/CHANGELOG.md docs/index.md .github/workflows/deploy-docs.yml
+git checkout -b "175-hosting-documentation"
+git add backend/leds.py
+git commit -m "fix: suppress intentional bandit B110 in leds.py"
+git push
+git add backend/leds.py backend/db/employees_db.py
+git commit -m "fix: remove unused variable and unused global"
+git push
+git add backend/leds.py
+git commit -m "fix: black formatting"
+git push
+git push origin 60-add-leds
+git commit -m "feat: add leds code"
+git add backend/leds.py  backend/pages/page_add_employee.py  backend/pages/page_recognition.py
+docker compose -f docker/docker-compose.yml down
+docker compose -f docker/docker-compose.yml build
+docker compose -f docker/docker-compose.yml up
+cd /home/me/FaceGuardV3
+mkdocs serve
+pipx install mkdocs
+pipx inject mkdocs mkdocs-material
+# Install with pipx (already works on your system)
+pipx install mkdocs
+pipx inject mkdocs mkdocs-material
+# Install MkDocs and the Material theme
+pip install mkdocs mkdocs-material
+
+# Create a new MkDocs project (this creates mkdocs.yml and a docs/ folder)
+mkdocs new .
+code .
+git diff HEAD~1 HEAD --stat
+git checkout 60-add-leds
+git push origin 144-reduce-repetitive-logs
+git commit -m "fix: black formatting"
+docker compose -f docker/docker-compose.yml build
+docker compose -f docker/docker-compose.yml up
+git pull origin  144-reduce-repetitive-logs
+git pull origin 144-reduce-repetetive-logs
+git checkout 144-reduce-repetitive-logs
+code backend/.streamlit/secrets.toml
+cp backend/.streamlit/secrets.toml.example backend/.streamlit/secrets.toml
+git clone git@github.com:Innopolis-Robotics-Society/FaceGuardV3.git
+rm -rf Assignment\ 5.txt  coverage  Assignment_05.md  FaceGuardV3/
+git commit -m "fix: timezone, wrong temporary access"
+git add backend/db/employees_db.py  backend/pages/page_add_employee.py
+git checkout -b "60-add-leds"
+nmcli d
+ping -c 3 google.com
+xdg-open /home/me/invitation/index.html
+cd invitation/
+mkdir invitation
+flameshot gui
+helix ~/.config/flameshot/flameshot.ini
+git push origin 113-change-employee-information
+git commit -m "fix: changing user does not delete it"
+git add backend/db/employees_db.py  backend/pages/page_employees.py
+git add employee_db.py page_employees.py
+git checkout -b "113-change-employee-information"
+git push origin 117-temporary-access
+git commit -m "fix: changed temporary access style"
+git checkout -b "117-temporary-access"
+psql -U postgres -d faceguard -c "ALTER TABLE employees ADD COLUMN start_date TIMESTAMP; ALTER TABLE employees ADD COLUMN expiration_date TIMESTAMP;"
+psql -U postgres -d faceguard -c "ALTER TABLE employees ALTER COLUMN start_date TYPE TIMESTAMP; ALTER TABLE employees ALTER COLUMN expiration_date TYPE TIMESTAMP;"
+git pull origin 115-duplication-check
+git pull 115-duplication-check
+rm cover\ letter.docx  CoverLetter_Presentation_2.pdf  CV.docx  Gulnaz\ Ibragimova_Teaching_Statement.pdf
+git clone https://github.com/Innopolis-Robotics-Society/FaceGuardV2.git
+nmcli d w c
+rm Video\ Project\ 7.docx
+rm Process_Requirements.md  Repository_Requirements.md
+rm IMG_20260628_211801_345.png  Assignment_04.md
+rm add_employee.png  Assignment4-Team17.pdf
+git rev-parse HEAD
+git log -1 --format="%H" reports/week4/README.md
+git tag -l
+PYTHONPATH=. pytest --cov=backend --cov-report=term-missing
+pytest --cov=backend --cov-report=term-missing
+pip install pytest pytest-cov --break-system-packages
+docker ps --filter "name=faceguard" --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+cd "/home/me/FaceGuardV3"
+cd docker && docker compose up -d
+cd docker && docker compose build --no-cache
+docker rmi docker-faceguard:latest
+cd docker && docker compose down --remove-orphans
+docker ps -a --filter "name=faceguard" --format "{{.Names}} {{.Status}}"
+docker images
+cd Documents/
+rm Presentation\ for\ the\ 7\ lecture.pptx
+shutdown telegram now
+cd backend && python -c "import pages.page_recognition; print('Import successful')" 2>&1 | tail -5
+cd backend && python -c "import pages.page_recognition; print('Import successful')" 2>&1
+pip install opencv-python insightface onnxruntime --break-system-packages
+cd backend && python -c "import pages.page_recognition" 2>&1 | head -20
+pip install av streamlit-webrtc aiortc --break-system-packages
+pip install av streamlit-webrtc aiortc
+pgrep -fl telegram
+killall telegram-desktop
+pkill -f telegram-desktop
+pkill telegram-desktop
+shutdown telegram
+git push origin 57-change-temporary-access
+git checkout -b "57-change-temporary-access"
+rm Assignment_04.md
+cd ise
+rm -rf FaceGuardV3/ spd/
+rm all_requirements.txt
+git push origin fix-link
+git commit -m "fix: add link to sprint 1"
+git checkout -b "fix-link"
+cd spd
+systemctl
+git push origin new-insightvision-structure
+git commit -m "feat: new insightvision structure"
+git checkout -b "new-insightvision-structure"
+rm 01\ Requirement.pdf  Presentation\ for\ the\ 4\ lecture.pptx
+rm -rf fg/
+rm notes.md
+
+docker compose -f docker/docker-compose.yml up
+git clone git@github.com:Innopolis-Robotics-Society/FaceGuardV3.git
+cd FaceGuardV3
+git checkout issue-56-add-docker
+cd fg
+mv FaceGuardV3/ fg
+git pull issue-56-add-docker
+git push origin issue-56-add-docker
+git pull origin issue-56-add-docker
+git commit -m "fix: remove secrets from the image"
+git commit -m "containerize the app with docker"
+git checkout -b issue-56-add-docker
+git push origin opencv-integration
+git commit -m "fix: integrate recognition"
+git add .gitignore  backend/requirements.txt  requirements.txt  backend/.streamlit/secrets.toml.example  backend/pages/page_add_employee.py  backend/pages/page_recognition.py  backend/recognition/recognize.py
+docker compose -f docker/docker-compose.yml up
+cd /home/me/fg
+docker compose -f docker/docker-compose.yml build
+docker compose -f docker/docker-compose.yml up
+docker compose -f docker/docker-compose.yml build --no-cache
+docker compose -f docker/docker-compose.yml up
+sudo rm -rf /home/me/fg/backend/.streamlit/secrets.toml
+docker compose -f docker/docker-compose.yml down -v
+docker compose -f docker/docker-compose.yml build --no-cache
+docker compose -f docker/docker-compose.yml up
+docker compose -f docker/docker-compose.yml down -v
+docker compose -f docker/docker-compose.yml up
+docker compose -f docker/docker-compose.yml down
+docker compose -f docker/docker-compose.yml up
+sudo systemctl restart docker
+docker compose -f docker/docker-compose.yml build
+docker compose -f docker/docker-compose.yml build
+rm /home/me/fg/requirements.txt
+rm /home/me/fg/backend/requirements.txt
+newgrp docker
+sudo usermod -aG docker $USER
+sudo systemctl enable --now docker
+sudo pacman -S docker
+cd
+cd spd/
+rm -rf CV_PresentationForSharing.pdf
+cd ise/
+rm answer.txt
+rm Presentation\ for\ the\ 4\ lecture\ \(1\).pptx  Presentation\ for\ the\ lecture\ №\ 5.pptx
+mkdir spd
+rm Орехова\ Варвара.pdf
+cd /home/me/fg/backend
+../venv/bin/streamlit run pages/page_authentication.py
+git commit -m "fix: remove buttons & error"
+git add backend/pages/page_recognition.py
+cd /home/me/fg
+source venv/bin/activate
+cd backend
+streamlit run pages/page_authentication.py
+streamlit run pages/page_authentication.py
+cd backend
+streamlit run backend/pages/page_authentication.py
+git commit -m "feat: add recognition page"
+git add backend/requirements.txt  requirements.txt  backend/db/employees_db.py  backend/pages/page_add_employee.py  backend/pages/page_authentication.py  backend/recognition/recognize.py  backend/pages/page_recognition.py
+git checkout -b opencv-integration
+pip install opencv-python
+cp .streamlit/secrets.toml.example .streamlit/secrets.toml
+pacman -Ss pgvector
+# Check Arch repositories first
+pacman -Ss pgvector
+
+# If not in main repos, use AUR as shown above
+# Install Python package for working with pgvector
+pip install pgvector-python
+
+# Or if you need the database driver with vector support
+pip install psycopg[binary,pool] pgvector
+# Connect to PostgreSQL
+sudo -iu postgres psql
+
+# In psql shell:
+CREATE EXTENSION vector;
+
+# Verify installation
+\dx
+# You should see "vector" in the list
+
+# Exit psql
+\q
+paru -S postgresql-pgvector
+rm Lecture\ 2.pptx
+rm Lecture\ 1.pptx
+flameshot
+git checkout opencv
+mv ISE\ -\ Lesson\ 4.pdf  ise
+mv ISE\ -\ Lesson\ 3.pdf  ise
+mv ISE\ -\ Lesson\ 2.pdf  ise
+mv ISE\ -\ Lesson\ 1.pdf  ise
+open ISE\ -\ Lesson\ 1.pdf  ISE\ -\ Lesson\ 2.pdf  ISE\ -\ Lesson\ 3.pdf  ISE\ -\ Lesson\ 4.pdf
+rm pr-review.png
+rm assignment2.pdf  branch-protection.png  FaceGuardV3/ mvp-v0.png  prototype.png
+happ
+git push origin back-fix
+git commit -m "fix: add automatic db creation"
+git add db/employees_db.py
+cd backend
+streamlit run pages/page_authentication.py
+git checkout -b back-fix
+git checkout -b backend-fix
+git push origin backend-fix
+git commit -m "fix: add separation of concerns"
+git add backend/db/employees_db.py  backend/db/logs_db.py  backend/pages/employees_db.py  backend/pages/logs_db.py  backend/pages/page_add_employee.py  backend/pages/page_authentication.py  backend/pages/page_employees.py  backend/pages/page_logs.py  backend/.streamlit/secrets.toml.example
+streamlit run backend/pages/
+streamlit run backend/pages/pageAuthentication.py
+cd backend/
+pip install -r backend/requirements.txt
+rm -rf paru/
+rm a1.pdf
+git push origin logs
+git commit -m "feat: add logs page & gitignore"
+git add backend/pages/logs.sql  backend/pages/logs_db.py  backend/pages/pageLogs.py  .gitignore
+git checkout -b logs
+sudo -u postgres psql -d faceguard -f logs.sql
+sudo -u postgres psql -c "CREATE DATABASE faceguard;"
+sudo -u postgres psql -d faceguard -f logs.sql
+sudo systemctl enable postgresql
+sudo systemctl status postgresql
+sudo -u postgres initdb -D /var/lib/postgres/data
+sudo systemctl start postgresql
+sudo systemctl start postgresql
+cd backend/pages/
+echo ".streamlit/secrets.toml" >> .gitignore
+streamlit run backend/pages/pageLogs.py
+pipx inject streamlit psycopg2-binary
+head -1 /home/me/.local/bin/streamlit
+which python3
+which streamlit
+python3 -c "import psycopg2; print('works')"
+sudo pacman -S python-psycopg2
+pip install psycopg2-binary
+pip install psycopg2-binary --break-system-packages
+pip3 install psycopg2-binary
+sudo pacman -S psycopg2
+sudo pacman -S psycopg2-binary
+paru -S psycopg2-binary
+streamlit run pageLogs.py
+code pageLogs.py
+code secrets.toml
+rmdir secrets.toml/
+code secrets.toml/
+cd .streamlit/
+mkdir .streamlit/secrets.toml
+streamlit run pageAuthentication.py
+psql -U postgres -d faceguard -f logs.sql
+cd pages/
+code .streamlit/secrets.toml
+paru -S networkmanager
+sudo pacman -Rns paru-bin paru-bin-debug
+cd ~/paru
+makepkg -si
+cd ~
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+sudo pacman -S --needed git base-devel
+paru -S networkManager
+sudo pacman -S postgresql
+sudo pacman -Syy
+code logs.sql
+code logs_db.py
+rm page
+rm logs_db.oy
+code page logs_db.oy
+git push origin  fix-authentication
+git commit -m "fix: delete titles"
+git add backend/pages/pageAuthentication.py
+git checkout -b fix-authentication
+git push origin page-add-employee
+git commit -m "feat: add employee page"
+git add backend/pages/pageAddEmployee.py
+git checkout -b page-add-employee
+git checkout page-add-employee
+streamlit run pageAddEmployee.py
+code pageEmployees.py
+code pageAuthentication.py
+code pageAddEmployee.py
+git push origin fix-employees-page
+git push  fix-employees-page
+git commit -m "fix: employees page"
+git checkout -b fix-employees-page
+git checkout fix-employees-page
+streamlit run pages/pageAuthentication.py
+cd FaceGuardV3/backend/
+git push origin --delete backend
+git checkout backend-new
+git branch -d backend
+git checkout -b backend-new
+git push origin backend-new
+git push origin backend
+git status
+git pull origin backend
+git checkout -b backend
+git commit -m "add: authentication page"
+rm -rf backend.py
+mv authentication.py pageAuthentication.py
+rm -rf happ-desktop-bin/
+rm -rf faceguard/
+rm -rf .streamlit/
+streamlit run authentication.py
+sudo -s
+cd happ-desktop-bin/
+git clone https://aur.archlinux.org/happ-desktop-bin.git
+sudo pacman -S  happ-desktop-bin
+paru -s  happ-desktop-bin
+paru -S  happ-desktop-bin
+paru  happ-desktop-bin
+streamlit run backend.py
+code authentication.py
+rm authentication
+code authentication
+git commit -m "feat: add backend folder"
+git checkout backend
+git checkout -b backend/
+git checkout backend/
+git reset --soft HEAD~1
+code faceguard.py
+cd faceguard/
+code backend.py
+mkdir backend
+rm github.png
+rm япония\ орехова\ 11а.pdf
+rm Assignment_02.docx  Assignment_02.md
+pip install streamlit-extras
+streamlit run faceguard.py
+. faceguard.py
+faceguard.py
+helix faceguard.py
+open faceguard.py
+# First install pipx if you don't have it
+pacman -S python-pipx
+
+# Then install Streamlit with pipx
+pipx install streamlit
+
+# Run streamlit hello
+streamlit hello
+pip install streamlit
+mkdir faceguard
+rm Research\ Board.jpg  Questions_.pdf  Team17-Assignment1.pdf
+rm -rf Downloads/
+rm assign1.pdf
+nmcli d w c "Smorodina" --ask
+rm -rf inno/
+rm -rf VarvaraOrekhova_problem_set_10.pdf
+cd dsa
+cd inno/
+rm mat.pdf
+rm -rf matanlearn/
+open preparing\ to\ the\ final\ MathAna2.pdf
+cd matanlearn/
+open chapter3.pdf  chapter4.pdf  MA_II_chapter_4.pdf  MA_II_Lab_9.pdf  MA_II_Lab_10.pdf  MA_II_Lab_11.pdf  MA_II_Lab_12.pdf  MA_II_Lab_13.pdf  MA_II_Lab_14.pdf  MA_II_Lab_15.pdf
+open mat.pdf
+rm Orekhova_Ryndenko_B25-DSAI-04_API_Inference_Cost_RP.pdf
+sudo pacman -S starship
+nmcli d w c "Netcraze-9068" --ask
+nmcli d w c "Netcraze-9068"
+paru starship
+starship
+pacman -S starship
+rm -rf ssad/
+git push -u origin main
+git commit -m ":p"
+cd inno/ssad
+rm -rf ssadlearn/
+open final2021.pdf  final2023.pdf final2024.pdf  finalrecap.pdf
+open final2021.pdf
+cd finals/
+cd ssadlearn/
+open finalrecap.pdf
+open final2024.pdf
+open final2023.pdf
+mkdir finals
+rm -rf google-chrome/ DSA\ Spring\ 2026\ —\ Topic\ 14.\ Problem\ Set.pdf
+cd google-chrome/
+git clone https://aur.archlinux.org/google-chrome.git
+rm -rf aglalearn/
+rm -rf tcslearn/
+mkdir aglalearn
+rmdir aglastudy/
+mkdir aglastudy
+open TCS_Pre_Final_2024.pdf
+open TCS_Pre_Final_2023.pdf
+open TCS_Final_2021.pdf
+cd tcslearn/
+rm VarvaraOrekhova_problem_set_13.pdf
+open MA_II_Lab_10.pdf
+open MA_II_Lab_9.pdf
+open chapter3.pdf
+mkdir matanlearn
+rmdir matanready/
+mkdir matanready
+code '4. abstractFactory.cpp'
+code '3. memento.cpp'
+code '2. mediator.cpp'
+code '1. templateMethod.cpp'
+cd week15
+mkdir week15
+cd assigns/
+rm VarvaraOrekhova.pdf
+cd assign4
+rm rp.pdf
+rm -rf eng/
+cd inno/eng/rp
+rm *.jpg
+rm *.png
+rm uml.jpg
+rm SofiaSokolova.pdf  SofiaSokolova_problem_set_13.pdf
+rm ErnestKashapov_problem_set_13.pdf  Orekhova_Ryndenko_B25-DSAI-04_API_Inference_Cost_RP.pdf
+mv umlpromisefinal.jpg  inno/ssad/assigns/assign4
+cd codeforces/
+cd week14
+rm assign13.zip
+unzip assign13.zip
+cd problemset/
+cd inno/dsa/week15
+code '2. firefighting.cpp'
+cd inno/dsa
+open uml1.png
+rm Research_proposal\ \(2\).pdf
+rm Proposal\ \(3\).pdf
+rm download.png
+rm birthday_calendar.pdf
+rm 20260429_173142.jpg
+rm 20260429_173049.jpg
+rm страховка.pdf
+mv rp.pdf inno/eng/rp/
+mv rp inno/eng/rp/
+mv rm inno/eng/rp/
+mv rm inno/eng/rp/ls
+code 1.\ firefighting.cpp
+mkdir codeforces
+mkdir problemset
+rm DSA\ Spring\ 2026\ —\ Topic\ 13.\ Problem\ Set.pdf
+rm -rf childhood/
+mv assign/ assigns
+rm -rf assigns
+mv assigns/3assign/uml.drawio\ \(1\).png  assign/assign3/
+mv assigns/3assign/report.pdf assign/assign3/
+code workflow.cpp
+code pandora.cpp
+cd assign3/
+code basket.cpp
+cd assign2
+code vending.cpp
+code cards.cpp
+cd assign1/
+mkdir assign4
+mkdir assign3
+mkdir assign2
+mkdir assign1
+cd assign
+mkdir assign
+rm -rf a.out  workflow
+cd 4assign/
+g++ workflow.cpp
+git commit -m "<3"
+open 20191016_175839.jpg
+open 20190911_150320.jpg open 20190914_163838.jpg
+open 20190911_150253.jpg
+open 20190821_072446.jpg
+open 20190811_152346.jpg
+open 20190811_122433.jpg
+open 20190727_151653.jpg
+open 20190727_151640.jpg
+cd childhood/
+rm childhood.zip
+rm VarvaraOrekhova_problem_set_11.pdf  VarvaraOrekhova_problem_set_12.pdf
+unzip childhood.zip
+sh
+rm VarvaraOrekhova_problem_set_12.pdf
+rm solution.zip
+unzip solution.zip
+rm dreams  network  secret
+cd week14/
+rm SofiaSokolova_problem_set_12\ \(3\).pdf
+rm \(with\ notes\)\ DSA\ Spring\ 2026\ —\ Topic\ 12.\ Lecture.pdf  ErnestKashapov_problem_set_13.pdf
+git pull --no-rebase
+git pull -u origin main
+git pull -u main
+git pull main
+cd ssad
+rm problemset.pdf
+cd inno
+mkdir tcslearn
+rm MA_II_Lab_13.pdf
+rm class\ 13\ B.pdf MA_II_Lab_12.pdf
+rm class\ 12\ A.pdf
+rm \(with\ notes\)\ DSA\ Spring\ 2026\ —\ Topic\ 12.\ Lecture.pdf
+cd 3assign/
+rm a.out
+./a.out
+g++ 3.\ observer.cpp
+g++ 2.\ chainOfResponsibility.cpp
+g++ 1.\ command.cpp
+su
+mkdir week14
+mkdir week13
+rm Tutorial\ 10.pdf
+rm My\ First\ Board.pdf
+rm My\ First\ Board.jpg
+rm Varvara_Orekhova_report.pdf
+rm SGT\ Peer-Review\ Form.doc
+rm uml.drawio.png  uml.drawio.svg  uml.jpg  uml.svg
+code uml.drawio.svg
+code uml.svg
+rm uml.svg
+rm report.tex
+rm pandora
+rm 2uml.svg
+rm maybewillneed.cpp
+rm 1.png
+cd inno/ssad/assigns/3assign/
+cd inno/ssad/
+open My\ First\ Board.jpg
+code report.tex
+open assign3.pdf
+rm Сборник_задач_по_математическому_анализу_Том_2.djvu
+cd week03
+cd week3
+cd dsa/
+code maybewillneed.cpp
+mv research-proposal-vm.pdf inno/eng/rp/
+rm GabdullaTukay_problem_set_11.tex
+mv assign11.pdf  inno/dsa/week13/problemset/
+rm eng.pdf
+rm assign11.zip
+rm intro.pdf
+rm S2590005626000445.bib
+rm Proposal_14_04.pdf
+rm SofiaSokolova_problem_set_11.pdf
+rm VarvaraOrekhova_problem_set_11.pdf
+rm research-proposal-vm\ \(1\).pdf
+rm Orekhova_Ryndenko_B25-DSAI-04_AI_Work_Ethics_LR.pdf
+rm Orekhova_Ryndenko_B25-DSAI-04_AI_Work_Ethics_LR\ \(1\).pdf
+rm \(with\ notes\)\ DSA\ Spring\ 2026\ —\ Topic\ 11.\ Lecture.pdf  assign11\ \(1\).zip  How\ to\ shorten\ your\ research\ paper.pdf
+unzip assign11.zip
+rm elec  perland
+code 1.\ electricity.cpp
+code 2.\ perland.cpp
+cd week13
+rm solution.tex
+mv solution.tex  problemset/
+mv problemset.pdf  problemset/
+rm intro_vm\ \(1\).pdf  intro_vm.pdf
+rm VarvaraOrekhova_problem_set_10.pdf
+code 2.\ compile\ in\ order.cpp
+open eng.pdf
+mkdir ssadlearn
+mv ./-де-де\ \(1\).pdf  eng.pdf
+mv './-де-де\ \(1\).pdf'  eng.pdf
+mv -де-де\ \(1\).pdf  eng.pdf
+rm assign10.zip  VarvaraOrekhova_problem_set_10.pdf
+rm ./-де-де.pdf
+rm '-де-де.pdf'
+rm -де-де.pdf
+mv assign10.pdf  inno/dsa/week12/problemset/
+mv solution.tex  inno/dsa/week12/problemset/
+unzip assign10.zip
+code solution.tex
+open notes.pdf
+cd week12
+mv -де-де.pdf  eng.pdf
+open -де-де.pdf
+ssh root@10.93.24.128
+mv 2.\ compile\ in\ order.cpp  codeforces/
+code '2. compile in order.cpp'
+code '2. compile in order'
+ks
+code 1.\ url.cpp
+cd week10/
+code timetraveler.cpp
+code rubikano.cpp
+cd week05/
+cd week08
+cd week06
+cd week11
+Travel Luiziana Innopolisiano
+Remove Eslento
+g++ 'a. bridges.cpp'
+free -h
+top
+sudo rm -rf toolkit/
+# Stop and remove all containers at once
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+
+# Delete the directory
+rm -rf toolkit/
+# Stop all running containers
+docker stop $(docker ps -aq)
+
+# Remove all containers
+docker rm $(docker ps -aq)
+
+# Now try removing the directory
+rm -rf toolkit/
+rm -rf toolkit/
+cd toolkit/
+cd inno/dsa/week12
+vmstat
+rm -rf quiz/
+mkdir quiz
+rm TCS\ Spring\ 2026\ -\ Lecture\ 10.pdf  Tutorial\ 9.pdf
+git push -u origin readme
+cd eng
+cd enng
+mv problemset.pdf  inno/dsa/week12/problemset/
+sudo pacman -Rs quartus-free-quartus
+sudo pacman -Rs quartus
+mv itp2/ ssad
+rm па.pdf
+rm \(with\ notes\)\ DSA\ Spring\ 2026\ —\ Topic\ 10.\ Lecture.pdf  Orekhova_Ryndenko_B25-DSAI-04_AI_Work_Ethics_LR\ \(1\).pdf
+g++ 3.\ factory.cpp
+gcc 3.\ factory.cpp
+mkdir week12
+cd inno/itp2/
+rmdir week13
+code codeforces/a.\ bridges.cpp
+code clients.cpp
+code 2.\ cafe.cpp
+cd week10
+code 'c. clients.cpp'
+cd inn
+rm VarvaraOrekhova_problem_set_8.pdf
+rm demo.mp4  mathfacts.pdf
+rm mathfacts\ \(1\).pdf
+rm 1.png  2.png
+open mathfacts.pdf
+mv video_2026-04-04_17-18-40.mp4  demo.mp4
+git commit -m "docs: add quiz screenshot"
+open screenshot-quiz.png
+mv pic3.png  quiz.png
+open pic3.png
+cd docs/
+cd se-toolkit-hackathon/
+cd /home/me/inno/toolkit/se-toolkit-hackathon/docs/screenshot-quiz.png
+mv pic3.png  /home/me/inno/toolkit/se-toolkit-hackathon/docs/
+
+mv pic2.png /home/me/inno/toolkit/se-toolkit-hackathon/docs/screenshot-facts.png
+mv pic4.png /home/me/inno/toolkit/se-toolkit-hackathon/docs/screenshot-quiz.png
+mkdir -p /home/me/inno/toolkit/se-toolkit-hackathon/docs
+mv pic1.png /home/me/inno/toolkit/se-toolkit-hackathon/docs/screenshot-facts.png
+mv pic2.png /home/me/inno/toolkit/se-toolkit-hackathon/docs/screenshot-quiz.png
+mv pic1.png  inno/toolkit/se-toolkit-hackathon/docs/
+git commit -m "docs: add README"
+git checkout -b readme
+code README.md
+git push -u origin version2
+git push -u origin version1
+git commit -m "feat: version 1 - math facts CRUD with LaTeX rendering"
+git push
+git checkout -b version1
+git clone https://github.com/oebarbie/se-toolkit-hackathon
+rm energy_rating.xlsx  mid.pdf  mtatanfull.pdf
+open mid.pdf
+mv Preparing\ to\ Midterm.pdf  mid.pdf
+rm methods.pdf
+mv notes.pdf  inno/dsa/week11/problemset/
+rm Class\ 11\ A.pdf
+mkdir week11
+rm -rf week11/
+g++ 3.\ proxy.cpp
+g++ 2.\ decorator.cpp
+g++ 1.\ facade.cpp
+gcc 1.\ facade.cpp
+cd itp2/
+rm mtatan.pdf  mtatanfull.pdf  Preparing\ to\ Midterm.pdf
+rm S26__AGLA_II_Lab8_solutions.pdf
+open S26__AGLA_II_Lab8_solutions.pdf
+rm Presentation_Methodology.pdf  Question_bank_answers.pdf
+rm условия\ 4.txt
+rm report.txt  условия\ 1.txt  условия\ 2.txt  условия\ 3.txt
+rm 1screen.png  2screen.png
+scp ~/.qwen/oauth_creds.json root@10.93.24.128:~/.qwen/oauth_creds.json
+qwen
+pnpm add -g @qwen-code/qwen-code
+rm -rf se-toolkit-lab-7/
+rm se-toolkit-lab-7-sof.zip
+rm -rf lecture.pdf  S26__AGLA_II_Lab8_solutions.pdf  tutorial.pdf
+rm VarvaraOrekhova_problem_set_7.pdf  VarvaraOrekhova_problem_set_8.pdf
+cd inno/dsa/week10/codeforces/
+rm la.pdf  lr.pdf  MA_II_Lab_9.pdf  \
+
+rm assign8.zip
+unzip assign8.zip
+open la.pdf
+mv lr.pdf  rp
+open lr.pdf
+mv withref.pdf  rp
+mv styleguide.pdf  rp
+mv la.pdf  rp
+mkdir rp
+cd inno/eng/
+mv lr.pdf  inno/eng/
+mv па.pdf  lr.pdf
+mv withref.pdf inno/eng
+mv styleguide.pdf inno/eng/
+mv IEEE\ Reference\ Style\ Guide\ for\ Authors.pdf  styleguide.pdf
+rm DSA\ Spring\ 2026\ —\ Topic\ 8.\ Problem\ Set.pdf
+mkdir week10
+rmdir week 10
+mkdir week 10
+cd inno/dsa/
+rm readinglogVM.xlsx
+rm Handout\ 1.doc  Handout\ 1.pdf
+# On Arch Linux (since the error mentions extra/starship)
+sudo pacman -S starship
+helix ~/.config/fish/config.fish
+unzip se-toolkit-lab-7-sof.zip
+nmcli -t -f ACTIVE,SSID dev wifi | grep "^yes" | cut -d: -f2
+source /home/me/inno/toolkit/se-toolkit-lab-7/.venv/bin/activate.fish
+rm Presentation_Forming_Research_Groups.pdf  readinglogVM.xlsx
+rm SyncShare.pdf
+rm \(with\ notes\)\ DSA\ Spring\ 2026\ —\ Topic\ 1.\ Lecture.pdf
+git push origin task-4-containerize
+git push -u origin task-4-containerize
+git push -u origin task-3-intent-routing
+git push -u origin task-2-backend
+git push origin task-1-scaffold
+cd /home/me/inno/toolkit/se-toolkit-lab-7 && uv run --env-file .env.bot.secret python bot/bot.py
+cd inno/toolkit/se-toolkit-lab-7/
+rm VarvaraOrekhova_problem_set_7.pdf
+mv main.tex  problemset/
+mv lecture.pdf  problemset/
+open problemset.pdf
+mv assign7.pdf  problemset.pdf
+cd week09/
+curl -s --max-time 5 http://10.93.24.128:42002/items/ -H "Authorization: Bearer 888" | head -c 100
+curl -s --max-time 10 https://api.telegram.org
+echo $https_proxy && echo $http_proxy
+git push -u origin task-1-scaffold
+git commit -m "correct file"
+cp .env.docker.example .env.docker.secret
+uv sync --dev
+cd se-toolkit-lab-7/
+git clone https://github.com/oebarbie/se-toolkit-lab-7
+git clone 'https://github.com/oebarbie/se-toolkit-lab-7/blob/main/lab/setup/setup-simple.md#lab-setup'
+rm -rf software-engineering-toolkit/
+rm -rf software-engineering-toolkit/se-toolkit-lab-
+rm -rf se-toolkit-lab-6/
+open inno/dsa/week09/assign7.pdf
+rm assign7.zip
+unzip assign7.zip
+rm -rf example.tex
+code example.tex
+mv week9 week09
+rm Solutions.pdf
+rm -rf qwen-code-oai-proxy/ se-toolkit-lab-6/
+rm \(with\ notes\)\ DSA\ Spring\ 2026\ —\ Topic\ 7.\ Lecture.pdf  Assignment_7.pdf  Lab\ 08.pdf  Lab.pptx  Sample\ 1.pdf
+open \(with\ notes\)\ DSA\ Spring\ 2026\ —\ Topic\ 7.\ Lecture.pdf
+git push -u origin task3-system-agent-new
+git commit -m "Task 3: Fix query_api tool configuration and improve agent prompts"
+source /home/me/inno/toolkit/se-toolkit-lab-6/.venv/bin/activate.fish
+uv run run_eval.py
+uv run pytest tests/test_agent.py -v
+uv run poe test
+git checkout task3-system-agent
+kitten ssh root@10.93.24.128
+ssh se-toolkit-vm
+cd se-toolkit-lab-6/
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "config" agent.py
+cd "/home/me/inno/toolkit/se-toolkit-lab-6"
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "required_llm" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "env_docker_path" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "env_agent_path" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "load_dotenv" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "dotenv" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "Any" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "typing" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "Path" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "sys" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "re" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "json" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "asyncio" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "LLM_TIMEOUT" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "MAX_TOOL_CALLS" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "AGENT_API_BASE_URL" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "LMS_API_KEY" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "LLM_MODEL" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "LLM_API_BASE" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "LLM_API_KEY" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "os" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "httpx" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "SYSTEM_PROMPT" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "run_agentic_loop" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "TOOLS" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "call_llm" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 5 -B 5 "LLM_API_BASE" agent.py
+cd ~/qwen-code-oai-proxy && grep -A 20 "constructor" src/qwen/api.ts
+cd ~/qwen-code-oai-proxy && grep -A 10 -B 5 "qwenAPI" src/index.ts
+cd ~/qwen-code-oai-proxy && grep -A 20 -B 5 "getAccessToken" src/qwen/api.ts
+cd ~/qwen-code-oai-proxy && head -50 src/qwen/api.ts
+cd ~/qwen-code-oai-proxy && grep -A 10 -B 5 "qwenCodeAuthUse" src/index.ts
+cd ~/qwen-code-oai-proxy && grep -A 10 -B 5 "qwenCodeAuthUse" src/qwen/api.ts
+cd ~/qwen-code-oai-proxy && grep -A 10 -B 5 "qwenCodeAuthUse" src/config.ts
+cd ~/qwen-code-oai-proxy && grep -A 20 -B 5 "QWEN_CODE_AUTH_USE" src/index.ts
+cd ~/qwen-code-oai-proxy && grep -A 30 -B 10 "QWEN_CODE_AUTH_USE" src/qwen/api.ts
+cd ~/qwen-code-oai-proxy && curl -s -X POST -H "Authorization: Bearer qwen-lab-api-key-2026" -H "Content-Type: application/json" -d '{"model":"qwen3-coder-plus","messages":[{"role":"user","content":"What is 2+2?"}]}' http://127.0.0.1:42005/v1/chat/completions
+cd ~/qwen-code-oai-proxy && npm run dev
+cd ~/qwen-code-oai-proxy && ps aux | grep ts-node
+cd ~/qwen-code-oai-proxy && pkill -f "ts-node src/index.ts" && sleep 2 && npm run dev
+cd ~/qwen-code-oai-proxy && grep -A 15 "validateApiKey" src/index.ts
+cd ~/se-toolkit-lab-6 && grep -A 10 -B 5 "Authorization" agent.py
+cd ~/se-toolkit-lab-6 && uv run agent.py "What is 2+2?"
+cd ~/se-toolkit-lab-6 && grep -A 5 -B 5 "AGENT_API_BASE_URL" agent.py
+cd ~/se-toolkit-lab-6 && grep -A 20 -B 5 "load_env" agent.py
+cd ~/se-toolkit-lab-6 && echo $AGENT_API_BASE_URL
+cd ~/se-toolkit-lab-6 && grep -A 5 -B 5 "API Base" agent.py
+cd ~/se-toolkit-lab-6 && cat .env.agent.secret
+cd ~/qwen-code-oai-proxy && curl -s -H "x-api-key: qwen-lab-api-key-2026" http://127.0.0.1:42005/v1/models
+cd ~/se-toolkit-lab-6 && uv run run_eval.py
+cd ~/se-toolkit-lab-6 && uv run agent.py "How many items are currently stored in the database? Query the running API to find out."
+cd ~/se-toolkit-lab-6 && uv run agent.py "What Python web framework does this project's backend use? Read the source code to find out."
+cd ~/se-toolkit-lab-6 && uv run agent.py "According to the project wiki, what steps are needed to protect a branch on GitHub? Find the answer in the wiki directory."
+cd ~/qwen-code-oai-proxy && cat .env | grep QWEN_API_KEY
+cd ~/qwen-code-oai-proxy && echo $QWEN_API_KEY
+cd ~/qwen-code-oai-proxy && grep -A 5 -B 5 "apiKey" src/config.ts
+cd ~/qwen-code-oai-proxy && head -100 src/index.ts
+cd ~/qwen-code-oai-proxy && grep -A 30 "authentication" src/index.ts
+cd ~/qwen-code-oai-proxy && curl -s http://127.0.0.1:42005/v1/models
+cd ~/qwen-code-oai-proxy && cat .env | grep QWEN_CODE_AUTH_USE
+cd ~/se-toolkit-lab-6 && uv run run_eval.py --index 8
+cd ~/se-toolkit-lab-6 && uv run run_eval.py --index 6
+cd ~/se-toolkit-lab-6 && uv run run_eval.py --index 4
+cd ~/se-toolkit-lab-6 && uv run run_eval.py --index 2
+cd ~/se-toolkit-lab-6 && uv run run_eval.py --index 0
+cd ~/se-toolkit-lab-6 && docker-compose ps
+cd ~/se-toolkit-lab-6 && exa -la tests/
+cd ~/se-toolkit-lab-6 && wc -w AGENT.md
+cd ~/se-toolkit-lab-6 && exa -la plans/
+cd ~/se-toolkit-lab-6 && uv run run_eval.py --index 1
+cd ~ && exa -ld ~
+cd ~ && cat .ssh/authorized_keys
+cd ~/se-toolkit-lab-6 && uv run agent.py "How many items are in the database?"
+cd ~ && exa -la se-toolkit-lab-6/
+cd ~ && pwd && exa -la
+cd /home/me/se-toolkit-lab-6 && uv run run_eval.py --index 1
+cd /home/me/se-toolkit-lab-6 && uv run run_eval.py
+cd /home/me/se-toolkit-lab-6 && uv run agent.py "What does the project wiki say about connecting to your VM via SSH? Summarize the key steps."
+cd /home/me/se-toolkit-lab-6 && uv run agent.py "How many items are in the database?"
+cd /home/me/se-toolkit-lab-6 && uv run agent.py "What is 2+2?"
+cd /home/me && cat .qwen/oauth_creds.json
+cd /home/me/qwen-code-oai-proxy && pkill -f "ts-node src/index.ts" && sleep 2 && npm run dev
+cd /home/me && mkdir -p .qwen && echo '{"access_token":"qwen-lab-api-key-2026","token_type":"Bearer"}' > .qwen/oauth_creds.json
+cd /home/me/qwen-code-oai-proxy && grep -A 30 "QWEN_CODE_AUTH_USE" src/qwen/auth.ts
+cd /home/me/se-toolkit-lab-6 && cat .env.agent.secret
+cd /home/me/qwen-code-oai-proxy && grep -A 20 -B 5 "authentication" src/index.ts
+cd /home/me/qwen-code-oai-proxy && head -50 src/qwen/auth.ts
+cd /home/me/qwen-code-oai-proxy && grep -A 10 -B 5 "QWEN_CODE_AUTH_USE" src/config.ts
+cd /home/me/se-toolkit-lab-6 && curl -s http://127.0.0.1:42005/v1/models
+cd /home/me/qwen-code-oai-proxy && grep -r "QWEN_CODE_AUTH_USE" .
+cd /home/me/qwen-code-oai-proxy && npm run auth
+cd /home/me/qwen-code-oai-proxy && cat docs/authentication.md
+cd /home/me/qwen-code-oai-proxy && find . -name "*account*" -o -name "*auth*" | head -10
+cd /home/me/qwen-code-oai-proxy && exa -la tmp-test/
+cd /home/me/qwen-code-oai-proxy && cat .env
+cd /home/me/se-toolkit-lab-6 && env | grep -E "(LLM|LMS|API)"
+cd /home/me/se-toolkit-lab-6 && uv run agent.py "How many items are currently stored in the database? Query the running API to find out."
+cd /home/me/se-toolkit-lab-6 && docker-compose ps
+cd /home/me/se-toolkit-lab-6 && uv run agent.py "According to the project wiki, what steps are needed to protect a branch on GitHub? Find the answer in the wiki directory."
+cd /home/me && cat ~/.ssh/authorized_keys | grep se-toolkit-autochecker
+cd /home/me && exa -la se-toolkit-lab-6/agent.py
+cd /home/me/se-toolkit-lab-6 && uv sync
+cd /home/me && exa -ld ~
+cd /home/me && chmod 600 ~/.ssh/authorized_keys && exa -la
+cd /home/me && echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKiL0DDQZw7L0Uf1c9cNlREY7IS6ZkIbGVWNsClqGNCZ se-toolkit-autochecker' >> ~/.ssh/authorized_keys
+cd /home/me && exa -la .ssh/
+cd /home/me && exa -la
+cd /home/me && pwd && exa -la
+cd /home/me/qwen-code-oai-proxy && npm install && npm run dev
+exa -la /home/me/qwen-code-oai-proxy/
+curl -s http://127.0.0.1:42005/v1/models
+ssh 10.93.24.128
+cd /home/me/inno/toolkit && scp -r se-toolkit-lab-6 10.93.24.128:/home/me/inno/toolkit/
+git push origin task3-system-agent-new
+gh pr create --title "Task 3: The System Agent" --body "Closes #3
+
+- Add query_api tool for backend API queries with authentication support
+- Fix sorting bug in /analytics/top-learners endpoint (None value handling)  
+- Update AGENT.md with comprehensive documentation and lessons learned
+- Add 2 regression tests for system agent tool usage
+- All 10/10 evaluation questions now pass"
+git commit -m "Task 3: The System Agent - Add query_api tool, fix analytics bug, update documentation and tests
+
+- Add query_api tool for backend API queries with authentication support
+- Fix sorting bug in /analytics/top-learners endpoint (None value handling)
+- Update AGENT.md with comprehensive documentation and lessons learned
+- Add 2 regression tests for system agent tool usage
+- All 10/10 evaluation questions now pass"
+git add AGENT.md backend/app/routers/analytics.py tests/test_agent.py
+uv run run_eval.py --index 1
+uv run agent.py "What framework does the backend use and how many items are in the database?"
+uv run agent.py "What is the current item count in the database?"
+kitten ssh -o ConnectTimeout=5 10.93.24.128 "echo 'VM is accessible'"
+uv run pytest tests/test_agent.py::TestTask3SystemAgent::test_data_query_tool_usage -v
+uv run pytest tests/test_agent.py::TestTask3SystemAgent::test_system_facts_tool_usage -v
+uv run run_eval.py --index 10
+uv run run_eval.py --index 7
+uv run agent.py "Query the /analytics/top-learners endpoint for lab-01"
+uv run agent.py "The /analytics/top-learners endpoint crashes for some labs. Query it, find the error, and read the source code to explain what went wrong."
+exa -la .env*
+uv run agent.py "What HTTP status code does the API return when you request /items/ without sending an authentication header?"
+uv run agent.py "What framework does the backend use?"
+uv run agent.py "How many items are in the database?"
+docker-compose ps
+nano .env.agent.secret
+ssh me@10.93.24.128
+gwen
+cd ./../
+cd week9 && g++ -std=c++11 "2. docbuilder.cpp" -o docbuilder && ./docbuilder
+cd "/home/me/inno/itp2"
+cd week9 && g++ -std=c++11 "1. smartdoceditor_minimal.cpp" -o smartdoceditor_minimal && ./smartdoceditor_minimal
+cd week9 && g++ -std=c++11 "1. smartdoceditor_corrected.cpp" -o smartdoceditor && ./smartdoceditor
+cd week9 && g++ -std=c++11 1. smartdoceditor_corrected.cpp -o smartdoceditor && ./smartdoceditor
+mkdir week9
+rm Varya\ TSA6.xlsx
+rm -rf Varvara_Maksim.pdf
+rm -rf qwen-code-oai-proxy/
+git push --force origin main
+git push origin main
+git pull origin main
+git push origin main
+code .env.docker.secret
+git checkout task3-system-agent
+git merge main
+git push origin task3-system-agent
+# Update your local main
+git checkout main
+git pull origin main
+
+# Switch back to your branch and rebase
+git checkout task3-system-agent
+git rebase main
+git push -u origin task3-system-agent
+git commit -m "feat: implement system agent with query_api tool for Task 3"
+git checkout -b task3-system-agent
+git checkout -b task3
+git push origin task-1-call-llm
+git commit -m "feat: implement documentation agent with tools for Task 2"
+git checkout task-1-call-llm
+git checkout -b task2
+git commit -m "feat: implement LLM agent for Task 1"
+git checkout -b task-1-call-llm
+git push -u origin task-1-call-llm
+git push -u task-1-call-llm
+export PNPM_HOME="/home/me/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+qwen
+code .env.agent.secret
+cp .env.agent.example .env.agent.secret
+docker compose --env-file .env.docker.secret ps --format "table {{.Service}}\t{{.Status}}"
+enable qwen
+onCommand:extension.openqwenChat
+docker compose --env-file .env.docker.secret down -v
+docker compose --env-file .env.docker.secret up --build -d
+cd ../se-toolkit-lab-5
+docker compose --env-file .env.docker.secret down
+cd ../se-toolkit-lab-6
+docker compose --env-file .env.docker.secret up --build -d
+git clone https://github.com/oebarbie/se-toolkit-lab-6
+rm -rf mids/
+cd mids/
+rm MA_II_Lab_6.pdf  MA_II_Lab_7.pdf  TCS_Cheatsheet\ \(5\).pdf
+rm chapter\ 3\ \(11.03.2026\).pdf  lectures\ 04.03.2026\ \(Chapter\ 2\).pdf  live.pdf
+rm -rf presentation/
+mkdir presentation
+rm Week_7.pdf
+rm SSAD_Midterm_2022.pdf  SSAD_Midterm_2023.pdf  SSAD_Midterm_2024.pdf  SSAD_Midterm_2025.pdf
+rm DSA_Midterm_2025.pdf
+rm DSA_Midterm_2021.pdf
+rm DSA_Midterm_2020.pdf
+rm -rf DSA_Study_Summary.docx  photo_2026-03-09_14-55-27.jpg  VarvaraOrekhova_problem_set_6.pdf
+nmtui
+cd week07/
+g++ basket.cpp
+cd 2assign/
+g++ a.\ wkl.cpp
+g++ check.cpp
+g++ avl-trees.cpp
+rm lr.pdf
+rm -rf VarvaraOrekhova_problem_set_6.pdf
+code
+rm example.tex  solution.tex
+rm test_simple.cpp
+git push -u origin task3
+git commit -m "feat: add analytics dashboard with charts"
+cd se-toolkit-lab-5/
+cd frontend
+npm install && npm run dev
+npm run typecheck
+cd frontend
+npm install chart.js react-chartjs-2
+git push -u origin task/2-analyze-endpoints
+git commit -m "feat: implement analytics endpoints (scores, pass-rates, timeline, groups)"
+git checkout -b task/2-analyze-endpoints
+git push -u origin task/1-build-data-pipeline
+git commit -m "feat: implement ETL pipeline for autochecker data"
+code backend/app/routers/pipeline.py
+code backend/app/etl.py
+code backend/app/etl.py.
+curl \
+  -u v.orekhova@innopolis.university:oebarbieoebarbie \
+  "https://auche.namaz.live/api/items"
+git checkout main
+git pull origin main
+git checkout -b task/1-build-data-pipeline
+docker compose --env-file .env.docker.secret up --build
+git clone https://github.com/oebarbie/se-toolkit-lab-5
+https://github.com/<your-github-username>/se-toolkit-lab-5
+git clone https://github.com/<your-github-username>/se-toolkit-lab-5
+cd software-engineering-toolkit/
+g++ wkl.cpp
+cd week07
+rm -rf se-toolkit-lab-4/
+`cd dsa/
+open algoscormen
+rm Orekhova_AWA1_Group_9.rtf
+nmcli d w c "UniversityStudent" --ask
+nmcli d w c "Nova" --ask
+cd dsa/week07/codeforces/
+rm -rf google-chrome/
+rm Feedback.docx  lr.pdf
+rm Новый\ документ\ \(3\).pdf
+rm Varvara_Maksim_lr.pdf
+rm class\ 6B.pdf  Feedback.docx  Small-Group\ Tutorial\ Feedback\ Form\ \(1\).docx  Small-Group\ Tutorial\ Feedback\ Form.docx
+paru -s google-chrome
+rm Literature_Review_Title.pdf
+rm VarvaraOrekhova_problem_set_5.pdf  Щедрикова.pdf
+rm \(with\ notes\)\ DSA\ Spring\ 2026\ —\ Topic\ 6.\ Lecture.pdf  class\ 6B.pdf  Literature_Review_Title\ \(1\).pdf  Literature_Review_Title_removed.pdf  lr.pdf  Revised\ Article\ Ethical\ AI.pdf
+source /home/me/inno/toolkit/software-engineering-toolkit/se-toolkit-lab-4/.venv/bin/activate.fish
+git commit -m "feat: add description column to the front-end table"
+rm -rf todo/
+mv 1.mov 1.mp4
+cd ntrvw25/
+cd todo/
+cd frontend
+npm run dev
+curl -H "Authorization: Bearer my-secret-api-key" http://10.93.24.128:42002/items/
+npm run dev
+npm install
+zip -r -9 ntrvw25.zip ntrvw25
+rm -rf se-toolkit-lab-2/ se-toolkit-lab-3/
+rm -rf install-vscode-extensions.sh  lab-01-market-product-and-git/
+du -sh ~/* 2>/dev/null | sort -h | tail -10
+docker system prune -a --volumes
+npm cache clean --force
+git push -u origin task2
+git commit -m "test: add curated AI-generated unit tests"
+git commit -m "fix: rename timestamp to created_at in InteractionModel"
+export API_BASE_URL=http://10.93.24.128:42002
+export API_TOKEN=my-secret-api-key
+uv run poe test-e2e
+uv run poe test-e2e
+export API_TOKEN=my-secret-api-key
+export API_BASE_URL=http://10.93.24.128:42003
+export API_BASE_URL=http://<your-vm-ip>:42002
+export API_TOKEN=my-secret-api-key
+uv run poe test-e2e
+cd se-toolkit-lab-4
+git branch
+docker compose --env-file .env.docker.secret logs app | tail -20
+export API_BASE_URL=http://10.93.24.128:42002/
+cd se-toolkit-lab-4
+git pull
+git add backend/app/models/interaction.py
+git commit -m "fix: rename timestamp to created_at in InteractionModel"
+git push
+git commit -m "fix: filter interactions by item_id instead of learner_id"
+code backend/tests/unit/test_interactions.py
+code backend/tests/unit/test_interactions.py.
+cp .env.example .env.secret
+docker compose --env-file .env.docker.secret down
+docker compose --env-file .env.docker.secret logs postgres
+docker compose --env-file .env.docker.secret logs
+docker compose --env-file .env.docker.secret ps
+docker volume prune -f
+docker container prune -f
+docker stop $(docker ps -q) 2>/dev/null
+bash
+bask
+cd se-toolkit-lab-4/
+git clone https://github.com/oebarbie/se-toolkit-lab-4
+rm iu_RCA.crt  StudentUniversity\ WIFI\ on\ Arch_Manjaro.pdf
+nmcli connection show --active
+ssh -v se-toolkit-vm
+# Ensure the certificate is readable
+sudo chmod 644 /etc/ssl/certs/iu_RCA.crt
+ls -la /etc/ssl/certs/iu_RCA.crt
+nmcli connection show "UniversityStudent" | grep 802-1x.ca-cert
+nmcli connection modify "UniversityStudent" 802-1x.ca-cert "/etc/ssl/certs/iu_RCA.crt"
+sudo find / -name "iu_RCA.crt" 2>/dev/null
+nmcli connection show "UniversityStudent" | grep -i ca-cert
+nmcli connection up uuid c2e14612-b3ac-4cde-ae9f-688c621276c8 --ask
+sudo journalctl -xe NM_CONNECTION=c2e14612-b3ac-4cde-ae9f-688c621276c8 + NM_DEVICE=wlp2s0 -f
+# Connect using UUID instead of name
+nmcli connection up uuid c2e14612-b3ac-4cde-ae9f-688c621276c8 --ask
+
+# Or if you want to rename it to avoid confusion
+nmcli connection modify uuid c2e14612-b3ac-4cde-ae9f-688c621276c8 con-name "UniversityStudent-Main"
+nmcli connection show
+nmcli connection modify "c2e14612-b3ac-4cde-ae9f-688c621276c8" connection.autoconnect yes
+nmcli connection modify c2e14612-b3ac-4cde-ae9f-688c621276c8 connection.autoconnect yes
+nmcli connection modify "UniversityStudent" connection.autoconnect yes
+nmcli connection modify "InnoMeeting" connection.autoconnect no
+# List all WiFi connections
+nmcli connection show
+
+# For any other networks you see, disable auto-connect
+nmcli connection modify "OtherNetworkName" connection.autoconnect no
+
+# Make sure UniversityStudent auto-connects
+nmcli connection modify "UniversityStudent" connection.autoconnect yes
+# Store your password (replace with actual password)
+nmcli connection modify "UniversityStudent" 802-1x.password "wf*q9UE8Xaz$eZa"
+nmcli connection up "UniversityStudent" --ask
+nmcli device disconnect wlp2s0
+nmcli connection down "InnoMeeting"
+nmcli device status
+# View all settings for this connection
+nmcli connection show "UniversityStudent"
+
+# Look for 802-1x.identity and 802-1x.password entries
+nmcli connection up "UniversityStudent"
+sudo helix /etc/wpa_supplicant/wpa_supplicant.conf
+sudo systemctl enable wpa_supplicant_r.service
+sudo systemctl restart wpa_supplicant.service
+sudo EDITOR=helix systemctl edit --full --force wpa_supplicant_r.service
+echo $XDG_SESSION_TYPE
+# Copy something to clipboard first, then run:
+xclip -o -selection clipboard
+# This should output your clipboard content
+sudo pacman -S xclip wl-clipboard
+cargo install helix --features clipboard
+helix --version
+sudo pacman -S xclip
+sudo EDITOR-helix systemctl edit --full --force wpa_supplicant_r.service
+sudo systemctl edit --full --force wpa_supplicant_r.service
+sudo EDITOR=helix systemctl edit --full wpa_supplicant.service
+sudo systemctl edit --full wpa_supplicant.service
+ip link
+helix /etc/wpa_supplicant/wpa_supplicant.conf
+nmcli d w c "UniversityStudent"
+helix iu_RCA.crt
+cd /etc/ssl/certs
+sudo cp iu_RCA.crt /etc/ssl/certs/
+cd ls
+cd :///etc/ssl/certs/
+rm iu_RCA.crt
+rm EN_WiFi_Manual.pdf
+rm StudentUniversity\ WIFI\ on\ Arch_Manjaro.pdf
+# Delete the hidden .git folder (this removes all Git history and un-initializes the repo)
+rm -rf .git
+startx\
+
+nmcli d w c "UniversityStudent" password "wf*q9UE8Xaz$eZa"
+iwd
+cd system-connections/
+nvim NetworkManager.conf
+magicdonut.cpp.
+nvim exa
+cd conf.d/
+cd NetworkManager/
+cd /etc
+which hx
+sudo env EDITOR=hx systemctl edit --full wpa_supplicant.service
+set -gx SYSTEMD_EDITOR hx
+set -gx EDITOR hx
+echo $EDITOR
+source ~/.config/fish/config.fish
+# Add the correct line
+echo 'set -gx EDITOR hx' >> ~/.config/fish/config.fish
+sed -i '/EDITOR hx/d' ~/.config/fish/config.fish
+cat ~/.config/fish/config.fish | grep -A 2 -B 2 EDITOR
+echo 'set -x EDITOR hx' >> ~/.config/fish/config.fish
+source ~/.config/fish/config.fish
+helix ~/iu_RCA.crt
+cd ./iu_RCA.crt
+cd ~/iu_RCA.crt
+sudo nmtui
+sudo helix /etc/gtk-2.0/gdk-pixbuf.loaders
+sudo hx /etc/gtk-2.0/gdk-pixbuf.loaders
+sudo nano /etc/gtk-2.0/gdk-pixbuf.loaders
+gdk-pixbuf-query-loaders | grep -E "^(Loader|.*.so)"
+nm-connection-editor
+sudo gdk-pixbuf-query-loaders --update-cache
+sudo pacman -Rns gdk-pixbuf2
+sudo pacman -S gdk-pixbuf2
+sudo pacman -S gdk-pixbuf2 --overwrite="*"
+sudo pacman -S network-manager-applet
+sudo pacman -Sy --needed archlinux-keyring
+sudo pacman-key --populate archlinux
+sudo pacman-key --init
+sudo rm -rf /etc/pacman.d/gnupg/
+sudo rm -r /var/lib/pacman/sync
+paru -s nm-connection-editor
+rm Handout\ 1.pdf  Handout\ 2.pdf
+rm Exercises\ for\ preparing\ to\ test\ 1.pdf  Chapter\ 1\ MathAnalysis\ 2.pdf
+ip route show | grep 10.93
+traceroute -n 10.93.24.128
+ping 10.93.24.128
+# 1. Check if the IP is reachable at all
+ping 10.93.24.128
+
+# 2. Do a traceroute to see where packets stop
+traceroute -n 10.93.24.128
+
+# 3. Check your local routing table
+ip route show | grep 10.93
+# Scan common ports
+telnet -p 1-1000 10.93.24.128
+# Scan common ports
+nmap -p 1-1000 10.93.24.128
+ssh -p 2200 username@10.93.24.128
+ssh -p 8022 username@10.93.24.128
+ssh -p 2222 username@10.93.24.128
+telnet 10.93.24.128 22
+nmap -p 22 10.93.24.128
+# Check if the VM is reachable at all
+ping -c 4 10.93.24.128
+ssh username@10.93.24.128
+kitten ssh se-toolkit-vm
+code ~/.ssh/config
+cat ~/.ssh/config
+kitten ssh -i ~/.ssh/id_ed25519 root@10.93.24.128
+nix --version
+nix --v
+. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish
+curl -fsSL https://install.determinate.systems/nix | sh -s -- install
+cd lr/
+cd eng/
+git itp2/
+g++ task3.cpp
+rm results_Varya_Maksim.pdf
+g++ task1.cpp
+cd week6/
+rm SofiaSokolova_problem_set_5_ext.pdf
+c
+git push -u origin task2-debug
+rm Handout\ 1.\ Peer-Review\ LR\ Results.docx  IEEE-Editorial-Style-Manual-for-Authors.pdf
+las
+open topic5.pdf
+open inno/dsa/
+code src/app/routers/interactions.py
+git checkout -b task2-debug
+code src/app/models/interaction.py
+source /home/me/inno/toolkit/software-engineering-toolkit/se-toolkit-lab-3/.venv/bin/activate.fish
+docker compose --env-file .env.docker.secret up app --build
+docker compose --env-file .env.docker.secret down app
+git push -u origin task1-exploretheapi
+git commit -m "docs: fill in the API exploration questionnaire"
+git checkout -b task1-exploretheapi
+code lab/tasks/required/questionnaire.md
+docker compose --env-file .env.docker.secret up postgres --build
+# Essential extensions
+code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
+code --install-extension ms-python.debugpy
+code --install-extension ms-python.vscode-python-envs
+code --install-extension charliermarsh.ruff
+code --install-extension tamasfe.even-better-toml
+code --install-extension ms-vsliveshare.vsliveshare
+code --install-extension redhat.vscode-yaml
+code --install-extension ms-vscode.remote-server
+code --install-extension ms-vscode-remote.remote-ssh
+code --install-extension ms-vscode-remote.remote-ssh-edit
+code --install-extension ms-vscode.remote-explorer
+code --install-extension ms-vscode-remote.remote-containers
+code --install-extension ms-vscode-remote.remote-wsl
+code --install-extension matthewpi.caddyfile-support
+
+# Markdown support
+code --install-extension bierner.markdown-checkbox
+code --install-extension bierner.markdown-emoji
+code --install-extension bierner.markdown-footnotes
+code --install-extension bierner.markdown-mermaid
+code --install-extension saeris.markdown-github-alerts
+code --install-extension bierner.markdown-preview-github-styles
+code --install-extension DavidAnson.vscode-markdownlint
+code --install-extension yzhang.markdown-all-in-one
+
+# Git & GitHub
+code --install-extension github.vscode-pull-request-github
+code --install-extension eamodio.gitlens
+
+# Coding agent
+code --install-extension qwenlm.qwen-code-vscode-ide-companion
+
+# Optional but useful
+code --install-extension usernamehw.errorlens
+code --install-extension gruntfuggly.todo-tree
+code --install-extension esbenp.prettier-vscode
+code --install-extension takumii.markdowntable
+cd inno/toolkit/software-engineering-toolkit/se-toolkit-lab-3/
+helix /etc/docker/daemon.json
+# Edit Docker daemon config
+sudo mkdir -p /etc/docker
+sudo nano /etc/docker/daemon.json
+sudo systemctl restart docker
+cd se-toolkit-lab-3/
+sudo usermod -aG docker $me
+helix docker
+groups
+sudo systemctl enable docker
+sudo systemctl status docker
+sudo systemctl start docker
+docker --version
+docker compose --env-file .env.docker.secret down postgres -v
+\docker compose --env-file .env.docker.secret up --build
+uv run python --version
+uv sync
+git clone https://github.com/oebarbie/se-toolkit-lab-3
+rm agla.pdf
+cd week05
+rm -rf AGLA_II_Lab_1.pdf  set5.pdf
+rm -rf *.jpg
+rm -rf *.png
+g++ timetraveler.cpp
+cd week05/codeforces/
+cd week04/
+cd inno/ c
+source /home/me/inno/toolkit/software-engineering-toolkit/se-toolkit-lab-2/.venv/bin/activate.fish
+;systemctl
+rm .jpg
+rm 1.jpg  страховка.pdf
+curl -s http://127.0.0.1:42000/items/item/lab-02-run-local-venv
+cd se-toolkit-lab-2/
+cd inno/toolkit/software-engineering-toolkit/
+curl -s http://127.0.0.1:41000/status
+curl -s http://127.0.0.1:41000/
+curl -s https://jsonplaceholder.typicode.com/todos/1 | jq .
+source .env.secret && kill $(lsof -ti :$PORT)
+uv run poe dev
+source .env.secret && lsof -i :$PORT
+cat .env.secret
+env
+python -m uvicorn app.main:app --reload
+source .venv/bin/activate
+git clone https://github.com/oebarbie/se-toolkit-lab-2.git
+https://github.com/oebarbie/se-toolkit-lab-2.git
+git clone github.com/oebarbie/se-toolkit-lab-2
+https://github.com/oebarbie/se-toolkit-lab-2
+git clone https://github.com/oebarbie/se-toolkit-lab-2?tab=readme-ov-file
+git config --global user.email "barbaraorekhova@gmail.com"
+git config --global user.name "Varvara Orekhova"
+curl -LsSf https://astral.sh/uv/install.sh | sh
+mkdir software-engineering-toolkit
+helix id_ed25519.pub
+cd ~/.ssh/
+open 2026-01-23_03-23.void
+rm -rf Мастер.2012.BDRip.\(720p\).mkv
+rm -rf AmneziaVPN_Linux_Installer.tar  AmneziaVPN_Linux_4.6.0.3.tar.zip  AmneziaVPN_Linux_Installer.bin  kontur-vpn-2.1.1-1-x86_64.pkg.tar.zst  wireguard-wrapper-2.0.3-1-x86_64.pkg.tar.zst
+rm -rf Орехов\ Иван\ Егорович\ справка.pdf  Приветствие.pdf
+cd .void
+c .void
+rm VarvaraOrekhova_problem_set_3.pdf
+sudo pacman -U ./docker-desktop-x86_64.pkg.tar.zst
+wget https://download.docker.com/linux/static/stable/x86_64/docker-29.2.1.tgz -qO- | tar xvfz - docker/docker --strip-components=1
+sudo cp -rp ./docker /usr/local/bin/ && rm -r ./docker
+docker compose
+docker -v
+rm assign4.zip
+unzip assign4.zip
+unzip assign4.pdf
+unzip assign.zip
+cd problemtest/
+mkdir problemtest
+rm -rf a.out
+mv magicdonut.cpp  codeforces/
+mv cormenadabra.cpp  codeforces/
+g++ magicdonut.cpp
+cd week4/
+rm DSA\ Spring\ 2026\ —\ Topic\ 4.\ Problem\ Set.pdf
+open DSA\ Spring\ 2026\ —\ Topic\ 4.\ Problem\ Set.pdf
+rm assign4.tex
+rm Code_Generated_Image.png  Handout\ 3.pdf  Handout\ 4\ Checklist.docx
+g++ cards.cpp
+cd 1assign/
+git push -u origin double-check
+g++ vending.cpp
+Parametrized constructor: initializes the VM with n
+The Vending class must contain the following members:
+3 S
+100 120 80
+1 3 2
+5
+1 2 2 1 3
+rm -rf Handout\ 1\ \(2\).docx  Handout\ 2.docx  Handout\ 3.pdf  photo_2026-01-17_00-29-08.jpg
+cd paru-bin/
+cd clone/
+cd paru/
+cd .cache/
+cd ~/.cache/paru/clone/paru-git
+sudo pacman -S paru
+sudo pacman -Rns $(pacman -Qdtq)
+sudo pacman -Rns paru
+ldd $(which paru) | grep alpm
+find /usr/lib -name "libalpm.so.*"
+# Force reinstall pacman and related packages
+sudo pacman -Syyu pacman libalpm# Force reinstall pacman and related packages
+sudo pacman -Syyu pacman libalpm
+sudo pacman -S pacman
+cd week3/
+sudo pacman -Sy archlinux-keyring
+mv agla.pdf  inno/
+rm Books.zip
+rm -rf Introduction\ to\ Linear\ Algebra\ -\ Strang\ 4ed.pdf  Linear\ Algebra\ and\ its\ Applications\ -\ Strang\ 4ed.pdf  Literature_Review_Title_removed.pdf  rbs-linalg.pdf
+rm AGLA2_assignments\ 3.pdf  Assignment\ 3\ solutions.pdf
+mv DavidCLay_Linear\ Algebra\ and\ its\ applications\ by\ DavidCLay\ 4th.pdf  agla.pdf
+open DavidCLay_Linear\ Algebra\ and\ its\ applications\ by\ DavidCLay\ 4th.pdf
+unzip Books.zip
+git commit -m "add information about roles"
+git checkout -b double-check
+git checkout -b main
+git push -u origin examine-role
+git add docs/roles-and-skills.md
+git checkout -b examine-role
+git push -u origin search-architecture
+git commit -m "add diagrams"
+git commit -m "delete empty spaces in names"
+git commit -m "add information about architecture"
+git add docs/architecture.md
+git checkout -b search-architecture
+git add architecture.md
+git push -u origin add-contributor
+git commit -m "docs: add oebarbie to contributors"
+git add CONTRIBUTORS.md
+git checkout -b add-contributor
+git push -u origin https://github.com/oebarbie/lab-01-market-product-and-git
+git push -u origin 1-task-add-my-name-to-contributors
+cd lab-01-market-product-and-git/
+git checkout 1-task-add-my-name-to-contributors
+git fetch origin
+git fetch origin
+git checkout 1-task-add-my-name-to-contributors
+# Run the script
+./install-vscode-extensions.sh
+chmod +x install-vscode-extensions.sh
+cd ~/.config/fish/config.fish
+git clone https://github.com/oebarbie/lab-01-market-product-and-git
+rm -rf lab-01-market-product-and-git/
+mkdir toolkit
+rm -rf nearrest.cpp
+g++ nearrest.cpp
+rm assign3.zip
+rm assign3.pdf
+mv GabdullaTukay_problem_set_3.tex  assign3.tex
+unzip assign3.zip
+rm DSA\ Spring\ 2026\ —\ Topic\ 3.\ Problem\ Set.pdf
+open DSA\ Spring\ 2026\ —\ Topic\ 3.\ Problem\ Set.pdf
+rm Handout\ 1\ \(1\).pdf  ls
+rm GabdullaTukay_problem_set_3.tex
+g++ mountland.cpp
+rm reading\ log\ \(1\).xlsx
+rm Handout\ 1.\ Method\ Structure\ \(1\).docx  IEEE-Editorial-Style-Manual-for-Authors.pdf
+4 4 2
+5 2 1 7
+10 6 5 3
+1 4 7 15
+21 17 32 40
+1 2 7
+1 3 8
+rm -rf S2451958825000673.bib
+mv tsa1.pdf  lr/
+mv reading\ log.xlsx  lr/
+mkdir lr
+rm Handout\ 2.\ Reading\ Log\ Template.xlsx
+open VarvaraOrekhova_problem_set_2.pdf
+cd week2/
+mv Varvara_Orekhova_problem_set_2.pdf  VarvaraOrekhova_problem_set_2.pdf
+mv main.tex VarvaraOrekhova_problem_set_2.tex
+rm -rf assign2.zip
+unzip assign2.zip
+rm -rf Varvara_Orekhova_problem_set_2.tex
+rm -rf GabdullaTukay_problem_set_2.tex  Handout\ 1.\ Method\ Structure.docx  Tutorial\ 2\ \(slides\ w\ solutions\).pptx
+rm *.pdf
+open Varvara_Orekhova_problem_set_2.tex
+mv main.tex Varvara_Orekhova_problem_set_2.tex
+open topic2.pdf
+ls /usr/lib/libalpm.so*
+git clone https://aur.archlinux.org/paru-bin.git
+rm -rf paru paru-bin
+cd /tmp
+sudo pacman -R paru paru-bin 2>/dev/null
+sudo pacman -R paru-bin
+sudo pacman -R paru
+git clone https://aur.archlinux.org/paru.git
+cd /tmp/
+sudo pacman -S --needed base-devel git
+sudo pacman -S archlinux-keyring
+sudo pacman -Syu pacman
+git remote add origin git@github.com:oebarbie/s26_dsa.git
+git branch -M main
+git init
+rm -rf git
+cd .git
+cd  dsa/
+g++ tovarishfunc.cpp
+class Stack {public:    int top;    int arr[1000];    Stack() { top = -1; }    bool isEmpty() { return top == -1; }    // add the top elem    void push(int x) {        top++;        arr[top] = x;    }    // remove the top elem    int pop() {        int val = arr[top];        top--;        return val;    }};
+class Queue {public:    int front, rear;    int arr[1000];    Queue() { front = 0; rear = -1; }    bool isEmpty() { return front>rear; }    int size() { return rear-front+1; }    // add elem at the rear    void offer(int x, int y) {        rear++; arr[rear] = x;        rear++; arr[rear] = y;    }    // remove 2 elems from the front    void poll() { front+=2; }    // see the front elem    int peek() { return arr[front]; }};
+using namespace std;
+compute 0
+remove
+compute 1
+add 1 3
+cd week2
+g++ 3.\ box_oper.cpp
+g++ 2.\ box_mf.cpp
+g++ '1. box.cpp'
+g++ perfectpaths.cpp
+...
+.G.
+cd week2/codeforces/
+rm Handout\ 2.\ Overleaf.docx  Literature\ Review\ Overleaf\ Template.zip  pIMG_9891_3х4.jpg
+open Varvara_Orekhova_problem_set_1.pdf
+cd week1
+rm -rf zoom/
+mv algoscormen inno/dsa/
+mv sample.bib  inno/dsa/week1/problemtest/
+mv frog.jpg  inno/dsa/week1/problemtest/
+mv main.tex  inno/dsa/week1/problemtest/
+mv Varvara_Orekhova_problem_set_1.zip  inno/dsa/week1/problemtest/
+mv Varvara_Orekhova_problem_set_1.pdf  inno/dsa/week1/problemtest/
+mv assign1.zip  inno/dsa/week1/problemtest/
+mv dsa/ ./../
+mv dsa/ itp2/
+rm -rf dsa/
+mkdir dsa
+rm photo_2026-01-23_03-24-07.jpg
+rm DSA\ Spring\ 2026\ —\ Topic\ 1.\ Problem\ Set.pdf
+rm GabdullaTukay_problem_set_1.tex
+rm 1.2.jpg  2026-01-23_03-22.void
+unzip Varvara_Orekhova_problem_set_1.zip
+g++ sort.cpp
+g++ pi.cpp
+cd week1/codeforces/
+mv eng/ inno/
+git remote add origin git@github.com:oebarbie/f25_ca.git
+cd comparch/
+cd itp
+git remote add origin git@github.com:oebarbie/26s_itp2.git
+git remote remove origin
+git remote set-url origin git@github.com:oebarbie/26s_itp2.git
+# Change the URL to your account
+git remote set-url origin git@github.com:oebarbie/26s_itp2.git
+
+# Then push
+git push -u origin main
+ssh-keygen -t ed25519 -C "barbaraorekhova@gmail.com"
+kitten ssh -T git@github.com
+git remote add origin git@github.com:innnotes/26s_itp2.git
+git branch -M main
+git push -u origin main
+git remote add origin git@github.com:innnotes/26s_itp
+git add readme.md
+cd itp2/week1/
+g++ 4.\ duplicate_arr.cpp
+g++ 1.\ time.cpp
+g++ 5.\ duplicate_vctr.cpp
+g++ 2.\ swap_ptr.cpp
+g++ task2_b.cpp
+g++ 1.cpp
+mkdir itp2
+cd zoom/
+git clone https://aur.archlinux.org/zoom.git
+sudo pacman -S zoom
+paru -S zoom
+# Find which package provides libalpm.so.15
+pkgfile libalpm.so.15
+
+# Install pkgfile if you don't have it
+sudo pacman -S pkgfile
+sudo pkgfile -u  # Update database
+pkgfile libalpm.so.15
+
+# Reinstall the package (usually pacman itself)
+sudo pacman -S pacman
+sudo pacman -S pacman libalpm
+# Update system first
+sudo pacman -Syu
+
+# Reinstall pacman and libalpm
+sudo pacman -S pacman libalpm
+rm -rf todo.zip
+cd tdata/
+rm -rf com/
+rm -rf learnjava/
+cd utils/
+rm *.java
+cd com/learnjava/
+rm Artem\'s\ favourite\ images.pptx
+cd TelegramDesktop/
+cd .local/share/
+zip -r todo.zip todo/
+rm -rf Видеоинтервью.mp4
+open Видеоинтервью.mp4
+open 1.mov
+rm 2025-10-14_21-08.void
+open 2025-10-14_21-08.void
+rm -rf \(500\)\ Days\ of\ Summer.2009.BD.Rip.720p.h264.Rus.Eng.mkv  500\ дней\ лета/
+open 500\ дней\ лета.avi
+cd 500\ дней\ лета/
+open 500\ дней\ лета/
+open \(500\)\ Days\ of\ Summer.2009.BD.Rip.720p.h264.Rus.Eng.mkv
+rm -rf Article\ 1.pdf  Article\ 2.pdf  Downloads/
+rm -rf itp_final/
+cd itp_final/
+unzip solution_2023.zip
+open itp_final/cheat\ sheet\ 2024.pdf
+rm 5.\ Avoiding\ plagiarism.ppt
+mv cheat\ sheet\ 2024.pdf  itp_final/
+mkdir itp_final
+rm -rf final/
+cd final/
+rm -rf itp/
+mv varya\ rre.pdf  ga2/
+mv varya\ rre.pdf  eng/
+rm Fundamentals_of_CompArch_Final_2024.pdf  Fundamentals_of_CompArch_Pre_Final_2024.pdf  HW\ Young\ and\ Monroe.\ Autonomous\ morals.pdf
+java -jar rars1_6.jar
+mv *.pdf final/
+mv *.java final/
+mkdir final
+rm solution_2023.zip  solution_sample.zip
+unzip solution_sample.zip
+rm Main\$OrthogonalMoving.class
+rm Main\$InvalidTypeException.class
+rm Main\$InvalidNumberOfInsectsException.class
+rm Main\$InvalidNumberOfFoodPointsException.class
+rm Main\$InvalidInsectTypeException.class
+rm Main\$InvalidInsectColorException.class
+rm Main\$InvalidEntityPositionException.class
+rm Main\$InvalidBoardSizeException.class
+rm Main\$InsectColor.class
+rm Main\$Insect.class
+rm Main\$Grasshopper.class
+rm Main\$GameSimulation.class
+rm Main\$GameException.class
+rm Main\$FoodPoint.class
+rm Main\$Exception.class
+rm Main\$EntityPosition.class
+rm Main\$DuplicateInsectException.class
+rm Main\$Direction.class
+rm Main\$DiagonalMoving.class
+rm Main\$Butterfly.class
+java Main.java
+javac Main.java
+cd 04.\ java\ assiga/
+cd assigments/
+open 04.\ java\ assiga/task.png
+mv task.png inno/itp/assigments/04.\ java\ assiga/
+open task.png
+rm Lab14.pdf  Tut\ 14.pdf
+rm Handout\ 1.\ Intro\ and\ Conclusion\ Peer\ Review.docx  Handout\ 2.docx
+mv Problem-A-Codeforces.png  task.png
+rm Varya\ ResponsePara2.pdf
+rm Varya\ ResponsePara1.pdf
+rm RRE\ 3.png
+rm RRE\ Sample.docx  RRE\ Structure.docx
+rm RRE\ 1.png  RRE\ 2.png
+mkdir itp
+open Problem-A-Codeforces.png
+helix readme.md
+mv responseparas.pdf  ga2/
+mv tableref.xlsx  ga2/
+mv responsepara2.pdf  ga2/
+mv responsepara1.pdf  ga2/
+mv Varya\ TSA6.xlsx  tableref.xlsx
+mv Varya\ ResponseParas.pdf  responseparas.pdf
+mv Varya\ ResponsePara2.pdf  responsepara2.pdf
+mv Varya\ ResponsePara1.pdf  responsepara1.pdf
+mv summary.pdf  ga2
+rm Handout\ 1.\ Response\ Paragraph\ Peer\ Review.docx  Handout\ 1.\ RP\ Structure.docx
+mv article.pdf  ga2
+mv Article\ 3.pdf article.pdf
+mkdir ga2
+mv feedback3.pdf  ga1/
+mv feedback1.pdf  ga1/
+mv assigment3.pdf  ga1/
+mv assigment2.pdf  ga1/
+mv assigment1.pdf  ga1/
+mkdir ga1
+git remote add origin git@github.com:innnotes/awa1.git
+rm thinkjava2.pdf
+rm TranslationRisc-VTaskReferences.pptx  Varya\ ResponsePara1.pdf  Varya\ ResponsePara2.pdf
+rm Lecture_1_AGLA_1.pdf  orekhova_summary.pdf
+rm Chapter_5_for_students.pdf  Chapter_6_draft.pdf
+git commit -m ":)"
+cd 03.\ java\ assiga/
+javac rars1_6.jar
+rm print.pdf
+rm preparing\ for\ Test\ 2.pdf
+rm Handout\ 1.\ Response\ Paragraph\ Peer\ Review.docx
+rm Chapter_5_for_students.pdf
+rm Chapter4.pdf  Chapter4.pdf
+mkdir 13week
+java UniversityCourseManagementSystem
+javac UniversityCourseManagementSystem.java
+sudo -S
+sudo -Suy
+2
+7
+enroll
+java UniversityCourseManagementSystem.class
+javac 03.\ it.java
+cd inno/comparch/
+wg-quick up barbara_asus.conf
+nmcli d w c "AOInnopolis" --ask
+cd /etc/
+sudo mv b_lenovo.conf  /etc/wireguard/
+mv b_lenovo.conf  /etc/wireguard/
+rm Handout\ 1.\ RP\ Structure.docx
+rm Tutorial_answers.pdf
+rm Tasks_1.pdf
+rm Tutorial_9.pdf
+rm Tutorial_11.pdf
+rm IMG_9891.JPG  pIMG_9891_3х4.jpg
+rm Handout\ 2.\ RRE\ Sample.docx
+rm Lecture_11.pdf
+rm Handout\ 1.\ Hedging\ and\ boosting.docx
+rm Exercise_Agla_solutions.pdf
+rm AGLA_lab8_sols\ \(1\).pdf  AGLA_lab8_sols.pdf  Conic\ sections,\ Ellipse,\ Hyperbola,\ Parabola.pdf  Exercise_Agla.pdf
+rm -rf agla/
+cd agla/
+rm -rf tutorial/
+cd tutorial/
+rm -rf grades/
+mv rars1_6.jar  inno/comparch/
+rm mletter.pdf
+rm Lecture_rotation.pdf
+rm Lecture_9.pdf
+rm cv.pdf  grades.xlsx
+git clone https://github.com/TheThirdOne/rars
+git clone https://github.com/TheThirdOne/rars/releases
+git clone "https://github.com/TheThirdOne/rars/releases"
+javac *.java && java VendingMachine
+cd 11week/lab/ex1/
+open eng1.void
+cd grades/
+mkdir grades
+rm Tutorial\ 10\ Codes.zip
+mv __MACOSX/ 10week
+unzip Tutorial\ 10\ Codes.zip
+cd itp/
+mv Tutorial\ 10\ Codes.zip  ./../inno/itp/
+rm Handout\ 3.pdf  Handout\ 4.\ Citation\ Patterns.docx
+rm Handout\ 2.\ RRE\ Sample\ \(1\).docx  Handout\ 2.\ RRE\ Sample.docx  Handout\ 1.\ Finding\ Critique\ Points.pdf
+mv thinkjava2.pdf  inno/itp/
+rm Handout\ 3.pdf
+mkdir comparch
+ld
+rm -rf inno/comparch/
+rm -rf lab9.qpf  lab9.sv  lab9.qsf
+cd lab9
+open thinkjava2.pdf
+rm Logic__Discrete_Maths_Midterm_2023.pdf
+rm Teach\ Yourself\ C\ in\ 24\ Hours.pdf
+rm Logic\ \&\ Discrete\ Math.pdf
+rm The_C_Programming_Language_2nd_Edition_by_Brian_W_Kernighan,_Dennis.pdf
+rm Handout\ 3.\ Reporting\ Verbs\ .docx
+rm Handout\ 2.\ RRE\ Sample\ \(1\).docx
+rm Handout\ 2.\ Revisiting\ Academic\ Writing\ Conventions.docx
+rm Handout\ 1.\ Reporting\ verbs\ to\ practice.docx  Handout\ 1.\ RRE\ Structure.docx
+rm CompArch\ Midterm\ Recap.pdf  Answers_for_2023.Midterm.ComputerArchitecture.StudentsBook.pdf  Fundamentals_of_CompArch_Midterm_2022.pdf  Fundamentals_of_CompArch_Midterm_2024.pdf  IMRaD\ Code\ Breaker.pdf
+rm Chapter2_for_students.pdf  Chapter3_for_students.pdf
+rm Assignment_mux.zip
+unzip Assignment_mux.zip
+mkdir lab7
+rm -rf lab7/
+rm -rf assig7/ db/ incremental_db/ output_files/
+mv incremental_db/ lab7
+mv assig7.qsf  lab7
+mv assig7.qpf  lab7/
+mkdir assig7.qpf  lab7
+cd assig7/
+rm -rf assig6/
+assig6/
+rm 2022\ With\ answers.pdf  2024\ With\ answers.pdf  Introduction_to_Programming_Midterm_2023.pdf  ITP\ Midterm\ Recap\ 2025.pdf
+rm -rf Assignment_mux/
+rm -rf lab6/ lab6_try/
+cd lab6/
+cd Assignment_mux/
+lsblk
+reboot
+sudo chmod +w /home/me/inno/comparch/lab6/Assignment_mux.bdf
+chmod +w /home/me/inno/comparch/lab6/Assignment_mux.bdf
+find /home -name "Assignment_mux.bdf" 2>/dev/null
+pwd
+ls -la
+chmod 644 /home/me/inno/comparch/Assignment_mux/Assignment_mux.bdf
+sudo chmod +w Assignment_mux.bdf
+chmod +w Assignment_mux.bdf
+chmod +w /inno/comparch/lab6/Assignment_mux.bdf
+chmod +w /inno/comparch/Assignment_mux/Assignment_mux.bdf
+chmod +w inno/comparch/Assignment_mux/Assignment_mux.bdf
+chmod +w /home/me/inno/comparch/Assignment_mux/Assignment_mux.bdf
+mv assig6/ lab6_try/
+mv Assignment_mux/ lab6
+mv lab6 lab6_try
+mv lab6_try
+mv Assignment_mux/ ../
+mv Assignment_mux/ inno/comparch/
+rm Assignment_mux/
+rm Build_2_1_MUX_and_4_bit_Bus_Multiplexer_in_Quartus_II_version_13.mp4
+rm -rf Handout\ 1.\ Bruns\ et\ al\ Variability\ of\ ethics\ education.pdf
+cd libraries/
+cd /opt/intelFPGA/24.1/quartus/
+gcc 02.\ craft.c
+cd 02.\ craft/
+cd 07week/
+javac main.java
+rm -rf __MACOSX/
+rm varya.zip
+mv exercise15/ 06week/
+mv exercise14/ 06week/
+mv exercise13/ 06week/
+mv exercise12/ 06week/
+mv exercise11/ 06week/
+mv exercise10/ 06week/
+mv exercise9/ 06week/
+mv exercise8/ 06week/
+mv exercise7/ 06week/
+unzip varya.zip
+cd assigments/02.\ craft/
+mv __MACOSX/ inno/itp/
+rm -rf Tutorial\ 6\ Codes.zip
+unzip Tutorial\ 6\ Codes.zip
+rm Handout\ 2.\ Examples\ of\ paragraph\ heads.pdf  a\ few\ GA\ 1\ tips.pdf
+mv Tutorial\ 6\ Codes.zip  ../
+gcc check.c
+gcc 02.\ craft/02.\ craft.c
+rm -rf mov/ movie.zip
+rm -rf master_2.18_\[torrents.ru\]_by_bm11.avi  mov.zip
+zip -r movie.zip master_2.18_\[torrents.ru\]_by_bm11.avi
+mv 'master_2.18_[torrents.ru]_by_bm11.avi' ../
+cd mov/
+zip -r mov.zip mov/
+mv master_2.18_\[torrents.ru\]_by_bm11.avi  mov/
+mkdir mov
+rm 6944318ef5d19a7b49192e82748f201b2bf9aa80.torrent  2.torrent
+mv introtopro/ itp
+rm -rf db/
+cd lab3/
+rm -rf Lab2.qpf  Lab2.qws
+mv lab2/ lab3
+rm -rf 1/
+cd 1/
+rm -rf subtr/
+cd subtr/
+cd lab4/
+rm -rf incremental_db/
+rm Lab2.bdf  Lab2.qpf  Lab2.qsf  Lab3.bdf
+rm -rf inno/comparch/1/
+rm -rf output_files/ incremental_db/
+mv summ/ lab4
+rm -rf Lab4.bdf  Lab4-subtr.bdf
+rm -rf lab4/
+cd summ/
+cd lab4
+mv lab1/ lab2
+rm -rf lab2/
+rmdir lab2
+cd lab1/
+mkdir lab4
+mv 2  2task
+mv lab5_2.bdf  1task/
+mv lab5.qws  1task/
+mv output_files/ 1task/
+mv incremental_db/ 1task/
+mv lab5.qsf 1task/
+mv lab5.qsf
+mv lab5.qpf  1task/
+mv lab5.bdf  1task/
+mv db/ 1task/
+mkdir 1task
+cd 2/
+cd lab5/
+mkdir lab1
+lw
+mv 2025-10-08\ 12.04.59\ Salam\ Ahmadiasl\'s\ Zoom\ Meeting/ agla
+mv eng_assigment3.pdf assigment3.pdf
+mv eng_assigment1.pdf assigment1.pdf
+mv eng_assigment1\ \(1\).pdf  feedback1.pdf
+open eng_assigment1\ \(1\).pdf
+rm -rf assigment3.pdf
+open assigment3.pdf
+open eng_assigment3.pdf
+mv 2025-10-08\ 12.04.59\ Salam\ Ahmadiasl\'s\ Zoom\ Meeting/ ../
+rm 2025-10-08\ 12.04.59\ Salam\ Ahmadiasl\'s\ Zoom\ Meeting/ 2025-10-08\ 12.04.59\ Salam\ Ahmadiasls\ Zoom\ Meeting.zip  2025-10-08\ 12.04.59\ Salam\ Ahmadiasls\ Zoom\ Meeting.zip
+unzip com.zip
+open video1317404732.mp4
+cd 2025-10-08\ 12.04.59\ Salam\ Ahmadiasl\'s\ Zoom\ Meeting/
+unzip 2025-10-08\ 12.04.59\ Salam\ Ahmadiasls\ Zoom\ Meeting.zip
+java 05.\ vowels.java
+java 06.\ temp.java
+java 03.\ engalphab.java
+java 04.\ lexicograph.java
+java 02.\ ascii.java
+javac 02.\ ascii.java
+javac '01. swap.java'
+cd lab/
+cd 06week/
+javac -version
+java -version
+paru -S jdk-openjdk
+paru -S jre-openjdk
+paru -S javac
+paru -S java
+rm -rf lab5/
+rm -rf comparch/
+rm AGLA_I_Tutorial_4\ \(1\).pdf  AGLA_I_Tutorial_4.pdf  AGLA_lab4.pdf  Change\ of\ Basis.pdf
+./f1
+gcc 04.\ recipes.c -o f1
+gcc 03.\ enum.c  -o f1
+gcc 03.\ enum.c
+gcc 02.\ union.c -o f1
+gcc 02.\ union.c
+gcc 01.\ bitfields.c -o f1
+cd 05week/
+mv eng_assigment1.pdf  eng/
+mv assigment2.pdf  eng/
+mkdir eng
+gcc difffunc.c
+gcc dasha.c
+gcc 23.c
+gcc 23++.c
+rm -rf 12/ 1/
+open Lab3.bdf
+gcc 23+.c
+gcc 01.\ array.c
+gcc 04.c
+gcc 03.\ check.c
+gcc 04.\ check.c
+gcc 02.\ array.c
+rm -rf Agla_I_Lecture_4.pdf  AGLA_I_Tutorial_4.pdf  AGLA_lab4.pdf  wtffff/
+gcc -v
+gcc main.c
+cd wtffff/
+mkdir wtffff
+sudo gcc 03.\ check.c
+gcc -Wall 03.\ check.c
+cd wtf/
+cd introtopro/
+sudo gcc 01.\ array.c
+gcc check1.c
+gcc 01.\ array.c -0 f1
+gcc check2.c
+gcc check1.c -o f1
+gcc assigments/check1.c
+gcc -Wall check1.c
+gcc 01.\ array.c -o output.txt
+gcc lab/01.\ struct.c -o f1
+cd 04week/
+./../
+cd ./.
+gcc 01.\ array.c  -o f1
+cd me/
+cd home/
+cd /
+cd ./
+5
+gcc strings.c
+gcc fyi.c
+gcc 04.\ pointfunc.c
+rm 04.\ pointfunc
+cd hw
+cd 03week/
+gdb
+sudo pacman -S gdb
+gcc 04.\ pointfunc.c && ./a.out
+cd 03week/hw/
+mv ntrvw25/ todo/
+mkdir todo
+rm -rf novabench/
+mv comparch/ inno/
+rm 1.jpg  2.jpg  3.jpg
+mv assigment1.pdf  inno/eng/
+gcc 04.\ pointfunc.c  -o f1
+cd hw/
+cd 02week/
+gcc sonya.c  -o f1
+gcc hw/sonya.c  -o f1
+gcc hw/04.\ pointfunc.c  -o f1
+gcc hw/03.\ copystr.c  -o f1
+rm -rf lab3\ —\ копия/
+св
+./novabench-cli.sh info
+./novabench-cli.sh  test
+./novabench-cli.sh
+./novabench
+cd novabench/
+chmod +x novabench
+novabench/ open
+novabench/ start
+start novabench-cli.sh
+helix README
+gcc 01.\ pyramid.c  -o f1
+cd lab3\ —\ копия/
+gcc 03.\ copystr.c  -o f1
+gcc 02.\ duplicate.c -o f1
+gcc 02.\ duplicate.c
+gcc 08.\ str_len_pointer.c  -o f1
+gcc 06.\ check.c  -o f1
+gcc 05.\ check.c  -o f1
+gcc 05.\ c_check.c  -o f1
+gcc 05.\ b_check.c -o f1
+gcc 05.\ b_check.c
+rm novabench-linux.tar.gz
+tar -xzf novabench-linux.tar.gz
+rm -rf lab3.zip
+unzip lab3.zip
+gcc 04.\ password.c  -o f1
+gcc 03.\ ascii_str.c  -o f1
+gcc 02.\ ascii.c  -o f1
+gcc 01.\ strongnum.c  -o f1
+rm class\ 5.\ student\ a.pdf  class\ 5\ paragraph\ practice.pdf
+rm AGLA_I__Lab_2__2025.pdf  HW_3_answer.pdf  Lecture_2_AGLA_1.pdf
+cd quiz/
+rm CompArch082025.ova
+cd arch/
+rm -rf example/
+rm example.zip
+cd example/
+unzip example.zip
+rm Student\ A.\ AWA.\ Lesson\ 4..pdf
+rm checklist.pdf  photo_2025-03-04_15-50-06.jpg
+./pr1
+gcc 03.\ towerpro.c  -o pr1
+gcc 02.\ tower.c  -o pr1
+gcc 04.\ swap.c  -o pr1
+rmdir introtoprog/
+mv 02week/ ../introtopro/
+mv 01week/ ../introtopro/
+cd introtoprog/
+rm AGLA_I_Tutorial_2.pdf  agla1.pdf  AGLA_I__Lab_2__2025.pdf  HW_3.pdf  Handout\ 2.\ Punctuation.docx  Lecture_2_AGLA_1.pdf
+rm 2025-08-31_freshmens.csv
+mv introtoprog/ ../
+cd cse/
+./pr2
+gcc 02.c -o pr2
+gcc 02.c  -o pr2
+gcc 02.c -o pr1
+gcc 01.c -o pr1
+pr1
+gcc 2week/01.c -o pr1
+rm 1.pdf
+rm -rf yay/
+sudo udevadm control --reload
+sudo helix /etc/udev/rules.d/51-usbblaster.rules
+helix /etc/udev/rules.d/51-usbblaster.rules
+paru -S /etc/udev/rules.d/51-usbblaster.rules
+sudo nano /etc/udev/rules.d/51-usbblaster.rules
+yay -Sy quartus-free-quartus quartus-free-devinfo-max10
+modelsim-intel-starter
+sudo helix /etc/pacman.conf
+sudo hx /etc/pacman.conf
+sudo nano /etc/pacman.conf
+yay -Sy quartus-free-quartus quartus-free-devinfo-max10 modelsim-intel-starter
+sudo pacman -Sy --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg - si
+distrobox-create -n quartus --image ubuntu:20.04
+sudo pacman -S distrobox
+cd yay/
+rm -rf setup.sh
+rm -rf readme.txt
+sudo rm -rf intelFPGA_lite/
+rm -rf intelFPGA_lite/ components/
+rm Software\ Installation\ Manual\ for\ Computer\ Architecture\ Labs.pdf
+rm -rf intelFPGA_lite/
+bash setup.sh
+rm Quartus-lite-23.1std.1.993-linux.tar
+open readme.txt
+tar -xvf Quartus-lite-23.1std.1.993-linux.tar
+mv cse/ inno/
+mv introtopro/ inno/
+mkdir inno
+rmdir inno/
+rm Oracle_VirtualBox_Extension_Pack-7.2.0.vbox-extpack  Unconfirmed\ 765843.crdownload  VirtualBox-7.2-7.2.0_170228_fedora40-1.x86_64.rpm
+mv Oracle_VirtualBox_Extension_Pack-7.2.0.vbox-extpack  VirtualBox-7.2-7.2.0_170228_fedora40-1.x86_64.rpm  Unconfirmed\ 765843.crdownload  /home/me/
+rm AGLA_I_Tutorial_1_answers.pdf  HA\ 1.pdf  HW_2\ \(1\).pdf  HW_2.pdf  HW_Solutions.pdf
+rm 2025-08-31_freshmens.csv  Chapter_1_MathAn.pdf  the\ contents\ of\ the\ course\ Analysis\ 1.pdf
+rm HW_2.pdf
+git remote add origin git@github.com:oebarbie/f25_intro_to_prog.git
+gcc 2.\ smth.c  -o pr1
+cd 6.\ start/
+.
+gcc 01.\ hello.c -o pr1
+paru -S gcc
+gcc hello.c -o test
+cd 1.\ start/
+mkdir introtopro
+gcc 01. hello.c -o pr1
+gcc '01. hello.c' -o pr1
+rm HA\ 1.pdf  HW_2.pdf
+rm Lecture_1_AGLA_1\ \(1\).pdf  iu_RCA.crt  Lecture_1_AGLA_1.pdf
+rm AGLA_I_Tutorial_1_answers.pdf  AGLA_I__Lab_1.pdf
+rm wifi_linux.pdf
+rm StudentUniversity\ WIFI\ on\ Linux.pdf
+nmcli d w c "BOTAY!" --ask
+nmcli d w c "BOTAY!_5G" --ask
+nmcli con down "BOTAY!" --ask
+nmcli con down "BOTAY!_5G"
+nmcli d w disconnect "BOTAY!_5G"
+nmcli device disconnect "BOTAY!_5G"
+nmcli d w device disconnect "BOTAY!_5G"
+nmcli d w --help
+nmcli d w d "BOTAY!_5G"
+nmcli d w c "BOTAY!_5G" password "ComplicatedPassword"
+nmcli d w c "BOTAY!_5G" p "ComplicatedPassword"
+cd /etc/NetworkManager/system-connections/
+paru
+sudo pacman -Syy archlinux-keyring
+mv StudentUniversity\ WIFI\ on\ Linux.pdf  wifi_linux.pdf
+helix herbstluftwm/autostart
+helix herbstluftwm/theme.sh
+cd configs/
+open wp.jpg
+open road.jpg
+open ridge.jpg
+open q.jpeg
+open pic.jpg
+open pastel.png
+open pastel.jpeg
+open heaven.jpg
+open goat.jpg
+open d.jpeg
+open 12.jpg
+open 0.jpg
+cd wp/
+helix autorandr/docked/
+rm ntrvw25.zip
+zip -r ntrvw25.zip ntrvw25/
+rm exam.pdf
+open ntrvw25/1.mov
+mv 1.mov ntrvw25/
+rm -rf Lecture\ 1\ \(Selected\ Topics\ in\ Computer\ Science\).pdf
+rm -rf exam.pdf
+exit
+open 5.jpg
+open 7.jpg
+open 6.jpg
+git remote add origin git@github.com:oebarbie/-se.git
+
+git remote add origin git@github.com:oebarbie/-se.git
+mv c_lang/ cse
+rmdir cse
+mkdir cse
+mv innno/ c_lang
+open exam.pdf
+mv examr.pdf  exam.pdf
+cd innno/
+rm -rf labs/ lectures/
+rm FinalTestTrialQuestions.pdf
+rm x
+open Lecture\ 5\ \(Probabilities\ Basics\).pdf
+cd lectures/
+open Lecture\ 4\ part\ 2\ \(Combinatorics\).pdf
+open Lecture\ 4\ part\ 1\ \(TSP\ and\ Computationally\ Intensive\ Problems\).pdf
+open Lecture\ 3\ part\ 3\ \(Iterative_and_recursive_algs\).pdf
+open Lecture\ 3\ part\ 2\ \(C\ Python\ Java\ comparison\).pdf
+open Lecture\ 3\ part\ 1\ \(Overview\ of\ Programming\ Languages\ cont.\).pdf
+open Lecture\ 2\ \(Overview\ of\ Programming\ Languages\).pdf
+open Lecture\ 1\ \(Selected\ Topics\ in\ Computer\ Science\).pdf
+mv Lecture\ 4\ part_1_TSP_and_Computationally_Intensive_Problems.pdf  'Lecture 4 part 1 (TSP and Computationally Intensive Problems).pdf'
+mv Lecture\ 4 part_1_TSP_and_Computationally_Intensive_Problems.pdf  'Lecture 4 part 1 (TSP and Computationally Intensive Problems).pdf'
+mv Lecture\ 4part_1_TSP_and_Computationally_Intensive_Problems.pdf  'Lecture 4 part 1 (TSP and Computationally Intensive Problems).pdf'
+mv Lecture\ 4_part_1_TSP_and_Computationally_Intensive_Problems.pdf  'Lecture 4 part 1 (TSP and Computationally Intensive Problems).pdf'
+mv Lecture\ 4_part_1_TSP_and_Computationally_Intensive_Problems.pdf  'Lecture 4 part_1_TSP_and_Computationally_Intensive_Problems.pdf'
+rm Lab3\ template.pdf
+open Lab3\ template.pdf
+rm Lecture\ 3\ part\ 3\ \(Iterative_and_recursive_algs\).pdf
+rm IctStudies\ CourseBook.pdf  Lab\ 3\ references.pdf  Lab\ 4\ references.pdf
+whoami
+nmcli d w c innomeet
+nmcli d w c Makcal --ask
+nmcli con edit id uni-wifi
+nmcli con add type wifi ifname wlp2s0 con-name uni-wifi ssid uni-ssid
+nmcli con edit id work-wifi
+nmcli con add type wifi ifname wlan0 con-name work-wifi ssid work-ssid
+
+# nmcli con add type wifi ifname wlan0 con-name work-wifi ssid work-ssid
+
+rm -rf inn.pdf  innno.zip
+rm -rf ICT\ STUDIES\ TB.pdf
+nmcli d w c "Tattelecom_354A_5G" --ask
+paru -S iwctl
+sudo iwctl
+nmcli device wifi list
+sudo systemctl enable --now NetworkManager
+sudo systemctl enable iwd
+systemctl enable iwd
+nmcli d w c UniversityGuest --ask
+open ICT\ STUDIES\ TB.pdf
+rm -rf Рег.\ карта\ новая.docx
+nmcli d w c UniversityStudent --ask
+nmcli d w c UniversityStudent --help
+nmcli d w c UniversityStudent --ask --help
+nmcli enable NetworkManager
+nmcli d w c DESKTOP-MAX --ask
+nmcli d w c BOTAY!_5G --ask
+st
+zip -r innno.zip innno/
+zip innno.zip innno/
+mkdir innno
+nmcli device wifi connect UniversityGuest --ask
+systemctl enable --now NetworkManager
+feh --bg-scale arch/wp/road.jpg
+rm -rf Конкурсный\ список\ на\ получение\ стипендии.pdf
+mv Видеоинтервью.mov  1.mov
+rm -rf newenv/
+rm 0rf newenv/
+cd newenv/
+rm 1.jpg  3.jpg  2.jpg
+open 1.jpg
+mv Видеоинтервью.mp4  ntrvw25/
+mkdir ntrvw25
+rm -rf photo_2025-07-16_09-45-22.jpg  session_name.session  telethon_env/ tg_channels.py  tg_session.session
+rm -rf егэ25/
+with TelegramClient('session_name', api_id, api_hash) as client:
+/usr/sbin/python /home/me/tg_channels.py
+python tg_channels.py
+source newenv/bin/activate.fish
+/usr/sbin/python
+python -c "import telethon; print(telethon.__version__)"
+pip install telethon
+python -m venv newenv
+source newenv/bin/activate
+python3 tg_channels.py
+python3 -m pip install telethon
+python -c "import sys; print(sys.path)"
+pip install --force-reinstall telethon
+pip uninstall telethon
+
+pipx runpython tg_channels.py
+pipx install telethon
+# Проверьте установленные пакеты
+pip list | grep telethon
+rm -rf sofinno25.zip  sofinno25/ егэ25.zip
+helix tg_channels.py
+zip -r егэ25.zip егэ25/
+zip -r sofinno25.zip sofinno25/
+rm -rf brosme/
+rm 25_2.pdf
+cd telethon_env/
+pip install telethon               # Устанавливаем
+
+source ~/telethon_env/bin/activate # Активируем
+
+python -m venv ~/telethon_env      # Создаём окружение
+
+paru -S python-telethon
+exec $SHELL
+pipx ensurepath
+sudo pacman -S python python-pipx
+sudo pacman -S python python-pipx python-venvpipx ensurepath
+sudo pacman -S python python-pipx python-venv
+pacman -S python-telethon
+sudo pacman -S python python-pip
+rm photo_2025-07-19_09-52-05.jpg
+mkdir егэ25
+mkdir brosme
+rm -rf 1
+cd 1
+rm -rf ege/
+rm gptcheck.png
+open gptcheck.png
+rm walk.mp4
+rm 2.mp4
+rm 1.mp4  1.xlsx
+rm v.2\ №1\ форма\ договора\ СПО\ \(2\)\ \(1\).docx
+rm Информация\ о\ наличии\ общежития.docx
+mv Screen\ Recording\ 2025-07-15\ at\ 7.00.11 PM.mov  1
+rm Благодарность.pdf
+rm 1.xlsx
+rm 1.zip
+unzip 1.zip
+rm -rf GFPGAN/
+paru -S realesrgan
+python setup.py develop
+paru -S requirements.txt
+git clone 'https://github.com/xinntao/facexlib'
+cd GFPGAN/
+cd BasicSR/
+git clone https://github.com/xinntao/BasicSR
+paru -S facexlib
+paru -S basicsr
+
+pip install basicsr
+
+git clone https://github.com/TencentARC/GFPGAN.git
+rm ЕГЭ_2025__Пересдача__4_июля__729vw.pdf
+mkdir ege
+rm Вариант\ Пересдача\ 04.07.2025.pdf
+git config user.name
+
+rm -rf grdtn25.zip  grdtn25/ summ25-1.zip  summ25-2.zip  summ25-2/
+zip -r summ25-2.zip summ25-2/
+zip -r grdtn25.zip grdtn25/
+open photo_99_2025-07-11_19-55-19.jpg
+cd summ25-2/
+mkdir grdtn25
+open doc_2025-07-11_18-50-51.mp4
+open doc_2025-07-11_18-50-43.mp4
+open video_2025-07-11_18-53-07.mp4
+open video_2025-07-11_18-53-11.mp4
+mkdir summ25-2
+mv summ25-1/ 1
+zip -r summ25-1.zip summ25-1/
+cd summ25-1/
+mkdir summ25-1
+rm krke25.zip  ryzn25.zip  sprng25-1.zip  sprng25-2.zip  wltz25.zip
+mv wltz25/ 1
+zip -r wltz25.zip wltz25/
+mv sprng25-2/ 1
+zip -r sprng25-2.zip sprng25-2/
+mkdir wltz25
+mv ryzn25/ 1
+zip -r ryzn25.zip ryzn25/
+mv ryzn/ ryzn25
+mkdir ryzn
+mv sprng25-1/ 1
+mv krke25/ 1
+mkdir 1
+zip -r krke25.zip krke25/
+zip -r sprng25-1.zip sprng25-1/
+mkdir sprng25-2
+rm photo_10_2025-07-11_14-54-15.jpg
+open photo_10_2025-07-11_14-54-15.jpg
+open photo_2025-07-11_14-49-09.jpg
+rm photo_5_2025-07-11_14-55-00.jpg
+open photo_5_2025-07-11_14-55-00.jpg
+open photo_3_2025-07-11_14-54-15.jpg
+open photo_2_2025-07-11_14-54-15.jpg
+rm photo_2_2025-07-11_14-55-00.jpg
+open photo_2_2025-07-11_14-55-00.jpg
+rm photo_1_2025-07-11_14-55-00.jpg
+open photo_1_2025-07-11_14-55-00.jpg
+open photo_1_2025-07-11_14-54-15.jpg
+cd krke25/
+mkdir krke25
+cd sprng25-1/
+rm -rf mscw25/
+rm -rf 1/ mscw25.zip
+cd mscw25/
+unzip mscw25.zip
+zip sofinno25.zip sofinno25/
+rm mscw25.zip  winter25-3.zip
+mv winter25-3/ 1
+mv mscw25/ 1
+open IMG_1670.MOV
+open IMG_1681.MOV
+open video.mp4
+open IMG_1410.MOV
+open doc_2025-07-11_00-45-31.mp4
+open doc_2025-07-10_00-51-07.mp4
+zip -r winter25-3.zip winter25-3/
+zip -r mscw25.zip mscw25/
+mkdir sprng25-1
+rmdir winter25-4/
+rm winter25-3.zip  winter25-4/
+mkdir winter25-4
+mkdir mscw25
+rm photo_2025-02-23_09-53-32.jpg
+open photo_2025-02-23_09-53-32.jpg
+rm photo_2025-02-23_09-53-33\ \(4\).jpg   photo_2025-02-23_09-53-33\ \(3\).jpg photo_2025-02-23_09-53-33\ \(2\).jpg
+rm  photo_2025-02-23_09-53-33\ \(5\).jpg
+open photo_2025-02-23_09-53-33\ \(5\).jpg
+rm photo_2025-02-23_09-53-33.jpg
+open photo_2025-02-23_09-53-33.jpg
+open photo_2025-01-19_05-08-18\ \(2\).jpg
+cd winter25-3/
+open doc_2025-07-10_00-41-27.mp4
+mkdir winter25-3
+rm graduation2_25.zip
+mkdir sofinno25
+rm 1
+rm -rf 1/ lstcll25.zip  lstcll25/
+cd lstcll25/
+unzip lstcll25.zip
+mv lstcll25/ 1
+exa -a
+zip -r lstcll25.zip lstcll25/
+sudo mv lstcll25/ /home/brb/
+mv lstcll25/ /home/brb/
+rm push
+rm -rf lstcll25.zip  lstcll25/
+unzip lstcll25.zip  z
+unzip lstcll25.zip  z/
+unzip lstcll25.zip 1
+unzip lstcll25.zip 1/
+zip lstcll25 lstcll25.zip
+zip lstcll25.zip lstcll25/
+paru -S zip
+rm -rf kege/
+paru -Syu linux-firmware
+paru -Rdd linux-firmware
+pacman -Rdd linux-firmware
+sudo -s zip unzip
+rm 1.jpeg  ЕГЭ_2025__Оба_дня__6xpzo.pdf
+open 1.jpeg
+mkdir lstcll25
+rm ЕГЭ_2025__Оба_дня__6xpzo.pdf
+rm files.zip
+rm 18_23202.xlsx
+rm 9_23268.xls
+rm 2.5\\.png
+/bin/python "/home/me/kege/1 day/09.py"
+cd 1\ day/
+mv 1\ day/
+mv 09.txt 09.pdf
+cd kege/
+mv 09.txt kege/1\ day/
+mv 09.docx  09.txt
+/bin/python "/home/me/kege/1 day/13.py"
+python
+/bin/python "/home/me/kege/day 1/23.py"
+/bin/python "/home/me/kege/day 1/19-21.py"
+/bin/python "/home/me/kege/day 1/15.py"
+/bin/python "/home/me/kege/day 1/08.py"
+/bin/python "/home/me/kege/day 1/02.py"
+/bin/python /home/me/kege/01.py
+/bin/python "/home/me/kege/❌ 19 - 21 task/hw/09.py"
+/bin/python "/home/me/kege/❌ 19 - 21 task/hw/08.py"
+/bin/python "/home/me/kege/❌ 19 - 21 task/hw/05.py"
+/bin/python "/home/me/kege/❌ 19 - 21 task/hw/04.py"
+/bin/python "/home/me/kege/❌ 19 - 21 task/hw/10.py"
+/bin/python "/home/me/kege/❌ 19 - 21 task/hw/03.py"
+/bin/python "/home/me/kege/❌ 19 - 21 task/hw/02.py"
+/bin/python "/home/me/kege/❌ 19 - 21 task/hw/01.py"
+/bin/python "/home/me/kege/❌ 19 - 21 task/work/01.py"
+/bin/python "/home/me/kege/❌ 23 task/hw/06.py"
+/bin/python "/home/me/kege/❌ 23 task/hw/09.py"
+/bin/python "/home/me/kege/❌ 23 task/hw/08.py"
+/bin/python "/home/me/kege/❌ 23 task/hw/04.py"
+/bin/python "/home/me/kege/❌ 23 task/hw/03.py"
+/bin/python "/home/me/kege/❌ 23 task/hw/02.py"
+/bin/python "/home/me/kege/❌ 23 task/hw/01.py"
+/bin/python "/home/me/kege/❌ 16 task/hw/12.py"
+/bin/python "/home/me/kege/❌ 16 task/hw/11.py"
+/bin/python "/home/me/kege/❌ 16 task/hw/10.py"
+/bin/python "/home/me/kege/❌ 16 task/hw/09.py"
+/bin/python "/home/me/kege/❌ 16 task/hw/08.py"
+/bin/python "/home/me/kege/❌ 16 task/hw/07.py"
+/bin/python "/home/me/kege/❌ 16 task/hw/06.py"
+/bin/python "/home/me/kege/❌ 16 task/hw/05.py"
+/bin/python "/home/me/kege/❌ 16 task/hw/04.py"
+/bin/python "/home/me/kege/❌ 16 task/hw/03.py"
+/bin/python "/home/me/kege/❌ 16 task/hw/02.py"
+/bin/python "/home/me/kege/❌ 16 task/hw/01.py"
+/bin/python "/home/me/kege/❌ 06 task/work/01.py"
+/bin/python "/home/me/kege/❌ 12 task/hw/08.py"
+/bin/python "/home/me/kege/❌ 12 task/hw/05.py"
+/bin/python "/home/me/kege/❌ 12 task/hw/04.py"
+/bin/python "/home/me/kege/❌ 12 task/hw/03.py"
+/bin/python "/home/me/kege/❌ 12 task/hw/02.py"
+/bin/python "/home/me/kege/❌ 12 task/hw/01.py"
+/bin/python "/home/me/kege/❌ 05 task/hw/09.py"
+/bin/python "/home/me/kege/❌ 05 task/hw/08.py"
+/bin/python "/home/me/kege/❌ 05 task/hw/07.py"
+/bin/python "/home/me/kege/❌ 05 task/hw/06.py"
+/bin/python "/home/me/kege/❌ 05 task/hw/05.py"
+/bin/python "/home/me/kege/❌ 05 task/hw/04.py"
+/bin/python "/home/me/kege/❌ 05 task/hw/03.py"
+/bin/python "/home/me/kege/❌ 05 task/hw/02.py"
+/bin/python "/home/me/kege/❌ 05 task/hw/01.py"
+/bin/python "/home/me/kege/❌ 17 task/hw/10.py"
+/bin/python "/home/me/kege/❌ 17 task/hw/09.py"
+/bin/python "/home/me/kege/❌ 17 task/hw/08.py"
+/bin/python "/home/me/kege/❌ 17 task/hw/07.py"
+/bin/python "/home/me/kege/❌ 17 task/hw/06.py"
+/bin/python "/home/me/kege/❌ 17 task/hw/05.py"
+/bin/python "/home/me/kege/❌ 17 task/hw/04.py"
+/bin/python "/home/me/kege/❌ 17 task/hw/03.py"
+/bin/python "/home/me/kege/❌ 17 task/hw/02.py"
+/bin/python "/home/me/kege/❌ 17 task/hw/01.py"
+mv *.txt kege/❌\ 17\ task/hw/
+unzip files.zip
+rm 18_11482.xls
+rm -rf 09\ task.zip  09\ task/
+mv 09\ task/* kege
+mv 09\ task/* kege/hw
+cd 09\ task/
+unzip 09\ task.zip
+/bin/python "/home/me/kege/09 task/01.py"
+mv file.txt kege/09\ task/
+helix file.txt
+paru -S helix
+kitty file.txt
+/bin/python "/home/me/kege/13 task/work/test.py"
+python test.py
+cd work/
+cd 13\ task/
+/bin/python "/home/me/kege/13 task/work/06.py"
+/bin/python "/home/me/kege/13 task/work/05.py"
+/bin/python "/home/me/kege/13 task/work/04.py"
+/bin/python "/home/me/kege/13 task/work/03.py"
+/bin/python "/home/me/kege/13 task/work/02.py"
+/bin/python "/home/me/kege/13 task/theory.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/21.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/20.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/17.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/16.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/15.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/14.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/13.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/12.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/11.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/10.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/09.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/08.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/07.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/06.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/05.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/04.py"
+/bin/python
+/bin/python "/home/me/kege/🆗 14 task/conv.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/03.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/02.py"
+/bin/python "/home/me/kege/🆗 14 task/hw/01.py"
+rm 17.xls  18.xls  18_2162.xls
+rm 16.xlsx  18_1060.xlsx
+rm 15.xls  18_3896.xls
+rm 13.xlsx  14.xlsx
+rm 18_11668.xlsx
+rm 18_726.xls  18_12927.xlsx
+rm 10.xls  11.xls
+rm yes
+open yes
+rm -rf inf/
+open 7task.pdf
+cd inf/
+rm -rf work/
+rm Открытыи_вариант_ЕГЭ_2025.pdf  Разбор\ домашки\ \(3-18\).zip
+rm 01.xlsx  02.xls 03.xlsx 04.xls  05.xlsx  06.xls  07.xlsx 08.xls
+unzip Разбор\ домашки\ \(3-18\).zip
+/bin/python "/home/me/kege/🆗 25 task/hw/13.py"
+/bin/python "/home/me/kege/🆗 25 task/hw/12.py"
+/bin/python "/home/me/kege/🆗 25 task/hw/11.py"
+C/bin/python "/home/me/kege/🆗 25 task/hw/11.py"
+/bin/python "/home/me/kege/🆗 25 task/hw/10.py"
+/bin/python "/home/me/kege/🆗 25 task/hw/09.py"
+/bin/python "/home/me/kege/🆗 25 task/hw/08.py"
+/bin/python "/home/me/kege/🆗 25 task/hw/07.py"
+/bin/python "/home/me/kege/🆗 25 task/hw/06.py"
+/bin/python "/home/me/kege/15 task/work/02.py"
+/bin/python "/home/me/kege/02 task/hw/10.py"
+/bin/python "/home/me/kege/02 task/hw/09.py"
+/bin/python "/home/me/kege/02 task/hw/08.py"
+/bin/python "/home/me/kege/02 task/hw/07.py"
+/bin/python "/home/me/kege/02 task/hw/06.py"
+/bin/python "/home/me/kege/02 task/hw/05.py"
+/bin/python "/home/me/kege/02 task/hw/04.py"
+/bin/python "/home/me/kege/02 task/hw/03.py"
+/bin/python "/home/me/kege/02 task/hw/01.py"
+/bin/python "/home/me/kege/02 task/work/01.py"
+git merge --no-ff
+git pull README.md
+git config pull.ff only
+/bin/python /home/me/kege/08task/hw/19.py
+/bin/python /home/me/kege/08task/hw/18.py
+/bin/python /home/me/kege/08task/hw/17.py
+/bin/python /home/me/kege/08task/hw/16.py
+/bin/python /home/me/kege/08task/hw/15.py
+/bin/python /home/me/kege/08task/hw/14.py
+/bin/python /home/me/kege/08task/hw/13.py
+/bin/python /home/me/kege/08task/hw/12.py
+/bin/python /home/me/kege/08task/hw/11.py
+/bin/python /home/me/kege/08task/hw/10.py
+/bin/python /home/me/kege/08task/hw/09.py
+/bin/python /home/me/kege/08task/hw/08.py
+/bin/python /home/me/kege/08task/hw/07.py
+/bin/python /home/me/kege/08task/hw/06.py
+/bin/python /home/me/kege/08task/hw/05.py
+/bin/python /home/me/kege/08task/hw/04.py
+/bin/python /home/me/kege/08task/hw/03.py
+/bin/python /home/me/kege/08task/hw/02.py
+/bin/python /home/me/kege/08task/hw/01.py
+/bin/python /home/me/kege/08task/work/16.py
+/bin/python /home/me/kege/08task/work/15.py
+/bin/python /home/me/kege/08task/work/14.py
+/bin/python /home/me/kege/08task/work/13.py
+/bin/python /home/me/kege/08task/work/12.py
+/bin/python /home/me/kege/08task/work/11.py
+/bin/python /home/me/kege/08task/work/01.py
+/bin/python /home/me/kege/08task/work/09.py
+/bin/python /home/me/kege/08task/work/08.py
+/bin/python /home/me/kege/08task/work/07.py
+/bin/python /home/me/kege/08task/work/10.py
+/bin/python /home/me/kege/08task/work/05.py
+/bin/python /home/me/kege/08task/work/04.py
+/bin/python /home/me/kege/08task/work/03.py
+/bin/python /home/me/kege/08task/work/02.py
+/bin/python /home/me/kege/14task/work/04.py
+/bin/python /home/me/kege/14task/work/05.py
+/bin/python /home/me/kege/14task/work/03.py
+/bin/python /home/me/kege/14task/work/02.py
+c/bin/python /home/me/kege/14task/work/02.py
+/bin/python /home/me/kege/14task/01.py
+/bin/python /home/me/kege/25task/hw/06.py
+/bin/python /home/me/kege/25task/hw/05.py
+/bin/python /home/me/kege/25task/hw/04.py
+/bin/python /home/me/kege/25task/hw/03.py
+/bin/python /home/me/kege/25task/hw/02.py
+/bin/python /home/me/kege/25task/hw/01.py
+git add 11task/ 25task/
+rm README.md
+cat id_ed25519.pub
+open github.pub
+git remote add origin git@github.com:oebarbie/kege.git
+echo "# kege" >> README.md
+git ssh git@github.com:oebarbie/kege.git
+git clone git@github.com:oebarbie/kege.git
+/bin/python /home/me/kege/11task/10.py
+/bin/python /home/me/kege/11task/04.py
+/bin/python /home/me/kege/11task/03.py
+/bin/python /home/me/kege/11task/02.py
+/bin/python /home/me/kege/11task/01.py
+/bin/python /home/me/kege/25task/13.py
+/bin/python /home/me/kege/25task/12.py
+/bin/python /home/me/kege/25task/11.py
+/bin/python /home/me/kege/25task/10.py
+/bin/python /home/me/kege/25task/09.py
+/bin/python /home/me/kege/25task/08.py
+999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+/bin/python /home/me/kege/25task/07.py
+/bin/python /home/me/kege/25task/06.py
+/bin/python /home/me/kege/25task/05.py
+/bin/python /home/me/kege/25task/04.py
+/bin/python /home/me/kege/25task/03.py
+/bin/python /home/me/kege/25task/02.py
+/bin/python /home/me/kege/1.py
+mkdir kege
+mkdir inf
+rm 9_-15_ШПОРА_2025.pdf  Открытыи_вариант_ЕГЭ_2025.pdf  9_-15_ШПО
+rm _18_Алгебра__Теория__6kc4c.pdf  _18_Алгебра__Шпаргалка__6kc4f.pdf  карточка.png  Чек-листы__Цветные___6nia5.pdf
+sudo cd /etc/wireguard/
+cd /etc/wireguard/
+mv barbara_lenovo_saopaulo.conf  barbara_lenovo_saopaulo.conf
+sudo umount /mnt/flesh/
+sudo umount /mnt
+sudo cp карточка.png  /mnt/flesh/
+sudo mount /dev/sda1 /mnt/flesh/
+sudo mkdir /mnt/flesh
+mv 2.png  карточка.png
+rm ореховакарточка.png
+rm 1.pdf  Bolshaya_nareshka_Zadanie_7__Конспект__5fak8.pdf
+open 2.png
+open ореховакарточка.png
+open 1.png
+rm 0.jpg  0.png
+rm 1.jpg  1.png  2.jpg
+rm 4.jpg  2.png
+rm 1.png  3.jpg
+open 3.jpg
+open 2.jpg
+rm 1.jpg
+rm 1.webp
+rm fcec805d54bd40cca174c9c0fdccb2fb.docx  Базовые_задания__Задания_1_и_4__IP_адресация__задание_13__Конспект__5hc1y.pdf
+mv 7task.pdf  inf/
+mv КОНСПЕКТ_Кодирование_информации__Изображения__Задание_7__4lzs3.pdf  7task.pdf
+rm f41e09c0277140d69c7ca0cd9ed5e804.docx
+rm passport0.jpg
+rm 2023programmingtest_Программирование.pdf  2024test_Programming.pdf
+rm 0.png  1.jpg  1.png  2.jpg  2.png
+rm 0830bb881daa4fb994d739cac3201e5a.docx  alg.docx  geo.docx  РЕШЕНИЯ__Пробныи__вариант__21___ЕГЭ_2025___Уровень_реального_экзамена__6kxco.pdf
+docker
+rm 0fd0941ebb094ca988d9a6b8a932fe48.docx
+mv 2  2.jpg
+mv 1  1.jpg
+rm 'Сертификат Орехова Варвара Егоровна по математике.pdf'
+rm eeaao.mkv
+rm ty
+rm 1  2  457e96a1d153419091e5d1e0cad0bd5d.docx  Пробный_вариант__20_I_ЕГЭ_2025_I_Уровень_реального_экзамена__6favr.pdf  Рабочая_тетрадь__Пробный_вариант__20__6fi98.pdf
+rm 4ae9d17e38944fa38a73d15056594f48.docx
+rm 862babc04ad24079a93b55c25961d44d.docx  7296362dc1b6444c8dd9556baf40646e.docx
+journalctl -u NetworkManager.service -r | nvim
+ping 1.1.1.1
+journalctl -u NetworkManager.service -r
+journalctl -u NetworkManager.service
+systemctl status NetworkManager.service
+nmcli d w c Keenetic-0302 --ask
+nmcli d w c Keenetic-0222 --ask
+nmcli d w c Keenetic-8222 --ask
+nmcli connection
+nmcli connection down Keenetic-0302
+rm Пробный_вариант__0_ЕГЭ_2025_I_Пробник_для_оценки_начального_уровня_знаний__5i13f.pdf
+rm 54e188e4d01f4fdebea1df3d6c88f2fe.docx  eee0e8d033574c0cb41d451a50844db6.docx  'РЕШЕНИЯ__Пробный_вариант__0_ЕГЭ_2025_I_Пробник_для_оценки_начального_уровня_знаний__5i13g (1).pdf'  РЕШЕНИЯ__Пробный_вариант__0_ЕГЭ_2025_I_Пробник_для_оценки_начального_уровня_знаний__5i13g.pdf
+rm 7.png  20f02a2856924a15b7ea69b5b94c7384.docx  'Скан работы.pdf'
+rm -rf nginx/ __MACOSX/
+open quiz/dima-happybirthday
+rm -rf birthday/ cluster/ olymp/
+rm 7c86570627d242a280d714f49e0fae20.docx
+bluetoothctl
+rm 1.docx  bca37bf0578a45b0a54f48446f876dcb.docx  eid9315_attach_9bc7c48c3ad0b839514641e32a3ed4f935c9805a.zip
+open eeaao.mkv
+sudo wg-quick up barbara_asus.conf
+bsdtar xf eid9315_attach_9bc7c48c3ad0b839514641e32a3ed4f935c9805a.zip
+rm 1.docx  2.docx
+rm Критерии_23-24_\ МАТЕМАТИКА.doc
+rm -rf 10-11\ класс/
+open ГАЗПРОМ\ закл\ 10-11\ класс\ 11-12.docx
+cd 10-11\ класс/
+rm -rf 8-9\ класс/
+rm Методческие\ указания\ МАТЕМАТИКА\ 2021-2022.doc.pdf
+open Методческие\ указания\ МАТЕМАТИКА\ 2021-2022.doc.pdf
+rm *.zip
+unzip mathematics\ \(1\).zip
+unzip mathematics.zip
+rm регистрационная\ карточка.pdf
+rm регистрационная\ карточка\ \(1\).pdf  photo_2025-02-20_14-11-45.jpg
+rm blanks-21.02-2145.pdf  cluster.tar.gz
+rm 2.docx  1.docx
+exa -la
+bsdtar czf cluster.tar.gz cluster/
+bsdtar -h
+rm nginx.tar.gz
+rm nginx
+du nginx.tar.gz
+du nginx
+bsdtar cf nginx.tar.gz nginx/
+bsdtar cf nginx/ nginx.tar.gz
+cat conference.logcap.ru
+cd nginx/
+rm -rf rabbitmq/
+cd rabbitmq/
+rm 1.jpg  2.jpg  mathelperproject.pdf  gazprom.pdf
+rm cv_template.pdf
+open mathelperproject.pdf
+mv 10А\ ОРЕХОВА_В_ПЕЧАТЬ.docx.pdf  mathelperproject.pdf
+rm photo.jpg
+rm output
+rm -rf проект\ орехова.docx
+open проект\ орехова.docx
+open 10А\ ОРЕХОВА_В_ПЕЧАТЬ.docx.pdf
+rm -rf 10.docx  olymp.zip
+system-config-printer
+paru -S system-config-printer
+sudo hp-setup -i
+paru -S hplip
+sudo systemctl enable --now cups
+paru -S cups
+unzip olymp.zip
+paru -S unzip
+sudo -s unzip
+xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1980x1200
+nvim
+systemctl list-units
+rm 1.png  2.png  3.png
+sudo paru -Suy
+sudo paru -Syy
+wg-quick down barbara_asus.conf
+mv eeaao  eeaao.mkv
+mv Everything.Everywhere.All.at.Once.WEB-DLRip.Kubik.v.Kube.mkv  eeaao
+cd birthday/
+rm i_s340.conf
+rm 1.png  2.png  3.png  4.png  5.png  6.png
+cat arch/configs/herbstluftwm/keybinds.sh
+xrandr --output eDP-1 --primary
+xrandr --output eDP-1 --on
+xrandr --output eDP-1
+xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1980x1440
+wg-quick up barbara_asus
+sudo mv barbara_asus.conf /etc/wireguard/
+ssh-add ~/.ssh/github
+exec ssh-agent fish
+cat ~/.ssh/github.pub
+mv github* ~/.ssh/
+ssh-keygen -t ed25519
+ssh-agent
+cat ~/.gitconfig
+git remote add origin git@github.com:oebarbie/arch.git
+git push --set-upstream origin main
+git push
+rm misc/config
+nvim misc/config
+exa misc/config
+rm configs/helix/ -rf
+exa configs/
+exa misc
+exa x11 -l
+exa x11
+exa wp
+sudo rm -rf db
+rm -rf db
+nvim db
+exa db --tree
+exa db -tree
+exa db -l
+exa db -k
+exa db
+sudo pacman -Rs helix
+sudo pacman -S neovim
+sudo pacman -S nvim
+rm -rf terraform/
+sudo rm -rf go
+rm -rf go
+rm -rf Everything\ Everywhere\ All\ at\ Once.2022.BDRip.apollion/
+rm -rf work
+exa -l
+wg
+cd autorandr/
+cd arv
+cd ar
+gh
+helix misc/.gitconfig
+btop
+exa -al
+helix zeze.sh
+exa 0l
+git remote -v
+git remote rm origin
+systemctl sleep
+ss
+open keybinds.sh
+sls
+cd arch/configs/herbstluftwm/
+xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 2560x1440
+helix autostart
+cd herbstluftwm/
+cd arch/configs
+open Everything.Everywhere.All.at.Once.WEB-DLRip.Kubik.v.Kube.mkv
+open Everything\ Everywhere\ All\ at\ Once.2022.BDRip.apollion/Everything\ Everywhere\ All\ at\ Once.2022.BDRip.AVO.Kashkin.apollion.avi
+d
+shutdown nooww
+shutdown
+suspend
+quit
+sudo passwd brb
+passwd brb
+sudo useradd -mG wheel brb
+useradd -mG wheel brb
+wg show
+docker run -p 8080:8080 -e KC_BOOTSTRAP_ADMIN_USERNAME=admin -e KC_BOOTSTRAP_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:26.0.7 start-dev
+nvimm
+systemctl status sshd
+helix output
+helm template jfrog/artifactory-oss > output
+helm template jfrog/artifactory-oss
+helm ls -a
+helm ls
+helm install artifactory jfrog/artifactory-oss --dry-run --debug > output
+helm install artifactory jfrog/artifactory-oss --dry-run --debug
+helm search repo
+helm help install
+helm help repo
+helm help pull
+helm list
+helm env
+helm repo list
+helm repo update
+helm repo add jfrog https://charts.jfrog.io/
+helm install artifactory artifactory-oss --dry-run --debug
+set -gx KUBECONFIG ~/.kube/config
+kubectl get svc
+kubectl get po
+helix ingress-argo.yaml
+kubectl get svc -n ingress-nginx -o wide
+ip a show wlp2s0
+kubectl get svc -n argocd -o wide
+kubectl get endpoints -n argocd
+kubectl get svc -n argocd
+kubectl apply -f ingress-argo.yaml
+EDITOR=helix kubectl edit -n  argocd svc argocd-server
+EDITOR=hx kubectl edit -n  argocd svc argocd-server
+kubectl edit -n  argocd svc argocd-server
+kubectl get all -n ingress-nginx
+kubectl get svc -n ingress-nginx
+kubectl get endpoints
+curl 192.168.1.82
+helix ingress.yaml
+kubectl get ingresses.networking.k8s.io -n argocd
+kubectl get ingresses.networking.k8s.io
+kubectl get ingressclasses.networking.k8s.io
+kubectl delete -f ingress.yaml
+kubectl get ns
+cp ingress.yaml ingress-argo.yaml
+helix nginx_lb.yml
+kubectl apply -f ingress.yaml
+kubectl apply -f nginx_lb.yml
+kubectl get all -n argocd
+kubectl get ingresses.networking.k8s.io -o wide
+kubectl get svc --namespace=ingress-nginx ingress-nginx-controller -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
+kubectl get svc --namespace=ingress-nginx ingress-nginx-controller -o jsonpath='{.status.loadBalancer.ingress[0].ip
+}'
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/cloud/deploy.yaml
+cd configurations/
+cd cluster/kubernetes/
+kubectl get lb
+kubectl get endpoints -o json
+kubectl get endpoints -o wide
+sudo iptables -L
+kubectl get no
+sudo sysdig -A -c echo_fds proc.name=sshd
+journalctl -u sshd.service -e
+argocd login 192.168.1.81:80
+argocd login http://192.168.1.81:80
+argocd login http://192.168.1.81/
+argocd login
+argocd account update-password -n argocd
+argocd account update-password
+argocd admin initial-password -n argocd
+sudo pacman -S argocd
+pacman -S argocd
+kubectl get secrets argocd-initial-admin-secret -n argocd
+kubectl get secrets -n argocd
+kubectl get secrets argocd-initial-admin-secret
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+systemctl restart sshd
+sudo helix /etc/ssh/sshd_config
+kubectl get l2advertisement -A
+curl http://192.168.40.0:10231/
+kubectl -n metallb-system get IPAddressPool
+kubectl describe svc lb-nginx
+sudo tcpdump -n -z wlp2s0 arp src host 192.168.40.1
+sudo tcpdump -n -z wlp2s0 arp src host 192.168.40.0
+sudo tcpdump -n -i ens3 arp src host 192.168.40.0
+sudo tcpdump -n -i ens3 arp src host 192.168.1.240
+tcpdump -n -i ens3 arp src host 192.168.1.240
+sudo arping 192.168.40.0
+sudo pacman -S tcpdump
+arping 192.168.40.0
+curl http://192.168.1.50:32644/
+curl 192.168.40.0:10231
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.8/config/manifests/metallb-native.yaml
+kubectl get all -A
+helix loadbalancer.yaml
+kitten ssh worker1
+sudo reboot
+journalctl -u k3s.service -f -e
+journalctl -u k3s.service -e
+systemctl restart k3s.service
+sudo ip link delete flannel.1
+ip link delete flannel.1
+journalctl -u -e k3s.service
+journalctl -u -ee k3s.service
+journalctl -ue k3s.service
+journalctl -u k3s.service
+cilium
+cilium uninstall
+cilium status --wait
+systemctl status k3s.service
+mkdir ~/.kube 2> /dev/null
+sudo k3s kubectl config view --raw > "$KUBECONFIG"
+chmod 600 "$KUBECONFIG"
+curl -sfL https://get.k3s.io | sh -s - --disable servicelb --disable traefik --token REDACTED
+helix ../base.md
+/usr/local/bin/k3s-uninstall.sh
+curl 10.3.0.1:10231
+curl 10.3.0.1
+helix cillium.yaml
+mv cillium.yaml configurations/
+kubectl get ippools
+kubectl apply -f cillium.yaml
+curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC='--flannel-backend=none --disable-network-policy --token REDACTED' sh -
+helix base.md
+kubectl logs -n kube-system -l k8s-app=flannel-migration-controller
+kubectl get pods -n kube-system -l k8s-app=flannel-migration-controller
+kubectl delete -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.1/manifests/flannel-migration/migration-job.yaml
+kubectl get jobs -n kube-system flannel-migration
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.1/manifests/flannel-migration/migration-job.yaml
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.1/manifests/flannel-migration/calico.yaml
+rm deployment-ubuntu.yaml
+rm serviceip.yaml
+helix serviceip.yaml
+helix deployment-ubuntu.yaml
+rm deployment.yaml
+helix deployment.yaml
+sudoedit
+docker rm -f some-nginx
+docker exec -it some-nginx bash
+curl 127.0.0.1:4999
+docker run --name some-nginx -p 127.0.0.1:4999:80 -d nginx
+curl 172.17.0.2
+docker network inspect bridge
+docker network ls
+docker run --name some-nginx -d nginx
+kubectl delete ns metallb-system
+kubectl get all
+kubectl get -A
+kubectl delete -f loadbalancer.yaml
+kubectl get all -n default
+kubectl get -A -n default
+kubectl get pods
+kubectl delete -f nginx_lb.yml
+echo $KUBECONFIG
+curl http://212.45.248.20:32012/
+curl 192.168.40.0:80
+curl 192.168.40.0:443
+curl 192.168.40.2
+curl 192.168.40.1
+curl 192.168.40.0
+kubectl get deployments.apps
+kubectl get svc -o wide
+kubectl get po -o wide
+kubectl get po -A
+helix deployment
+kubectl get all -n metallb-system
+kubectl delete pod -n metallb-system speaker-5gqxc
+kubectl logs -n metallb-system pods/speaker-5gqxc
+sudo wg-quick down i_s340
+sudo wg stop
+sudo wg show
+wg -h
+ss -ntlpu
+kubectl logs -n metallb-system pods/speaker-cg7z9
+kubectl get no -o wide
+kubectl get no -a
+kubectl apply -f loadbalancer.yaml
+kubectl get nodes
+docker image ls
+docker image prune -a
+docker image prune
+docker volume ls
+docker volume prune
+docker system prune
+docker rm $(docker ps -a -q)
+docker stop $(docker ps -a -q)
+docker docker stop $(docker ps -a -q)
+ip route show table local
+ip route
+ip route show
+ip route list
+ip -s link show wlp2s0
+sudo iptables -t nat -S
+sudo iptables -t nat -L
+sudo iptables -S OUTPUT
+sudo iptables -S DOCKER
+sudo iptables -S DOCKER-ISOLATION-STAGE-2
+sudo iptables -S DOCKER-ISOLATION-STAGE-1
+sudo iptables -S DOCKER-USER
+sudo iptables -S FORWARD
+sudo iptables -S INPUT
+sudo iptables -S KUBE-FIREWALL
+sudo iptables -S KUBE-ROUTER-INPUT
+sudo iptables -S INPUT -n
+sudo iptables -L INPUT -n
+iptables -L
+kubectl port-forward --address 0.0.0.0 -n kube-system pods/metrics-server-cdcc87586-w85j7 7771:10250
+kubectl port-forward -n kube-system pods/metrics-server-cdcc87586-w85j7 7771:10250
+kubectl port-forward -n kube-system pods/metrics-server-cdcc87586-w85j7 777:10250
+kubectl top pod
+kubectl top node
+kubectl top
+kubectl -n kube-system describe pods.metrics.k8s.io
+kubectl -n kube-system get pods.metrics.k8s.io
+kubectl logs -n kube-system pods/metrics-server-cdcc87586-w85j7
+kubectl port-forward -n kube-system pods/metrics-server-cdcc87586-w85j7
+kubectl port-forward -n kube-system
+kubectl run -it --rm --privileged \
+  --image=ubuntu \
+  --overrides='{"spec": {"hostNetwork": true, "hostPID": true}}' \
+  ubuntu -- bash
+kubectl delete deployments --all
+kubectl delete services --all
+kubectl delete pods --all
+kubectl delete daemonset --all
+
+kubectl get svc -A
+helix config
+cd .kube/
+ip route lisst
+docker run --name some-nginx -d -p 7658:80 nginx
+docker rm some-nginx -f
+curl 127.0.0.1:7658
+docker run --name some-nginx -d -p 127.0.0.1:7658:80 nginx
+docker run --name some-nginx -d -p 127.0.0.1:7658:80 some-content-nginx
+kubectl get configmap kube-proxy -n kube-system -o yaml | \
+sed -e "s/strictARP: false/strictARP: true/" | \
+kubectl diff -f - -n kube-system
+kubectl edit configmap -n kube-system kube-proxy
+kubectl delete -f deployment-ubuntu.yaml
+set -gx KUBECONFIG ~/.kube/config
+mkdir ~/.kube 2> /dev/null
+sudo k3s kubectl config view --raw > "$KUBECONFIG"
+chmod 600 "$KUBECONFIG"
+
+cd kubernetes/
+cd cluster/
+dockker ps
+docker run --rm \
+docker.elastic.co/beats/filebeat:8.16.0 \
+setup -E setup.kibana.host=kibana:5601 \
+-E output.elasticsearch.hosts=["elasticsearch:9200"]
+docker rm -f filebeat
+docker run \
+--network=elastic --name filebeat -d \
+docker.elastic.co/beats/filebeat:8.16.0 \
+setup -E setup.kibana.host=kib01:5601 \
+-E output.elasticsearch.hosts=["es01:9200"]
+docker container inspect kib01
+docker network inspect elastic
+docker exec -it es01 bash
+docker exec -it kib01 bash
+docker logs filebeat
+docker rm filebeat
+docker run \
+--network=bridge --name filebeat -d \
+docker.elastic.co/beats/filebeat:8.16.0 \
+setup -E setup.kibana.host=kib01:5601 \
+-E output.elasticsearch.hosts=["es01:9200"]
+docker rm nice_lehmann
+docker rm nostalgic_tu
+docker logs nice_lehmann
+docker run \
+--network=bridge -d \
+docker.elastic.co/beats/filebeat:8.16.0 \
+setup -E setup.kibana.host=kib01:5601 \
+-E output.elasticsearch.hosts=["es01:9200"]
+docker run \
+--network=bridge \
+docker.elastic.co/beats/filebeat:8.16.0 \
+setup -E setup.kibana.host=kib01:5601 \
+-E output.elasticsearch.hosts=["es01:9200"] -d
+docker run \
+--network=bridge
+docker.elastic.co/beats/filebeat:8.16.0 \
+setup -E setup.kibana.host=kib01:5601 \
+-E output.elasticsearch.hosts=["es01:9200"]
+helix server.tf
+helix main.tf
+cd terraform/
+terraform plan
+terraform validate
+[1;2Aq
+exa .ssh/
+mv .ssh/id_ed25519.pub .ssh/main.pub
+cp ~/.ssh/id_ed25519.pub .ssh
+mkdir .ssh
+rm .ssh
+touch .ssh
+helix .terraform/providers/tf.timeweb.cloud/timeweb-cloud/timeweb-cloud/1.3.8/linux_amd64/terraform-provider-timeweb-cloud
+helix .terraform.lock.hcl
+terraform init
+sudo pacman -S terraform
+terraform/
+mkdir terraform
+docker logs kib01
+docker start kib01
+docker start kib01 -d
+docker run --name kib01 --net elastic -p 5601:5601 docker.elastic.co/kibana/kibana:8.16.0
+docker pull docker.elastic.co/kibana/kibana:8.16.0
+docker exec -it es01 /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
+docker exec -it es01 /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
+docker run --name es01 --net elastic -p 9200:9200 -m 4GB -d docker.elastic.co/elasticsearch/elasticsearch:8.16.0
+docker rm es01
+docker logs es01
+docker run --name es01 --net elastic -p 9200:9200 -m 1GB -d docker.elastic.co/elasticsearch/elasticsearch:8.16.0
+docker rm -f es01
+clear
+docker run --name es01 --net elastic -p 9200:9200 -m 1GB docker.elastic.co/elasticsearch/elasticsearch:8.16.0 -d
+docker run --name es01 --net elastic -p 9200:9200 -it -m 1GB docker.elastic.co/elasticsearch/elasticsearch:8.16.0
+docker pull docker.elastic.co/elasticsearch/elasticsearch:8.16.0
+wg-quick up i_s340
+systemctl start systemd-resolved.service
+resolvconf -a i
+resolvconf -a
+resolvconf
+systemctl status systemd-resolved.service
+wg-quick up i_s340.conf
+man wg-quick
+sudo cp i_s340.conf /etc/wireguard/
+wg-quick up
+wg-quick
+man wg
+sudo wg
+docker network create elastic
+docker rm -f rabbitmq
+ip -4
+ip a -4
+ip a 4
+helix main.go
+./dima-happybirthday
+go build .
+helix problems.go
+go mod init github.com/elintendo/dima-happybirthday
+cd go
+helix sender/send.go
+helix receiver/receive.go
+mv send.go sender
+mv receive.go receiver/
+mkdir sender
+mkdir receiver
+helix send.go
+helix go.mod
+helix receive.go
+helix receiver.go
+go get github.com/rabbitmq/amqp091-go
+go mod init rabbit
+mkdir rabbitmq
+# latest RabbitMQ 4.0.x
+docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 -d rabbitmq:4.0-management
+# latest RabbitMQ 4.0.x
+docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4.0-management -d
+# latest RabbitMQ 4.0.x
+docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4.0-management
+influx write \
+--org leader \
+--bucket main \
+--precision s \
+"
+home,room=Living\ Room temp=21.1,hum=35.9,co=0i 1641024000
+home,room=Kitchen temp=21.0,hum=35.9,co=0i 1641024000
+home,room=Living\ Room temp=21.4,hum=35.9,co=0i 1641027600
+home,room=Kitchen temp=23.0,hum=36.2,co=0i 1641027600
+home,room=Living\ Room temp=21.8,hum=36.0,co=0i 1641031200
+home,room=Kitchen temp=22.7,hum=36.1,co=0i 1641031200
+home,room=Living\ Room temp=22.2,hum=36.0,co=0i 1641034800
+home,room=Kitchen temp=22.4,hum=36.0,co=0i 1641034800
+home,room=Living\ Room temp=22.2,hum=35.9,co=0i 1641038400
+home,room=Kitchen temp=22.5,hum=36.0,co=0i 1641038400
+home,room=Living\ Room temp=22.4,hum=36.0,co=0i 1641042000
+home,room=Kitchen temp=22.8,hum=36.5,co=1i 1641042000
+home,room=Living\ Room temp=22.3,hum=36.1,co=0i 1641045600
+home,room=Kitchen temp=22.8,hum=36.3,co=1i 1641045600
+home,room=Living\ Room temp=22.3,hum=36.1,co=1i 1641049200
+home,room=Kitchen temp=22.7,hum=36.2,co=3i 1641049200
+home,room=Living\ Room temp=22.4,hum=36.0,co=4i 1641052800
+home,room=Kitchen temp=22.4,hum=36.0,co=7i 1641052800
+home,room=Living\ Room temp=22.6,hum=35.9,co=5i 1641056400
+home,room=Kitchen temp=22.7,hum=36.0,co=9i 1641056400
+home,room=Living\ Room temp=22.8,hum=36.2,co=9i 1641060000
+home,room=Kitchen temp=23.3,hum=36.9,co=18i 1641060000
+home,room=Living\ Room temp=22.5,hum=36.3,co=14i 1641063600
+home,room=Kitchen temp=23.1,hum=36.6,co=22i 1641063600
+home,room=Living\ Room temp=22.2,hum=36.4,co=17i 1641067200
+home,room=Kitchen temp=22.7,hum=36.5,co=26i 1641067200
+"
+
+influx query '
+from(bucket: "main")
+    |> range(start: 2022-01-01T08:00:00Z, stop: 2022-01-01T20:00:01Z)
+    |> filter(fn: (r) => r._measurement == "home")
+    |> filter(fn: (r) => r._field== "co" or r._field == "hum" or r._field == "temp")
+'
+
+influx query '
+from(bucket: "get-started")
+    |> range(start: 2022-01-01T08:00:00Z, stop: 2022-01-01T20:00:01Z)
+    |> filter(fn: (r) => r._measurement == "home")
+    |> filter(fn: (r) => r._field== "co" or r._field == "hum" or r._field == "temp")
+'
+
+influx write \
+--org leader \
+--bucket main \
+--precision s \
+"home,room=Living\ Room temp=21.1,hum=35.9,co=0i 1641024000
+home,room=Kitchen temp=21.0,hum=35.9,co=0i 1641024000
+home,room=Living\ Room temp=21.4,hum=35.9,co=0i 1641027600
+home,room=Kitchen temp=23.0,hum=36.2,co=0i 1641027600"
+influx config -h
+influx config
+influx config create \
+  --config-name get-started \
+  --host-url http://192.168.1.50:8086 \
+  --org leader \
+  --token 1SRi72xVGCpyOzYeYzv-2vP1RTD1vILhiV_58L6F3Im8J5NimuRu0EOLkBjv1C-7eZPbLcs7JdXRmQgehAWilw==
+
+influx auth active -i 1SRi72xVGCpyOzYeYzv-2vP1RTD1vILhiV_58L6F3Im8J5NimuRu0EOLkBjv1C-7eZPbLcs7JdXRmQgehAWilw==
+influx auth active
+influx write
+influx write \
+  --bucket get-started \
+  --precision s "
+home,room=Living\ Room temp=21.1,hum=35.9,co=0i 1641024000
+home,room=Kitchen temp=21.0,hum=35.9,co=0i 1641024000
+home,room=Living\ Room temp=21.4,hum=35.9,co=0i 1641027600
+home,room=Kitchen temp=23.0,hum=36.2,co=0i 1641027600
+home,room=Living\ Room temp=21.8,hum=36.0,co=0i 1641031200
+home,room=Kitchen temp=22.7,hum=36.1,co=0i 1641031200
+home,room=Living\ Room temp=22.2,hum=36.0,co=0i 1641034800
+home,room=Kitchen temp=22.4,hum=36.0,co=0i 1641034800
+home,room=Living\ Room temp=22.2,hum=35.9,co=0i 1641038400
+home,room=Kitchen temp=22.5,hum=36.0,co=0i 1641038400
+home,room=Living\ Room temp=22.4,hum=36.0,co=0i 1641042000
+home,room=Kitchen temp=22.8,hum=36.5,co=1i 1641042000
+home,room=Living\ Room temp=22.3,hum=36.1,co=0i 1641045600
+home,room=Kitchen temp=22.8,hum=36.3,co=1i 1641045600
+home,room=Living\ Room temp=22.3,hum=36.1,co=1i 1641049200
+home,room=Kitchen temp=22.7,hum=36.2,co=3i 1641049200
+home,room=Living\ Room temp=22.4,hum=36.0,co=4i 1641052800
+home,room=Kitchen temp=22.4,hum=36.0,co=7i 1641052800
+home,room=Living\ Room temp=22.6,hum=35.9,co=5i 1641056400
+home,room=Kitchen temp=22.7,hum=36.0,co=9i 1641056400
+home,room=Living\ Room temp=22.8,hum=36.2,co=9i 1641060000
+home,room=Kitchen temp=23.3,hum=36.9,co=18i 1641060000
+home,room=Living\ Room temp=22.5,hum=36.3,co=14i 1641063600
+home,room=Kitchen temp=23.1,hum=36.6,co=22i 1641063600
+home,room=Living\ Room temp=22.2,hum=36.4,co=17i 1641067200
+home,room=Kitchen temp=22.7,hum=36.5,co=26i 1641067200
+"
+
+influx setup
+systemctl status influxdb.service
+influx
+sudo pacman -S influx-cli
+
+
+sudo systemctl start influxdb
+
+
+
+
+sudo pacman -S influxdb
+
+
+helm list --all
+helm install oki ./mychart/ --debug --dry-run --set favoriteDrink=slurm
+helm install --debug --dry-run oki ./mychart/
+helix mychart/templates/configmap.yaml
+helix mychart/values.yaml
+helm version
+helm -h
+helm --version
+helm -v
+helm uninstall full-coral
+helm get manifest full-coral
+helm install full-coral ./mychart/
+mv configmap.yml configmap.yaml
+helix configmap.yml
+rm -rf *
+helix NOTES.txt
+cd templates/
+helix values.yaml
+helix Chart.yaml
+cd mychart/
+helm create mychart
+sudo pacman -S helm
+systemctl stop bluetooth.service
+sudo systemctl restart bluetooth
+sudo systemctl start bluetooth
+paru -S galaxybudsclient-bin
+rm -rf paru-bin/
+git clone aur.archlinux.org/paru-bin.git
+go run main.go
+helix go.sum
+go mod tidy
+go mod init github.com/elintendo/dima-happybirthday:3
+go mod init github.com/elintendo/dima-happybirthday!
+go mod init
+go install
+mkdir birthday
+rm -rf quizgo/
+go build
+helix Dockerfile
+go get github.com/zerefwayne/quizgo
+cd quizgo/
+git clone git@github.com:zerefwayne/quizgo.git
+o get github.com/zerefwayne/quizgo
+kubectl describe pod landing-ubuntu-5f6685cf98-qp98k
+kubectl apply -f deployment-ubuntu.yaml
+kubectl describe pod landing-ubuntu-5f6685cf98-dtmlz
+docker pull myregistry.com/my-ubuntu
+docker info ImagePullBackOff
+sudoedit /etc/rancher/k3s/registries.yaml
+kubectl describe pod landing-ubuntu-5f6685cf98-z7rtq
+kubectl describe pod landing-ubuntu-5f6685cf98-c7wt2
+kubectl describe deployments.apps landing-ubuntu
+cp deployment.yaml deployment-ubuntu.yaml
+helix /etc/hosts
+sudo kubectl get po
+mv kubernetes/ cluster/
+git clone git@github.com:elintendo/kubernetes.git
+sudo systemctl start k3s
+
+
+sudo systemctl stop k3s
+scp certs/domain.crt brb@192.168.1.122:/home/brb
+scp certs/domain.crt 192.168.1.122:/home/brb
+docker push myregistry.com/my-ubuntu
+sudo cp certs/domain.crt /etc/docker/certs.d/myregistry.com/
+sudo mkdir -p docker/certs.d/myregistry.com
+mkdir -p docker/certs.d/myregistry.com
+sudo mkdir docker
+mkdir docker
+cd /etc/docker
+cd /etc/dockeer
+docker tag ubuntu:16.04 myregistry.com/my-ubuntu
+docker push myregistry.com:5000/my-ubuntu
+docker tag ubuntu:16.04 myregistry.com:5000/my-ubuntu
+docker pull ubuntu:16.04
+sudo helix /etc/hosts
+openssl x509 -in certs/domain.crt -text -noout
+openssl x509 -in certs/domain.crt -noout
+openssl x509 -in certs/domain.crt
+helix certs/domain.crt
+helix certs/domain.
+exa certs/
+mkdir ~/.kube 2> /dev/null
+sudo k3s kubectl config view --raw > "$KUBECONFIG"
+chmod 600 "$KUBECONFIG"
+
+systemctl status systemd-logind.service
+systemctl restart systemd-logind.service
+systemctl restart logind
+sudoedit /etc/systemd/logind.conf
+sudoedit /etc/systemd/homed.conf
+tracepath google.com
+tracepath vk.com
+systemctl stop avahi-daemon.socket
+systemctl stop avahi-daemon.service
+avahi-resolve --name yoshi.local -4
+avahi-resolve --name yoshi.local
+avahi-resolve -h
+ping macBook-air-me.local
+ping MacBook-Air-me.local
+sudoedit /etc/nsswitch.conf
+systemctl status avahi-daemon.service
+sudo systemctl restart avahi-daemon.service
+sudo helix /etc/nsswitch.conf
+helix /etc/nsswitch.conf
+sudo systemctl start avahi-daemon.service
+pacman -Qi avahi
+pacman -Ql avahi
+docker logs registry
+docker run -d \
+  --restart=always \
+  --name registry \
+  -v "$(pwd)"/certs:/certs \
+  -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \
+  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \
+  -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \
+  -p 443:443 \
+  registry:2
+openssl rsa -in domain.key -text -noout
+openssl rsa -in domain.key -text
+openssl rsa domain.key
+openssl x509 -in domain.crt -text -noout
+openssl x509 -in domain.crt -text
+cd certs/
+openssl req \
+  -newkey rsa:4096 -nodes -sha256 -keyout certs/domain.key \
+  -addext "subjectAltName = DNS:myregistry.com" \
+  -x509 -days 365 -out certs/domain.crt
+mkdir certs
+rm -rf certs/
+helix domain.crt
+mkdir -p certs
+mkdir cluster
+sudo helix /etc/rancher/k3s/registries.yaml
+helix /etc/rancher/k3s/registries.yaml
+helix .kube/config
+sudo ss -ntlpu
+chmod 600 "$KUBECONFIG"
+sudo k3s kubectl config view --raw > "$KUBECONFIG"
+mkdir ~/.kube 2> /dev/null
+
+systemctl status k3s-agent.service
+./k3s-agent-uninstall.sh
+./k3s-killall.sh
+sudo ./k3s-killall.sh
+cd /usr/local/bin/
+bash /usr/local/bin/k3s-uninstall.sh
+sudo kill -9 207544
+kill -9 207544
+kill -9 206916
+sudo kill -9 206916
+systemctl restart k3s-agent.service
+systemctl enable --now sshd
+k3s
+sudo k3s server
+k3s server
+kubectl version
+feh --bg-scale arch/wp/wp.jpg
+feh --bg-scale arch/wp/ridge.jpg
+feh --bg-scale arch/wp/q.jpeg
+feh --bg-scale arch/wp/pastel.jpeg
+feh --bg-scale arch/wp/heaven.jpg
+feh --bg-scale arch/wp/goat.jpg
+feh --bg-scale arch/wp/d.jpeg
+feh --bg-scale arch/wp/12.jpg
+feh --bg-scale arch/wp/0.jpg
+[wd
+helix
+xrandr --output eDP-1 --off
+xrandr --output HDMI-1 --primary --mode 1920x1080
+sudo k3s ctr image pull --plain-http 192.168.1.122:5000/logcapital/landing-frontend:latest
+sudo k3s ctr image pull --plain-http 192.168.1.122:5000/logcapital/landing-frontend
+k3s ctr
+k3s ctr run
+sudo systemctl stop containerd
+k3s ctr image ls
+kubectl
+sudo ctr image check
+sudo ctr image usage 192.168.1.122:5000/logcapital/landing-frontend:latest
+sudo ctr image
+sudo ctr image 192.168.1.122:5000/logcapital/landing-frontend:latest
+sudo ctr image ls
+sudo ctr image tag sha256:7ac7fe3217f4147e420ddf55979f0d3c401957bf80497d32938bcb3406c51881 192.168.1.122:5000/logcapital/landing-frontend:latest
+sudo ctr image tag sha256:7ac7fe3217f4147e420ddf 192.168.1.122:5000/logcapital/landing-frontend:latest
+sudo ctr image tag 192.168.1.122:5000/logcapital/landing-frontend:latest
+sudo ctr image tag -h
+sudo ctr image tag
+sudo ctr image ls tag 192.168.1.122:5000/logcapital/landing-frontend:latest 192.168.1.122:5000/logcapital/landing-frontend:latest
+sudo ctr image ls tag
+sudo ctr image pull --plain-http 192.168.1.122:5000/logcapital/landing-frontend:latest
+sudo ctr images ls
+sudo systemctl start containerd
+sudo systemctl status containerd
+curl -sfL https://get.k3s.io | K3S_URL=https://192.168.1.122:6443 K3S_TOKEN=REDACTED sh -
+curl -sfL https://get.k3s.io | K3S_URL=https://192.168.1.122:6443 K3S_TOKEN=30224 sh -
+curl -sfL https://get.k3s.io | K3S_URL=https://192.168.1.55:6443 K3S_TOKEN=30224 sh -
+sudo systemctl status sshd
+sudo systemctl start sshd
+ip r
+ip n
+ip link ls docker0
+ip li ls
+ip -V
+ip -v
+ip monitor
+man ip-address
+man ip
+docker image prune -h
+docker volume rm conference-server_postgres_volume strapi-v2_strapi-data
+docker  rm -f hungry_herschel
+systemctl start docker
+man iptables
+sudo iptables -L -t mangl
+sudo iptables -L -t mangle
+sudo iptables -L -t nat
+sudo iptables -L -t raw
+reboot\
+
+curl -sfL https://get.k3s.io | K3S_URL=https://192.168.1.122:6443 K3S_TOKEN=K1072234cc630cb9f6db7d192d6baff7f880096e997dac5bd994cb8926cfa99258f::server:15c2edc421431ba070427438b3edaf64 sh -
+curl -sfL https://get.k3s.io | K3S_URL=http://192.168.1.122:6443 K3S_TOKEN=K1072234cc630cb9f6db7d192d6baff7f880096e997dac5bd994cb8926cfa99258f::server:15c2edc421431ba070427438b3edaf64 sh -
+rm token
+helix token
+cat /sys/class/power_supply/BAT1/capacity
+cat /sys/class/power_supply/BAT1/present
+cat /sys/class/power_supply/BAT1/power_now
+ll
+docker logs  15734581b02d  2>&1 | grep "Bootstrap Password:"
+docker logs  conta  2>&1 | grep "Bootstrap Password:"
+sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher
+docker rm strapi_postgres_container -f
+docker rm strapi_postgres_container
+docker rm -f conference-server conference-server-conference_db-1
+systemctl start sshd
+pacman -Qe
+nmcli d w c "ASUS_FC_MAZ" --ask
+sudo pacman -U wireguard-wrapper-2.0.3-1-x86_64.pkg.tar.zst
+pacman -U wireguard-wrapper-2.0.3-1-x86_64.pkg.tar.zst
+cd .void/
+w
+git commit -m "init"
+helix cms.logcap.ru.conf
+mv conference.logcap.ru conference.logcap.ru.conf
+helix conference.logcap.ru
+helix crm.logcap.ru.conf
+helix files.logcap.ru.conf
+helix landing.logcap.ru.conf
+helix logcap.ru.conf
+helix trader.logcap.ru.conf
+cd prod
+cd work/logcap/nginx
+ssh -L 51821:localhost:51821 vpn -Nhelix
+helix .config/helix/languages.toml
+helix --health
+cd dev
+rm -rf test/
+cd .ssh/
+bsdtar xf ssh
+cd test/
+mv ssh test/
+mkdir test
+gpg ssh
+bsdtar cf ssh .ssh
+bsdtar xf .ssh/ ssh
+ssh -L 51821:localhost:51821 vpn -N
+helix arch/configs/fish/config.fish
+kitten ssh vpn
+ssh -L 51820:localhost:51820 vpn -N
+helix vpn.pub
+cat .ssh/id_ed25519.pub
+helix .ssh/config
+docker prune
+docker rm -f wireguard-ui
+rm wg_ui.yml
+helix wg_ui.yml
+docker compose -f wg_ui.yml up -d
+sudo pacman -S wireguard-tools
+wireguard
+sudo pacman -S wg-util
+sudo pacman -S wg-utils
+sudo pacman -S wireguard
+cat trader.logcap.ru.conf
+cat logcap.ru.conf
+cat landing.logcap.ru.conf
+cat files.logcap.ru.conf
+cat crm.logcap.ru.conf
+cat cms.logcap.ru.conf
+cp * /home/me/work/logcap/nginx/prod/
+rm *1
+rm *.save
+rm default
+rsync -a debian:/etc/nginx/sites-available/ nginx
+rm conference.logcap.ru default logcap.ru.conf.save*
+rm -rf *.conf
+rsync -r debian:/etc/nginx/sites-available/ .
+rm -rf nginx/
+rsync -a debian:/etc/nginx/sites-enabled/ nginx
+rsync -r debian:/etc/nginx/sites-enabled/ nginx
+rsync debian:/etc/nginx/sites-available .
+rsync debian:/etc/nginx/sites-available/ .
+scp debian:/etc/nginx/sites-available/ .
+scp debian:/etc/nginx/sites-available .
+scp debian:/etc/nginx/sites-enabled .
+kitten ssh debian
+cd prod/
+helix dev.logcap.ru.conf
+cd dev/
+kitten ssh dev
+mkdir prod
+mkdir dev
+git clone git@github.com:LogCapital/nginx.git
+cd work/logcap/
+kitten ssh prod
+cd support-bot/
+rm env env0 ssh ssh.gpg
+fish -c "ssh prod"
+gpg ssh.gpg
+helix misc/config
+cat config
+fish -c ssh prod
+fish "ssh prod"
+fish -c
+ln -sf /home/me/arch/arv/vscode/settings.json .config/Code/User
+cd Code/
+cd .config/
+rm -rf Code\ -\ OSS/
+paru -S visual-studio-code-bin
+sudo paru -Rs code
+sudoedit /usr/lib/code/product.json
+helix settings.json
+cd .config/Code\ -\ OSS/User/
+ln -sf /home/me/arch/arv/vscode/settings.json .config/Code\ -\ OSS/User
+sudo ./zeze.sh
+cd Code\ -\ OSS/
+paru -S code
+sudo pacman -S code
+cd vscode/
+psql -h 95.143.7.211 -p 2525 -U web_admin
+herbstclient detect_monitors
+helix .config/herbstluftwm/autostart
+xrandr --output HDMI-1 --primary --mode 1920x1080i
+pipesz
+xrandr --output HDMI-1 --primary
+cd docked/
+sudo pacman -S xorg-xrandr
+git commit -m "добавил пайплайн"
+helix docker-compose.yml
+helix env
+openssl base64 -A -in env0 -out env
+helix env0
+helix .github/workflows/debian.yml
+mkdir .github/workflows -p
+cd files-module/
+git clone git@github.com:LogCapital/files-module.git
+rm cpu_temp_log.txt daemon.go
+systemctl --user stop cpu_temp_daemon.service
+helix cpu_temp_log.txt
+systemctl --user start cpu_temp_daemon.service
+systemctl --user status cpu_temp_daemon.service
+sudo systemctl --user daemon-reload
+systemctl status cpu_temp_daemon.service
+helix cpu_temp_daemon.service
+cd .config/systemd/user/
+systemctl status cpu_temp_daemon
+systemctl status
+journalctl --user -u cpu_temp_daemon.service -f
+
+systemctl --user status cpu_temp_daemon.service
+
+systemctl --user start cpu_temp_daemon.service
+
+systemctl --user daemon-reload
+   
+
+cd ~/.config/systemd/user
+   
+
+cd /etc/systemd/system/
+/home/me/daemon.go
+helix daemon.go
+/home/me
+/home/me/
+/sys/class/thermal/thermal_zone0/
+systemctl --user enable cpu_temp_daemon.service
+   
+
+go run daemon.go
+cat  /sys/class/thermal/thermal_zone1/temp
+cat  /sys/class/thermal/thermal_zone0/temp
+test/
+test
+git commit -m "pipeline fix"
+helix debian.yml
+rm production.deployment.yml  develop.deployment.yml
+helix .
+cd .github/workflows/
+git checkout devStand
+lc-landing-v2/
+cd logcap/
+cd work
+rm 1.env  1.png  med2.pdf  med1.pdf
+git commit -am "pipeline fix"
+helix .github/workflows/cicd_debian.yml
+helix cicd_debian.yml
+rm main.yml
+rm cicd_production.yml
+rm cicd_backend.yml
+rm build.yaml
+helix build.yaml
+cd crm-server/
+ssh root@81.200.149.16
+helix .ssh/id_ed25519.pub
+ssh dev
+ssh root@80.90.178.177
+ssh user@80.90.178.177
+kitten ssh root@dev
+ssh-add
+helix .config/herbstluftwm/keybinds.sh
+rm known_hosts
+helix known_hosts
+cd /home/me/.ssh/
+open med2.pdf
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
+-dNOPAUSE -dQUIET -dBATCH -sOutputFile=med2.pdf ~/.void/Telegram\ Desktop/Медкнмжка2.pdf
+open med1.pdf
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
+-dNOPAUSE -dQUIET -dBATCH -sOutputFile=med1.pdf ~/.void/Telegram\ Desktop/Медкнижка1.pdf
+rm doc_2024-08-02_11-21-46\ \(2\).env  doc_2024-08-02_11-21-46.env  doc_2024-08-13_14-28-47.env
+rm Медкнижка,\ ч1.pdf  Медкнижка,\ ч2.pdf  Медкнижка,\ ч3.pdf
+cd .void/Telegram\ Desktop/
+rm med1.pdf  med2.pdf  med3.pdf
+helix 1.env
+helix .env
+open med3.pdf
+mv output.pdf  med1.pdf
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
+-dNOPAUSE -dQUIET -dBATCH -sOutputFile=med3.pdf ~/.void/Telegram\ Desktop/Медкнижка,\ ч3.pdf
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
+-dNOPAUSE -dQUIET -dBATCH -sOutputFile=med2.pdf ~/.void/Telegram\ Desktop/Медкнижка,\ ч2.pdf
+open output.pdf
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
+-dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf ~/.void/Telegram\ Desktop/Медкнижка,\ ч1.pdf
+paru -S ghostscript
+pacman -Syy
+kitten ssh user@dev
+helix env.dev
+openssl base64 -A -in env.dev -out env
+openssl base64 -A -in env.env -out env
+sudo btop
+docker rm blissful_blackburn
+docker run -it alpine:3.19
+sudo ./AmneziaVPN_Linux_Installer.bin
+bsdtar xf AmneziaVPN_Linux_Installer.tar
+bsdtar xf AmneziaVPN_Linux_4.6.0.3.tar.zip
+kitten ssh backup
+helix .config/fish/config.fish
+ssh -L 3333:localhost:3333 debian -N
+ssh -L 3333:localhost:15080 debian -N
+ssh -L 15080:localhost:15080 debian -N
+ssh -L 15080:localhost:3333 debian -N
+nmcli d w h
+rm dump.tar.gz
+man dircolors
+docker logs conference-server
+docker compose up --build -d
+helix package.json
+git restore package.json
+docker run -it --entrypoint sh test:latest
+docker run -it test:latest --entrypoint sh
+docker run -it test:latest --entrypoint=sh
+docker commit conference-server test
+git commit -m "workflow fix (build flag)"
+helix .github/workflows/cd.yaml
+cd conference-server/
+ssh debian
+rsync -aP dump.tar.gz root@dev:/root/
+rsync -a root@prod:/root/lc-server-new/_work/lk-server/lk-server/develop/dump.tar.gz .
+git commit -m "workflow created"
+helix env.env
+rm doc_2024-08-02_12-06-40.env
+git checkout production
+cd email-module/
+git clone git@github.com:LogCapital/email-module.git
+rm -rf strapi-v2_strapi-data/ uploads/
+helix env.en
+helix .void/env.env
+nmcli d w c "ASUS_0C" --ask
+nmcli d w c ASUS_OC --ask
+sudo systemctl enable --now bluetooth
+helix .gitignore
+cd work/logcap/strapi-v2/
+feh .
+cd uploads/
+exa ~
+rsync -a uploads/ user@debian:/home/user
+rsync -a uploads/ user@debian/home/user
+rsync -a root@prod:/root/strapi-v2/public/uploads .
+cd public/uploads/
+tree
+sudo pacman -S tree
+git commit -m "change database port from 0.0.0.0 to localhost"
+git commit -m "change database port"
+git commit -m "wrap strapi into docker"
+git
+rm env
+git add .github
+openssl base64 -A -in .env -out env
+git add compose.yml
+git add Dockerfile
+git add docker-compose.yml
+docker logs strapi_postgres_container
+docker compose up -d
+docker stop strapi_postgres_container
+sudo -i
+docker logs strapi_server
+docker image rm 21
+docker rm -f strapi_server
+docker logs
+psql -h localhost -p 5433 -U postgres -d strapi-bd
+docker image rm 03
+docker rm -f strapi_postgres_container strapi_server
+docker-compose up -d
+docker rm -f strapi_postgres_container
+docker logs strapi_
+docker volume rm strapi-data strapi-v2_strapi-data
+docker volume inspect strapi-data
+docker volume create strapi-data
+docker status strapi_postgres_container
+sudo docker status strapi_postgres_container
+docker start strapi_postgres_container
+du -hs strapi-v2_strapi-data/
+df -hs strapi-v2_strapi-data/
+rsync -a root@prod:/var/lib/docker/volumes/strapi-v2_strapi-data .
+rsync -a root@debian:/var/lib/docker/volumes/strapi-v2_strapi-data .
+docker restart strapi_server
+psql -h localhost -p 5432
+psql -h localhost -p 5433
+psql -h localhost -p 1337 -U postgres -d strapi-bd
+pacman -S postgresql
+docker exec -it strapi_postgres_container sh
+cat .env
+docker rm strapi_server
+helix database/migrations/
+helix src/index.js
+helix src/api/
+docker compose up -d --force-recreate
+docker rm strapi_postgres_container strapi_server
+npm run start
+npm run build
+npm install --platform=linux --arch=x64 sharp
+pacman -Qi nodejs
+pacman -Qi npm
+pacman -Ql inetutils
+sudo pacman -S inetutils
+npm i --strict-peer-deps
+npm i
+cd cwd
+helix io
+helix mem
+helix cgroup
+cd /proc/2515
+bto
+helix .config/kitty/current-theme.conf
+mv compose.yml docker-compose.yml
+helix compose.yml
+cd strapi-v2/
+git clone git@github.com:LogCapital/strapi-v2.git
+docker rm -f lk-frontend-v2
+git restore configs/herbstluftwm/keybinds.sh
+git diff
+cd Boot/
+cd Microsoft/
+cd EFI/
+cd /mnt
+sudo mount /dev/sda1 /mnt
+nmcli d w c Bakrov2018 --ask
+nmcli d w c Bakrov2018
+git push origin production
+git commit -m "debian pipeline"
+cp .github/workflows/production.deployment.yml .github/workflows/debian.yml
+cd work/logcap/lc-landing-v2/
+helix work/logcap/lc-landing-v2/
+git commit -m "docker"
+helix src/components/Layout/announce/Announce.tsx
+grep -Ril "колличество" .
+grep -Rnw . -e 'колличество'
+cd lc-landing-v2/
+git clone git@github.com:LogCapital/lc-landing-v2.git
+sudo rm wireguard-kontur.log
+rm wireguard-kontur.log
+sudo pacman -Rs wireguard-wrapper xclip
+xclip
+sudo pacman -Rs xorg-xclipboard
+helix .xprofile
+sudo pacman -S parcellite
+helix .xinitrc
+helix .config/herbstluftwm/theme.sh
+helix wireguard-kontur.log
+pacman -Ql wireguard-wrapper
+cd /var/log/
+pacman -Qi wireguard-wrapper
+sudo pacman -Rs wireguard-wrapper
+pacman -Rs wireguard-wrapper
+rm -rf ok-jp3jantit.conf wg0.conf wireguard-wrapper/ wireguard-wrapper-2.0.2-1.x86_64.rpm wireguard-wrapper_2.0.2_amd64.deb
+sudo wg-quick up wg
+sudo wg-quick up wg0
+sudo cp wg0.conf /etc/wireguard/
+sudo wg-quick up ok-jp3jantit
+helix ok-jp3jantit.conf
+wg-quick up ok-jp3jantit
+wg-quick up wlp2s0
+sudo cp ok-jp3jantit.conf /etc/wireguard/
+sudo wg-quick up ok-jp3jantit.conf
+wg-quick up ok-jp3jantit.conf
+paru -Ql wireguard-tools
+sudo pacman -S wireguard-utils
+./wireguard-wrapper.AppImage
+sudo ./wireguard-wrapper.AppImage
+sudo ./wg-worker
+./wg-worker
+cd /opt/wireguard-kontur/
+cd /opt/wireguard-kontur/wg-kontur-service/
+cd /usr/src/debug/wireguard-wrapper/
+helix /usr/share/applications/WSD\ WG\ wrapper.desktop
+helix /etc/systemd/system/wg-kontur.service
+paru -Ql wireguard-wrapper
+sudoedit /etc/resolv.conf
+helix PKGBUILD
+helix wireguard-wrapper.install
+cd wireguard-wrapper/
+debtap -P wireguard-wrapper_2.0.2_amd64.deb
+sudo debtap -u
+paru -S debtap
+gsettings
+sudo systemctl stop docker.socket
+sudo systemctl stop docker
+docker volume ls -h
+docker volume ls a
+docker volume ls -a
+docker volume rm 6f605da934c651c1407d72d90bc603bb8e2c33c1d64289b24c45369b6922cdfb crm-server_logcapdb-data
+docker rmi -f $(docker images -aq)
+
+docker images -aq
+docker image -aq
+docker rm lk-frontend
+rm logcap-2024-07-18-0000.tgz
+systemctl start bluetooth
+systemctl restart bluetooth
+pulseaudio -k
+sudo systemctl status bluetooth
+sudo pacman -S pulseaudio-bluetooth bluez-utils
+sudoedit /etc/pulse/default.pa
+pulseaudio --start
+alsamixer
+sudo pacman -S alsa-utils
+sudoedit /etc/pulse/default.pa
+
+sudo helix /etc/pulse/default.pa
+pactl list sink-inputs
+pactl list sources short
+scp logcap-2024-07-18-0000.tgz user@debian:/home/user
+scp backup_root@158.160.152.10:/home/backup_root/backup-mongo-prod/logcap-2024-07-18-0000.tgz .
+scp backup_root@158.160.152.10:/home/backup_root/backup-mongo-prodlogcap-2024-07-18-0000.tgz .
+ssh-add ~/.ssh/backups_prod
