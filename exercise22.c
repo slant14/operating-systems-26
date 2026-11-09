@@ -34,3 +34,4 @@ int main() {
     }
     
     fclose(file);
+}
