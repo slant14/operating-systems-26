@@ -1,0 +1,5 @@
+  155  pwd
+  156  ls
+  157  whoami
+  158  date
+  159  uname -a
