@@ -1,5 +1,7 @@
 # 01BackgroundDog
 
+**Category** Bash CTF (`dogctf`)
+
 **Topic** Shell job control
 
 ## Solution
