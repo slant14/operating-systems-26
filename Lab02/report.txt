@@ -1,0 +1,23 @@
+n.halmedow@innopolis.university
+Below are the execution times for different numbers of processes (#P):
+
+#P (Processes)  |  Time (Seconds)
+----------------|------------------
+1               |  0.0121088
+10              |  0.00681541
+100             |  0.0297172
+1,000           |  0.176678
+10,000          |  CRASH (Fork failed: Resource temporarily unavailable)
+100,000         |  NOT POSSIBLE (OS process limit reached)
+1,000,000       |  NOT POSSIBLE (OS process limit reached)
+
+ANALYSIS & CONCLUSION
+------------------------
+* Best performance: 10 processes gave the fastest time (0.0068s) because the work was perfectly split among the actual CPU cores without extra friction.
+
+* Heavy slowdown: At 1,000 processes, the time jumped to 0.1766s. The computer got slow because it spent too much effort creating/switching between thousands of tasks and because all processes tried to write to "temp.txt" at the exact same time.
+
+* OS limit reached: At 10,000 processes, the program stopped with a "Resource temporarily unavailable" error. The code is 100% correct — it is just a Linux security rule that stops a single user from creating too many processes at once.
+
+* Summary: Splitting calculations into millions of separate processes does not work in real life. Processes are too "heavy," and the operating system blocks them to save hardware resources.
+
