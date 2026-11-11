@@ -1,0 +1,46 @@
+max RSS: 11804 KB
+max RSS: 22248 KB
+max RSS: 32496 KB
+max RSS: 42744 KB
+max RSS: 52992 KB
+max RSS: 63240 KB
+max RSS: 73488 KB
+max RSS: 83736 KB
+max RSS: 93984 KB
+max RSS: 104232 KB
+
+
+max RSS: 12120 KB
+procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu
+ 6  0      0 834276 155312 3149836   0    0   353   500 1788    7  5  3 92  0  0  0
+max RSS: 22312 KB
+ 2  0      0 828096 155312 3149048   0    0   128     0 3753 6040  8  4 87  0  0  0
+ 1  0      0 824748 155312 3140332   0    0     0     0 1337 2048  2  3 96  0  0  0
+max RSS: 32560 KB
+ 0  0      0 824748 155312 3140316   0    0     0     0  659 1458  1  1 98  0  0  0
+max RSS: 42808 KB
+ 0  0      0 814792 155312 3140316   0    0     0     0  399 1056  1  1 98  0  0  0
+max RSS: 52928 KB
+ 0  0      0 807208 155312 3140572   0    0     0     0 1702 2418  3  3 94  0  0  0
+max RSS: 63184 KB
+ 1  0      0 766940 155320 3138908   0    0     0    64 6048 4697  5  7 87  1  0  0
+max RSS: 73432 KB
+ 0  0      0 789248 155320 3138908   0    0     0     0 5425 3284  2  7 91  0  0  0
+max RSS: 83576 KB
+ 0  0      0 777788 155328 3136344   0    0     0   368 2180 1755  2  3 95  0  0  0
+max RSS: 93824 KB
+procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu
+ 0  0      0 768776 155328 3136412   0    0     0     0  456 1163  2  1 98  0  0  0
+max RSS: 104072 KB
+ 0  0      0 756804 155328 3136412   0    0     0     0  447 1191  2  1 97  0  0  0
+ 0  0      0 843576 155328 3136412   0    0     0     0  591 1272  2  2 96  0  0  0
+fish: Job 1, './a.out &' has ended
+
+
+findings:
+- the program allocates 10 MB each second, so its RSS grows ~10 MB/s (12 MB -> 104 MB).
+- vmstat: si and so stay 0 the whole time, as no swapping happens. maybe because 100 MB easily fits in the free RAM.
+- bi/bo are ~0: allocating and zeroing memory stays in RAM, nothing is written to disk.
+- when the program ends, free column returns, as the OS reclaims all its memory.
