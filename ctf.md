@@ -1,7 +1,7 @@
 # Bash CTF (dogctf)  
 
 ## 01CompileDog  
-The commands are as follows:
+The commands are as follows. Firstly, we check the files in the home directory
 ```
 ls -la  
 cd Programs  
