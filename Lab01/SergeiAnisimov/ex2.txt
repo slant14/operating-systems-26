@@ -1,0 +1,6 @@
+    1  pwd
+    2  ls -ld .
+    3  whoami
+    4  uname -s
+    5  date
+    6  history > ex2.txt
