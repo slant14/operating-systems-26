@@ -1,0 +1,14 @@
+Lab 05 Sergei Anisimov CSE-04
+Exercise 1 — Publisher and subscribers
+
+An unnamed pipe passes bytes from the publisher to its child subscriber.
+With multiple subscribers, the publisher sends a copy to each child.
+Each child forwards its copy to a separate FIFO.
+
+One shared FIFO would act as a shared byte stream. A read consumes bytes
+from it, so readers compete for the available bytes. A separate FIFO for
+each subscriber gives each reader its own stream.
+
+On Ubuntu 22.04 under WSL, tests with one and three subscribers delivered
+the same three messages to every subscriber, including a 1024-byte
+message. The publisher removed its FIFOs after EOF and after SIGINT.
