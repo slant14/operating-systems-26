@@ -1,0 +1,8 @@
+Lab 05 Sergei Anisimov CSE-04
+Ubuntu 22.04 under WSL, GCC -O2, n=10000000
+threads primes wall_seconds
+1 664579 2.610
+2 664579 1.547
+4 664579 1.237
+10 664579 1.967
+100 664579 1.683
