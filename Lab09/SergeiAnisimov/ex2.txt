@@ -1,0 +1,15 @@
+Lab 09 Sergei Anisimov CSE-04
+Exercise 2
+
+Measured with bash ex2.sh on Ubuntu 22.04 under WSL. The pager used Aging
+and the same sequence of 15 references in each case.
+
+Pages   Frames   TLB entries   TLB misses   Page hits   Disk accesses
+5       2        1             13/15        4/15        13
+10      2        2             11/15        4/15        13
+10      3        2             11/15        7/15        10
+
+With two frames, doubling the TLB size lowered the miss ratio from 86.67%
+to 73.33% while the page hit rate stayed at 26.67%. At ten virtual pages,
+adding a frame raised the page hit rate to 46.67%. The TLB miss ratio
+remained 73.33% on this trace. A TLB miss can still find the page in RAM.
