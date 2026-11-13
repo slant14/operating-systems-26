@@ -1,0 +1,12 @@
+Lab 06 Sergei Anisimov CSE-04
+Exercise 4 — Round Robin
+
+The supplied trace with a quantum of two ticks gave average turnaround
+of 13.43 ticks and average waiting time of 9.14 ticks. FCFS gave 12.29
+and 8.00. SJF gave 9.14 and 4.86.
+
+The dispatch order was 4, 3, 5, 4, 0, 3, 1, 6, 3, 1, 6, 3, 2, 1, 6, 2.
+A worker that uses its whole quantum is suspended and re-enters the
+queue. Jobs that arrive during a slice join the queue before the
+preempted worker. This gives jobs earlier opportunities to run even
+though average completion metrics were higher on this trace.

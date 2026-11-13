@@ -1,0 +1,2 @@
+Lab 06 Sergei Anisimov CSE-04
+The agent reads this message on startup and when it receives SIGUSR1.

@@ -1,0 +1,18 @@
+Lab 06 Sergei Anisimov CSE-04
+Exercise 2 — FCFS
+
+On Ubuntu 22.04 under WSL, the supplied trace dispatched jobs in the
+order 4, 3, 5, 0, 1, 6, 2. Average turnaround was 12.29 ticks and
+average waiting time was 8.00 ticks.
+
+With TRI_BASE=100, the worker for job 4 started after 15 instead of
+165573 in the sampled run. The worker starts its search at a lower
+random value. The dispatch order and scheduling metrics stayed the same
+because they depend on arrival and burst times.
+
+With all arrival times set to zero, the tie-break by index gave order
+0, 1, 2, 3, 4, 5, 6. Average turnaround was 16.71 ticks and average
+waiting time was 12.43 ticks.
+
+The scripts default to one second per tick. The comparison runs used
+LAB06_TICK_US=50000 and checked each row against a separate simulation.

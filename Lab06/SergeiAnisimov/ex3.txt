@@ -1,0 +1,11 @@
+Lab 06 Sergei Anisimov CSE-04
+Exercise 3 — Non-preemptive SJF
+
+The supplied trace dispatched jobs in the order 4, 5, 0, 1, 6, 2, 3.
+Average turnaround was 9.14 ticks and average waiting time was 4.86
+ticks. FCFS on the same input gave 12.29 and 8.00 ticks.
+
+After job 4 finishes, SJF selects the shortest arrived job, which is
+job 5. This lowers the average waiting time on this trace. Job 3 waits
+until the end because its eight-tick burst is longer than the other
+available bursts. SJF does not interrupt a running job.
