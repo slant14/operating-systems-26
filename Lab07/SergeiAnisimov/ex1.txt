@@ -1,0 +1,19 @@
+Lab 07 Sergei Anisimov CSE-04
+Exercise 1 — Memory allocator
+
+Environment: Ubuntu 22.04 under WSL, GCC 11.4.0, -O2.
+Input: queries.txt with 54 queries (34 allocate, 20 clear).
+Each run resets the array of 10,000,000 unsigned integers for each algorithm.
+Reported times are the mean of five CPU-time measurements from clock().
+Throughput is 54 divided by the mean CPU time.
+
+Algorithm      CPU seconds     queries/s
+First Fit         0.120048        449.82
+Best Fit          0.333401        161.97
+Worst Fit         0.515309        104.79
+
+First Fit had the highest throughput on this trace.
+First Fit stops as soon as it finds enough contiguous cells.
+Best Fit checks free runs for the smallest adequate block.
+Worst Fit selects the largest free run. Both scan the full array.
+These timings describe this query trace and do not measure fragmentation.
