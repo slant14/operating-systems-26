@@ -1,0 +1,11 @@
+Lab 05 Sergei Anisimov CSE-04
+Exercise 3
+
+Each thread owns a disjoint interval and writes its count into its own
+request record. The main thread sums the results after joining the workers.
+The interval lengths differ by at most one, although testing a larger
+integer can require more trial divisions.
+
+Each tested thread count returned 664579 primes below 10000000. In this run
+the time fell from 2.642 s with one thread to 0.209 s with 100 threads.
+These are single measurements on this WSL instance.

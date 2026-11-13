@@ -1,0 +1,12 @@
+Lab 05 Sergei Anisimov CSE-04
+Exercise 4
+
+The mutex protects the next candidate and the shared count. The workers
+release it while testing primality so that these tests can run concurrently.
+Each tested thread count returned 664579 primes below 10000000.
+
+Four threads gave the best observed result for Exercise 4 (1.237 s).
+At 10 and 100 threads the results were 1.967 s and 1.683 s. The fixed
+partitions in Exercise 3 finished in 0.374 s and 0.209 s at those counts.
+Dynamic assignment can improve load balance, but acquiring the mutex for
+each candidate creates contention. These are single measurements on WSL.
