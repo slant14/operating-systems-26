@@ -1,0 +1,37 @@
+Lab 13 Sergei Anisimov CSE-04
+Exercise 1
+
+Output from Ubuntu 22.04 under WSL with bash ex1.sh:
+
+Thread 1 is created
+Thread 1 holds: and requests 2
+Thread 1 tries to lock mutex 2
+Thread 3 is created
+Thread 3 holds: and requests 0
+Thread 3 tries to lock mutex 0
+Thread 3 holds: 0 and requests 2
+Thread 3 tries to lock mutex 2
+Thread 1 holds: 2 and requests 0
+Thread 1 tries to lock mutex 0
+Deadlock is detected
+Thread 0 holds:
+Thread 1 holds: 2 and requests 0
+Thread 2 holds:
+Thread 3 holds: 0 and requests 2
+Thread 1 unlocked mutex 2
+Thread 3 unlocked mutex 0
+
+Thread 1 holds mutex 2 and waits for mutex 0. Thread 3 holds mutex 0
+and waits for mutex 2. That makes a cycle in the resource graph.
+After reporting it, the program wakes the waiting threads so they can
+release the mutexes they own and exit.
+
+A second test assigned one mutex to two competing threads. The first
+owner completed its work and released it, allowing the other thread to
+finish. This run printed "No deadlocks".
+
+Exercise 2
+
+The Banker check found a safe order for the PDF input: 1, 3, 4, 5, 2.
+A two-process example with one instance of each resource and reciprocal
+unmet requests reported "Processes that cannot finish: 1 2".
