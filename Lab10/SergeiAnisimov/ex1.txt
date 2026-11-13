@@ -1,0 +1,19 @@
+Lab 10 Sergei Anisimov CSE-04
+Exercise 1
+
+The three original names shared one inode in the WSL run. Writing through
+myfile11.txt generated the event "myfile11.txt is modified". The write used
+a name inside the watched directory.
+
+Creating myfile13.txt generated a CREATE event for the symbolic link.
+Writing to its target through the outside path produced no MODIFY event
+for myfile13.txt. The link stores a pathname and has its own inode.
+
+After removing the duplicate hard links inside the watched directory,
+stat reported links=2 for myfile11.txt. The two remaining hard links
+are myfile11.txt and the original file's outside name. The symlink does
+not contribute to the target inode's link count. SIGINT triggered the
+final stat snapshot.
+
+The runner uses a temporary outside path on the same filesystem so the
+experiment can be repeated without overwriting /tmp/myfile1.txt.
