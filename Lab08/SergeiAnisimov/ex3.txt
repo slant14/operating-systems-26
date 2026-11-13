@@ -1,0 +1,22 @@
+Lab 08 Sergei Anisimov CSE-04
+Exercise 3
+
+Compiled with gcc -std=c11 -O2 -Wall -Wextra -Wpedantic -Werror.
+Ran ex3 in the background while sampling vmstat 1 11 on Ubuntu 22.04 under WSL.
+
+Second   Allocated (MiB)   Peak RSS (KiB)
+1        10                11368
+2        20                21996
+3        30                32236
+4        40                42476
+5        50                52716
+6        60                63084
+7        70                73324
+8        80                83564
+9        90                93804
+10       100               104044
+
+The first vmstat row is an average since boot. All ten interval rows
+showed si=0 and so=0, and swpd remained 0. Peak RSS rose by roughly
+10 MiB per iteration because memset touched the allocated pages. There
+was sufficient RAM in this run and the test did not trigger swapping.
