@@ -1,0 +1,36 @@
+1. Needle: There are two mutexes in the code (silence_spell, truth_and_order_spell). But in fact, they are blocked and unblocked only by the main() function itself.
+Sol: The flag is read in the usual way: fopen("/root/flag.txt "), inside a regular thread.
+Code: 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void* meeting(void* arg) {
+    (void)arg;
+    FILE* f = fopen("/root/flag.txt", "r");
+    char* line = malloc(256);
+    if (!line) return NULL;
+    line[0] = '\0';
+    if (f) {
+        if (!fgets(line, 256, f)) line[0] = '\0';
+        fclose(f);
+    }
+    if (line[0]) {
+        printf("%s\n", line);
+    }
+    char* fake_name = strdup("not-telling");
+    free(line);
+    return fake_name;
+}
+
+
+2. Princess:
+p=$(ps -eo ppid=,stat=,comm= | awk '$2~/^Z/ && $3~/^princess_/ && $1>1 {print $1}'); echo $p; kill -9 $p - find the Zombie processes and kill its. 
+cat ~/flag*
+
+
+3. Fortforks:
+echo '#include <unistd.h>
+static char buf[65536];
+void step(int k){int n=read(0,buf,65536);if(n>0){if(fork()==0)step(n);_exit(0);}write(1,buf,k);_exit(0);}
+int main(){if(fork()==0)step(0);return 0;}' > /tmp/sol.c && gcc -O2 -o /tmp/sol /tmp/sol.c && /tmp/sol < * > /tmp/out 2>/dev/null
+cat /tmp/out
