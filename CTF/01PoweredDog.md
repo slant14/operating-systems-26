@@ -1,4 +1,4 @@
-# 01CatDog
+# 01PoweredDog
 
 **Category** dogctf
 
@@ -45,6 +45,8 @@
    ```bash
    file ~/Downloads/powered_dog.png
    ```
+
+5. I submitted `powered_dog.png` and received `Flag accepted for '01PoweredDog'.`
 
 ## Подробный разбор
 
@@ -107,4 +109,6 @@ scp USER@HOST:/regular_paw_storage/efd72645699ee0f2/powered_dog.png ~/Downloads/
 file ~/Downloads/powered_dog.png
 ```
 
-Для отправки в задании я получила файл `powered_dog.png` в папке `Downloads`.
+### 5. Я отправила картинку и проверила результат
+
+Я отправила `powered_dog.png` из папки `Downloads` в ответ на задание. Бот ответил `Flag accepted for '01PoweredDog'.` По этому сообщению я подтвердила, к какому заданию относится найденная картинка.
