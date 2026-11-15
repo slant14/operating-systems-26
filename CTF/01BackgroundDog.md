@@ -1,6 +1,6 @@
 # 01BackgroundDog
 
-**Category** DOCCTF
+**Category** dogctf
 
 ## Solution
 
