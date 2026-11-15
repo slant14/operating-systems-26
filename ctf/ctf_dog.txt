@@ -1,0 +1,106 @@
+1. 01HelloDog:
+scp "e.gilfanov-dog@osctf.nnk.moe:/home/ctf/go_to_opt/hoi_:3.png" ~/OS/operating-systems-26-week1/
+
+
+2. 01CatDog:
+cat Cat_dog_top Cat_dog_bottom > dog_full.png
+scp "e.gilfanov-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Pictures/dog_full.png" ~/OS/operating-systems-26-week1/
+
+
+3. 03UsedDog:
+cd ..
+cd ..
+cd dog
+scp "e.gilfanov-dog@osctf.nnk.moe:/home/dog/Used_dog.png" ~/OS/operating-systems-26-week1/
+
+
+4. 02ScatteredDog:
+cd Videos
+cd 'Scatteder dog'
+nano sol.c
+
+#include <stdio.h>
+int main() {
+    FILE *out = fopen("scattered_dog.png", "wb");
+    if (!out) return 1;
+    char buffer[8192];
+    size_t bytes;
+    for (int i = -50; i <= 49; i++) {
+        char filename[10];
+        sprintf(filename, "%d", i);
+
+        FILE *in = fopen(filename, "rb");
+        if (!in) continue;
+
+        while ((bytes = fread(buffer, 1, sizeof(buffer), in)) > 0) {
+            fwrite(buffer, 1, bytes, out);
+        }
+        fclose(in);
+    }
+    fclose(out);
+    return 0;
+}
+
+gcc sol.c -o sol
+./sol
+scp "e.gilfanov-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Videos/Scattered dog/scattered_dog.png" ~/OS/operating-systems-26-week1/
+
+
+5. 02ShyDog:
+cd Videos
+cd 'Shy dog'
+Find among all pictures _Maybe_Dog this one: 
+scp "e.gilfanov-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Videos/Shy dog/Vacation_Maybe_Dog_5870a4a6.png" ~/OS/operating-systems-26-week1/
+
+
+6. 03InsecureDog:
+cd Doguments
+cd secret_stuff
+cat rememver.txt and try to make up a word GOOD of G, O, D letters, when one of them repeats twice:
+scp "e.gilfanov-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Doguments/secret_stuff/super_secret/GOOD.png" ~/OS/operating-systems-26-week1/
+
+
+7. 01TailheadedDog:
+cd Downloads
+cat dog.log
+head dog.log
+Combain all stuff Look, a dog image path:
+/regular_paw_storage/65086713ff7cf85d/tailheaded.png
+cat /regular_paw_storage/65086713ff7cf85d/tailheaded.png > /home/ctf/my_dog.png
+scp "e.gilfanov-dog@osctf.nnk.moe:/home/ctf/my_dog.png" ~/OS/operating-systems-26-week1/
+
+
+8. 01CompileDog:
+cd Programs
+gcc Compile_dog.c -o Compile_dog
+./Compile_dog
+cat /regular_paw_storage/08479fab9f01ef8f/Compile_dog.png > ~/Compile_dog.png
+scp "e.gilfanov-dog@osctf.nnk.moe:/home/ctf/Compile_dog.png" ~/OS/operating-systems-26-week1/
+
+
+9. 03SpyDog:
+cd dog
+cd Doguments
+cd cat_tracker
+Check readme and suspect
+git log --oneline
+Search for "hanging" objects:
+git fsck --unreachable
+git cat-file -p <8d668eb4fefaacfc6c0014e4eaf5cb822c43e0c7> | file -
+git cat-file -p 8d668eb4fefaacfc6c0014e4eaf5cb822c43e0c7 > /tmp/dog_real.png
+scp "e.gilfanov-dog@osctf.nnk.moe:/tmp/dog_real.png" ~/OS/operating-systems-26-week1/
+
+
+10. 01PoweredDog:
+cd opt
+cat README.md
+cat /regular_paw_storage/ecda182db263c721/powered_dog.png > /home/ctf/powered_dog.png
+scp "e.gilfanov-dog@osctf.nnk.moe:/home/ctf/powered_dog.png" ~/OS/operating-systems-26-week1/
+
+
+11. 01BackgroundDog:
+ps aux | grep -i "dog\|background"
+kill -CONT 321
+kill 321
+cat /regular_paw_storage/ac3bb63e249aa1af/Background_dog.png > /home/ctf/background_dog.png
+scp "e.gilfanov-dog@osctf.nnk.moe:/home/ctf/background_dog.png" ~/OS/operating-systems-26-week1/
