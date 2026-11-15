@@ -30,10 +30,10 @@
    /regular_paw_storage/28bed636c1e6a87c/Compile_dog.png
    ```
 
-4. I downloaded the image to my Mac using the challenge SSH destination in place of `USER@HOST`.
+4. I downloaded the image to my Mac.
 
    ```bash
-   scp USER@HOST:/regular_paw_storage/28bed636c1e6a87c/Compile_dog.png ~/Downloads/Compile_dog.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/28bed636c1e6a87c/Compile_dog.png ~/Downloads/Compile_dog.png
    open ~/Downloads/Compile_dog.png
    ```
 
@@ -83,10 +83,10 @@ cat /tmp/compile_dog_output
 
 ### 4. Я скачала картинку
 
-Я открыла отдельную вкладку терминала на Mac и выполнила `scp`, подставив вместо `USER@HOST` адрес подключения из задания.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp USER@HOST:/regular_paw_storage/28bed636c1e6a87c/Compile_dog.png ~/Downloads/Compile_dog.png
+scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/28bed636c1e6a87c/Compile_dog.png ~/Downloads/Compile_dog.png
 open ~/Downloads/Compile_dog.png
 ```
 

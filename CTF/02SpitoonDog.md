@@ -45,10 +45,10 @@
    Right this way sir: /regular_paw_storage/6c455644a15d4b7f/Spitoon_dog.png, sorry to keep you waiting
    ```
 
-5. I downloaded and opened the image on my Mac, using the challenge SSH destination in place of `USER@HOST`.
+5. I downloaded and opened the image on my Mac.
 
    ```bash
-   scp USER@HOST:/regular_paw_storage/6c455644a15d4b7f/Spitoon_dog.png ~/Downloads/Spitoon_dog.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/6c455644a15d4b7f/Spitoon_dog.png ~/Downloads/Spitoon_dog.png
    open ~/Downloads/Spitoon_dog.png
    ```
 
@@ -117,10 +117,10 @@ Right this way sir: /regular_paw_storage/6c455644a15d4b7f/Spitoon_dog.png, sorry
 
 ### 5. Я скачала и открыла картинку
 
-Я открыла отдельную вкладку терминала на Mac и подставила вместо `USER@HOST` адрес подключения из задания.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp USER@HOST:/regular_paw_storage/6c455644a15d4b7f/Spitoon_dog.png ~/Downloads/Spitoon_dog.png
+scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/6c455644a15d4b7f/Spitoon_dog.png ~/Downloads/Spitoon_dog.png
 open ~/Downloads/Spitoon_dog.png
 ```
 

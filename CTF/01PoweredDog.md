@@ -34,10 +34,10 @@
    Here is your dog image: /regular_paw_storage/efd72645699ee0f2/powered_dog.png
    ```
 
-4. I copied the image to my Mac with `scp`. I used the SSH destination provided with the challenge in place of `USER@HOST`.
+4. I copied the image to my Mac with `scp`.
 
    ```bash
-   scp USER@HOST:/regular_paw_storage/efd72645699ee0f2/powered_dog.png ~/Downloads/powered_dog.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/efd72645699ee0f2/powered_dog.png ~/Downloads/powered_dog.png
    ```
 
    I saw the transfer reach `100%`, with a displayed size of `132KB`. I confirmed the local file was a 300 × 213 RGBA PNG.
@@ -95,10 +95,10 @@ cat /opt/README.md
 
 ### 4. Я скачала картинку на Mac
 
-Я открыла отдельную вкладку терминала на Mac и выполнила `scp`, подставив вместо `USER@HOST` адрес подключения из задания.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp USER@HOST:/regular_paw_storage/efd72645699ee0f2/powered_dog.png ~/Downloads/powered_dog.png
+scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/efd72645699ee0f2/powered_dog.png ~/Downloads/powered_dog.png
 ```
 
 В первом аргументе я указала SSH-адрес, двоеточие и абсолютный путь к исходному файлу в контейнере. Во втором я указала путь назначения на Mac. В этом терминале `~` обозначает мою домашнюю папку на Mac, поэтому картинка сохранилась в `Downloads`.

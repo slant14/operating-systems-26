@@ -17,10 +17,10 @@
    file -- 'hoi_:3.png'
    ```
 
-3. I downloaded the image and opened it on my Mac. I used the challenge SSH destination in place of `USER@HOST`.
+3. I downloaded the image and opened it on my Mac.
 
    ```bash
-   scp 'USER@HOST:/home/ctf/go_to_opt/hoi_:3.png' ~/Downloads/
+   scp 'a.kaiumova-dog@osctf.nnk.moe:/home/ctf/go_to_opt/hoi_:3.png' ~/Downloads/
    open ~/Downloads/'hoi_:3.png'
    ```
 
@@ -49,16 +49,16 @@ file -- 'hoi_:3.png'
 
 ### 3. Я скачала и открыла картинку
 
-Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды. Вместо `USER@HOST` я подставила SSH-адрес из задания.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp 'USER@HOST:/home/ctf/go_to_opt/hoi_:3.png' ~/Downloads/
+scp 'a.kaiumova-dog@osctf.nnk.moe:/home/ctf/go_to_opt/hoi_:3.png' ~/Downloads/
 open ~/Downloads/'hoi_:3.png'
 ```
 
 В первом аргументе `scp` я указала источник в контейнере. Во втором я указала локальную папку `Downloads`, поэтому файл сохранился в ней под исходным именем `hoi_:3.png`. Через `open` я открыла скачанную картинку.
 
-Я заключила имя в одинарные кавычки, чтобы передать его оболочке буквально. В аргументе `scp` двоеточие после `USER@HOST` отделяло SSH-адрес от пути, а двоеточие в `hoi_:3.png` было частью имени файла.
+Я заключила имя в одинарные кавычки, чтобы передать его оболочке буквально. В аргументе `scp` двоеточие после `a.kaiumova-dog@osctf.nnk.moe` отделяло SSH-адрес от пути, а двоеточие в `hoi_:3.png` было частью имени файла.
 
 ### 4. Я подтвердила, к какому заданию относится картинка
 

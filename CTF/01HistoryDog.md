@@ -16,10 +16,10 @@
    cp /super_secret_doggo_vault/grandpaw.png /regular_paw_storage/1e1ab4e34f5f48a4/grandpaw.png
    ```
 
-3. I downloaded `grandpaw.png` to my Mac using the challenge SSH destination in place of `USER@HOST` and opened it.
+3. I downloaded `grandpaw.png` to my Mac and opened it.
 
    ```bash
-   scp USER@HOST:/regular_paw_storage/1e1ab4e34f5f48a4/grandpaw.png ~/Downloads/grandpaw.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/1e1ab4e34f5f48a4/grandpaw.png ~/Downloads/grandpaw.png
    open ~/Downloads/grandpaw.png
    ```
 
@@ -53,10 +53,10 @@ cp /super_secret_doggo_vault/grandpaw.png /regular_paw_storage/1e1ab4e34f5f48a4/
 
 ### 3. Я скачала и открыла картинку
 
-Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды, подставив вместо `USER@HOST` адрес подключения из задания.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp USER@HOST:/regular_paw_storage/1e1ab4e34f5f48a4/grandpaw.png ~/Downloads/grandpaw.png
+scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/1e1ab4e34f5f48a4/grandpaw.png ~/Downloads/grandpaw.png
 open ~/Downloads/grandpaw.png
 ```
 

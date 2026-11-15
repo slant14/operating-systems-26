@@ -17,10 +17,10 @@
    find . -maxdepth 1 -type f -exec file -- {} + | grep -F 'PNG image data'
    ```
 
-3. I downloaded and opened the image on my Mac. I used the challenge SSH destination in place of `USER@HOST` and quoted the remote argument containing the directory name with a space.
+3. I downloaded and opened the image on my Mac. I quoted the remote argument containing the directory name with a space.
 
    ```bash
-   scp 'USER@HOST:/home/ctf/go_to_opt/Videos/Shy dog/Winter_Maybe_Dog_470ee04f.png' ~/Downloads/
+   scp 'a.kaiumova-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Videos/Shy dog/Winter_Maybe_Dog_470ee04f.png' ~/Downloads/
    open ~/Downloads/Winter_Maybe_Dog_470ee04f.png
    ```
 
@@ -61,10 +61,10 @@ find . -maxdepth 1 -type f -exec file -- {} + | grep -F 'PNG image data'
 
 ### 3. Я скачала и открыла картинку
 
-В отдельной вкладке терминала на Mac я выполнила следующие команды, подставив вместо `USER@HOST` адрес подключения из задания.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp 'USER@HOST:/home/ctf/go_to_opt/Videos/Shy dog/Winter_Maybe_Dog_470ee04f.png' ~/Downloads/
+scp 'a.kaiumova-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Videos/Shy dog/Winter_Maybe_Dog_470ee04f.png' ~/Downloads/
 open ~/Downloads/Winter_Maybe_Dog_470ee04f.png
 ```
 

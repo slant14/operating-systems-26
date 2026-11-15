@@ -21,10 +21,10 @@
    file -- /regular_paw_storage/2e0ef8d776993747/Background_dog.png
    ```
 
-5. I copied the image to my Mac with `scp`, using the SSH destination from the challenge in place of `USER@HOST`. I verified the local PNG with `file` and submitted it.
+5. I copied the image to my Mac with `scp`. I verified the local PNG with `file` and submitted it.
 
    ```bash
-   scp USER@HOST:/regular_paw_storage/2e0ef8d776993747/Background_dog.png ~/Downloads/Background_dog.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/2e0ef8d776993747/Background_dog.png ~/Downloads/Background_dog.png
    file ~/Downloads/Background_dog.png
    ```
 
@@ -80,10 +80,10 @@ file -- /regular_paw_storage/2e0ef8d776993747/Background_dog.png
 
 ### 5. Я скачала и отправила картинку
 
-Я открыла отдельную вкладку терминала на Mac и выполнила `scp` в ней. Вместо `USER@HOST` я подставила адрес подключения из команды `ssh`.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp USER@HOST:/regular_paw_storage/2e0ef8d776993747/Background_dog.png ~/Downloads/Background_dog.png
+scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/2e0ef8d776993747/Background_dog.png ~/Downloads/Background_dog.png
 file ~/Downloads/Background_dog.png
 ```
 

@@ -27,10 +27,10 @@
    /regular_paw_storage/596c834bcf5318d2/Mute_dog.png
    ```
 
-4. I downloaded and opened the image on my Mac, using the challenge SSH destination in place of `USER@HOST`.
+4. I downloaded and opened the image on my Mac.
 
    ```bash
-   scp USER@HOST:/regular_paw_storage/596c834bcf5318d2/Mute_dog.png ~/Downloads/Mute_dog.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/596c834bcf5318d2/Mute_dog.png ~/Downloads/Mute_dog.png
    open ~/Downloads/Mute_dog.png
    ```
 
@@ -79,10 +79,10 @@ cat /tmp/mute_dog.stdout /tmp/mute_dog.stderr
 
 ### 4. Я скачала и открыла картинку
 
-Я открыла отдельную вкладку терминала на Mac и подставила вместо `USER@HOST` адрес подключения к контейнеру.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp USER@HOST:/regular_paw_storage/596c834bcf5318d2/Mute_dog.png ~/Downloads/Mute_dog.png
+scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/596c834bcf5318d2/Mute_dog.png ~/Downloads/Mute_dog.png
 open ~/Downloads/Mute_dog.png
 ```
 

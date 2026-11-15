@@ -24,10 +24,10 @@
    file -- /tmp/Scattered_dog.png
    ```
 
-4. I downloaded and opened the image on my Mac, using the challenge SSH destination in place of `USER@HOST`.
+4. I downloaded and opened the image on my Mac.
 
    ```bash
-   scp USER@HOST:/tmp/Scattered_dog.png ~/Downloads/Scattered_dog.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/tmp/Scattered_dog.png ~/Downloads/Scattered_dog.png
    open ~/Downloads/Scattered_dog.png
    ```
 
@@ -71,10 +71,10 @@ file -- /tmp/Scattered_dog.png
 
 ### 4. Я скачала и открыла картинку
 
-Я открыла отдельную вкладку терминала на Mac и подставила вместо `USER@HOST` адрес подключения из задания.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp USER@HOST:/tmp/Scattered_dog.png ~/Downloads/Scattered_dog.png
+scp a.kaiumova-dog@osctf.nnk.moe:/tmp/Scattered_dog.png ~/Downloads/Scattered_dog.png
 open ~/Downloads/Scattered_dog.png
 ```
 

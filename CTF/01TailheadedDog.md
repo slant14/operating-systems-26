@@ -25,10 +25,10 @@
    /regular_paw_storage/2098b88fe052669a/tailheaded.png
    ```
 
-4. I downloaded the image and opened it on my Mac, using the challenge SSH destination in place of `USER@HOST`.
+4. I downloaded the image and opened it on my Mac.
 
    ```bash
-   scp USER@HOST:/regular_paw_storage/2098b88fe052669a/tailheaded.png ~/Downloads/tailheaded.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/2098b88fe052669a/tailheaded.png ~/Downloads/tailheaded.png
    open ~/Downloads/tailheaded.png
    ```
 
@@ -71,10 +71,10 @@ tail -n 60 /home/ctf/go_to_opt/Downloads/dog.log
 
 ### 4. Я скачала и открыла картинку
 
-Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды. Вместо `USER@HOST` я подставила SSH-адрес подключения из задания.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp USER@HOST:/regular_paw_storage/2098b88fe052669a/tailheaded.png ~/Downloads/tailheaded.png
+scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/2098b88fe052669a/tailheaded.png ~/Downloads/tailheaded.png
 open ~/Downloads/tailheaded.png
 ```
 

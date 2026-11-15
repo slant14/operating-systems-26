@@ -24,10 +24,10 @@
    file -- /tmp/Cat_dog.png
    ```
 
-4. I downloaded the result from a terminal on my Mac and opened it. I used the SSH destination provided with the challenge in place of `USER@HOST`.
+4. I downloaded the result from a terminal on my Mac and opened it.
 
    ```bash
-   scp USER@HOST:/tmp/Cat_dog.png ~/Downloads/Cat_dog.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/tmp/Cat_dog.png ~/Downloads/Cat_dog.png
    open ~/Downloads/Cat_dog.png
    ```
 
@@ -73,10 +73,10 @@ file -- /tmp/Cat_dog.png
 
 ### 4. Я скачала и открыла картинку
 
-Я открыла отдельную вкладку терминала на Mac и выполнила команды, подставив вместо `USER@HOST` адрес из команды подключения к контейнеру.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp USER@HOST:/tmp/Cat_dog.png ~/Downloads/Cat_dog.png
+scp a.kaiumova-dog@osctf.nnk.moe:/tmp/Cat_dog.png ~/Downloads/Cat_dog.png
 open ~/Downloads/Cat_dog.png
 ```
 

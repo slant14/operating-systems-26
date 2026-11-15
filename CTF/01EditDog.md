@@ -31,10 +31,10 @@
    Here's your dog pic: /regular_paw_storage/4cf12d4a5a8f6c3a/Edit_dog.png
    ```
 
-5. I downloaded and opened the image on my Mac, using the challenge SSH destination in place of `USER@HOST`.
+5. I downloaded and opened the image on my Mac.
 
    ```bash
-   scp USER@HOST:/regular_paw_storage/4cf12d4a5a8f6c3a/Edit_dog.png ~/Downloads/Edit_dog.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/4cf12d4a5a8f6c3a/Edit_dog.png ~/Downloads/Edit_dog.png
    open ~/Downloads/Edit_dog.png
    ```
 
@@ -85,10 +85,10 @@ diff -u /tmp/EDITME.original /home/ctf/go_to_opt/Doguments/EDITME
 
 ### 5. Я скачала картинку на Mac
 
-Я открыла отдельную вкладку терминала на Mac и подставила вместо `USER@HOST` адрес подключения из задания.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp USER@HOST:/regular_paw_storage/4cf12d4a5a8f6c3a/Edit_dog.png ~/Downloads/Edit_dog.png
+scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/4cf12d4a5a8f6c3a/Edit_dog.png ~/Downloads/Edit_dog.png
 open ~/Downloads/Edit_dog.png
 ```
 

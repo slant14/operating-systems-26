@@ -26,10 +26,10 @@
    /regular_paw_storage/lxtp68u/Restore_dog.png
    ```
 
-3. I checked the ambiguous first character of the directory name using exact candidate paths over SSH. I used the challenge SSH destination in place of `USER@HOST`.
+3. I checked the ambiguous first character of the directory name using exact candidate paths over SSH.
 
    ```bash
-   ssh USER@HOST 'for name in lxtp68u 1xtp68u Ixtp68u; do if test -r "/regular_paw_storage/$name/Restore_dog.png"; then echo "/regular_paw_storage/$name/Restore_dog.png"; fi; done'
+   ssh a.kaiumova-dog@osctf.nnk.moe 'for name in lxtp68u 1xtp68u Ixtp68u; do if test -r "/regular_paw_storage/$name/Restore_dog.png"; then echo "/regular_paw_storage/$name/Restore_dog.png"; fi; done'
    ```
 
    I confirmed the spelling `lxtp68u`, beginning with a lowercase `l`. My earlier `scp` attempt with `?xtp68u` had failed because wildcard expansion required reading the restricted parent directory.
@@ -37,8 +37,8 @@
 4. I checked for remaining editor processes from my Mac. I found a recovery session with PID `937007` and sent it SIGTERM.
 
    ```bash
-   ssh USER@HOST 'ps -u ctf -o pid,stat,args'
-   ssh USER@HOST 'kill -TERM 937007'
+   ssh a.kaiumova-dog@osctf.nnk.moe 'ps -u ctf -o pid,stat,args'
+   ssh a.kaiumova-dog@osctf.nnk.moe 'kill -TERM 937007'
    ```
 
    I used the PID observed in that process listing. I received no error from the signal command.
@@ -46,7 +46,7 @@
 5. I downloaded and opened the image on my Mac, submitted `Restore_dog.png`, and received `Flag accepted for '03RestoreDog'.`
 
    ```bash
-   scp USER@HOST:/regular_paw_storage/lxtp68u/Restore_dog.png ~/Downloads/Restore_dog.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/lxtp68u/Restore_dog.png ~/Downloads/Restore_dog.png
    open ~/Downloads/Restore_dog.png
    ```
 
@@ -96,10 +96,10 @@ scp: remote readdir("/regular_paw_storage/"): Permission denied
 
 По ошибке я поняла, что для раскрытия маски клиент попытался прочитать список имён в `/regular_paw_storage`, а права каталога этого не позволяли. Я перешла к проверке конкретных известных вариантов имени.
 
-Из терминала на Mac я выполнила команду, подставив вместо `USER@HOST` адрес подключения из задания.
+В терминале на Mac я выполнила следующую команду.
 
 ```bash
-ssh USER@HOST 'for name in lxtp68u 1xtp68u Ixtp68u; do if test -r "/regular_paw_storage/$name/Restore_dog.png"; then echo "/regular_paw_storage/$name/Restore_dog.png"; fi; done'
+ssh a.kaiumova-dog@osctf.nnk.moe 'for name in lxtp68u 1xtp68u Ixtp68u; do if test -r "/regular_paw_storage/$name/Restore_dog.png"; then echo "/regular_paw_storage/$name/Restore_dog.png"; fi; done'
 ```
 
 После входа по SSH удалённая оболочка перебрала три точных имени. Через `test -r` я проверила доступность каждого файла для чтения и вывела совпавший путь. Я получила `/regular_paw_storage/lxtp68u/Restore_dog.png` и определила первый символ как строчную латинскую `l`.
@@ -111,7 +111,7 @@ ssh USER@HOST 'for name in lxtp68u 1xtp68u Ixtp68u; do if test -r "/regular_paw_
 В терминале на Mac я посмотрела процессы пользователя `ctf` в контейнере.
 
 ```bash
-ssh USER@HOST 'ps -u ctf -o pid,stat,args'
+ssh a.kaiumova-dog@osctf.nnk.moe 'ps -u ctf -o pid,stat,args'
 ```
 
 В выводе я увидела процесс `937007` с командой `vim -r /home/ctf/go_to_opt/Doguments/crashed.txt`. Я также увидела процессы SSH-соединений `dropbear`, оболочки `bash` и несколько `background_dog` в состоянии `T`, то есть приостановленных.
@@ -119,7 +119,7 @@ ssh USER@HOST 'ps -u ctf -o pid,stat,args'
 Я различала временные файлы `.swp` и `.swo` на диске и работающий процесс редактора с PID. Чтобы завершить найденную сессию Vim, я отправила ей SIGTERM.
 
 ```bash
-ssh USER@HOST 'kill -TERM 937007'
+ssh a.kaiumova-dog@osctf.nnk.moe 'kill -TERM 937007'
 ```
 
 Я получила завершение команды без сообщения об ошибке. Отдельную повторную проверку процесса после этого я не выполняла. PID `937007` относился к этой конкретной сессии. При повторении я сначала определяю текущий PID по команде процесса и затем использую его для отправки сигнала.
@@ -129,7 +129,7 @@ ssh USER@HOST 'kill -TERM 937007'
 В терминале на Mac я скачала файл по точному адресу и открыла его.
 
 ```bash
-scp USER@HOST:/regular_paw_storage/lxtp68u/Restore_dog.png ~/Downloads/Restore_dog.png
+scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/lxtp68u/Restore_dog.png ~/Downloads/Restore_dog.png
 open ~/Downloads/Restore_dog.png
 ```
 

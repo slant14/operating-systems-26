@@ -30,10 +30,10 @@
    /home/ctf/go_to_opt/Doguments/secret_stuff/super_secret/OGOD.png
    ```
 
-4. I downloaded and opened the image on my Mac, using the challenge SSH destination in place of `USER@HOST`.
+4. I downloaded and opened the image on my Mac.
 
    ```bash
-   scp USER@HOST:/home/ctf/go_to_opt/Doguments/secret_stuff/super_secret/OGOD.png ~/Downloads/OGOD.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Doguments/secret_stuff/super_secret/OGOD.png ~/Downloads/OGOD.png
    open ~/Downloads/OGOD.png
    ```
 
@@ -87,10 +87,10 @@ done
 
 ### 4. Я скачала и открыла файл
 
-Я открыла отдельную вкладку терминала на Mac и подставила вместо `USER@HOST` адрес подключения из задания.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp USER@HOST:/home/ctf/go_to_opt/Doguments/secret_stuff/super_secret/OGOD.png ~/Downloads/OGOD.png
+scp a.kaiumova-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Doguments/secret_stuff/super_secret/OGOD.png ~/Downloads/OGOD.png
 open ~/Downloads/OGOD.png
 ```
 

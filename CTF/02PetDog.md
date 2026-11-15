@@ -78,10 +78,10 @@
    git status
    ```
 
-8. I downloaded and opened `mascot.png` on my Mac, using the challenge SSH destination in place of `USER@HOST`. I submitted the image and received `Flag accepted for '02PetDog'.`
+8. I downloaded and opened `mascot.png` on my Mac. I submitted the image and received `Flag accepted for '02PetDog'.`
 
    ```bash
-   scp USER@HOST:/home/ctf/go_to_opt/Doguments/auto_petter/mascot.png ~/Downloads/mascot.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Doguments/auto_petter/mascot.png ~/Downloads/mascot.png
    open ~/Downloads/mascot.png
    ```
 
@@ -271,10 +271,10 @@ git status
 
 ### 8. Я скачала картинку и подтвердила флаг
 
-В отдельной вкладке терминала на Mac я выполнила следующие команды, подставив вместо `USER@HOST` SSH-адрес из задания.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp USER@HOST:/home/ctf/go_to_opt/Doguments/auto_petter/mascot.png ~/Downloads/mascot.png
+scp a.kaiumova-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Doguments/auto_petter/mascot.png ~/Downloads/mascot.png
 open ~/Downloads/mascot.png
 ```
 

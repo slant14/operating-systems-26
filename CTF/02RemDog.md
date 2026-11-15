@@ -38,10 +38,10 @@
    Here's your dog pic: /regular_paw_storage/93a22bbfe927db66/Rem_dog.png
    ```
 
-5. I downloaded and opened the image on my Mac, using the challenge SSH destination in place of `USER@HOST`.
+5. I downloaded and opened the image on my Mac.
 
    ```bash
-   scp USER@HOST:/regular_paw_storage/93a22bbfe927db66/Rem_dog.png ~/Downloads/Rem_dog.png
+   scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/93a22bbfe927db66/Rem_dog.png ~/Downloads/Rem_dog.png
    open ~/Downloads/Rem_dog.png
    ```
 
@@ -116,10 +116,10 @@ ls -la
 
 ### 5. Я скачала и открыла результат
 
-В отдельной вкладке терминала на Mac я выполнила команды, подставив вместо `USER@HOST` адрес подключения из задания.
+Я открыла отдельную вкладку терминала на Mac и выполнила следующие команды.
 
 ```bash
-scp USER@HOST:/regular_paw_storage/93a22bbfe927db66/Rem_dog.png ~/Downloads/Rem_dog.png
+scp a.kaiumova-dog@osctf.nnk.moe:/regular_paw_storage/93a22bbfe927db66/Rem_dog.png ~/Downloads/Rem_dog.png
 open ~/Downloads/Rem_dog.png
 ```
 
