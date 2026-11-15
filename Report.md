@@ -326,6 +326,114 @@ vim -r crashed.txt
 ```
 I got: */regular_paw_storage/n23k9i7/Restore_dog.png*
 
+# CCTF
+
+### 1. Cavern
+
+The main idea of this solution is to use a vulnerability in the memory management of the original program.
+
+The guess() function allocates memory for the offering structure, saves the decoded flag in the secret field, and then frees the allocated memory using free(). However, it still returns a pointer to this memory.
+
+This creates a use-after-free vulnerability, because the program returns a pointer to memory that has already been freed.
+
+By looking at the original source code, we can understand how the offering structure is organized and find the position of the secret field. The solution uses this information to try to read the flag directly from memory instead of guessing it.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <dlfcn.h>
+
+#define FLAGLEN 55
+#define SECRET_OFFSET 64
+
+typedef void* (*guess_function)(char*);
+
+void run(void) {
+    dlerror();
+
+    guess_function cavern_guess =
+        (guess_function)dlsym(RTLD_DEFAULT, "guess");
+
+    if (cavern_guess == NULL) {
+        printf("Could not find guess: %s\n", dlerror());
+        return;
+    }
+
+    void* ptr = cavern_guess("wrong");
+
+    volatile unsigned char* secret =
+        (volatile unsigned char*)ptr + SECRET_OFFSET;
+
+    printf("Flag: ");
+
+    for (int i = 0; i < FLAGLEN; i++) {
+        putchar(secret[i]);
+    }
+
+    putchar('\n');
+}
+```
+
+The solution uses dlsym() to find the original guess() function and call it. After examining the source code, we find that this function stores the decoded flag in the secret field, frees the memory, and then returns a pointer to the same memory.
+
+### 2. Legacy
+
+The original program was written for an old architecture where unsigned had 18 bits. On modern computers, unsigned int usually has 32 bits, so the hash function produces different results.
+
+To fix this problem, I added & 0x3FFFF to the hash calculation. This operation keeps only the lowest 18 bits, reproducing the original 18-bit unsigned arithmetic.
+
+I also added (unsigned char) to ensure that characters are always treated as unsigned values, independently of the platform.
+
+As a result, the hash function calculates the correct positions for all encoded strings. The add_data() function can then place each character into the correct position in the document, reconstructing the original flag.
+
+```c
+unsigned position(const char *s)
+{
+    unsigned h = 0;
+
+    while (*s) {
+        h = (h * 67 + (unsigned char)*s++) & 0x3FFFF;
+    }
+
+    return h;
+}
+```
+### 3. Xorcism
+
+The main idea of this solution is to use XOR decryption to recover the original password.
+
+In the original program, the password is encrypted using the XOR operation. However, the program contains both the encrypted data (enc) and the key (key). This means that we do not need to guess the password because we can restore it directly.
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+#define PWLEN 33
+
+static const unsigned char enc[PWLEN] = {
+    0x47, 0x4d, 0x69, 0x3b, 0x44, 0x44, 0x05, 0x6b, 0x58, 0x4f, 0x2e, 0x50, 0x71, 0x12, 0x1f, 0x6b, 0x68, 0x75, 0x12, 0x6a, 0x68, 0x6f, 0x6e, 0x7c, 0x76, 0x6d, 0x05, 0x4b, 0x72, 0x4c, 0x35, 0x41, 0x64
+};
+
+static const unsigned char key[4] = { 0x37, 0x21, 0x5a, 0x0f };
+
+int main(void)
+{
+    char in[64] = {0};
+
+    fputs("crack me!\n", stdout);
+    fputs("password: ", stdout);
+
+    for (int i = 0; i < PWLEN; i++) {
+        in[i] = enc[i] ^ key[i % 4];
+    }
+
+    in[PWLEN] = '\0';
+
+    printf("correct! flag: cctf{%s}\n", in);
+
+    return 0;
+}
+```
 
 
 
