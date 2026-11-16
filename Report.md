@@ -104,7 +104,29 @@ history
 ```
 and found */regular_paw_storage/c16ceecd3f1b618a/grandpaw.png*
 
-### 7. 01TailheadedDog
+### 7. 01PoweredDog
+
+The directory is called *go_to_opt*, so it is a hind. 
+```bash
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+```
+
+Here we can find *opt* folder.
+
+```bash
+cd opt
+ls
+cat README.md
+```
+
+By doing this we get: */regular_paw_storage/af70531da0c0f6a4/powered_dog.png*
+
+### 8. 01TailheadedDog
 
 I went to Downloads folder and looked what is there:
 ```bash
@@ -123,7 +145,7 @@ I found the beginning and the end of the path:
 
 *3baeba30/tailheaded.png*
 
-### 8. 02MuteDog
+### 9. 02MuteDog
 
 I went to Programs folder and found *mute_dog*
 ```bash
@@ -146,7 +168,7 @@ cat answer.txt
 
 and got: *d933fd0a/Mute_dog.png/regular_paw_storage/e8fdc830* = */regular_paw_storage/e8fdc830d933fd0a/Mute_dog.png*
 
-### 9. 02RemDog
+### 10. 02RemDog
 
 I went to Doguments folder and found there unsorted folder.
 ```bash
@@ -172,7 +194,7 @@ find . -type f -size 1937c -delete
 ```
 and got: *Here's your dog pic: /regular_paw_storage/4fa46cf5a8b89c48/Rem_dog.png*
 
-### 10. 02ScatteredDog
+### 11. 02ScatteredDog
 
 I went to Videos folder and found there 'Scattered dog' folder.
 ```bash
@@ -193,7 +215,7 @@ cd ..
 pwd
 ```
 
-### 11. 02ShyDog
+### 12. 02ShyDog
 
 I went to Videos folder and found there 'Shy dog' folder.
 ```bash
@@ -212,7 +234,7 @@ file *
 mv Snapshot_Maybe_Dog_3108badb.png ..
 ```
 
-### 12. 02SpitoonDog
+### 13. 02SpitoonDog
 
 I went to Programs folder and found spitoon:
 ```bash
@@ -248,7 +270,7 @@ Right this way sir: /regular_paw_storage/spitoon/tough_dog.png, sorry to keep yo
 
 By doing this I got: *regular_paw_storage/b8f5933753560a19/Spitoon_dog.png*
 
-13. ### 03InsecureDog
+### 14. 03InsecureDog
 
 I went to Doguments folder and found secret_stuff folder:
 ```bash
@@ -288,7 +310,7 @@ for n in {D,O,G}{D,O,G}{D,O,G}{D,O,G}; do     [ -f "$n.png" ] && echo "$n.png"; 
 
 and got: *GDGO.png*
 
-14. ### 03NetDog
+### 15. 03NetDog
 
 By the name I could understand that I have to look nets.
 ```bash
@@ -305,7 +327,7 @@ cat /proc/net/tcp
 nc -w 3 127.0.0.1 3984 > Net_dog.png
 ```
 
-### 15. 03RestoreDog
+### 16. 03RestoreDog
 
 I went to Doguments folder and found crashed.txt
 ```bash
@@ -325,6 +347,19 @@ So I opened the file in recovery mode and entered there the recovery key:
 vim -r crashed.txt
 ```
 I got: */regular_paw_storage/n23k9i7/Restore_dog.png*
+
+### 17. 03UsedDog
+
+```bash
+cd ..
+ls
+cd ..
+ls
+cd dog
+ls
+```
+
+By searching other directories I found *Used_dog.png*
 
 # CCTF
 
