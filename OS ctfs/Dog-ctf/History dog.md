@@ -1,0 +1,1 @@
+The `cp` operation on the photo is hidden in the history, used `history` command to find it

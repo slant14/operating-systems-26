@@ -1,0 +1,1 @@
+In the directory `/home/dog` there is a file `Used_dog.png`, this is the flag
