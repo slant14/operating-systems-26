@@ -20,7 +20,7 @@ regular_paw_storage/81473ce290813132/Edit_dog.png
 
 ## 01HelloDog
 When the container is started there is hoi_:3.png picture in the go_to_opt folder. \
-scp -O a.shestakova-dog@osctf.nnk.moe:/home/ctf/go_to_opt/hoi_:3.png ~/Desktop
+/home/ctf/go_to_opt/hoi_:3.png
 
 ## 01HistoryDog
 The history command gives the location of the picture: \
@@ -52,7 +52,7 @@ regular_paw_storage/19f456eed91fe397/Spitoon_dog.png
 
 ## 03InsecureDog
 For this challenge, I wrote a program that enumerates all possible combinations with two repeated letters and checks whether the file \ with such name is not null, if it is not null, then we receive our file name: \
-scp -O a.shestakova-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Doguments/secret_stuff/super_secret/DDGO.png ~/Desktop
+home/ctf/go_to_opt/Doguments/secret_stuff/super_secret/DDGO.png
 
 ## 03UsedDog
 cd / -> cd home -> cd dog. \
