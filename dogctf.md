@@ -55,5 +55,5 @@ For this challenge, I wrote a program that enumerates all possible combinations 
 scp -O a.shestakova-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Doguments/secret_stuff/super_secret/DDGO.png ~/Desktop
 
 ## 03UsedDog
-cd / -> cd home -> cd dog
+cd / -> cd home -> cd dog.
 This folder contains Used_dog.png
