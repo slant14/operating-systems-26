@@ -2,7 +2,7 @@
 
 Here is the code for libmeeting.c
                       
-‛‛‛#include <stdio.h>
+```#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
@@ -13,6 +13,6 @@ void* meeting(void* arg) {
     exit(0);
     return NULL;
 }
-‛‛‛
+```
 After that 
 
