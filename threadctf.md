@@ -22,9 +22,11 @@ After that, run:\
 And:\
 ./meeting
 
-Obtained flag: threadctf{sHoo71ng_S0mE_atoMic_fe3t}
+The obtained flag: threadctf{sHoo71ng_S0mE_atoMic_fe3t}
 
 ## Princess
 Some processes were zombies. We can use the following command to see the status of each process (pid, ppid, state): ```ps -eo pid, ppid, state```. After that, these processes can be killed by their PID using the  ```kill``` command.
+
+The obtained flag: threadctf{WHAT_d0_yOu_ME4N_They_arE_a1Re4DY_De4D}
 
 
