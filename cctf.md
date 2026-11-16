@@ -40,3 +40,29 @@ to this: \
 Old computers allocated 18 bits for unsigned int, whereas modern computers allocate 32 bits. We simply needed to limit h to 18 bits (3FFFF gives 18 ones)
 
 The obtained flag: cctf{7He_g0Od_old_days_witH_GooD_Old_c}
+
+## xorcism
+In this challenge, we can easily delete all unnecessary checks and queries from the code and keep only the function that gives us the password.
+
+```
+#include <stdio.h>
+#include <string.h>
+
+#define PWLEN 33
+
+static const unsigned char enc[PWLEN] = {
+    0x47, 0x6d, 0x1f, 0x6e, 0x44, 0x12, 0x05, 0x4b, 0x58, 0x4f, 0x2e, 0x50, 0x71, 0x44, 0x3f, 0x4b, 0x68, 0x16, 0x12, 0x6a, 0x68, 0x4f, 0x6e, 0x7c, 0x56, 0x4d, 0x05, 0x6b, 0x52, 0x4c, 0x35, 0x41, 0x02
+};
+
+static const unsigned char key[4] = { 0x37, 0x21, 0x5a, 0x0f };
+
+int main(void)
+{
+    for (int i = 0; i < PWLEN; i++) {
+        printf("%c",enc[i] ^ key[i % 4]) {
+        }
+    }
+}
+
+```
+The obtained flag: cctf{pLEas3_Dont_FeeD_7He_n4sal_demoN5}
