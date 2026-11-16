@@ -133,7 +133,7 @@ cat README.md
 ```
 **Answer:** */regular_paw_storage/7b1b72fbbe0203b6/powered_dog.png*
 
-## 7. 01TailheadedDog
+## 8. 01TailheadedDog
 I go to the directory 'Downloads'
 ```bash
 cd Downloads
@@ -149,7 +149,7 @@ I get two parts of the path of the dog: /regular_paw_storage/c7b092e2 and f9a522
 
 **Answer:** */regular_paw_storage/c7b092e2f9a52281/tailheaded.png*
 
-## 8. 02MuteDog
+## 9. 02MuteDog
 I go to the directory 'Programs'
 ```bash
 cd Programs
@@ -164,7 +164,7 @@ I get: 605cc918/Mute_dog.png/regular_paw_storage/14545041
 
 **Answer:** */regular_paw_storage/14545041605cc918/Mute_dog.png*
 
-## 9. 02RemDog
+## 10. 02RemDog
 I go to the directory 'Doguments/unsorted' and see the file README and read it
 ```bash
 cd Doguments
@@ -181,7 +181,7 @@ find . -maxdepth 1 -type f -size 1937c -delete
 ```
 **Answer:** */regular_paw_storage/81f3f7d43c3704db/Rem_dog.png*
 
-## 10. 02ScatteredDog
+## 11. 02ScatteredDog
 I go to the directory 'Videos/'Scattered dog''.
 ```bash
 cd Videos
@@ -201,7 +201,7 @@ pwd
 ```
 **Answer:** */home/ctf/go_to_opt/Videos/Scattered_dog.png*
 
-## 11. 02ShyDog
+## 12. 02ShyDog
 I go to the directory 'Videos/'Shy dog''.
 ```bash
 cd Videos
@@ -221,7 +221,7 @@ mv Winter_Maybe_Dog_f1ad22ae.png ..
 ```
 **Answer:** */home/ctf/go_to_opt/Videos/Winter_Maybe_Dog_f1ad22ae.png*
 
-## 12. 02SpitoonDog
+## 13. 02SpitoonDog
 I go to the directory 'Programs' and see the file spitoon and compile it
 ```bash
 cd Programs
@@ -246,7 +246,7 @@ Without 112 errors
 Right this way sir: /regular_paw_storage/6f813f960a992354/Spitoon_dog.png, sorry to keep you waiting
 **Answer:** */regular_paw_storage/6f813f960a992354/Spitoon_dog.png*
 
-## 13. 03InsecureDog
+## 14. 03InsecureDog
 I go to the directory 'Doguments/secret_stuff'.
 ```bash
 cd Doguments
@@ -277,7 +277,7 @@ done
 I find the file: GODO.png
 **Answer:** */home/ctf/go_to_opt/Doguments/secret_stuff/super_secret/GODO.png*
 
-## 14. 03NetDog
+## 15. 03NetDog
 I see nets
 ```bash
 cat /proc/net/tcp
@@ -300,7 +300,7 @@ nc -w 3 127.0.0.1 2809 > ~/Net_dog.png
 ```
 **Answer:** */home/ctf/Net_dog.png*
 
-## 15. 03RestoreDog
+## 16. 03RestoreDog
 I go to the directory 'Doguments' and read the file 'crashed.txt'
 ```bash
 cd Doguments
@@ -323,7 +323,7 @@ I use the recovery key and get the answer
 
 **Answer:** */regular_paw_storage/xikhc8a/Restore_dog.png*
 
-## 16. 03UsedDog
+## 17. 03UsedDog
 I go to the directory 'home/dog' and see the file 'Used_dog.png'
 ```bash
 ls
