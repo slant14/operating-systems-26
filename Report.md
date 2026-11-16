@@ -323,6 +323,9 @@ cat /proc/net/tcp
    1: 00000000:0016 00000000:0000 0A 00000000:00000000 00:00000000 00000000  1000        0 176320615 1 0000000000000000 100 0 0 10 100               
    2: 170011AC:0016 010011AC:AD00 01 00000000:00000000 00:00000000 00000000  1000        0 176320617 3 0000000000000000 20 7 31 10 320 
 ```
+
+I look for the port with UID 0 and state 0A because UID 0 means that the socket belongs to the root user, while state 0A means that the port is in the LISTEN state and is waiting for incoming connections. So I saved the answer in the file.
+
 ```bash
 nc -w 3 127.0.0.1 3984 > Net_dog.png
 ```
@@ -389,11 +392,6 @@ void run(void) {
     guess_function cavern_guess =
         (guess_function)dlsym(RTLD_DEFAULT, "guess");
 
-    if (cavern_guess == NULL) {
-        printf("Could not find guess: %s\n", dlerror());
-        return;
-    }
-
     void* ptr = cavern_guess("wrong");
 
     volatile unsigned char* secret =
@@ -411,13 +409,19 @@ void run(void) {
 
 The solution uses dlsym() to find the original guess() function and call it. After examining the source code, we find that this function stores the decoded flag in the secret field, frees the memory, and then returns a pointer to the same memory.
 
+Compile and run:
+```bash
+gcc -shared -fPIC -o offer.so offer.c -ldl
+./cavern ./offer.so
+```
+
+I got: *cctf{remEMbeR_tH3Re_Is_no_5po0n_FrEE_fRom_N4S41_D3MONS}*
+
 ### 2. Legacy
 
 The original program was written for an old architecture where unsigned had 18 bits. On modern computers, unsigned int usually has 32 bits, so the hash function produces different results.
 
 To fix this problem, I added & 0x3FFFF to the hash calculation. This operation keeps only the lowest 18 bits, reproducing the original 18-bit unsigned arithmetic.
-
-I also added (unsigned char) to ensure that characters are always treated as unsigned values, independently of the platform.
 
 As a result, the hash function calculates the correct positions for all encoded strings. The add_data() function can then place each character into the correct position in the document, reconstructing the original flag.
 
@@ -427,12 +431,15 @@ unsigned position(const char *s)
     unsigned h = 0;
 
     while (*s) {
-        h = (h * 67 + (unsigned char)*s++) & 0x3FFFF;
+        h = (h * 67 + *s++) & 0x3FFFF;
     }
 
     return h;
 }
 ```
+
+I got: *cctf{thE_9oOD_0ld_d4y5_Wi7h_go0D_O1D_c}*
+
 ### 3. Xorcism
 
 The main idea of this solution is to use XOR decryption to recover the original password.
@@ -469,6 +476,285 @@ int main(void)
     return 0;
 }
 ```
+
+I got: *cctf{pl34se_dont_F3Ed_THe_N4sAL_DEmoNS}*
+
+# Thread CTF
+
+### 1. Needle
+
+In my solution, I created my own libmeeting.so library with a custom meeting() function. The main program loads this library using dlopen() and finds my function using dlsym(). Inside meeting(), I lock the shared mutex, open /root/flag.txt, read its contents, and return the flag. The main program expects the function to return my name, but it does not check the returned value. Therefore, I return the flag instead of my name. This allows me to get the flag without giving my real name to Polythread.
+
+```bash
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+extern pthread_mutex_t truth_and_order_spell;
+
+void* meeting(void* arg)
+{
+    (void)arg;
+
+    pthread_mutex_lock(&truth_and_order_spell);
+
+    char* flag = malloc(256);
+
+    FILE* f = fopen("/root/flag.txt", "r");
+
+    if (f == NULL) {
+        snprintf(flag, 256, "Could not retrieve fabric");
+    } else {
+        if (fgets(flag, 256, f) == NULL)
+            snprintf(flag, 256, "Could not read fabric");
+
+        fclose(f);
+    }
+
+    pthread_mutex_unlock(&truth_and_order_spell);
+
+    return flag;
+}
+```
+
+I got: *cctf{thE_9oOD_0ld_d4y5_Wi7h_go0D_O1D_c}*
+
+### 2. Princess
+
+First, I started by looking for all running processes and understand how they were organized. I noticed that there were cabin processes and princess processes running at the same time.
+
+```bash
+ps aux
+```
+
+Then, I used the /proc directory in my C program to inspect the processes automatically. I read information from /proc/[pid]/stat to get the process name, its state, and its parent PID.
+
+My goal was to find princess processes whose names started with princess_ and whose state was Z. This state means that the process had already finished but was still present as a zombie process.
+
+After finding such a princess, I checked its parent process using the PPID. I also used /proc/[pid]/exe to make sure that the parent was actually running the cabin executable.
+
+If all conditions were correct, I sent the SIGTERM signal to the cabin using kill(). After successfully sending the signal, I increased the counter.
+
+I repeated this process until I reached 50 destroyed cabins, because that was the number required by the task.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <dirent.h>
+#include <signal.h>
+#include <unistd.h>
+
+int main() {
+    int count = 0;
+
+    while (count < 50) {
+        DIR *dir = opendir("/proc");
+        if (!dir) return 1;
+
+        struct dirent *e;
+
+        while ((e = readdir(dir)) && count < 50) {
+            int pid = atoi(e->d_name);
+            if (pid <= 1) continue;
+
+            char path[100], line[512], name[256];
+            int parent = 0, dead = 0, princess = 0;
+
+            sprintf(path, "/proc/%d/stat", pid);
+
+            FILE *f = fopen(path, "r");
+            if (!f) continue;
+
+            if (fgets(line, sizeof(line), f)) {
+                char *end = strrchr(line, ')');
+
+                if (end) {
+                    *end = '\0';
+                    strcpy(name, strrchr(line, '(') + 1);
+
+                    char state;
+                    sscanf(end + 2, "%c %d", &state, &parent);
+
+                    if (state == 'Z') dead = 1;
+                    if (strncmp(name, "princess_", 9) == 0)
+                        princess = 1;
+                }
+            }
+
+            fclose(f);
+
+            if (!dead || !princess || parent <= 1)
+                continue;
+
+            sprintf(path, "/proc/%d/exe", parent);
+
+            char exe[256];
+            int len = readlink(path, exe, sizeof(exe) - 1);
+            if (len < 0) continue;
+
+            exe[len] = '\0';
+
+            if (strcmp(exe, "/usr/local/bin/cabin") != 0)
+                continue;
+
+            if (kill(parent, 0) == 0) {
+                if (kill(parent, SIGTERM) == 0) {
+                    count++;
+                    printf("Destroyed: %d/50\n", count);
+                }
+            }
+        }
+
+        closedir(dir);
+        usleep(100000);
+    }
+
+    printf("Done!\n");
+    return 0;
+}
+```
+
+After compiling and running I got:
+```
+=== The Forest ===
+The forest falls silent. 50 cursed cabins lie in ruin, and
+the story is finally over. Your reward waits in your home
+directory.
+```
+
+so I checked the directory and found flag: *threadctf{wha7_Do_Y0U_meaN_tHeY_4R3_AlrEaDY_dEAd}*
+
+```bash
+ls
+cat flag.txt
+```
+
+### 3. Princess2
+
+My program checks the /proc/PID/stat file to identify zombie princess processes. It reads the process name and state, and gets the PID of the parent process. If the process is a zombie (Z) and its name starts with princess_, I check its parent.
+
+Next, I check /proc/PID/exe to make sure that the parent process is actually /usr/local/bin/cabin. This prevents my program from terminating unrelated processes.
+
+I also use a seen array to remember which cabin PIDs have already been processed, so the same cabin is not counted multiple times.
+
+When I find a matching cabin, I use kill() with SIGTERM to terminate it. The program repeats this process until the challenge is completed.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <dirent.h>
+#include <signal.h>
+#include <unistd.h>
+
+#define TARGET 100
+
+int main() {
+    int count = 0;
+
+    int seen[256];
+    int seen_count = 0;
+
+    printf("=== THE BLADE ===\n");
+    printf("Mode: CUT\n");
+
+    while (count < TARGET) {
+        DIR *dir = opendir("/proc");
+        if (!dir) return 1;
+
+        struct dirent *e;
+
+        while ((e = readdir(dir)) != NULL && count < TARGET) {
+            int pid = atoi(e->d_name);
+            if (pid <= 1) continue;
+
+            char path[100], line[512], name[256];
+            int parent = 0, dead = 0, princess = 0;
+
+            sprintf(path, "/proc/%d/stat", pid);
+
+            FILE *f = fopen(path, "r");
+            if (!f) continue;
+
+            if (fgets(line, sizeof(line), f)) {
+                char *end = strrchr(line, ')');
+
+                if (end) {
+                    *end = '\0';
+                    strcpy(name, strrchr(line, '(') + 1);
+
+                    char state;
+                    sscanf(end + 2, "%c %d", &state, &parent);
+
+                    if (state == 'Z') dead = 1;
+
+                    if (strncmp(name, "princess_", 9) == 0)
+                        princess = 1;
+                }
+            }
+
+            fclose(f);
+
+            if (!dead || !princess || parent <= 1)
+                continue;
+
+            sprintf(path, "/proc/%d/exe", parent);
+
+            char exe[256];
+            int len = readlink(path, exe, sizeof(exe) - 1);
+            if (len < 0) continue;
+
+            exe[len] = '\0';
+
+            if (strcmp(exe, "/usr/local/bin/cabin") != 0)
+                continue;
+
+            int already_seen = 0;
+
+            for (int i = 0; i < seen_count; i++) {
+                if (seen[i] == parent)
+                    already_seen = 1;
+            }
+
+            if (already_seen) continue;
+
+            printf("Found cabin: %d, princess: %d\n", parent, pid);
+
+            if (kill(parent, SIGTERM) == 0) {
+                count++;
+                printf("Destroyed: %d/100\n", count);
+                fflush(stdout);
+            }
+
+            if (seen_count < 256)
+                seen[seen_count++] = parent;
+        }
+
+        closedir(dir);
+
+        if (count < TARGET)
+            usleep(100000);
+    }
+
+    printf("\nTotal destroyed: %d\n", count);
+
+    return 0;
+}
+```
+
+After compiling and running I got:
+```
+=== The Forest ===
+The forest falls silent. 100 cursed cabins lie in ruin, and
+the story is finally over. Your reward waits in your home
+directory.
+```
+So I used:
+```bash
+cat flag.txt
+```
+ I got: *threadctf{i_h0P3_yoU_Can_C_cl3ArlY_noW}*
 
 
 
