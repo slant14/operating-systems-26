@@ -29,3 +29,9 @@ void run(void) {
 }
 ```
 The obtained flag: cctf{reM3mbER_there_1s_nO_sP0oN_FR33_FRoM_Nas4l_deM0n5}
+
+## Legacy
+There was a minor problem in code:
+The only thing we need to change is to substitute this line: ```h = (h * 67 + *s++); ``` with this line:
+```h = (h * 67 + *s++) & 0x3FFFF;```
+Old computers allocated for unsigned int 18 bits, whereas nowadays computers allocate 32 bits for unsigned int, we simply needed to bound h up to 18 bits (3FFFF gives 18 1's)
