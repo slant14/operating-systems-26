@@ -1,8 +1,8 @@
 ## Cavern
 
-The idea of the solution is that if we are trying to follow the steps of creating secret offer we can give it to function offering check and quarantee that this our answer
-My code of offer.c
+The idea behind the solution is that, if we follow the steps for creating a secret offer, we can pass it to the offering_check function and guarantee that this is our answer. \
 
+My code of offer.c \
 ```#include <stdio.h>
 #include <string.h>
 #define BUF_SIZE 64
@@ -31,7 +31,12 @@ void run(void) {
 The obtained flag: cctf{reM3mbER_there_1s_nO_sP0oN_FR33_FRoM_Nas4l_deM0n5}
 
 ## Legacy
-There was a minor problem in code:
-The only thing we need to change is to substitute this line: ```h = (h * 67 + *s++); ``` with this line:
-```h = (h * 67 + *s++) & 0x3FFFF;```
-Old computers allocated for unsigned int 18 bits, whereas nowadays computers allocate 32 bits for unsigned int, we simply needed to bound h up to 18 bits (3FFFF gives 18 1's)
+There was a minor problem in the code:
+The only thing we needed to change was this line: \
+```h = (h * 67 + *s++); ``` \
+to this: \
+```h = (h * 67 + *s++) & 0x3FFFF;``` \
+
+Old computers allocated 18 bits for unsigned int, whereas modern computers allocate 32 bits. We simply needed to limit h to 18 bits (3FFFF gives 18 ones)
+
+The obtained flag: cctf{7He_g0Od_old_days_witH_GooD_Old_c}
