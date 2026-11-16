@@ -117,6 +117,22 @@ history
 ```
 **Answer:** */regular_paw_storage/8c9ce192e382cbeb/grandpaw.png*
 
+## 7. 01PoweredDog
+I see that we have the directory 'go_to_opt' that says that I need to go to 'opt'. So I tried to find this directory, then I find file 'README.md' and read it
+```bash
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd opt
+ls
+cat README.md
+```
+**Answer:** */regular_paw_storage/7b1b72fbbe0203b6/powered_dog.png*
+
 ## 7. 01TailheadedDog
 I go to the directory 'Downloads'
 ```bash
@@ -306,3 +322,17 @@ vim -r crashed.txt
 I use the recovery key and get the answer
 
 **Answer:** */regular_paw_storage/xikhc8a/Restore_dog.png*
+
+## 16. 03UsedDog
+I go to the directory 'home/dog' and see the file 'Used_dog.png'
+```bash
+ls
+cd ..
+ls
+cd ..
+cd dog
+ls
+```
+**Answer:** */home/dog/Used_dog.png*
+
+
