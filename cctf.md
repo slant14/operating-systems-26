@@ -35,7 +35,7 @@ There was a minor problem in the code:
 The only thing we needed to change was this line: \
 ```h = (h * 67 + *s++); ``` \
 to this: \
-```h = (h * 67 + *s++) & 0x3FFFF;``` \
+```h = (h * 67 + *s++) & 0x3FFFF;```
 
 Old computers allocated 18 bits for unsigned int, whereas modern computers allocate 32 bits. We simply needed to limit h to 18 bits (3FFFF gives 18 ones)
 
