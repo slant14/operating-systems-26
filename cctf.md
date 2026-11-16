@@ -1,8 +1,8 @@
 ## Cavern
 
-The idea behind the solution is that, if we follow the steps for creating a secret offer, we can pass it to the offering_check function and guarantee that this is our answer. \
+The idea behind the solution is that, if we follow the steps for creating a secret offer, we can pass it to the offering_check function and guarantee that this is our answer.\
 
-My code of offer.c \
+My code of offer.c\
 ```#include <stdio.h>
 #include <string.h>
 #define BUF_SIZE 64
