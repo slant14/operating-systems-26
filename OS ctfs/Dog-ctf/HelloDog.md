@@ -1,0 +1,1 @@
+The home folder contains `hoi_:3.png`, which is the flag

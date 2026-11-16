@@ -1,0 +1,3 @@
+The `Doguments/auto_petter` folder contains a git repository copy, with `/tools/assemble_mascot.sh` script, that takes 3 parts from `/frames` folder and assembles them into mascot.png - the photograph.
+
+The correct frames are required for the program to produce the flag, so we need 1 - to copy `part1.bin` form the `dev` branch, switch to the `master` branch, revert two commits which put `part2.bin` and `part3.bin` on quarantine, and then assemble the mascot.png.

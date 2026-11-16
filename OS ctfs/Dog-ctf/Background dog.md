@@ -1,0 +1,1 @@
+The process is stopped, `fg` command runs it again, printing the path to the photo
