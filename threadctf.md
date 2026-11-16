@@ -25,6 +25,6 @@ And:\
 Obtained flag: threadctf{sHoo71ng_S0mE_atoMic_fe3t}
 
 ## Princess
-Some processes were zombies. We can use the following command to see the status of each process (pid, ppid, state): ```ps -eo pid, ppid, state```. After that, these processes can be killed by their PID using the  ```kill ``` command.
+Some processes were zombies. We can use the following command to see the status of each process (pid, ppid, state): ```ps -eo pid, ppid, state```. After that, these processes can be killed by their PID using the  ```kill``` command.
 
 
