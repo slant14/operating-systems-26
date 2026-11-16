@@ -1,0 +1,134 @@
+1. 01CatDog
+In /home/ctf/go_to_opt/Pictures two files 
+ctf@a10b1f5f5b6b$ ls -la
+total 64
+drwxr-xr-x 2 ctf ctf  4096 Nov 15 14:56 .
+drwxr-xr-x 7 ctf ctf  4096 Nov 15 14:56 ..
+-rw-r--r-- 1 ctf ctf 26543 Nov 15 14:56 Cat_dog_bottom
+-rw-r--r-- 1 ctf ctf 26543 Nov 15 14:56 Cat_dog_top
+
+In Cat_dog_top we see 
+ctf@a10b1f5f5b6b$ cat Cat_dog_top
+?PNG
+
+so they are parts of png image, we need to merge them, and then copy
+ctf@a10b1f5f5b6b$ cat Cat_dog_top Cat_dog_bottom > 123.png
+
+2. 01CompileDog
+Program Compile_dog.c in /home/ctf/go_to_opt/Programs givws path:
+/regular_paw_storage/001ad924dde789ca/Compile_dog.png
+just copy and send to bot
+
+3. 01EditDog
+In /home/ctf/go_to_opt/Doguments we see EDITME
+ctf@a10b1f5f5b6b$ cat EDITME
+Make the dog 6 characters longer. Preserve the integrity of the dog.
+
+DO NOT EDIT ANYTHING OUTSIDE THESE SAFETY LINES
+\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+
+                         .-.
+     (__________________()6 `-,
+     (   ______________   /''"`
+     //\\             //\\
+jgs  "" ""            "" ""
+
+
+\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+DO NOT EDIT ANYTHING OUTSIDE THESE SAFETY LINES
+
+Make dog 6 characters longer
+ctf@a10b1f5f5b6b$ nano EDITME
+Woof! You have solved Edit_dog!
+
+Here's your dog pic: /regular_paw_storage/4c07510b3dbf4ceb/Edit_dog.png
+copy and sent to bot
+
+4. 01HelloDog
+copy image from /home/ctf/go_to_opt/hoi_:3.png and send
+
+5. 01HistoryDog
+
+I got disconnected from the VM due to internet issues, and when I reconnected, 
+I tried to access my recent commands—only to stumble upon some commands that I hadn’t typed myself:
+cp /super_secret_doggo_vault/grandpaw.png /regular_paw_storage/86037746ae55abc3/grandpaw.png
+
+copy and send image from /regular_paw_storage/86037746ae55abc3/grandpaw.png
+
+6. 01Tailheaded dog
+In /home/ctf/go_to_opt/Downloads open dog.log
+ctf@a10b1f5f5b6b$ cat dog.log
+Look, a dog image path:
+/regular_paw_storage/e1777d9a
+
+I wonder if there is more at the end of it..
+
+⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣦⡀⠀⠀⠀⠀⠀⢀⣠⣤⣄⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⣴⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣧⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⠀⢰⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀
+⠀⣠⣴⣦⣤⡀⠀⠈⢿⣿⣿⣿⣿⣿⡏⠀⢸⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀
+⣸⣿⣿⣿⣿⣿⣆⠀⠈⠻⢿⣿⣿⠟⠀⠀⠈⢿⣿⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠀
+⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⣠⣶⣾⣷⣦⡀
+⢻⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣧
+⠈⢿⣿⣿⣿⣿⣿⡇⠀⠀⠀⣀⣤⣶⣶⣶⣤⡀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⡟
+⠀⠀⠀⠙⠿⢿⠿⠋⠀⢀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀⠀⣿⣿⣿⣿⣿⣿⡿⠁
+⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⠀⢿⣿⣿⣿⣿⡿⠁⠀
+⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠉⠛⠉⠁⠀⠀⠀
+⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⠛⠻⠿⠿⠟⠛⠛⠉⠉⠉⠉⠛⠿⢿⣿⣿⠿⠋⠀⠀⠀⠀⠀
+
+6a5c498c/tailheaded.png
+
+I wonder if there is more at the start of it..
+
+copy adn send image from /regular_paw_storage/e1777d9a6a5c498c/tailheaded.png
+
+7. 02RemDog
+
+In /home/ctf/go_to_opt/Doguments/unsorted 
+ctf@a10b1f5f5b6b$ cat README
+I need to remove all the angry dogs from this folder some day...
+
+we have two types of dogs, only angry dogs have symbol 'b', so
+ctf@a10b1f5f5b6b$ grep -l "d" * | xargs -d '\n' rm
+
+
+Woof! You have solved Rem_dog!
+
+Here's your dog pic: /regular_paw_storage/ab51b58155c99dc8/Rem_dog.png
+copy and send
+
+8. 02ScatteredDog
+
+In /home/ctf/go_to_opt/Videos/Scattered dog we see files from -50 to 50 i guess, i wanted to sort them
+ctf@a10b1f5f5b6b$ for i in $(seq -100 100); do
+> if [ -f "./$i" ]; then
+> cat "./$i"
+> fi
+> done > ~/111.png
+and copy it 
+
+9. 02ShyDog
+In /home/ctf/go_to_opt/Videos/Shy dog we see many files, but image with dog only in one of them
+use file * to see what is realy png and see
+Vacation_Maybe_Dog_dce997a2.png: PNG image data, 150 x 200, 8-bit colormap, non-interlaced
+copy and see that it is needed dog, send it to bot
+
+10. 03 RestoreDog
+
+In /home/ctf/go_to_opt/Doguments we see carshed.txt
+ctf@a10b1f5f5b6b$ cat crashed.txt
+My session crashed while I was writing down where I hid my favorite dog...
+Good thing vim keeps swap files around.
+I encrypted my notes, so here is the recovery key: 8c1b314c4a89c89a
+use vim -r crashed.txt and recover them using key: 8c1b314c4a89c89a
+see the path and copy it bot
+
+11. 03UsedDog
+
+In /home/dog we see Used_dog.png
+just copy it and send
