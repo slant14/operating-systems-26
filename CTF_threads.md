@@ -140,6 +140,7 @@ I need to destroy 100 cabins with dead princesses without touching the living on
 
 I open the directory containig information abour processes, using 'opendir("/proc")'. Then I go through processes one by one, using 'readdir()'. First, I created a path to the process's status file using 'strcat()'. Then I opened this file using 'fopen()' to read information about the process: name, state, and PPid. If the princess was dead, I opened the parent and cheks its name: if name contain 'cabin' I kill the process and print about this.
 ```c
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -152,52 +153,70 @@ int main() {
 
     while (count < 100) {
         DIR *dir = opendir("/proc");
-        if (!dir) return 1;
+        if (dir == NULL) return 1;
 
         struct dirent *e;
+
         while ((e = readdir(dir)) != NULL && count < 100) {
             if (atoi(e->d_name) == 0) continue;
 
             char path[100] = "/proc/";
-            char line[256], cabin[100];
-            int parent = 0, dead = 0, princess = 0;
+            char line[256];
+            char cabin[100] = "";
+
+            int dead = 0;
+            int princess = 0;
+            int parent = 0;
 
             strcat(path, e->d_name);
             strcat(path, "/status");
 
             FILE *f = fopen(path, "r");
-            if (!f) continue;
+            if (f == NULL) continue;
 
             while (fgets(line, sizeof(line), f)) {
-                if (strncmp(line, "Name:", 5) == 0 && strstr(line, "princess_"))
+                if (strstr(line, "Name:") == line &&
+                    strstr(line, "princess_"))
                     princess = 1;
-                if (strncmp(line, "State:", 6) == 0 && strchr(line, 'Z'))
+
+                if (strstr(line, "State:") == line &&
+                    strchr(line, 'Z'))
                     dead = 1;
-                if (strncmp(line, "PPid:", 5) == 0)
+
+                if (strstr(line, "PPid:") == line)
                     parent = atoi(line + 5);
             }
+
             fclose(f);
 
-            if (!princess || !dead || parent <= 1) continue;
+            if (!princess || !dead || parent <= 1)
+                continue;
 
             sprintf(path, "/proc/%d/comm", parent);
+
             f = fopen(path, "r");
-            if (!f) continue;
-            if (!fgets(cabin, sizeof(cabin), f)) {
+            if (f == NULL) continue;
+
+            if (fgets(cabin, sizeof(cabin), f) == NULL) {
                 fclose(f);
                 continue;
             }
             fclose(f);
 
-            if (strstr(cabin, "cabin") && kill(parent, SIGKILL) == 0) {
-                count++;
-                printf("Destroyed: %d/100\n", count);
-                fflush(stdout);
+            if (strstr(cabin, "cabin")) {
+                if (kill(parent, SIGKILL) == 0) {
+                    count++;
+                    printf("Destroyed: %d/100\n", count);
+                    fflush(stdout);
+                }
             }
         }
+
         closedir(dir);
         usleep(100000);
     }
+
+    printf("Done!\n");
     return 0;
 }
 ```
