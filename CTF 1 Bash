@@ -1,0 +1,93 @@
+List of found dogs:
+- BackgroundDog
+- CatDog
+- CompileDog
+- EditDog
+- HelloDog
+- HistoryDog
+- PoweredDog
+- TailheadedDog
+- RemDog
+- ShyDog
+- SpitoonDog
+- InsecureDog
+- RestoreDog
+- UsedDog
+
+01BackgroundDog
+bg (bg kill %1)
+scp -O v.iakovleva-dog@osctf.nnk.moe:/regular_paw_storage/d037e384b4c6112c/Background_dog.png /mnt/c/Users/Honor/Desktop/
+
+01CatDog
+cd Downloads
+cat Cat_dog_top Cat_dog_bottom > catdog.bin
+its a bin file so it should be downloaded as it is and then converted (i used online converter to png)
+
+01CompileDog
+cd Programs
+compile the file through gcc ... -o ... and then ./...
+scp -O v.iakovleva-dog@osctf.nnk.moe:/regular_paw_storage/d037e384b4c6112c/Background_dog.png /mnt/c/Users/Honor/Desktop/
+
+01EditDog
+cd Doguments
+we need to add some symbols to make the dog longer
+scp -O v.iakovleva-dog@osctf.nnk.moe:/regular_paw_storage/8930eca0155a21d7/Edit_dog.png /mnt/c/Users/Honor/Desktop/
+
+01HelloDog
+the very first png file, just should download it with the command
+
+01HistoryDog
+cd ..
+cat .bash_history
+in here there is a cp /super_secret_doggo_vault/grandpaw.png /regular_paw_storage/ec6a22d2f6312fe7/grandpaw.png
+
+01PoweredDog
+cd .. until a big list
+cd opt
+cat README.md
+there should be the needed path
+
+01TailheadedDog
+cd Downloads
+there is a file that has the needed path devided into 2 parts. first part:
+cat dog.log | head -n 50
+second part:
+cat dog.log
+scp -O v.iakovleva-dog@osctf.nnk.moe:/regular_paw_storage/c83bae2f5691b3bc/tailheaded.png /mnt/c/Users/Honor/Desktop/
+
+02RemDog
+cd Doguments
+there is a lot of files, some include angry dogs, some include good dogs. if we will delete all the angry dogs from here we will get the path to the flag
+find . -type f -size 1937c -delete 
+angry dogs are 1937 size
+
+02ShyDog
+cd Video
+file *
+and there is only one png file that is the needed flag
+scp -O v.iakovleva-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Videos/Vacation_Maybe_Dog_fd4ba661.png /mnt/c/Users/Honor/Desktop/
+
+02SpitoonDog
+cd Programs
+./spitoon
+man spitoon
+right answer: "How tough am I? How tough am I?! I ran 231 of linux programs this lab
+Without 231 errors"
+and  pressing  Ctrl+C (without pressing Enter first): "Only true tough guys can handle raw SIGINT signals."
+
+03InsecureDog
+cd Doguments
+a simple code can be written to get all the possible combinations, considering that on eof them is the rigth one.
+but i tried to just brute force it. the right combination is OGDO
+scp -O v.iakovleva-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Doguments/secret_stuff/super_secret/OGDO.png /mnt/c/Users/Honor/Desktop/
+
+03RestoreDog
+i lost track of what i'm doing at some point, but i guess its something like
+cat .crashed.txt to see the recovery key
+vim -r .crashed.txt.swp enter the recovery key here, or something like that. enter will give the path to the flag
+
+03UsedDog
+cd .. 2 times
+cd dog
+and there is the png right away
+
