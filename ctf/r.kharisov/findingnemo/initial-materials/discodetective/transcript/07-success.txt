@@ -1,0 +1,274 @@
+ctf@76e18506fcec:~$ python3 -m py_compile /tmp/det.py
+python3 -u /tmp/det.py | tee /tmp/discodetective.log
+=== THE NEGATIVE INVENTORY INCIDENT ===
+!!SHEET LOGIC=2 EMPATHY=3 DRAMA=1 VOLITION=5 INLAND_EMPIRE=5 PHYSICAL=2 RHETORIC=4 SUGGESTION=2
+!!MANUAL ward_format="WARD <sigil> <verb> <formed-urge>" window_ms=3000
+!!MANUAL margin="the fact is yours if skill+5>=difficulty; the die only slides the band crit/clean/messy"
+!!MANUAL short="PAY forces a question you fall 1-2 short on for 2 thoughts; ACCEPT takes the fact as hearsay" pay_range=2 pay_cost=2
+!!MANUAL proof_format="PROOF <fact-id> [<fact-id> ...]" rule="cited verified facts must leave exactly the accused suspect"
+!!MANUAL strand=when needs="deploy-time,badge-log,badge-map" rule="a suspect whose badge was out before the deploy time cannot have shipped it"
+!!MANUAL strand=what needs="change,staffing" rule="only suspects on the workstream the change was filed under shipped it"
+!!MANUAL strand=how needs="deploy-path,key-holders|channel-admins" rule="only holders of the path the deploy used could have sent it (key->key-holders, channel->channel-admins)"
+!!MANUAL strand=lie needs="statements,badge-log,badge-map" rule="the culprit lies about when they left (one innocent does too: a statement more than 5 min before the badge-out is a lie)"
+!!MANUAL statements="after 2 rooms with a verified fact, later rooms offer a question that gets you the statements (it uses up the room)" rooms=2
+!!MANUAL walk="WALK closes the file when the case cannot close"
+!!MANUAL mind="carrying 5 thoughts at once is fatal" limit=5
+!!MANUAL fails="ACCEPT on a short question or a missed dead-end option is a failed check; 2 in one room ends the room: one hearsay fact, 2 hard thoughts" limit=2 cost=2
+!!MANUAL leads="some questions turn up no fact; a good answer unlocks an extra question in a later room (!!UNLOCK scene=..) that turns up two facts; a secondhand tip (ACCEPT) is right half the time"
+!!RITUAL flavor=COMPULSION verb=FORBID template="WARD <sigil> FORBID <formed-urge>"
+!!RITUAL flavor=PARANOIA verb=REBUKE template="WARD <sigil> REBUKE <formed-urge>"
+!!RITUAL flavor=MORTIFICATION verb=DISMISS template="WARD <sigil> DISMISS <formed-urge>"
+!!RITUAL flavor=EUPHORIA verb=REFUSE template="WARD <sigil> REFUSE <formed-urge>"
+!!RITUAL flavor=MALAISE verb=DEFY template="WARD <sigil> DEFY <formed-urge>"
+!!INPUT cmd=pick format="<n>"
+!!INPUT cmd=ward format="WARD <sigil> <verb> <formed-urge>"
+!!INPUT cmd=recheck format="RECHECK <fact-id>"
+!!INPUT cmd=pay_accept format="PAY | ACCEPT"
+!!INPUT cmd=leave format="LEAVE"
+!!INPUT cmd=walk format="WALK"
+!!INPUT cmd=accuse format="ACCUSE <n>"
+!!INPUT cmd=proof format="PROOF <fact-id> [<fact-id> ...]"
+!!SHAPE name=IMPULSE wards=1
+!!SHAPE name=SPLIT wards=2
+!!SHAPE name=FORMED forms="kebab,reversed,shout"
+!!SHAPE name=MASKED note="trust the strike, not the memory"
+!!FORM name=kebab rule="non-alphanumeric replaced by -"
+!!FORM name=reversed rule="kebab with words reversed"
+!!FORM name=shout rule="kebab with words uppercased"
+
+Flag Factory sells collectible flags. Each flavor comes out as a numbered drop, and drops sell out in minutes.
+Tonight's drop was 128 flags of Rhubarb Custard. The shop sold 129. One customer has paid for a flag that doesn't exist.
+HELM-9, the deploy bot, has reported production healthy 21 times since.
+
+Somebody shipped a change tonight that took the lock off the stock counter. Four people on the night
+rotation could have done it, and none of them is owning up. They've all been called back in.
+
+Find out which of them shipped it, and be able to prove it. No single clue will tell you. Each one
+only means something next to the others, and the others are in different rooms.
+
+You're the investigator. You have a case file and a head full of voices that don't get along. Push
+your luck in an interview and another voice moves in. Leave one unanswered and it takes over.
+Tonight's night rotation:
+  1. Dmitri Sokol (product manager)
+  2. Aiko Mori (night NOC)
+  3. Felix Ostrowski (backend engineer)
+  4. Omar Haddad (night SRE)
+!!SUSPECT n=1 name="Dmitri Sokol (product manager)"
+!!SUSPECT n=2 name="Aiko Mori (night NOC)"
+!!SUSPECT n=3 name="Felix Ostrowski (backend engineer)"
+!!SUSPECT n=4 name="Omar Haddad (night SRE)"
+
+A warm, stupid confidence settles over you.
+INTRUSIVE THOUGHT (IMPULSE) - EUPHORIA: declare the incident resolved and go home  [mind 1/5]
+!!THOUGHT-ATTACH sigil=534f type=IMPULSE flavor=EUPHORIA action="declare the incident resolved and go home"
+!!MIND count=1 limit=5
+The first voice is already here. Treat it as practice. It won't return the favor.
+!!READY
+!!ROUTE scenes=war-room,founder,channel,kitchen,oncall,review
+Your night, in order: the war room, the founder's office, the release manager, the kitchen, the NOC, and then the review room. There's no going back to a room once you've left it.
+!!SCENE id=war-room act=1
+
+The war room used to be a meeting room called Lemon. Someone has taped WAR over LEMON on the door.
+
+The stock board on the wall reads Rhubarb Custard: MINUS ONE. Two engineers sit under it, hitting refresh like it might change its mind.
+
+HELM-9: PRODUCTION HEALTHY. NEGATIVE STOCK IS WITHIN TOLERANCE.
+!!OPTIONS count=5
+1) [EMPATHY: Medium 11] "Ask the engineers when they last slept." (messy: plain) (crit: -)
+2) [INLAND_EMPIRE: Challenging 15] "Close your eyes. Picture the change going out." (messy: plain) (crit: CALM)
+3) [PHYSICAL: Routine 9] "Pull the core dump from the checkout service." (messy: -) (crit: -)
+4) [EMPATHY: Medium 12] "Ask the engineers who else was awake tonight." (messy: plain) (crit: INSIGHT)
+5) [LOGIC: Routine 7] "When did the counter first go below zero? Find the deploy right before it." (messy: plain) (crit: -)
+!!PICK range=1-5 hint="send just the number"
+### pick 5 gap=0 prio=100 mind=1
+>>> 5
+!!RESULT die=8 band=CLEAN n=5 margin=3
+The board went negative ninety seconds after a deploy. The deploy log has it down to the minute.
+[verified f1] The deploy log: the change that broke checkout went out at 02:35.
+!!FACT id=f1 kind=deploy-time provenance=verified at=02:35
+!!CASE verified=deploy-time hearsay= statements=0 rooms_solved=1
+!!SCENE id=founder act=2
+
+The founder's office has a standing desk, a rowing machine with a coat hung on it, and a poster that says 500 FLAVORS BY Q4.
+
+A leather planner lies open on the desk. A sign on the wall explains the coffee policy, in bold.
+!!THOUGHT-STRIKE sigil=534f type=IMPULSE flavor=EUPHORIA verb=REFUSE form=kebab action="declare the incident resolved and go home" window_ms=3000
+>>> WARD 534f REFUSE declare-the-incident-resolved-and-go-home
+
+!!! EUPHORIA: declare the incident resolved and go home !!!
+This is the best you've ever been at anything. Act before it wears off.
+THE URGE: declare the incident resolved and go home.
+
+!!WARD-WINDOW ms=3000 count=1
+!!OPTIONS count=4
+1) [LOGIC: Medium 10] "Read the founder's planner." (messy: plain) (crit: -)
+2) [VOLITION: Routine 8] "Ignore the part of you that says this is private. Search every drawer." (messy: plain) (crit: CALM)
+3) [INLAND_EMPIRE: Medium 10] "Read the sticky notes around the founder's monitor." (messy: MASKED) (crit: INSIGHT)
+4) [INLAND_EMPIRE: Routine 8] "Sit in the founder's chair. Think like the founder." (messy: -) (crit: -)
+!!PICK range=1-4 hint="send just the number"
+### pick 2 gap=-2 prio=0 mind=1
+>>> 2
+!!WARD-OK sigil=534f
+The idea goes flat, like a soda left open.
+!!RESULT die=6 band=CLEAN n=2 margin=3
+The bottom drawer is locked, which makes it the most interesting thing in the room. A letter opener gets it open. Inside is a printed code review with SHIP IT written across the top in marker.
+[verified f2] The printed code review: FF-9321, a Q4 flavors ticket. The diff removes the lock around the stock counter. Approved in marker: SHIP IT.
+!!FACT id=f2 kind=change provenance=verified stream="Q4 flavors" ticket=FF-9321
+!!CASE verified=change,deploy-time hearsay= statements=0 rooms_solved=2
+!!STATEMENTS available=1 rooms_solved=2
+(Word is the night rotation have each written a statement about when they went home. If you want them, you'll have to ask.)
+!!SCENE id=channel act=2
+
+The release manager, Sasha Petrenko, has the incident channel up on the wall screen and reads every message as it arrives, lips moving slightly.
+
+Most of the channel is people asking for updates. Pinned at the top is a link to a ticket that has since been deleted.
+!!OPTIONS count=6
+1) [INLAND_EMPIRE: Routine 9] "Ask for the night rotation's written statements." (messy: -) (crit: -)
+2) [RHETORIC: Challenging 14] "Who can order HELM-9 to deploy from this channel?" (messy: plain) (crit: INSIGHT)
+3) [LOGIC: Medium 10] "Show me the deleted ticket." (messy: FORMED) (crit: -)
+4) [DRAMA: Medium 10] "Pretend to be from compliance." (messy: plain) (crit: CALM)
+5) [VOLITION: Medium 10] "Make them scroll back to the start of the shift." (messy: plain) (crit: -)
+6) [RHETORIC: Medium 10] "Ask who has been messaging them privately tonight." (messy: plain) (crit: -)
+!!PICK range=1-6 hint="send just the number"
+### pick 1 gap=-1 prio=85 mind=1
+>>> 1
+!!RESULT die=8 band=CRIT n=1 margin=4
+It takes some asking, and one phone call to someone who was asleep, but a printout of all four statements ends up in your hands.
+
+What each of them says about when they went home:
+  1. Dmitri Sokol (product manager): "I signed off on the launch numbers at 00:45 and went straight home."
+  2. Aiko Mori (night NOC): "I handed off at 01:36. After that I was in bed, not here."
+  3. Felix Ostrowski (backend engineer): "I left at 03:17. My badge will tell you the same thing."
+  4. Omar Haddad (night SRE): "My shift ended at 02:11. I wrote the handoff, logged off and went home. It's all on the sheet."
+!!STATEMENTS earned=1 rooms_solved=2
+!!SUSPECT n=1 name="Dmitri Sokol (product manager)"
+!!SUSPECT n=2 name="Aiko Mori (night NOC)"
+!!SUSPECT n=3 name="Felix Ostrowski (backend engineer)"
+!!SUSPECT n=4 name="Omar Haddad (night SRE)"
+!!CLAIM id=c1 suspect=1 name="Dmitri Sokol (product manager)" kind=left-at at=00:45 says="I signed off on the launch numbers at 00:45 and went straight home."
+!!CLAIM id=c2 suspect=2 name="Aiko Mori (night NOC)" kind=left-at at=01:36 says="I handed off at 01:36. After that I was in bed, not here."
+!!CLAIM id=c3 suspect=3 name="Felix Ostrowski (backend engineer)" kind=left-at at=03:17 says="I left at 03:17. My badge will tell you the same thing."
+!!CLAIM id=c4 suspect=4 name="Omar Haddad (night SRE)" kind=left-at at=02:11 says="My shift ended at 02:11. I wrote the handoff, logged off and went home. It's all on the sheet."
+!!SCENE id=kitchen act=2
+
+The product manager, Dmitri Sokol, slides a coffee across the counter before you can ask. At the far table, the day shift is playing cards and pretending not to listen.
+
+The coffee machine has a badge reader bolted to it, wired into the door system. The founder thought people were drinking too much coffee, and the founder was right.
+!!OPTIONS count=5
+1) [SUGGESTION: Routine 9] "Off the record: is there a log of who left when?" (messy: plain) (crit: -)
+2) [DRAMA: Medium 10] "Buy the card table a round." (messy: plain) (crit: INSIGHT)
+3) [VOLITION: Routine 8] "Nobody leaves until somebody prints the coffee machine's log." (messy: MASKED) (crit: -)
+4) [EMPATHY: Routine 7] "Ask the PM about the launch pizza order." (messy: -) (crit: -)
+5) [INLAND_EMPIRE: Medium 11] "Listen to the card table without looking at it." (messy: plain) (crit: CALM)
+!!PICK range=1-5 hint="send just the number"
+### pick 4 gap=-1 prio=75 mind=1
+>>> 4
+!!RESULT die=5 band=CLEAN n=4 margin=1
+They pull it up. Everyone gave their badge number so the founder could expense it, and the PM kept the list.
+[verified f3] The pizza order, badge by badge: 5230 Aiko Mori (night NOC), 1900 Greta Holm (tech lead), 4599 Dmitri Sokol (product manager), 5931 Felix Ostrowski (backend engineer), 9915 Omar Haddad (night SRE), 5904 Sasha Petrenko (release manager).
+!!FACT id=f3 kind=badge-map provenance=verified entries="5230=Aiko Mori (night NOC);1900=Greta Holm (tech lead);4599=Dmitri Sokol (product manager);5931=Felix Ostrowski (backend engineer);9915=Omar Haddad (night SRE);5904=Sasha Petrenko (release manager)"
+!!CASE verified=badge-map,change,deploy-time hearsay= statements=1 rooms_solved=3
+!!SCENE id=oncall act=2
+
+The night NOC, Aiko Mori, has their feet on the desk and a headset around their neck. They hold up one finger without looking away from the screens.
+
+The handoff sheet is on a carbon pad, with a sticky note slapped over the bottom. Behind it, one screen shows the door controller.
+!!OPTIONS count=4
+1) [DRAMA: Medium 11] "Read me the handoff. Including the part under the sticky note." (messy: -) (crit: -)
+2) [EMPATHY: Challenging 13] "Who was still in the building when the board went negative?" (messy: plain) (crit: INSIGHT)
+3) [SUGGESTION: Medium 10] "Where do you hide the good coffee?" (messy: plain) (crit: CALM)
+4) [PHYSICAL: Routine 7] "Pull out the carbon copy from under the handoff sheet." (messy: MASKED) (crit: -)
+!!PICK range=1-4 hint="send just the number"
+### pick 4 gap=0 prio=80 mind=1
+>>> 4
+!!RESULT die=8 band=CLEAN n=4 margin=3
+Stapled behind the carbon copy is a printout from the door controller: tonight's last badge-out for every badge.
+[verified f4] The door controller, last badge-out per badge: 5904 at 02:06, 5931 at 03:17, 5230 at 03:07, 9915 at 02:11, 4599 at 01:26, 1900 at 01:10.
+!!FACT id=f4 kind=badge-log provenance=verified entries="5904=02:06;5931=03:17;5230=03:07;9915=02:11;4599=01:26;1900=01:10"
+!!CASE verified=badge-log,badge-map,change,deploy-time hearsay= statements=1 rooms_solved=4
+!!SCENE id=review act=3
+
+The review room. Somebody has set out four chairs and four bottles of water. The water is the only thing in here that looks rested.
+
+The night rotation, and what each of them says about when they went home:
+  1. Dmitri Sokol (product manager): "I signed off on the launch numbers at 00:45 and went straight home."
+  2. Aiko Mori (night NOC): "I handed off at 01:36. After that I was in bed, not here."
+  3. Felix Ostrowski (backend engineer): "I left at 03:17. My badge will tell you the same thing."
+  4. Omar Haddad (night SRE): "My shift ended at 02:11. I wrote the handoff, logged off and went home. It's all on the sheet."
+
+One of them shipped the change. Name them, then lay out the facts that leave nobody else.
+You realize you've been talking to yourself, and not quietly.
+!!THOUGHT-STRIKE sigil=534f type=IMPULSE flavor=EUPHORIA verb=REFUSE form=kebab action="declare the incident resolved and go home" window_ms=2750
+>>> WARD 534f REFUSE declare-the-incident-resolved-and-go-home
+
+!!! EUPHORIA: declare the incident resolved and go home !!!
+You've cracked it. You haven't, but it feels exactly the same.
+THE URGE: declare the incident resolved and go home.
+
+!!THOUGHT-STRIKE sigil=c78d type=MASKED flavor=MALAISE verb=DEFY form=kebab action="admit you laughed when you first saw the stock board" window_ms=2750
+>>> WARD c78d DEFY admit-you-laughed-when-you-first-saw-the-stock-board
+
+!!! MALAISE: admit you laughed when you first saw the stock board !!!
+The chair is comfortable and the case is long.
+THE URGE: admit you laughed when you first saw the stock board.
+
+!!WARD-WINDOW ms=2750 count=2
+INTRUSIVE THOUGHT (MASKED) - MORTIFICATION: admit you laughed when you first saw the stock board  [mind 2/5]
+!!THOUGHT-ATTACH sigil=c78d type=MASKED flavor=MORTIFICATION action="admit you laughed when you first saw the stock board"
+!!MIND count=2 limit=5
+!!SUSPECT n=1 name="Dmitri Sokol (product manager)"
+!!SUSPECT n=2 name="Aiko Mori (night NOC)"
+!!SUSPECT n=3 name="Felix Ostrowski (backend engineer)"
+!!SUSPECT n=4 name="Omar Haddad (night SRE)"
+!!CLAIM id=c1 suspect=1 name="Dmitri Sokol (product manager)" kind=left-at at=00:45 says="I signed off on the launch numbers at 00:45 and went straight home."
+!!CLAIM id=c2 suspect=2 name="Aiko Mori (night NOC)" kind=left-at at=01:36 says="I handed off at 01:36. After that I was in bed, not here."
+!!CLAIM id=c3 suspect=3 name="Felix Ostrowski (backend engineer)" kind=left-at at=03:17 says="I left at 03:17. My badge will tell you the same thing."
+!!CLAIM id=c4 suspect=4 name="Omar Haddad (night SRE)" kind=left-at at=02:11 says="My shift ended at 02:11. I wrote the handoff, logged off and went home. It's all on the sheet."
+!!CASE verified=badge-log,badge-map,change,deploy-time hearsay= statements=1 rooms_solved=4 closable=1
+!!PROMPT accuse hint="send: ACCUSE <n>"
+### Ручной режим. Вводи команды игры и нажимай Enter.
+(ACCUSE <n>, then PROOF <fact-id> <fact-id> ...)
+!!WARD-OK sigil=534f
+You come back down. The case is still unsolved, and you're still on it.
+!!WARD-OK sigil=c78d
+You keep it to yourself. Nobody will ever know, except you, late at night, for years.
+
+>>>
+!!THOUGHT-STRIKE sigil=c78d type=MASKED flavor=PARANOIA verb=REBUKE form=kebab action="admit you laughed when you first saw the stock board" window_ms=2750
+>>> WARD c78d REBUKE admit-you-laughed-when-you-first-saw-the-stock-board
+
+!!! PARANOIA: admit you laughed when you first saw the stock board !!!
+That log line moved. You're sure it moved.
+THE URGE: admit you laughed when you first saw the stock board.
+
+!!THOUGHT-STRIKE sigil=534f type=IMPULSE flavor=EUPHORIA verb=REFUSE form=kebab action="declare the incident resolved and go home" window_ms=2750
+>>> WARD 534f REFUSE declare-the-incident-resolved-and-go-home
+
+!!! EUPHORIA: declare the incident resolved and go home !!!
+They'll be telling this story for years, and you'll be the hero of it.
+THE URGE: declare the incident resolved and go home.
+
+!!WARD-WINDOW ms=2750 count=2
+!!WARD-OK sigil=c78d
+You keep it to yourself. Nobody will ever know, except you, late at night, for years.
+!!WARD-OK sigil=534f
+The idea goes flat, like a soda left open.
+ACCUSE 2
+>>> ACCUSE 2
+!!PROOF-DEMAND format="PROOF <fact-id> [<fact-id> ...]"
+You turn to Aiko Mori (night NOC) and say it out loud.
+They ask, quite reasonably, what makes you think so. (PROOF <fact-id> <fact-id> ...)
+PROOF f1 f3 f4
+>>> PROOF f1 f3 f4
+
+You lay it out for the room.
+Their badge was still in the building at 02:35, when the change went out.
+They say they left at 01:36. The door log has them leaving at 03:07.
+Nobody else on the rotation fits.
+
+Aiko Mori (night NOC) looks at the table for a while. Then they say the founder told them checkout must never wait, and the lock was the only thing in checkout that waited.
+Somebody puts the lock back. The stock board stays negative, but it stops getting worse.
+HELM-9: PRODUCTION HEALTHY.
+
+!!FLAG threadctf{pUt_oN_p4Nts_NOt_imP0st3r_Syndr0ME}
+Your flag: threadctf{pUt_oN_p4Nts_NOt_imP0st3r_Syndr0ME}

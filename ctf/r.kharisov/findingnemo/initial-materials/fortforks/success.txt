@@ -1,0 +1,18 @@
+Fortforks successful run — excerpt supplied by the user, 17 November 2026.
+The SSH banner and authentication prompts are omitted.
+
+Local command:
+ssh r.kharisov-fortforks@osctf.nnk.moe 'tail -n 12 /tmp/fortforks.log'
+
+Opened /home/ctf/secrets; pid=36
+bytes=348160 generation=4 pid=40
+bytes=696320 generation=9 pid=45
+bytes=1044480 generation=14 pid=50
+bytes=1392640 generation=19 pid=55
+bytes=1740800 generation=24 pid=60
+bytes=2088960 generation=29 pid=65
+FLAG threadctf{on1Y_Prop3R_LIn3a93_Get_T0_lIVe_1N_Ca5tl3}
+bytes=2097243 generation=30
+
+The user confirmed that the course bot accepted this flag for fortforks.
+No separate bot acceptance screenshot was supplied for this task.
