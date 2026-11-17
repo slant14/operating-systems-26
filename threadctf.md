@@ -29,4 +29,38 @@ Some processes were zombies. We can use the following command to see the status 
 
 The obtained flag: threadctf{WHAT_d0_yOu_ME4N_They_arE_a1Re4DY_De4D}
 
+## Fortforks
 
+The container closes in 5 seconds, so we can write a program to save the result to result.txt file. After a second, we can enter the container and enter the command ```tail -n 5 result.txt```. 
+
+```#include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdlib.h>
+
+int main(void) {
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        setsid();
+
+        FILE *result = fopen("result.txt", "w");
+        int source = open("secrets", O_RDONLY);
+
+        char buffer[4096];
+        ssize_t count;
+
+        while ((count = read(source, buffer, sizeof(buffer))) > 0) {
+            fwrite(buffer, 1, count, result);
+            fflush(result);
+
+            pid = fork();
+            if (pid > 0) {
+                break;
+	        }
+        }
+    }
+
+    return 0;
+}``` \
+The obtained flag: threadctf{only_PRopER_LINeAgE_937_T0_LiVe_1n_ca571E}
