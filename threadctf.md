@@ -62,5 +62,6 @@ int main(void) {
     }
 
     return 0;
-}``` \
+}
+```
 The obtained flag: threadctf{only_PRopER_LINeAgE_937_T0_LiVe_1n_ca571E}
