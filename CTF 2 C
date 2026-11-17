@@ -1,0 +1,78 @@
+Found flags:
+- cavern
+- legacy
+- xorcism
+
+Cavern
+my program to guess the flag:
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define BUF_SIZE 64
+struct offering {
+        char guess[BUF_SIZE];
+        char secret[BUF_SIZE];
+};
+
+extern struct offering* offering_new();
+extern void offering_set_secret(struct offering* this);
+extern void offering_free(struct offering* this);
+
+void run(void) {
+        struct offering* o = offering_new();
+        offering_set_secret(o);
+        printf(o->secret);
+        offering_free(o);
+}
+
+gcc -shared -fPIC -o offer.so offer.c -ldl
+./cavern ./offer.so
+
+cctf{R3MeMb3r_THeRE_1s_N0_5pooN_FRee_froM_NAs41_D3MOns}
+
+the idea is that we have a encrypted flag. the provided in task code consist a placeholder for future flag of size 55. we have a key that we use to
+decrypt the flag, key consist 4 elements, so we go throught the flag using the key on every 4 elements, using the XOR operation & until we reach the end
+and receive the initial flag. structure consist our input guess of flag and the flaf itself, since it is the way XOR operator works. the flag was encrypted
+by the key so it can be decrypted only by the same key. my code takes the sequence fron the placeholder and decrypt it wit the usage of key and just print it.
+like th idea of the task is that we don't know the flag initially, but it actually is in the placeholder in code on virtual machine. so my code just use this flag 
+as a guess and decrypt it.
+
+
+
+Legacy
+in this task the idea is that we have a hash-function, but in old code the size of unsigned was 18 bits, not 32. and hash was getting out of the 
+bounds of unsigned faster than in new computers, and since the end of the unsigned was reasched, new values was written in the beggining again 
+(like we were starting from first indices again). so to solve this problem we need to apply a mask of 18 number 1 (0b111111111111111111). the mask 
+will leave only last 18 symbols, that follows the behaviour of overfilling old unsigned. (on old machine if the value is too big to fit in 18 bits,
+everything over 18 bits was ommited by default. thats exactly what we are doing by applying the mask).
+
+unsigned position(const char *s) {
+    unsigned h = 0;
+    while (*s) {
+        h = (h * 67 + *s++) & 0b111111111111111111;
+    }
+    return h;
+}
+the only change in code is here
+
+
+
+XORcism
+the solution is a simple code that will decrypt the flag using the key for us
+#include <stdio.h>
+
+int main(void) {
+    unsigned char enc[33] = {
+        0x67, 0x6d, 0x69, 0x4e, 0x02, 0x44, 0x05, 0x6b, 0x58, 0x4f, 0x0e, 0x50, 0x51, 0x44, 0x3f, 0x6b, 0x68, 0x55, 
+        0x12, 0x6a, 0x68, 0x4f, 0x1b, 0x7c, 0x76, 0x4d, 0x05, 0x6b, 0x04, 0x4c, 0x35, 0x41, 0x64
+    };
+    unsigned char key[4] = {0x37,0x21,0x5a,0x0f};
+    for (int i = 0; i < 33; i++) {
+        printf("%c", enc[i] ^ key[i % 4]);
+    }
+    return 0;
+}
+
+
+
