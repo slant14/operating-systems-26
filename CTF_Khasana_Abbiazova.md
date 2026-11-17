@@ -368,13 +368,13 @@ By searching other directories I found *Used_dog.png*
 
 ### 1. Cavern
 
-The main idea of this solution is to use a vulnerability in the memory management of the original program.
+There is a problem in given program.
 
 The guess() function allocates memory for the offering structure, saves the decoded flag in the secret field, and then frees the allocated memory using free(). However, it still returns a pointer to this memory.
 
 This creates a use-after-free vulnerability, because the program returns a pointer to memory that has already been freed.
 
-By looking at the original source code, we can understand how the offering structure is organized and find the position of the secret field. The solution uses this information to try to read the flag directly from memory instead of guessing it.
+By looking at the original source code, I understood how the offering structure is organized and found the position of the secret field. I uses this information to try to read the flag directly from memory instead of guessing it.
 
 ```c
 #include <stdio.h>
@@ -407,7 +407,7 @@ void run(void) {
 }
 ```
 
-The solution uses dlsym() to find the original guess() function and call it. After examining the source code, we find that this function stores the decoded flag in the secret field, frees the memory, and then returns a pointer to the same memory.
+I use dlsym() to find the original guess() function and call it. After examining the source code, I found that this function stores the decoded flag in the secret field, frees the memory, and then returns a pointer to the same memory.
 
 Compile and run:
 ```bash
@@ -442,9 +442,9 @@ I got: *cctf{thE_9oOD_0ld_d4y5_Wi7h_go0D_O1D_c}*
 
 ### 3. Xorcism
 
-The main idea of this solution is to use XOR decryption to recover the original password.
+I use XOR decryption to recover the original password.
 
-In the original program, the password is encrypted using the XOR operation. However, the program contains both the encrypted data (enc) and the key (key). This means that we do not need to guess the password because we can restore it directly.
+In the original program, the password is encrypted using the XOR operation. However, the program contains both the encrypted data and the key. This means that I  don't need to guess the password because I can restore it directly.
 
 ```c
 #include <stdio.h>
