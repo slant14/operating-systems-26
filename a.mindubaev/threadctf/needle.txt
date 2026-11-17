@@ -1,0 +1,1 @@
+The idea was to make the program simply retrieve the flag from the root and pass it to the meeting.

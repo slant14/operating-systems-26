@@ -1,0 +1,1 @@
+Move to the "Doguments" directory and open with nano EDITME file: "nano EDITME". Make the dog longer by required amount of symbols and after that in bash you will see the path to the dog picture.

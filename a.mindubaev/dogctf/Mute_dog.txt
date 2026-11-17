@@ -1,0 +1,1 @@
+Move to the "Programs" directory. Executing "./mute_dog" shows the picture telling that terminals are listening. So we need to bypass it by writing the output and errors right into the some file: "./mute_dog &> mute.txt". Normal output containd one piece of the path and errors output contains the second one. Concatenate two pieces and you are done!

@@ -1,0 +1,1 @@
+We use mask 0x3FFFFu (14 ones) to handle the bug with unsigned int as now its size is 32 instead of 18.

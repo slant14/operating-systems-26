@@ -1,0 +1,1 @@
+In the code before the input we can find and output the password by ourselves and get the flag.

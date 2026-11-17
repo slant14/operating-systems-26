@@ -1,0 +1,1 @@
+Move to the "Doguments/unsorted" directory. Type "ls -la" and look at the files. We need to delete all the files with the maximum size. In my case it was 1937 so "find . -type f -size 1937c -delete" worked. After that the terminal responded with the dog picture path.

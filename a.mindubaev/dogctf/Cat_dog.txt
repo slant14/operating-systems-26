@@ -1,0 +1,1 @@
+Move to the "Pictures" directory and using "cat Cat_dog_top Cat_dog_bottom > Cat_dog.png" concatenate two files into the dog picture. 

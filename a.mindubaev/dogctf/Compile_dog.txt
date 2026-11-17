@@ -1,0 +1,1 @@
+Move to the "Programs" directory and with "gcc compile_dog.c -o compile_dog" compile the c code to get the path to the dog picture.

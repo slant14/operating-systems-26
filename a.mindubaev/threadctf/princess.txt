@@ -1,0 +1,1 @@
+Just deleting the parent processes with a zombie child in the loop using the script in the first part and C script in the second part.

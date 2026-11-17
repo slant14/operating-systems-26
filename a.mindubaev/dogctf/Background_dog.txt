@@ -1,0 +1,1 @@
+After accessing the contianer enter "fg %1" to get the path to the dog image.

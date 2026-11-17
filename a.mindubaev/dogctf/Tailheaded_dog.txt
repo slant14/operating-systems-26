@@ -1,0 +1,1 @@
+Move to the "Downloads" directory. Open the start of the dog.log with "head dog.log". It is the first piece of the path. The second piece is hidden in the end of the file. Look for it using "cat dog.log" as tail only shows Toby Fox dog. Concatenate two pieces and you are done!

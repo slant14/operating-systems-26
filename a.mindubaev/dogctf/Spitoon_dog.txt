@@ -1,0 +1,1 @@
+Move to the "Programs" directory. Type "man spitoon" to the the prhases you need to answer him to get the path. Launch "./spitoon" and meet its conditions to get the path to the dog picture.
