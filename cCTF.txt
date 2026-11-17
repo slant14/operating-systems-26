@@ -1,0 +1,69 @@
+1. cavern
+we have cavern.c that loads our .so file and runs run()
+there are functions offering_new() and offering_set_secret() which put the flag into secret
+so i made offer.c with the same offering structure, called those functions and printed secret
+
+offer.c code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <dlfcn.h>
+
+struct offering {
+        char guess[64];
+        char secret[64];
+};
+
+extern struct offering *offering_new(void);
+extern void offering_set_secret(struct offering *offer);
+
+void run(void) {
+        struct offering* offer = offering_new();
+        offering_set_secret(offer);
+        printf("%.55s\n", offer->secret);
+        free(offer);
+}
+
+gcc -shared -fPIC -o offer.so offer.c
+./cavern ./offer.so
+
+flag: cctf{remeMBEr_tHerE_1s_no_spoOn_FRE3_Fr0M_na5Al_d3M0Ns}
+
+2. legacy
+legacy.c crashes because it was made for a machine where unsigned was 18 bits, but now its usually 32
+so position() gives wrong indexes
+changed this line
+h = h * 67 + *s++;
+to
+h = (h * 67 + *s++) & 0x3ffff;
+then compiled it again
+
+gcc legacy.c -o legacy
+./legacy
+
+flag: cctf{THe_goOd_old_Days_Wi7H_GooD_olD_C}
+
+3. xorcism
+in demon.c there is enc array and key array, and the password is checked with xor
+so i used the same xor to get the password, just printed enc[i] ^ key[i % 4] in a loop
+then entered the password in the original program
+
+new main:
+int main(void)
+{
+    char in[64] = {0};
+
+    
+    in[strcspn(in, "\n")] = '\0';
+
+    for (int i = 0; i < PWLEN; i++) {
+        putchar(enc[i]^key[i % 4]);
+    }
+
+    printf("correct! flag: cctf{%s}\n", in);
+    return 0;
+}
+
+gcc demon.c -o demon
+./demon
+
+flag: cctf{P1ea53_DOn7_Fe3d_the_n4sal_DeMOns}
