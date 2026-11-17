@@ -632,13 +632,7 @@ cat flag.txt
 
 ### 3. Princess2
 
-My program checks the /proc/PID/stat file to identify zombie princess processes. It reads the process name and state, and gets the PID of the parent process. If the process is a zombie (Z) and its name starts with princess_, I check its parent.
-
-Next, I check /proc/PID/exe to make sure that the parent process is actually /usr/local/bin/cabin. This prevents my program from terminating unrelated processes.
-
-I also use a seen array to remember which cabin PIDs have already been processed, so the same cabin is not counted multiple times.
-
-When I find a matching cabin, I use kill() with SIGTERM to terminate it. The program repeats this process until the challenge is completed.
+It is the same as princess, we just can't look at processes bu ps aux and we have to kill 100 processes.
 
 ```c
 #include <stdio.h>
@@ -648,24 +642,16 @@ When I find a matching cabin, I use kill() with SIGTERM to terminate it. The pro
 #include <signal.h>
 #include <unistd.h>
 
-#define TARGET 100
-
 int main() {
     int count = 0;
 
-    int seen[256];
-    int seen_count = 0;
-
-    printf("=== THE BLADE ===\n");
-    printf("Mode: CUT\n");
-
-    while (count < TARGET) {
+    while (count < 100) {
         DIR *dir = opendir("/proc");
         if (!dir) return 1;
 
         struct dirent *e;
 
-        while ((e = readdir(dir)) != NULL && count < TARGET) {
+        while ((e = readdir(dir)) && count < 100) {
             int pid = atoi(e->d_name);
             if (pid <= 1) continue;
 
@@ -688,7 +674,6 @@ int main() {
                     sscanf(end + 2, "%c %d", &state, &parent);
 
                     if (state == 'Z') dead = 1;
-
                     if (strncmp(name, "princess_", 9) == 0)
                         princess = 1;
                 }
@@ -710,35 +695,19 @@ int main() {
             if (strcmp(exe, "/usr/local/bin/cabin") != 0)
                 continue;
 
-            int already_seen = 0;
-
-            for (int i = 0; i < seen_count; i++) {
-                if (seen[i] == parent)
-                    already_seen = 1;
+            if (kill(parent, 0) == 0) {
+                if (kill(parent, SIGTERM) == 0) {
+                    count++;
+                    printf("Destroyed: %d/100\n", count);
+                }
             }
-
-            if (already_seen) continue;
-
-            printf("Found cabin: %d, princess: %d\n", parent, pid);
-
-            if (kill(parent, SIGTERM) == 0) {
-                count++;
-                printf("Destroyed: %d/100\n", count);
-                fflush(stdout);
-            }
-
-            if (seen_count < 256)
-                seen[seen_count++] = parent;
         }
 
         closedir(dir);
-
-        if (count < TARGET)
-            usleep(100000);
+        usleep(100000);
     }
 
-    printf("\nTotal destroyed: %d\n", count);
-
+    printf("Done!\n");
     return 0;
 }
 ```
