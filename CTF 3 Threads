@@ -1,0 +1,115 @@
+Found flags:
+- needle
+- princess
+- princess2 
+
+Needle
+in the provivded code we can see that the main thread pthread_join(meeting_occurence, &name_pointer) and then printf("%s", name_pointer).
+it means that the output is the just the return of the meeting function, not the flag.
+the program is waiting for the name. the first thread reads /root/flag.txt so it does have the right to read it, and the meeting function 
+is running in the same process so their rights are equal. we can just read the flag in meeting, then the flag can be treated as a name.  
+nano viktoriia.c
+
+#include <stdio.h>
+#include <string.h>
+#include<stdlib.h>
+
+void meeting(){
+    char* flag = malloc(256);
+    FILE* f = fopen("/root/flag.txt", "r");
+    if (f) {
+        fgets(flag, 256, f);
+        fclose(f);
+    }
+    printf("%s", flag);
+}
+
+so this code just open the flat.txt reads the flag into malloc and return it.
+
+
+Princess
+to solve this one, as i understood, we should kill 50 zombie processes. ps aux showed me all the processes in system, including zombie,
+and if we will run ps -eo pid,ppid,stat,comm | grep 'Z' we will be able to see all the ombie pricesses. then i repeatedly tried running 
+kill and ppid that i just obtained. when i reached 50 killed processes i got the message: 
+
+=== The Forest ===
+The forest falls silent. 50 cursed cabins lie in ruin, and
+the story is finally over. Your reward waits in your home
+directory.
+
+cat flag.txt and i for the flag.
+
+
+
+Princess2
+we cannot use bash anymore, so i had to write a code that will kill all the zombie's cabins for me.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <signal.h>
+#include <unistd.h>
+
+static int to_int(const char *s) {
+    int n = 0;
+    while (*s >= '0' && *s <= '9') { 
+      n = n * 10 + (*s - '0'); s++; 
+    }
+    return n;
+}
+
+static int starts_princess(const char *s) {
+    const char *pre = "princess_";
+    while (*pre) { 
+      if (*s++ != *pre++) {
+        return 0; 
+      }
+    }
+    return 1;
+}
+
+int main(void) {
+    int killed = 0;
+    while (killed < 100) {
+        for (int pid = 1; pid < 32768; pid++) {
+            char path[64], comm[64], state;
+            int ppid;
+
+            sprintf(path, "/proc/%d/stat", pid);
+            FILE *f = fopen(path, "r");
+            if (!f) continue;
+
+            int ok = fscanf(f, "%*d (%63[^)]) %c %d", comm, &state, &ppid);
+            fclose(f);
+            if (ok != 3) continue;
+
+            if (state != 'Z') continue;
+            if (!starts_princess(comm)) continue;
+            if (ppid <= 1) continue;
+
+            sprintf(path, "/proc/%d/comm", ppid);
+            f = fopen(path, "r");
+            if (!f) continue;
+            fgets(comm, sizeof(comm), f);
+            fclose(f);
+
+            if (strstr(comm, "cabin") != NULL && kill(ppid, SIGTERM) == 0)
+                killed++;
+        }
+        printf("%d\n", killed);
+        fflush(stdout);
+        sleep(1);
+    }
+    return 0;
+}
+
+and then, quite a lot of time ago, i received a message:
+=== The Forest ===
+The forest falls silent. 100 cursed cabins lie in ruin, and
+the story is finally over. Your reward waits in your home
+directory.
+
+100
+
+cat flag.txt
+
