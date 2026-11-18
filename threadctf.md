@@ -1,9 +1,5 @@
 # CTF — N. Denisov CSE-04
 
-> Filled in following the format of the "CTF 3" report (princess / princess2 / discodetective).
-> Check the report number, name, and group before submitting — they were filled in based on
-> data from the ssh connection banner to the containers and may need correcting.
-
 **Threads CTF (`threadctf`) · Instance `sixsevensh` · 3 of 6 challenges solved**
 
 - [needle](#needle) · Replace the `.so` that a setuid binary loads from a relative path, and read the flag directly.
