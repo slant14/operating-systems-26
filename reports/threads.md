@@ -1,4 +1,4 @@
-## Challenge 1 - needle
+## Needle
 
 `main` reads `/root/flag.txt` into a `malloc`'d buffer in `retrieve_the_fabric()`
 but never prints it. The only thing it prints is `name_pointer` — the return
@@ -37,13 +37,15 @@ gcc -shared -fPIC -o libmeeting.so program_with_name.c -lpthread
 
 **Flag:** `threadctf{sHoOtinG_Som3_aTomiC_feeT}`
 
-## Challenge 5 - princess
+## Princess
 
 **In container:**
 ```bash
-# Find zombie princesses and kill their parent (cabin)
-ps -eo pid,ppid,state,comm | awk '$3 == "Z" && $4 ~ /princess/ { print $2 }' | xargs -r kill
+# Show processes to find zombies (State 'Z') and their parents (PPID)
+ps aux | grep princess
 
+# Kill the parent cabins by their PPID (repeat until 50 cabins are destroyed)
+kill -9 <PPID>
 # Repeat until 50 cabins are destroyed, then read the flag
 ls -la
 cat flag.txt
