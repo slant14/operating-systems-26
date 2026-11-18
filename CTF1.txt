@@ -1,0 +1,185 @@
+HelloDog
+base64 /home/ctf/Desktop/hoi_:3.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/home/ctf/Desktop/hoi_:3.png C:\Users\alisa\Desktop\hoi_:3.png
+
+BackgroundDog
+
+pkill -CONT -f background_dog
+find / -name "Background_dog.png" 2>/dev/null
+base64 /regular_paw_storage/d9ede9e0848abb59/Background_dog.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/regular_paw_storage/d9ede9e0848abb59/Background_dog.png C:\Users\alisa\Desktop\Background_dog.png
+
+CatDog
+cd /home/ctf/Pictures
+cat Cat_dog_top Cat_dog_bottom > /tmp/Cat_dog_full.png
+file /tmp/Cat_dog_full.png
+base64 /tmp/Cat_dog_full.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/tmp/Cat_dog_full.png C:\Users\alisa\Desktop\Cat_dog_full.png
+
+CompileDog
+cd /home/ctf/Programs
+gcc compile_dog.c -o my_dog
+./my_dog
+base64 /regular_paw_storage/6a554cfe9e97529f/Compile_dog.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/regular_paw_storage/6a554cfe9e97529f/compile_dog.png C:\Users\alisa\Desktop\compile_dog.png
+
+EditDog
+nano /home/ctf/Documents/EDITME
+changed dog a bit
+CtrlO enter CtrlX
+base64 /regular_paw_storage/f837da087ebfa94a/Edit_dog.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/regular_paw_storage/f837da087ebfa94a/Edit_dog.png C:\Users\alisa\Desktop\Edit_dog.png
+
+HistoryDog
+cat /home/dog/.bash_history
+
+cp /super_secret_doggo_vault/grandpaw.png /regular_paw_storage/5e2794b86e009567/grandpaw.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/regular_paw_storage/5e2794b86e009567/grandpaw.png C:\Users\alisa\Desktop\grandpaw.png
+
+
+
+PoweredDog
+cat /opt/README.md
+base64 /regular_paw_storage/eea2dbb828d9ef71/powered_dog.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/regular_paw_storage/eea2dbb828d9ef71/powered_dog.png C:\Users\alisa\Desktop\powered_dog.png
+
+TailheadedDOg
+/home/ctf/go_to_opt/Downloads/dog.log
+Look, a dog image path:
+/regular_paw_storage/57f98b46
+238fe307/tailheaded.png
+
+/regular_paw_storage/57f98b46 + 238fe307/tailheaded.png
+= /regular_paw_storage/57f98b46238fe307/tailheaded.png
+
+base64 /regular_paw_storage/57f98b46238fe307/tailheaded.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/regular_paw_storage/57f98b46238fe307/tailheaded.png C:\Users\alisa\Desktop\tailheaded.png
+
+MuteDog
+/home/ctf/go_to_opt/Programs/mute_dog --help > /tmp/mute_out.txt 2>&1
+strings /tmp/mute_out.txt | grep -E "regular_paw_storage|Mute_dog"
+base64 /regular_paw_storage/009762507c7f113f/Mute_dog.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/regular_paw_storage/009762507c7f113f/Mute_dog.png C:\Users\alisa\Desktop\Mute_dog.png
+
+PetDog
+
+cd /home/ctf/go_to_opt/Doguments/auto_petter
+bash tools/assemble_mascot.sh
+git show 90e6cb4:frames/part1.bin > frames/part1.bin
+git show 9a1a2c3:frames/part2.bin > frames/part2.bin
+git show b8a99a6:frames/part3.bin > frames/part3.bin
+bash tools/assemble_mascot.sh
+base64 mascot.png
+
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Doguments/auto_petter/mascot.png C:\Users\alisa\Desktop\mascot.png
+
+RemDog
+cd /home/ctf/go_to_opt/Doguments/unsorted
+mkdir -p /tmp/angry_dogs
+mv $(ls -la | grep 1937 | awk '{print $9}') /tmp/angry_dogs/
+ls -la
+base64 /regular_paw_storage/7c2f133e938abb34/Rem_dog.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/regular_paw_storage/7c2f133e938abb34/Rem_dog.png C:\Users\alisa\Desktop\Rem_dog.png
+
+ScatteredDog
+cd "/home/ctf/go_to_opt/Videos/Scattered dog"
+cat -- -50 -49 -48 -47 -46 -45 -44 -43 -42 -41 -40 -39 -38 -37 -36 -35 -34 -33 -32 -31 -30 -29 -28 -27 -26 -25 -24 -23 -22 -21 -20 -19 -18 -17 -16 -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 > /tmp/scattered_raw.png
+file /tmp/scattered_raw.png
+base64 /tmp/scattered_raw.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/tmp/scattered_raw.png C:\Users\alisa\Desktop\scattered_raw.png
+
+ShyDog
+base64 "/home/dog/Doguments/cat_tracker/Shy dog/Gallery_Maybe_Dog_97fd225a.png"
+
+or
+
+find "/home/dog/Doguments/cat_tracker/Shy dog" -name "*.png" 2>/dev/null
+file "/home/dog/Doguments/cat_tracker/Shy dog"/*.png 2>/dev/null | grep -i image
+
+SpitoonDog
+chmod +r /home/ctf/go_to_opt/Programs/spitoon
+strings /home/ctf/go_to_opt/Programs/spitoon | grep -A 15 -B 5 "tough"
+
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/regular_paw_storage/6ea54fd61b878172/Spitoon_dog.png C:\Users\alisa\Desktop\Spitoon_dog.png
+
+AqueousDog
+cat /home/ctf/.config/fish/config.fish
+echo 'L3JlZ3VsYXJfcGF3X3N0b3JhZ2UvNGUxMzNhZTE2NGQ2YjliZi9BcXVlb3VzX2RvZy5wbmc=' | base64 -d
+/regular_paw_storage/4e133ae164d6b9bf/Aqueous_dog.png
+
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/regular_paw_storage/4e133ae164d6b9bf/Aqueous_dog.png C:\Users\alisa\Desktop\Aqueous_dog.png
+
+ChainedDog
+cd /home/dog/Downloads
+LC_ALL=C bash -c '
+curr="start"
+> /tmp/chained_dog_fixed.png
+while [ -f "$curr" ]; do
+  next=$(head -n 1 "$curr" | tr -d "\r" | sed "s/^Next: //")
+  tail -n +2 "$curr" | sed "1s/^Content: //" >> /tmp/chained_dog_fixed.png
+  [ "$curr" = "$next" ] && break
+  curr="$next"
+done
+'
+file /tmp/chained_dog_fixed.png
+
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/tmp/chained_dog.png C:\Users\alisa\Desktop\chained_dog.png
+
+InsecureDog
+find / -iname "*insecure*" 2>/dev/null
+find / -iname "*Insecure_dog*" 2>/dev/null
+grep -riE "InsecureDog|insecure" /home /opt /etc /usr/local 2>/dev/null
+/usr/local/bin/checker_dog check
+
+NetDog
+nc localhost 2795 > /tmp/netdog.png
+file /tmp/netdog.png
+base64 /tmp/netdog.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/tmp/netdog.png C:\Users\alisa\Desktop\netdog.png
+
+ProDog
+
+
+
+RestoreDog
+vim -r .crashed.txt.swp
+base64 /regular_paw_storage/1bpjjw1/Restore_dog.png
+
+
+SpyDog
+cd /home/dog/Doguments/cat_tracker
+git --no-pager log --all --full-history --stat
+git fsck --full --unreachable
+git show d89a15d0e47598a2904a01a75bdd9fdbf33aea82
+git cat-file -p b78faa34066e9983fe32f826af88cc2b0a131791 > /tmp/frame_0042.png
+
+or
+
+cd /home/dog/Documents/cat_tracker
+git fsck --full --unreachable
+git cat-file -p b78faa34066e9983fe32f826af88cc2b0a131791 > /tmp/frame_0042.png
+file /tmp/frame_0042.png
+base64 /tmp/frame_0042.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/tmp/frame_0042.png C:\Users\alisa\Desktop\frame_0042.png
+
+UsedDog
+base64 /home/dog/Used_dog.png
+
+scp -O a.kondakova-dog@osctf.nnk.moe:/home/dog/Used_dog.png C:\Users\alisa\Desktop\Used_dog.png

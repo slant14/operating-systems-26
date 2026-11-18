@@ -1,0 +1,329 @@
+princess
+count=0
+while [ $count -lt 50 ]; do
+  ppids=$(ps -eo ppid,stat,comm | awk '$2 ~ /Z/ && $3 ~ /princess/ {print $1}' | sort -u)
+  
+  for ppid in $ppids; do
+    if [ "$ppid" -gt 1 ] 2>/dev/null; then
+      kill -9 "$ppid" 2>/dev/null && count=$((count+1))
+      echo "Снесено хижин: $count (PID: $ppid)"
+      [ $count -ge 50 ] && break
+    fi
+  done
+  sleep 0.1
+done
+
+ls -la ~ / /tmp
+
+
+
+
+
+
+
+
+princess2
+nano blade.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <dirent.h>
+#include <ctype.h>
+#include <signal.h>
+#include <unistd.h>
+
+int is_number(const char *s) {
+    while (*s) {
+        if (!isdigit(*s)) return 0;
+        s++;
+    }
+    return 1;
+}
+
+int main() {
+    int count = 0;
+    char path[256], line[256], name[256], state;
+    int ppid;
+
+    while (count < 100) {
+        DIR *dir = opendir("/proc");
+        if (!dir) return 1;
+
+        struct dirent *entry;
+        while ((entry = readdir(dir)) != NULL && count < 100) {
+            if (!is_number(entry->d_name)) continue;
+
+            snprintf(path, sizeof(path), "/proc/%s/status", entry->d_name);
+            FILE *f = fopen(path, "r");
+            if (!f) continue;
+
+            name[0] = '\0';
+            state = 0;
+            ppid = 0;
+
+            while (fgets(line, sizeof(line), f)) {
+                if (strncmp(line, "Name:", 5) == 0) {
+                    sscanf(line + 5, "%255s", name);
+                } else if (strncmp(line, "State:", 6) == 0) {
+                    sscanf(line + 6, " %c", &state);
+                } else if (strncmp(line, "PPid:", 5) == 0) {
+                    sscanf(line + 5, "%d", &ppid);
+                }
+            }
+            fclose(f);
+
+            if (strstr(name, "princess") != NULL && state == 'Z' && ppid > 1) {
+                if (kill(ppid, SIGKILL) == 0) {
+                    count++;
+                    printf("Slayed: %d/100 (PPID: %d)\n", count, ppid);
+                    fflush(stdout);
+                }
+            }
+        }
+        closedir(dir);
+        usleep(100000);
+    }
+
+    sleep(1);
+    FILE *flag = fopen("flag.txt", "r");
+    if (flag) {
+        while (fgets(line, sizeof(line), flag)) {
+            printf("FLAG: %s\n", line);
+        }
+        fclose(flag);
+    } else {
+        printf("flag.txt not found yet\n");
+    }
+    return 0;
+}
+CTRLO enter CTRLX
+gcc blade.c -o blade
+./blade
+
+
+
+
+
+
+
+
+decrypt
+open Ubuntu
+
+cat << 'EOF' > ~/ctf_decrypt/solve.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <pthread.h>
+#include <sys/wait.h>
+
+#define BINARY "./decrapinator-x86_64-linux"
+#define COPIES_PER_SHARD 6
+#define MAX_SHARDS 1024
+
+char *results[MAX_SHARDS];
+int solved_count = 0;
+int total_shards = 0;
+pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+
+typedef struct {
+    int shard_idx;
+} TaskArg;
+
+void* worker(void *arg) {
+    int idx = ((TaskArg*)arg)->shard_idx;
+    free(arg);
+
+    char cmd;
+    snprintf(cmd, sizeof(cmd), "%s decrypt shards/%d.shard 2>/dev/null", BINARY, idx);
+
+    while (1) {
+        pthread_mutex_lock(&lock);
+        if (results[idx] != NULL) {
+            pthread_mutex_unlock(&lock);
+            return NULL;
+        }
+        pthread_mutex_unlock(&lock);
+
+        FILE *fp = popen(cmd, "r");
+        if (!fp) {
+            usleep(10000);
+            continue;
+        }
+
+        char buf = {0};
+        size_t len = fread(buf, 1, sizeof(buf) - 1, fp);
+        int status = pclose(fp);
+
+        while (len > 0 && (buf[len - 1] == '\n' || buf[len - 1] == '\r' || buf[len - 1] == ' ')) {
+            buf[--len] = '\0';
+        }
+
+        if (WIFEXITED(status) && WEXITSTATUS(status) == 0 && len > 0) {
+            pthread_mutex_lock(&lock);
+            if (results[idx] == NULL) {
+                results[idx] = strdup(buf);
+                solved_count++;
+                if (solved_count == total_shards) {
+                    printf("\n=== ГОТОВЫЙ ФЛАГ ===\n");
+                    FILE *clip = popen("clip.exe 2>/dev/null", "w");
+                    for (int i = 0; i < total_shards; i++) {
+                        printf("%s", results[i]);
+                        if (clip) fputs(results[i], clip);
+                    }
+                    printf("\n====================\n");
+                    if (clip && pclose(clip) == 0) {
+                        printf("[+] Флаг автоматически скопирован в буфер обмена (Ctrl+V)!\n");
+                    }
+                    fflush(stdout);
+                    _exit(0);
+                }
+            }
+            pthread_mutex_unlock(&lock);
+            return NULL;
+        }
+    }
+    return NULL;
+}
+
+int main() {
+    char path;
+    while (total_shards < MAX_SHARDS) {
+        snprintf(path, sizeof(path), "shards/%d.shard", total_shards);
+        if (access(path, F_OK) == 0) {
+            total_shards++;
+        } else {
+            break;
+        }
+    }
+
+    if (total_shards == 0) {
+        fprintf(stderr, "Шарды в папке shards/ не найдены!\n");
+        return 1;
+    }
+
+    printf("Найдено шардов: %d. Запускаю %d потоков...\n", total_shards, total_shards * COPIES_PER_SHARD);
+
+    int total_threads = total_shards * COPIES_PER_SHARD;
+    pthread_t *threads = malloc(sizeof(pthread_t) * total_threads);
+
+    int t = 0;
+    for (int i = 0; i < total_shards; i++) {
+        for (int c = 0; c < COPIES_PER_SHARD; c++) {
+            TaskArg *arg = malloc(sizeof(TaskArg));
+            arg->shard_idx = i;
+            pthread_create(&threads[t++], NULL, worker, arg);
+        }
+    }
+
+    for (int i = 0; i < total_threads; i++) {
+        pthread_join(threads[i], NULL);
+    }
+
+    return 0;
+}
+EOF
+gcc -O2 ~/ctf_decrypt/solve.c -o ~/ctf_decrypt/solve -lpthread
+cd ~/ctf_decrypt && rm -rf shards shards.tar.gz && cp /mnt/c/Users/alisa/Downloads/shards.tar.gz . && tar -xzf shards.tar.gz && ./solve
+
+
+
+
+
+
+
+
+needle
+cat > meeting.c << 'EOF'
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+void* meeting(void* arg) {
+    FILE* f = fopen("/root/flag.txt", "r");
+    if (f) {
+        char flag[256];
+        if (fgets(flag, sizeof(flag), f)) {
+            printf("FLAG: %s\n", flag);
+            fflush(stdout);
+        }
+        fclose(f);
+    } else {
+        printf("Could not open /root/flag.txt. Trying other locations...\n");
+    }
+    return NULL;
+}
+EOF
+gcc -shared -fPIC meeting.c -o libmeeting.so -lpthread
+LD_PRELOAD=./libmeeting.so ./meeting
+
+
+
+
+
+
+
+
+fortforks
+ssh user@host "ls -la / /tmp ~"
+
+cat << "EOF" > /tmp/relay.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <time.h>
+#include <string.h>
+
+int main() {
+    int fd = open("secrets", O_RDONLY);
+    if (fd < 0) return 1;
+
+    char *buf = malloc(65536);
+    char *tail = calloc(4096, 1);
+    size_t tail_len = 0;
+    time_t start = time(NULL);
+
+    while (1) {
+        if (time(NULL) - start >= 3) {
+            pid_t pid = fork();
+            if (pid > 0) _exit(0);
+            if (pid < 0) return 1;
+            start = time(NULL);
+        }
+
+        ssize_t n = read(fd, buf, 65536);
+        if (n <= 0) break;
+
+        if (n >= 4096) {
+            memcpy(tail, buf + n - 4096, 4096);
+            tail_len = 4096;
+        } else {
+            if (tail_len + n > 4096) {
+                size_t shift = tail_len + n - 4096;
+                memmove(tail, tail + shift, tail_len - shift);
+                tail_len -= shift;
+            }
+            memcpy(tail + tail_len, buf, n);
+            tail_len += n;
+        }
+    }
+
+    FILE *out = fopen("/tmp/flag.txt", "wb");
+    if (out) {
+        fwrite(tail, 1, tail_len, out);
+        fclose(out);
+    }
+    return 0;
+}
+EOF
+gcc /tmp/relay.c -o /tmp/relay && nohup /tmp/relay >/dev/null 2>&1 &
+
+cat /tmp/flag.txt
+
+
+
+
+
+
