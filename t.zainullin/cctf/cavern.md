@@ -1,12 +1,8 @@
-# cctf — cavern (100 points)
+# cctf - cavern
 
 **Flag:** `cctf{rem3mB3r_tH3R3_is_no_Sp0oN_Fr3e_fr0M_n45a1_dem0ns}`
 
 ## Task
-
-Container: `ssh t.zainullin-cavern@osctf.nnk.moe` (password from the bot).
-Inside there is a setuid-root binary `cavern`. The bot instructions:
-
 1. Write a C file (e.g. `offer.c`) that exports `void run(void)`.
 2. Build: `gcc -shared -fPIC -o offer.so offer.c -ldl`
 3. Run: `./cavern ./offer.so`
@@ -28,14 +24,14 @@ void* guess(char* your_guess) {
 ## Idea
 
 Classic **use-after-free**: the decrypted flag is written into `offering->secret`,
-then the struct is `free()`d — but freed memory keeps its content, and the
+then the struct is `free()`d - but freed memory keeps its content, and the
 dangling pointer is returned to the caller. "You just need to remember it."
 Our `run()` calls `guess()` (a global symbol of the main binary, resolvable from
 a `dlopen`ed library) and reads the secret out of the freed chunk.
 
-## Solution
 
-`offer.c` (dump version — prints every printable byte of the freed struct):
+
+`offer.c` (dump version - prints every printable byte of the freed struct):
 
 ```c
 #include <stdio.h>
@@ -56,8 +52,6 @@ void run(void) {
 }
 ```
 
-Commands (inside the container):
-
 ```
 gcc -shared -fPIC -o offer.so offer.c -ldl
 ./cavern ./offer.so
@@ -72,9 +66,3 @@ HEIST dump: +NJncctf{rem3mB3r_tH3R3_is_no_Sp0oN_Fr3e_fr0M_n45a1_dem0ns}
 
 (The first bytes are the remains of our guess string, then the flag from
 `secret[64..118]`.)
-
-## Result
-
-```
-✅ Flag accepted for 'cavern'.   100 points
-```

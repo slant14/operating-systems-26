@@ -1,10 +1,10 @@
-# cctf — legacy (100 points)
+# cctf - legacy
 
 **Flag:** `cctf{7He_GooD_0ld_D4y5_Wi7H_gOOD_0Ld_C}`
 
 ## Task
 
-The bot gives `legacy.c` — a 42-year-old program. On a modern machine it just
+The bot gives `legacy.c` - a 42-year-old program. On a modern machine it just
 segfaults. The developer's diagnostics say:
 
 ```
@@ -28,12 +28,12 @@ The old machine had **18-bit unsigned** integers, so the hash was effectively
 modulo 2^18 = 262144. On a modern 32-bit `unsigned` the hash values are huge and
 `document[pos]` runs out of the 69-byte buffer → segfault.
 
-Check: `position(EICAR-string) mod 2^18 = 237614` — exactly the value from the
+Check: `position(EICAR-string) mod 2^18 = 237614` - exactly the value from the
 diagnostics, so the hypothesis is confirmed.
 
 The "fix" is to reproduce the old behaviour: mask the hash to 18 bits.
 
-## Solution
+
 
 Patch only the hash line ( emulation of 18-bit unsigned):
 
@@ -59,9 +59,3 @@ cctf{7He_GooD_0ld_D4y5_Wi7H_gOOD_0Ld_C}
 
 ("The Good Old Days With GOOD Old C".) All 33 strings landed at positions 0..32,
 the rest of `document` stays zero, so `printf("%s")` stops at the first NUL byte.
-
-## Result
-
-```
-✅ Flag accepted for 'legacy'.   100 points
-```

@@ -1,12 +1,8 @@
-# threadctf — princess2 (125 points)
+# threadctf - princess2
 
 **Flag:** `threadctf{i_hoP3_you_Can_C_CL3aRLy_noW}`
 
 ## Task
-
-Container: `ssh t.zainullin-princess2@osctf.nnk.moe`. The story repeats the
-`princess` hunt, but this time the forest kept the shell itself. The login
-shell is a restricted **story-shell**:
 
 ```
 The forest kept your shell. It won't give it back.
@@ -19,7 +15,7 @@ Forbidden: Everything else
 cabins must be torn down, and the tool to find/kill them has to be **written
 in C** ("we can C the way", "we'll make our own blade").
 
-## Solution — `blade.c`
+ - `blade.c`
 
 A self-contained hunter:
 
@@ -31,7 +27,7 @@ A self-contained hunter:
 
 Notes on the environment:
 
-- SFTP does not work through the story-shell — the file has to be created
+- SFTP does not work through the story-shell - the file has to be created
   inside (e.g. via `vim`/`nano`);
 - the hunt takes a while (~100 kills), so it is best run in the background of
   your own terminal (`./blade &`) or just left running.
@@ -48,12 +44,4 @@ the story is finally over. Your reward waits in your home
 directory.
 
 FLAG FOUND after 100 kills: threadctf{i_hoP3_you_Can_C_CL3aRLy_noW}
-```
-
-Send the flag as text to the bot in the `findingnemo` [threadctf] instance.
-
-## Result
-
-```
-✅ Flag accepted for 'princess2'.   125 points
 ```

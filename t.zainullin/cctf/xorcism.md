@@ -1,4 +1,4 @@
-# cctf — xorcism (100 points)
+# cctf - xorcism
 
 **Flag:** `cctf{p1eaS3_Dont_FeeD_tHE_na5Al_D3mOns}`
 
@@ -18,7 +18,7 @@ So the password **is** the flag content.
 
 XOR is symmetric: `enc[i] ^ key[i % 4]` gives the original password bytes.
 
-## Solution
+
 
 Recover the password with Python:
 
@@ -42,10 +42,4 @@ Output:
 ```
 crack me!
 password: correct! flag: cctf{p1eaS3_Dont_FeeD_tHE_na5Al_D3mOns}
-```
-
-## Result
-
-```
-✅ Flag accepted for 'xorcism'.   100 points
 ```

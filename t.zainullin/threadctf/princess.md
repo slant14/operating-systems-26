@@ -1,18 +1,15 @@
-# threadctf — princess (100 points)
+# threadctf - princess
 
 **Flag:** `threadctf{WH4t_do_YoU_m3An_th3Y_aRe_AlR34DY_DE4D}`
 
 ## Task
 
-Container: `ssh t.zainullin-princess@osctf.nnk.moe`. Inside, PID 1 is a
-root-owned process `/root/forest` that maintains a population of processes:
-
-- cabins: `the_<adjective>_cabin princess_<name>` — each spawns a child
+- cabins: `the_<adjective>_cabin princess_<name>` - each spawns a child
   princess process with the same name;
 - princesses: `princess_<name>`;
 - items: `the_locket`, `the_crown`, `the_blade`, ... (plain sleeping processes).
 
-Some princesses are already dead — they appear as zombies
+Some princesses are already dead - they appear as zombies
 (`[princess_heart] <defunct>`), their cabin is still alive. The story text says:
 
 > "It's the cabins that are cursed, not the princesses. Tear down **fifty** of
@@ -25,7 +22,7 @@ The forest replaces every killed cabin with a new one (randomly alive or
 cursed), so this becomes a hunt: wait for cursed cabins to appear, kill them,
 repeat 50 times. Killing a living princess or her cabin would break the rule.
 
-## Solution
+
 
 Background hunter script (`/tmp/hunt.sh`), started via a background job:
 
@@ -50,7 +47,7 @@ Notes:
 
 - zombie processes print as `[princess_heart] <defunct>`, so the awk filter
   must match `/princess_/` anywhere in args, not `^princess_`;
-- the forest spawns cursed cabins slower over time — the whole run took
+- the forest spawns cursed cabins slower over time - the whole run took
   ~15 minutes for ~50 kills.
 
 When the counter reached 50, the forest dropped the reward into our home
@@ -59,12 +56,4 @@ directory:
 ```
 cat /home/ctf/flag.txt
 # threadctf{WH4t_do_YoU_m3An_th3Y_aRe_AlR34DY_DE4D}
-```
-
-Send the flag to the bot (in the `findingnemo` [threadctf] instance!).
-
-## Result
-
-```
-✅ Flag accepted for 'princess'.   100 points
 ```

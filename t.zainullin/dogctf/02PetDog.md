@@ -1,10 +1,10 @@
-# dogctf — 02PetDog (100 points)
+# dogctf - 02PetDog
 
 **Flag:** picture file (`mascot.png`, 300x200 PNG).
 
 ## Task
 
-`~/go_to_opt/Doguments/auto_petter/` — a git repo stuck in an **interactive
+`~/go_to_opt/Doguments/auto_petter/` - a git repo stuck in an **interactive
 rebase**. The mascot pipeline says `mascot.png` is assembled from
 `frames/part1.bin`, `part2.bin`, `part3.bin` and "Frame parts must be the
 final encodes. See the git history for the ongoing frame saga."
@@ -19,7 +19,7 @@ and the history is full of "wip"/"botched" versions:
 - part3: `95cdcdd mascot: clean re-encode of part3, the import was botched`
   vs `7be9892 wip: experimental resampler on part3 (produces junk…)`
 
-## Solution
+
 
 Every part has exactly one *real* blob of 38152 bytes in the object database
 (the decoys are 88–740 bytes). Map blobs to parts via `git ls-tree` over all
@@ -40,12 +40,4 @@ git -C ~/go_to_opt/Doguments/auto_petter cat-file -p 22128824… > p2.bin
 git -C ~/go_to_opt/Doguments/auto_petter cat-file -p 82ef5bcd… > p3.bin
 git -C ~/go_to_opt/Doguments/auto_petter cat-file -p 510bfb75… > p1.bin
 cat p2.bin p3.bin p1.bin > mascot.png   # PNG magic check passes (89504e47)
-```
-
-Send `Pet_dog.png.dat` (the assembled mascot) to the bot as a document.
-
-## Result
-
-```
-✅ Flag accepted for '02PetDog'.
 ```

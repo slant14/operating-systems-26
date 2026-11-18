@@ -1,4 +1,4 @@
-# threadctf — needle (100 points)
+# threadctf - needle
 
 **Flag:** `threadctf{sHoOtin9_50m3_atom1C_FEe7}`
 
@@ -28,10 +28,10 @@ printf("Polythread has your concent and name: %s\n", (char*)name_pointer);
 
 The program loads **our** `libmeeting.so` from the current working directory and
 prints whatever our `meeting()` returns. Because the whole process is setuid
-root, our function may simply open `/root/flag.txt` and return its content —
+root, our function may simply open `/root/flag.txt` and return its content -
 the main thread will print it as the "name".
 
-## Solution
+
 
 1. Connect to the container (password from the bot).
 
@@ -64,12 +64,4 @@ Output:
 
 ```
 Polythread has your concent and name: threadctf{sHoOtin9_50m3_atom1C_FEe7}
-```
-
-4. Send the flag to the bot as a text message.
-
-## Result
-
-```
-✅ Flag accepted for 'needle'.   100 points
 ```

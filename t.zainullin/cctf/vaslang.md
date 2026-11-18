@@ -1,18 +1,18 @@
-# cctf — vaslang (100 points)
+# cctf - vaslang
 
 **Flag:** `cctf{YOU_c0Uld_havE_s0LveD_tHIS_the_FUN_WAy}`
 
 ## Task
 
 The bot gives `vaslang.c` (an interpreter of a small stack language, FORTH-like,
-all arithmetic modulo 251) and `inp.vas` — a 2000-line program written by an AI.
+all arithmetic modulo 251) and `inp.vas` - a 2000-line program written by an AI.
 The AI hit its context limit, so "the final edits came out mangled": the program
 crashes the interpreter. Fix the interpreter so the program runs and prints the
 flag.
 
 Language ops: `+` add, `*` mul, `:` dup, `.` drop, `<num>` push,
 `<func>` call, `R` return (when the return stack is empty, print the value stack
-from its start as a string — that is how the flag is printed).
+from its start as a string - that is how the flag is printed).
 
 ## Bug 1: forward references
 
@@ -92,10 +92,4 @@ Output (after the `hello` self-test):
 
 ```
 cctf{YOU_c0Uld_havE_s0LveD_tHIS_the_FUN_WAy}
-```
-
-## Result
-
-```
-✅ Flag accepted for 'vaslang'.   100 points
 ```

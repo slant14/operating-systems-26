@@ -1,12 +1,8 @@
-# dogctf — 03InsecureDog (100 points)
+# dogctf - 03InsecureDog
 
 **Flag:** accepted by the bot as a file (`OGDG.png`)
 
 ## Task
-
-Container: `ssh t.zainullin-dog@osctf.nnk.moe` (instance `findingdory`).
-In `~/go_to_opt/Doguments/` there is a `secret_stuff/super_secret/` directory
-whose permissions are locked down:
 
 ```
 .bash_profile:  chmod 311 /home/ctf/go_to_opt/Doguments/secret_stuff/super_secret
@@ -28,22 +24,9 @@ find / -xdev -iname '*.png' | grep -v 'Shy dog'
 /home/ctf/go_to_opt/Doguments/secret_stuff/super_secret/OGDG.png
 ```
 
-## Solution
+
 
 ```
 file ~/go_to_opt/Doguments/secret_stuff/super_secret/OGDG.png
 # PNG image data, 300 x 225, 8-bit/color RGBA
-```
-
-Download `OGDG.png` and send it to the bot as a plain document (no caption).
-Bot reply:
-
-```
-✅ Flag accepted for '03InsecureDog'.
-```
-
-## Result
-
-```
-03InsecureDog — 100 points
 ```
