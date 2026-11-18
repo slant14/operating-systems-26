@@ -207,14 +207,11 @@ gcc -shared -fPIC -o libmeeting.so name.c
 
 ### princess
 
-A cabin is cursed when its princess has died: her process is
-either gone or left behind as a zombie with an empty command line. So a cursed cabin has `the_*`
-children but no `princess_*` child.
-
-The program scans `/proc`, kills every cursed cabin, and repeats. A killed cabin leaves `/proc`, so
-nothing has to be remembered between scans: no counter, no list of killed pids, no second
-confirming scan. After enough cursed cabins are cleared, the forest writes the flag to
-`/home/ctf/flag.txt`, and the program reads it.
+Each cabin runs its princess as a child process named `princess_*`. When the princess dies she
+becomes a zombie that the cabin never reaps, so a cursed cabin keeps a dead `princess_*` child.
+For every process the program reads `/proc/<pid>/stat`, which holds the name, state, and parent
+pid. When it finds a zombie named `princess_*`, it kills the parent pid, which is that cursed cabin.
+It repeats until the forest writes the flag to `/home/ctf/flag.txt`.
 
 ```c
 #include <stdio.h>
@@ -225,112 +222,49 @@ confirming scan. After enough cursed cabins are cleared, the forest writes the f
 #include <unistd.h>
 #include <ctype.h>
 
-#define MAX 8192
-
-struct proc {
-    int  pid;
-    int  ppid;
-    int  is_cabin;      /* "cabin" appears in the command line */
-    char name[64];      /* argv[0]; empty for a zombie */
-};
-
-/* Read every process from /proc into procs[]; return how many. */
-static int scan(struct proc *procs) {
-    DIR *dir = opendir("/proc");
-    struct dirent *ent;
-    int n = 0;
-
-    while (dir && (ent = readdir(dir)) && n < MAX) {
-        if (!isdigit((unsigned char)ent->d_name[0]))
-            continue;
-
-        char path[64], buf[1024];
-        FILE *f;
-
-        /* parent pid is the field right after ")" in /proc/<pid>/stat */
-        snprintf(path, sizeof path, "/proc/%s/stat", ent->d_name);
-        f = fopen(path, "r");
-        if (!f)
-            continue;
-        int len = fread(buf, 1, sizeof buf - 1, f);
-        fclose(f);
-        buf[len > 0 ? len : 0] = 0;
-
-        char *paren = strrchr(buf, ')');
-        if (!paren)
-            continue;
-        int ppid = 0;
-        sscanf(paren + 2, "%*c %d", &ppid);
-
-        /* argv[0] is the first token of /proc/<pid>/cmdline */
-        char cmd[256] = {0};
-        snprintf(path, sizeof path, "/proc/%s/cmdline", ent->d_name);
-        f = fopen(path, "r");
-        if (f) {
-            fread(cmd, 1, sizeof cmd - 1, f);
-            fclose(f);
-        }
-
-        procs[n].pid = atoi(ent->d_name);
-        procs[n].ppid = ppid;
-        procs[n].is_cabin = (strstr(cmd, "cabin") != NULL);
-        strncpy(procs[n].name, cmd, 63);
-        procs[n].name[63] = 0;
-        n++;
-    }
-
-    if (dir)
-        closedir(dir);
-    return n;
-}
-
-/* Collect the pids of cursed cabins into out[]; return how many. */
-static int find_cursed(struct proc *procs, int n, int *out) {
-    int found = 0;
-
-    for (int i = 0; i < n; i++) {
-        if (procs[i].ppid != 1 || !procs[i].is_cabin)
-            continue;
-
-        int has_princess = 0;
-        int has_item = 0;
-        for (int j = 0; j < n; j++) {
-            if (procs[j].ppid != procs[i].pid)
-                continue;
-            if (strncmp(procs[j].name, "princess_", 9) == 0)
-                has_princess = 1;
-            else if (strncmp(procs[j].name, "the_", 4) == 0)
-                has_item = 1;
-        }
-
-        if (has_item && !has_princess)
-            out[found++] = procs[i].pid;
-    }
-
-    return found;
-}
-
 int main(void) {
-    static struct proc procs[MAX];
-    int cursed[1024];
-
     for (;;) {
-        int n = scan(procs);
-        int count = find_cursed(procs, n, cursed);
-        for (int i = 0; i < count; i++)
-            kill(cursed[i], SIGKILL);
+        DIR *d = opendir("/proc");
+        struct dirent *e;
+        while (d && (e = readdir(d))) {
+            if (!isdigit((unsigned char)e->d_name[0]))
+                continue;
+
+            char path[300], buf[512];
+            snprintf(path, sizeof path, "/proc/%s/stat", e->d_name);
+            FILE *f = fopen(path, "r");
+            if (!f)
+                continue;
+            int n = fread(buf, 1, sizeof buf - 1, f);
+            fclose(f);
+            buf[n > 0 ? n : 0] = 0;
+
+            /* stat is "pid (comm) state ppid ...": name after '(', state and ppid after last ')' */
+            char *open = strchr(buf, '(');
+            char *close = strrchr(buf, ')');
+            if (!open || !close)
+                continue;
+            char state = 0;
+            int ppid = 0;
+            sscanf(close + 2, "%c %d", &state, &ppid);
+
+            /* a dead princess is a zombie named princess_*; her parent is the cursed cabin */
+            if (state == 'Z' && ppid > 1 && strncmp(open + 1, "princess_", 9) == 0)
+                kill(ppid, SIGKILL);
+        }
+        if (d)
+            closedir(d);
 
         FILE *f = fopen("/home/ctf/flag.txt", "r");
         if (f) {
             char line[256];
-            int got = (fgets(line, sizeof line, f) != NULL);
+            int ok = fgets(line, sizeof line, f) && strstr(line, "threadctf");
             fclose(f);
-            if (got && strstr(line, "threadctf")) {
+            if (ok) {
                 fputs(line, stdout);
                 return 0;
             }
         }
-
         usleep(300000);   /* 0.3s between scans */
     }
 }
