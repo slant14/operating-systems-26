@@ -46,7 +46,7 @@ cd /opt
 ls -la
 cat README.md
 ```
-> Congrats on discovering your address! Here is your dog image: /regular_paw_storage/22ee3e4f0169cb3a/powered_dog.pngctf@8ad359da46e0$ 
+> Congrats on discovering your address! Here is your dog image: /regular_paw_storage/22ee3e4f0169cb3a/powered_dog.png 
 
 ## 8. TailheadedDog
 End file:
