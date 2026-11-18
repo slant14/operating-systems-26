@@ -58,58 +58,62 @@ The challenge gives 500 encrypted shards. The task text says the decryptor takes
 
 ```c
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
 
-#define SHARDS    500
-#define ATTEMPTS  30
-#define DECRYPTOR "./Decrapinator.v2.Linux.MacOS.Cracked/decrapinator-x86_64-linux"
+#define DEC "./decrapinator-x86_64-linux" // the decryptor
+#define DIR "shards"                      // shards folder
+#define N 500                             // number of shards
+#define K 30                              // copies per shard
 
-int main(void) {
+int main() {
     system("rm -rf out && mkdir out");
 
-    for (int shard = 0; shard < SHARDS; shard++) {
-        for (int a = 0; a < ATTEMPTS; a++) {
-            if (fork() != 0) continue;
-            char in[128], out[128];
-            sprintf(in,  "shards/%d.shard", shard);
-            sprintf(out, "out/%d-%d", shard, a);
-            freopen(out, "w", stdout);
-            freopen("/dev/null", "w", stderr);
-            execl(DECRYPTOR, DECRYPTOR, "decrypt", in, (char *)NULL);
-            _exit(1);
-        }
-    }
-
-    while (wait(NULL) != -1) ;
-
-    char flag[8192] = "";
-    for (int shard = 0; shard < SHARDS; shard++) {
-        for (int a = 0; a < ATTEMPTS; a++) {
-            char out[128], line[256] = "";
-            sprintf(out, "out/%d-%d", shard, a);
-            FILE *f = fopen(out, "r");
-            if (f == NULL) continue;
-            fgets(line, sizeof line, f);
-            fclose(f);
-            line[strcspn(line, "\r\n")] = '\0';
-            if (line[0] != '\0') {
-                strcat(flag, line);
-                break;
+    // start K decryptors for every shard, all at the same time
+    for (int i = 0; i < N; i++) {
+        for (int k = 0; k < K; k++) {
+            if (fork() == 0) {
+                char shard[512], outp[512];
+                sprintf(shard, "%s/%d.shard", DIR, i);
+                sprintf(outp,  "out/%d_%d.txt", i, k);
+                freopen(outp, "w", stdout);          // output -> its own file
+                freopen("/dev/null", "w", stderr);   // errors -> nowhere
+                execl(DEC, DEC, "decrypt", shard, (char*)NULL);
+                exit(1);
             }
         }
     }
 
-    printf("%s\n", flag);
+    // wait for all of them to finish
+    for (int i = 0; i < N * K; i++) {
+        wait(NULL);
+    }
+
+    // for each shard, take the first copy that produced output
+    for (int i = 0; i < N; i++) {
+        for (int k = 0; k < K; k++) {
+            char outp[512], buf[4096];
+            sprintf(outp, "out/%d_%d.txt", i, k);
+            FILE *f = fopen(outp, "r");
+            if (f == NULL) continue;
+            if (fgets(buf, sizeof buf, f) != NULL) {
+                buf[strcspn(buf, "\r\n")] = 0;
+                printf("%s", buf);
+                fclose(f);
+                break;
+            }
+            fclose(f);
+        }
+    }
+    printf("\n");
     return 0;
 }
 ```
 
 ```bash
 gcc -o manager manager.c
-# within the 30s window (decryptor is already downloaded; only shards are new):
 tar xzf shards.tar.gz && ./manager
 ```
 
