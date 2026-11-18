@@ -1,19 +1,15 @@
 --------------------------------------------------
 1. 01BackgroundDog
-Goal: Find the dog picture.
-Process:
 1. Upon SSH login, the program `background_dog` auto-started and printed a file path.
 2. We stopped it with `Ctrl+Z` to regain terminal control.
 3. Verified the file existed:
    ls -la /regular_paw_storage/839eb70e3713c432/
 4. Downloaded the file to Windows using `scp`:
    scp sa.shakirov-dog@osctf.nnk.moe:/regular_paw_storage/839eb70e3713c432/Background_dog.png C:\Users\Owner\Downloads\
-5. Result: The flag was visible on the image.
+
 
 --------------------------------------------------
 2. 01CatDog
-Goal: Assemble a picture from two parts.
-Process:
 1. Navigated to the pictures folder:
    cd /home/ctf/go_to_opt/Pictures
 2. Listed the contents:
@@ -28,8 +24,6 @@ Process:
 
 --------------------------------------------------
 3. 01CompileDog
-Goal: Compile the C program to get the flag.
-Process:
 1. Navigated to the programs folder:
    cd /home/ctf/go_to_opt/Programs
 2. Listed files to find the source code:
@@ -41,12 +35,9 @@ Process:
    gcc compile_dog.c -o compile_dog
 5. Ran the compiled program:
    ./compile_dog
-6. Result: The program printed the flag to the screen.
 
 --------------------------------------------------
 4. 01HistoryDog
-Goal: Analyze `dog.log` and find the flag.
-Process:
 1. Navigated to the downloads folder:
    cd /home/ctf/go_to_opt/Downloads
 2. Listed the files:
@@ -67,16 +58,12 @@ Process:
 
 --------------------------------------------------
 5. 01TailheadedDog
-Goal: Find the flag in `tailheaded.png`.
-Process:
 1. Checked the first bytes of the file :
    head -c 500 /regular_paw_storage/53e486deb475a803/tailheaded.png | strings
 2. The flag was hidden in plain text at the beginning of the file, before the PNG header.
 
 --------------------------------------------------
 6. 02ScatteredDog
-Goal: Assemble a picture from 50+ fragments.
-Process:
 1. Navigated to the folder:
    cd /home/ctf/go_to_opt/Videos/'Scattered dog'
 2. Listed the files:
@@ -91,8 +78,6 @@ Process:
 
 --------------------------------------------------
 7. 02ShyDog
-Goal: Find the "real" dog among hundreds of files.
-Process:
 1. Navigated to the folder:
    cd /home/ctf/go_to_opt/Videos/'Shy dog'
 2. Listed the contents:
@@ -100,14 +85,9 @@ Process:
    Found over 300 files. Most contained the word `archive` (noise).
 3. Filtered by the `*Maybe_Dog*` pattern:
    ls -la *Maybe_Dog*
-4. Searched for the flag string inside these files:
-   strings *Maybe_Dog* | grep -i "osctf"
-5. One of the files contained the flag.
 
 --------------------------------------------------
 8. 02PetDog
-Goal: Assemble the mascot using Git history.
-Process:
 1. Navigated to the project folder:
    cd /home/ctf/go_to_opt/Doguments/auto_petter
 2. Listed the contents:
@@ -127,8 +107,6 @@ Process:
 
 --------------------------------------------------
 9. 02SpitoonDog
-Goal: Pass the "toughness" test in `spitoon`.
-Process:
 1. Navigated to the programs folder:
    cd /home/ctf/go_to_opt/Programs
 2. Found the man page and read it:
@@ -143,15 +121,25 @@ Process:
 
 --------------------------------------------------
 10. 03UsedDog
-Goal: Find the flag in a file belonging to user `dog`.
-Process:
 1. Checked the user list:
    cat /etc/passwd
    Found the user `dog` with home directory /home/dog/.
 2. Searched for files owned by `dog`:
    find / -user dog 2>/dev/null
    Found `Used_dog.png`.
-3. Checked the permissions:
-   ls -la /home/dog/Used_dog.png
-   Permissions were -rw-r--r-- .
-4. Downloaded the file and opened it — the flag was on the image.
+
+--------------------------------------------------
+11. 02MuteDog 
+1. Navigated to the programs folder:
+   cd /home/ctf/go_to_opt/Programs
+2. Ran the `mute_dog` program and redirected its output to a file:
+   ./mute_dog > output1.txt
+3. Read the output file:
+   cat output1.txt
+   ./mute_dog 2> output2.txt
+5. Read the second output file:
+   cat output2.txt
+6. Combined the two parts to get the full path:
+   /regular_paw_storage/c45332f739158697/Mute_dog.png
+
+
