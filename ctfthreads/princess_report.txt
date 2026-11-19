@@ -1,0 +1,46 @@
+The challenge describes a forest of cabins: in the basement of every cabin lives a princess, and some of the princesses are already dead. The task is to tear down fifty of the cursed cabins without touching the living ones.
+
+
+1. Analyze
+ps -eo pid,ppid,stat,user,cmd --forest
+We discovered that the_forest (PID 1) creates multiple the_*_cabin processes. Each cabin has child processes, including a princess_* process.
+ps -eo pid,ppid,stat,cmd | awk '$3 ~ /^Z/'
+
+2. Problem
+We initially considered killing the zombie processes directly, but zombies are already dead, so kill cannot terminate them. Instead, we needed to terminate their parent cabins so the zombie processes could be cleaned up.
+However, there were two difficulties:
+1)Some cabins contained living princesses, which we were not allowed to harm.
+2)The forest constantly recreated cabins, so their PIDs kept changing.
+
+3. Script
+We created a Bash script that repeatedly searches for zombie princesses, identifies their parent cabins, checks whether any living princesses are inside, and terminates only the eligible cabins.
+
+while true; do
+  for z in $(ps -eo pid,stat | awk '$2 ~ /^Z/ {print $1}'); do
+    p=$(ps -o ppid= -p "$z" | tr -d ' ')
+
+    [ -z "$p" ] && continue
+    [ "$p" = 1 ] && continue
+
+    if ps -o stat=,cmd= --ppid "$p" |
+       awk '$1 !~ /^Z/ && $2 ~ /^princess_/ {f=1} END{exit !f}'; then
+      echo "Skipping cabin $p: living princess found"
+    else
+      echo "Destroying cursed cabin $p"
+      kill "$p"
+    fi
+  done
+
+  sleep 1
+done
+
+Execute as: bash slay.sh
+
+
+Result:
+=== The Forest ===
+The forest falls silent. 50 cursed cabins lie in ruin, and
+the story is finally over. Your reward waits in your home
+directory.
+
+threadctf{wH4T_D0_YOu_m3AN_THey_AR3_4lreADY_D3AD}
