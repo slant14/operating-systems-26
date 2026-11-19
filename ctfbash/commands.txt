@@ -1,0 +1,96 @@
+HelloDog (need to just download picture)
+scp -O m.beketov-dog@osctf.nnk.moe:/home/ctf/go_to_opt/hoi_:3.png ctfbash/ (in terminal bash)
+
+BackgroundDog (resume background job with fg)
+jobs -l
+# ls -la    /usr/local/bin/background_dog /tmp/bgdog
+# file /usr/local/bin/background_dog
+fg %1
+cd /regular_paw_storage/87c17e66a7a1ac9d/
+scp -O m.beketov-dog@osctf.nnk.moe:/regular_paw_storage/87c17e66a7a1ac9d/Background_dog.png ctfbash/
+
+UsedDog (download picture)
+cd /home/dog/
+ scp -O m.beketov-dog@osctf.nnk.moe:/home/dog/Used_dog.png ctfbash/
+
+03AqueousDog (decode base64 string)
+cd /home/ctf/.config/fish/
+cat config.fish
+echo 'L3JlZ3VsYXJfcGF3X3N0b3JhZ2UvYmNhZjkzODcwOTVlYzFkZS9BcXVlb3VzX2RvZy5wbmc=' | base64 -d; echo
+scp -O m.beketov-dog@osctf.nnk.moe:/regular_paw_storage/bcaf9387095ec1de/Aqueous_dog.png ctfbash/
+
+RestoreDog (recover from swap file and recovery key)
+cd /home/ctf/go_to_opt/Doguments
+cat crashed.txt
+ls -la
+vim -r crashed.txt
+(:q!)
+scp -O m.beketov-dog@osctf.nnk.moe:/regular_paw_storage/d712145/Restore_dog.png ctfbash/
+
+EditDog (edit the ASCII dog)
+cd /home/ctf/go_to_opt/Doguments
+cat EDITME
+nano EDITME
+
+InsecureDog (just guess the name and praise the god)
+cd /home/ctf/go_to_opt/Doguments/secret_stuff
+cat remember.txt
+cd super_secret
+file DDGO.png
+DGO - DDGO DGGO DGOO
+DOG - DDOG DOOG DOGG
+GDO - GGDO GDDO GDOO
+GOD - GGOD GOOD GODD
+OGD - OOGD OGGD OGDD
+ODG - OODG ODDG ODGG
+
+RemDog (sort and remove angry dogs)
+cd /home/ctf/go_to_opt/Doguments/unsorted
+cat README
+ls -lS
+cat 0c79ce34 rm 0c79ce34
+...
+scp -O m.beketov-dog@osctf.nnk.moe:/regular_paw_storage/7fe90f2f0259ce14/Rem_dog.png  ctfbash/
+
+Tailheadeddog(read head and tail of file)
+cd Downloads
+cat dog.log
+nano dog.log
+scp -O m.beketov-dog@osctf.nnk.moe:/regular_paw_storage/a2caaee969cc5940/tailheaded.png  ctfbash/
+
+CatDog (glue two parts by cat)
+cd /home/ctf/go_to_opt/Pictures
+cat Cat_dog_top Cat_dog_bottom > catdog.png
+scp -O m.beketov-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Pictures/catdog.png  ctfbash/
+
+CompileDog (compile C program)
+cd /home/ctf/go_to_opt/Programs
+gcc compile_dog.c -o dog
+./dog
+
+MuteDog (check two streams(stdout and stderr))
+cd /home/ctf/go_to_opt/Programs
+./mute_dog
+./mute_dog > out.txt 
+./mute_dog 2> outt.txt 
+scp -O m.beketov-dog@osctf.nnk.moe:/regular_paw_storage/b945c1668082a985/Mute_dog.png ctfbash/
+
+Spitoon (follow the instructions in man)
+cd /home/ctf/go_to_opt/Programs
+./spitoon
+man spitoon 
+scp -O m.beketov-dog@osctf.nnk.moe:/regular_paw_storage/50370c02a41acaca/Spitoon_dog.png ctfbash/
+
+HistoryDog (check the history and find path)
+history
+scp -O m.beketov-dog@osctf.nnk.moe:/regular_paw_storage/398ed3fc57f3da9b/grandpaw.png ctfbash/
+
+ShyDog (among 1000 fake images find real one)
+cd /home/ctf/go_to_opt/Videos/'Shy dog'
+ls
+ls | wc -l
+file * | head -1000
+Vacation_Maybe_Dog_b1c308f4.png
+cp Vacation_Maybe_Dog_b1c308f4.png //home/ctf/go_to_opt/Videos
+scp -O m.beketov-dog@osctf.nnk.moe:/home/ctf/go_to_opt/Videos/Vacation_Maybe_Dog_b1c308f4.png ctfbash/
+

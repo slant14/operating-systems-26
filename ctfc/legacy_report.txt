@@ -1,0 +1,49 @@
+The challenge provides diagnostic information from the original developer:
+unsigned has 18 bits
+check value: 237614
+
+1. Analyze code
+Find the function responsible for calculating positions in the document:
+
+unsigned position(const char *s)
+{
+    unsigned h = 0;
+    while (*s) {
+        h = h * 67 + *s++;
+    }
+    return h;
+}
+
+We noticed that the program uses unsigned integers. On the original computer unsigned was 18 bits, on modern computers - 32 bits
+
+2. Problem
+The function position() calculates indexes for the document[69] array
+
+Because of the difference in integer sizes, the calculations produce different results. Some indexes become larger than the array size, causing a segmentation fault
+
+3. Fix
+To simulate an 18-bit unsigned integer, we used the bitwise AND operator with the mask 0x3FFFF. (in binary 11 1111 1111 1111 1111). This mask keeps only the lowest 18 bits of the calculated value
+
+Replace: h = h * 67 + *s++;
+with: h = (h * 67 + *s++) & 0x3FFFFu; (u - unsigned int)
+
+that makes the calculations behave like they did on the original computer
+
+4. Testing
+After modifying:
+gcc legacy.c -o legacy
+./legacy
+
+
+Result:
+== Diagnostics: ==
+ unsigned has 32 bits
+ check value: 237614
+== End of Diagnostics ==
+
+Attempting to decrypt the document...
+== Decrypted Document: ==
+cctf{7h3_gOoD_oLd_D4ys_With_gooD_0lD_C}
+== End of Decrypted Document ==
+
+(In this challenge, we discovered that the segmentation fault was caused by differences between old 18-bit and modern 32-bit unsigned integers)

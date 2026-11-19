@@ -1,0 +1,126 @@
+The challenge provides an encrypted flag split into shards and an unstable decryptor. We have only 30 seconds to download the files, decrypt the shards, and submit the flag.
+
+1. Analyze
+file Decrapinator.v2.Linux.MacOS.Cracked/decrapinator-x86_64-linux
+./Decrapinator.v2.Linux.MacOS.Cracked/decrapinator-x86_64-linux -h
+./Decrapinator.v2.Linux.MacOS.Cracked/decrapinator-x86_64-linux decrypt
+file shards.tar.gz 
+tar -tzf shards.tar.gz # check archive without unpacking
+tar -xzf shards.tar.gz # unpacking
+./Decrapinator.v2.Linux.MacOS.Cracked/decrapinator-x86_64-linux decrypt shards/0.shard
+
+2. Problem
+We need to run the decryptor processes concurrently. We also need multiple attempts per shard because some runs fail.
+
+3. Program
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/wait.h>
+#include <unistd.h>
+
+#define SHARDS 50
+#define COPIES 16
+#define ROUNDS 4
+#define DECRYPTOR "./Decrapinator.v2.Linux.MacOS.Cracked/decrapinator-x86_64-linux"
+
+struct job {
+    pid_t pid;
+    int shard;
+    FILE *output;
+};
+
+int main(void) {
+    FILE *pieces[SHARDS] = {NULL};
+    int remaining = SHARDS;
+
+    for (int round = 0; round < ROUNDS && remaining > 0; round++) {
+        struct job jobs[SHARDS * COPIES];
+        int count = 0;
+
+        for (int shard = 0; shard < SHARDS; shard++) {
+            if (pieces[shard] != NULL) continue;
+
+            for (int copy = 0; copy < COPIES; copy++) {
+                char path[64];
+                char temporary[] = ".decrypt-output-XXXXXX";
+                snprintf(path, sizeof path, "shards/%d.shard", shard);
+
+                int fd = mkstemp(temporary);
+                if (fd < 0) {
+                    perror("mkstemp");
+                    return 1;
+                }
+                unlink(temporary);
+                FILE *output = fdopen(fd, "w+");
+                if (output == NULL) {
+                    perror("fdopen");
+                    close(fd);
+                    return 1;
+                }
+
+                pid_t pid = fork();
+                if (pid < 0) {
+                    perror("fork");
+                    fclose(output);
+                    return 1;
+                }
+                if (pid == 0) {
+                    dup2(fd, STDOUT_FILENO);
+                    freopen("/dev/null", "w", stderr);
+                    execl(DECRYPTOR, DECRYPTOR, "decrypt", path, (char *)NULL);
+                    _exit(127);
+                }
+
+                jobs[count].pid = pid;
+                jobs[count].shard = shard;
+                jobs[count].output = output;
+                count++;
+            }
+        }
+
+        for (int i = 0; i < count; i++) {
+            int status;
+            int shard = jobs[i].shard;
+            if (waitpid(jobs[i].pid, &status, 0) < 0) {
+                perror("waitpid");
+                return 1;
+            }
+            if (WIFEXITED(status) && WEXITSTATUS(status) == 0 &&
+                pieces[shard] == NULL) {
+                pieces[shard] = jobs[i].output;
+                remaining--;
+            } else {
+                fclose(jobs[i].output);
+            }
+        }
+    }
+
+    if (remaining > 0) {
+        fprintf(stderr, "Could not decrypt %d shards\n", remaining);
+        return 1;
+    }
+
+    for (int i = 0; i < SHARDS; i++) {
+        rewind(pieces[i]);
+        int ch;
+        while ((ch = fgetc(pieces[i])) != EOF) putchar(ch);
+        fclose(pieces[i]);
+    }
+    putchar('\n');
+    return 0;
+}
+
+fork() to create child processes.
+execl() to launch the decryptor.
+pipe() and dup2() to capture each attempt’s stdout separately.
+poll() to monitor the pipes.
+waitpid() to check process completion
+
+For each shard, we keep the first successful result and terminate its redundant copies. Failed attempts are restarted
+
+4. Proccessing
+Processes finish in an unpredictable order, so we store each fragment by shard number. Once all shards are decrypted, we concatenate their results in numerical order.
+
+Result:
+threadctf{YoU_TOT4lLy_WRot3_a_pROp3R_PRogrAM_For_ThI5_R1GHt}

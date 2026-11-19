@@ -1,0 +1,49 @@
+Find the hidden password and recover the flag
+
+1. Analyze code
+We discovered the password verification code:
+
+if ((unsigned char)in[i] != (enc[i] ^ key[i % 4]))
+
+This showed us that the password was encrypted using the XOR operation (^)
+
+2. Encryption
+The program uses a repeating XOR key. The expression key[i % 4] selects one of the four key bytes and repeats the key throughout the password.
+
+For example: 0x67 ^ 0x37 = 0x50 = 'P'
+
+3. Decoder
+
+#include <stdio.h>
+
+int main(void)
+{
+    unsigned char enc[] = {
+        0x67, 0x6d, 0x69, 0x3b, 0x64, 0x44, 0x05, 0x6b,
+        0x07, 0x4f, 0x0e, 0x50, 0x71, 0x12, 0x3f, 0x6b,
+        0x68, 0x16, 0x12, 0x3c, 0x68, 0x6f, 0x3b, 0x7c,
+        0x56, 0x4d, 0x05, 0x6b, 0x04, 0x4c, 0x35, 0x61,
+        0x44
+    };
+
+    unsigned char key[] = {
+        0x37, 0x21, 0x5a, 0x0f
+    };
+
+    printf("Flag: cctf{");
+
+    for (int i = 0; i < 33; i++) {
+        unsigned char c = enc[i] ^ key[i % 4];
+        printf("%c", c);
+    }
+
+    printf("}\n");
+
+    return 0;
+}
+
+And then compile and execute
+
+
+Result:
+cctf{PL34Se_d0nT_F3ed_7H3_Nasal_d3mons}

