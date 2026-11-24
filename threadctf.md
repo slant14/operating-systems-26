@@ -1,9 +1,10 @@
 ## Needle
 
 Here is the code for meeting.c.
-The meeting function requires our name as an argument, but we need to pass it secretly, for example using flag. 
+We can obtain the flag before Polythread asks for our name by opening the file flag.txt and reading its content into the string flag. Then the process is terminated by exit(0).
 
-```#include <stdio.h>
+```
+#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
