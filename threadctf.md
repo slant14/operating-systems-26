@@ -36,6 +36,8 @@ The obtained flag: threadctf{WHAT_d0_yOu_ME4N_They_arE_a1Re4DY_De4D}
 The container closes in 5 seconds, so we can write a program to save the result to result.txt file. After a second, we can enter the container and enter the command ```tail -n 5 result.txt```. 
 
 ```
+bash -c 'cat << "EOF" > main.c
+#include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
@@ -46,23 +48,27 @@ int main(void) {
     if (pid == 0) {
         setsid();
 
-        int result = open("result.txt",O_WRONLY | O_CREAT | O_TRUNC,0600);
-        int source = open("secrets",O_RDONLY);
+        FILE *result = fopen("result.txt", "w");
+        int source = open("secrets", O_RDONLY);
 
         char buffer[4096];
         ssize_t count;
 
         while ((count = read(source, buffer, sizeof(buffer))) > 0) {
-            write(result, buffer, count);
+            fwrite(buffer, 1, count, result);
+            fflush(result);
 
             pid = fork();
-            if (pid > 0)
+            if (pid > 0) {
                 break;
+	}
         }
-        close(result);
-        close(source);
     }
+
     return 0;
 }
+EOF
+gcc main.c -o main && ./main'
+
 ```
 The obtained flag: threadctf{only_PRopER_LINeAgE_937_T0_LiVe_1n_ca571E}
