@@ -1,0 +1,26 @@
+Lab 09 Sergei Anisimov CSE-04
+Exercise 2 - Translation lookaside buffer
+
+I kept Aging as the replacement policy and used the same 15 requests in
+every configuration. I varied the number of virtual pages and RAM frames
+to see how changing the TLB capacity and the available memory affected
+the results. Run bash ex2.sh to reproduce the table on Linux or WSL.
+
+The TLB keeps recent page-to-frame mappings. Its capacity is one fifth
+of the number of virtual pages, rounded down, with one entry minimum
+when the TLB is enabled. On a TLB miss, the MMU checks the page table.
+When a page is evicted, I drop its cached mapping so that the TLB cannot
+return an old frame number. The TLB miss ratio is misses divided by the
+total number of requests.
+
+Pages   Frames   TLB entries   TLB misses   Page hits   Disk accesses
+5       2        1             13/15        4/15        13
+10      2        2             11/15        4/15        13
+10      3        2             11/15        7/15        10
+
+With two frames, increasing the table from five to ten pages gave the
+TLB two entries instead of one. The TLB miss ratio fell from 86.67% to
+73.33%, but the page hit ratio stayed at 26.67%. With ten pages, adding
+a third frame raised the page hit ratio to 46.67% and saved three disk
+accesses. The TLB miss ratio stayed at 73.33%. This is possible because
+a page can be absent from the TLB and still be present in RAM.
