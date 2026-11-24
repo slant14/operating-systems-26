@@ -26,8 +26,8 @@ And:\
 The obtained flag: threadctf{sHoo71ng_S0mE_atoMic_fe3t}
 
 ## Princess
-Some processes were zombies. We can use the following command to track zombie processes: ```ps -eo pid, ppid, stat, comm | grep ' Z '
-```. After that, these processes can be killed by their PPID using the  ```kill``` command. We need to kill 50 of them.
+Some processes were in a zombie state. We can use the following command to find them: ```ps -eo pid, ppid, stat, comm | grep ' Z '
+```. After that, these processes can be killed by their PPID using the  ```kill``` command. We cannot kill zombie processes using their own PIDs, since they are already dead, but their parents are alive, so by killing parents we can get rid of the zombies. We need to kill 50 of them.
 
 The obtained flag: threadctf{WHAT_d0_yOu_ME4N_They_arE_a1Re4DY_De4D}
 
