@@ -33,7 +33,7 @@ The obtained flag: threadctf{WHAT_d0_yOu_ME4N_They_arE_a1Re4DY_De4D}
 
 ## Fortforks
 
-The container closes in 5 seconds, so we can write a program to save the result to result.txt file. After a second, we can enter the container and enter the command ```tail -n 5 result.txt```. 
+Since a process can live for only 5 seconds, the idea is to read data from the secrets pipe via multiple processes. The result is saved in result.txt file. After a second, we can enter the container and enter the command ```tail -n 5 result.txt```. 
 
 ```
 bash -c 'cat << "EOF" > main.c
