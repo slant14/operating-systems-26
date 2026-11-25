@@ -1,0 +1,56 @@
+test: test07_one_page.txt
+algorithm: random, pages: 1, frames: 1
+requests: W0 R0 W0 R0
+
+=== mmu output ===
+MMU process
+Initialized page table
+Page table
+Page 0 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+-------------------------
+Write request for page 0
+Page fault
+Ask pager to load page 0
+MMU resumed by SIGCONT
+Set dirty field for page 0
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=1, age=128
+-------------------------
+Read request for page 0
+Page hit
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=2, age=192
+-------------------------
+Write request for page 0
+Page hit
+Set dirty field for page 0
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=3, age=224
+-------------------------
+Read request for page 0
+Page hit
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=4, age=240
+Done all requests
+Hits: 3
+Misses: 1
+Hit ratio: 0.7500
+MMU sends SIGUSR1 to pager
+
+=== pager output ===
+Pager PID: 225605
+Selected algorithm: random
+Page table
+Page 0 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+RAM array
+Frame 0 | 
+Page 0 is referenced
+Allocate free frame 0
+Copy page 0 from disk to RAM frame 0
+RAM array
+Frame 0 | P000000
+Disk accesses so far: 1
+Page table
+Page 0 | valid=1, frame=0, dirty=0, referenced=0, nfu=0, age=0
+Total disk accesses: 1
+Pager is terminated

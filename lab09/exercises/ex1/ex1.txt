@@ -1,0 +1,26 @@
+needed commands for one run:
+gcc -std=c11 -D_POSIX_C_SOURCE=200809L pager.c -o pager
+gcc -std=c11 -D_POSIX_C_SOURCE=200809L mmu.c -o mmu
+
+./pager random 4 2 > pager_output.txt 2>&1 &
+pid=$!
+sleep 1
+./mmu 4 R0 R1 W1 R0 R2 W2 R0 R3 W2 "$pid" > mmu_output.txt 2>&1
+wait "$pid"
+
+pages: 4
+frames: 2
+requests: R0 R1 W1 R0 R2 W2 R0 R3 W2
+
+algorithm   hits   misses   hit ratio   disk accesses
+random      5      4        0.5556      5
+nfu         4      5        0.4444      6
+aging       4      5        0.4444      7
+
+review:
+all three algorithms were tested with the same data. random had the best
+hit ratio in this test (0.5556) and the fewest disk accesses (5).
+nfu and aging had the same hit ratio (0.4444), but aging
+had one more disk access because it replaced a dirty page.
+these results depend on the request sequence, so random is not always
+better than nfu or aging.

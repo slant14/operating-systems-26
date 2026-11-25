@@ -1,0 +1,15 @@
+36-bit virtual address space
+
+page - 8 KiB = 2^13
+per table entry - 4 bytes
+
+1. how wany pages in virtual address space?
+2^36 - addressable addresses
+2^13 - page size
+
+2^36 / 2^13 = 2^23
+
+2. max size of addressable physical memory?
+
+4 bytes = 32 bits
+2^32 * 2^13 = 2^45
