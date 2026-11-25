@@ -1,0 +1,256 @@
+test: test06_aging_history.txt
+algorithm: aging, pages: 5, frames: 3
+requests: W0 R1 R2 R0 R3 W4 R0 R2 R1 R4
+
+=== mmu output ===
+MMU process
+Initialized page table
+Page table
+Page 0 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 1 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 2 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+-------------------------
+Write request for page 0
+Page fault
+Ask pager to load page 0
+MMU resumed by SIGCONT
+Set dirty field for page 0
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=1, age=128
+Page 1 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 2 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+-------------------------
+Read request for page 1
+Page fault
+Ask pager to load page 1
+MMU resumed by SIGCONT
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=1, age=64
+Page 1 | valid=1, frame=1, dirty=0, referenced=0, nfu=1, age=128
+Page 2 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+-------------------------
+Read request for page 2
+Page fault
+Ask pager to load page 2
+MMU resumed by SIGCONT
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=1, age=32
+Page 1 | valid=1, frame=1, dirty=0, referenced=0, nfu=1, age=64
+Page 2 | valid=1, frame=2, dirty=0, referenced=0, nfu=1, age=128
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+-------------------------
+Read request for page 0
+Page hit
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=2, age=144
+Page 1 | valid=1, frame=1, dirty=0, referenced=0, nfu=1, age=32
+Page 2 | valid=1, frame=2, dirty=0, referenced=0, nfu=1, age=64
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+-------------------------
+Read request for page 3
+Page fault
+Ask pager to load page 3
+MMU resumed by SIGCONT
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=2, age=72
+Page 1 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 2 | valid=1, frame=2, dirty=0, referenced=0, nfu=1, age=32
+Page 3 | valid=1, frame=1, dirty=0, referenced=0, nfu=1, age=128
+Page 4 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+-------------------------
+Write request for page 4
+Page fault
+Ask pager to load page 4
+MMU resumed by SIGCONT
+Set dirty field for page 4
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=2, age=36
+Page 1 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 2 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 3 | valid=1, frame=1, dirty=0, referenced=0, nfu=1, age=64
+Page 4 | valid=1, frame=2, dirty=1, referenced=0, nfu=1, age=128
+-------------------------
+Read request for page 0
+Page hit
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=3, age=146
+Page 1 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 2 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 3 | valid=1, frame=1, dirty=0, referenced=0, nfu=1, age=32
+Page 4 | valid=1, frame=2, dirty=1, referenced=0, nfu=1, age=64
+-------------------------
+Read request for page 2
+Page fault
+Ask pager to load page 2
+MMU resumed by SIGCONT
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=3, age=73
+Page 1 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 2 | valid=1, frame=1, dirty=0, referenced=0, nfu=1, age=128
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=1, frame=2, dirty=1, referenced=0, nfu=1, age=32
+-------------------------
+Read request for page 1
+Page fault
+Ask pager to load page 1
+MMU resumed by SIGCONT
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=3, age=36
+Page 1 | valid=1, frame=2, dirty=0, referenced=0, nfu=1, age=128
+Page 2 | valid=1, frame=1, dirty=0, referenced=0, nfu=1, age=64
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+-------------------------
+Read request for page 4
+Page fault
+Ask pager to load page 4
+MMU resumed by SIGCONT
+Page table
+Page 0 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 1 | valid=1, frame=2, dirty=0, referenced=0, nfu=1, age=64
+Page 2 | valid=1, frame=1, dirty=0, referenced=0, nfu=1, age=32
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=1, frame=0, dirty=0, referenced=0, nfu=1, age=128
+Done all requests
+Hits: 2
+Misses: 8
+Hit ratio: 0.2000
+MMU sends SIGUSR1 to pager
+
+=== pager output ===
+Pager PID: 225594
+Selected algorithm: aging
+Page table
+Page 0 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 1 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 2 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+RAM array
+Frame 0 | 
+Frame 1 | 
+Frame 2 | 
+Page 0 is referenced
+Allocate free frame 0
+Copy page 0 from disk to RAM frame 0
+RAM array
+Frame 0 | P000000
+Frame 1 | 
+Frame 2 | 
+Disk accesses so far: 1
+Page table
+Page 0 | valid=1, frame=0, dirty=0, referenced=0, nfu=0, age=0
+Page 1 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 2 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 1 is referenced
+Allocate free frame 1
+Copy page 1 from disk to RAM frame 1
+RAM array
+Frame 0 | P000000
+Frame 1 | P000001
+Frame 2 | 
+Disk accesses so far: 2
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=1, age=128
+Page 1 | valid=1, frame=1, dirty=0, referenced=0, nfu=0, age=0
+Page 2 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 2 is referenced
+Allocate free frame 2
+Copy page 2 from disk to RAM frame 2
+RAM array
+Frame 0 | P000000
+Frame 1 | P000001
+Frame 2 | P000002
+Disk accesses so far: 3
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=1, age=64
+Page 1 | valid=1, frame=1, dirty=0, referenced=0, nfu=1, age=128
+Page 2 | valid=1, frame=2, dirty=0, referenced=0, nfu=0, age=0
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 3 is referenced
+Evict page 1 from frame 1
+Copy page 3 from disk to RAM frame 1
+RAM array
+Frame 0 | P000000
+Frame 1 | P000003
+Frame 2 | P000002
+Disk accesses so far: 4
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=2, age=144
+Page 1 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 2 | valid=1, frame=2, dirty=0, referenced=0, nfu=1, age=64
+Page 3 | valid=1, frame=1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 is referenced
+Evict page 2 from frame 2
+Copy page 4 from disk to RAM frame 2
+RAM array
+Frame 0 | P000000
+Frame 1 | P000003
+Frame 2 | P000004
+Disk accesses so far: 5
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=2, age=72
+Page 1 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 2 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 3 | valid=1, frame=1, dirty=0, referenced=0, nfu=1, age=128
+Page 4 | valid=1, frame=2, dirty=0, referenced=0, nfu=0, age=0
+Page 2 is referenced
+Evict page 3 from frame 1
+Copy page 2 from disk to RAM frame 1
+RAM array
+Frame 0 | P000000
+Frame 1 | P000002
+Frame 2 | P000004
+Disk accesses so far: 6
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=3, age=146
+Page 1 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 2 | valid=1, frame=1, dirty=0, referenced=0, nfu=0, age=0
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=1, frame=2, dirty=1, referenced=0, nfu=1, age=64
+Page 1 is referenced
+Evict page 4 from frame 2
+Write dirty page 4 to disk
+Copy page 1 from disk to RAM frame 2
+RAM array
+Frame 0 | P000000
+Frame 1 | P000002
+Frame 2 | P000001
+Disk accesses so far: 8
+Page table
+Page 0 | valid=1, frame=0, dirty=1, referenced=0, nfu=3, age=73
+Page 1 | valid=1, frame=2, dirty=0, referenced=0, nfu=0, age=0
+Page 2 | valid=1, frame=1, dirty=0, referenced=0, nfu=1, age=128
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 is referenced
+Evict page 0 from frame 0
+Write dirty page 0 to disk
+Copy page 4 from disk to RAM frame 0
+RAM array
+Frame 0 | P000004
+Frame 1 | P000002
+Frame 2 | P000001
+Disk accesses so far: 10
+Page table
+Page 0 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 1 | valid=1, frame=2, dirty=0, referenced=0, nfu=1, age=128
+Page 2 | valid=1, frame=1, dirty=0, referenced=0, nfu=1, age=64
+Page 3 | valid=0, frame=-1, dirty=0, referenced=0, nfu=0, age=0
+Page 4 | valid=1, frame=0, dirty=0, referenced=0, nfu=0, age=0
+Total disk accesses: 10
+Pager is terminated

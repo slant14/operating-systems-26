@@ -1,0 +1,2 @@
+random 3 3
+R0 R1 R2 R0 W1 R2 R0
