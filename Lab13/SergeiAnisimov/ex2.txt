@@ -1,0 +1,39 @@
+Lab 13 Exercise 2 | Sergei Anisimov, CSE-04
+
+I used the Allocation and Max matrices from the board. Each Need entry
+is Max minus Allocation. I scan the unfinished processes in order and
+let one finish when all of its remaining needs fit in Available. A
+finished process returns its current allocation. If a full pass makes
+no progress, the program lists the processes that still cannot finish.
+
+To repeat the test, run these commands in the Lab13 directory.
+
+  gcc -std=c11 -Wall -Wextra -Werror ex2.c -o ex2
+  ./ex2
+  ./ex2 --need slides-input.txt
+
+Both data files start with Total and Available, then the Allocation
+matrix. The last matrix is Max in input.txt. In the slide example it
+already contains remaining requests, so I use --need for that file.
+
+Board example
+
+Need:
+P0: 7 4 3
+P1: 1 2 2
+P2: 6 0 0
+P3: 0 1 1
+P4: 4 1 1
+Initial available: 3 2 2
+P1 finishes, available: 5 2 2
+P3 finishes, available: 7 3 3
+P4 finishes, available: 7 5 5
+P0 finishes, available: 7 6 5
+P2 finishes, available: 10 6 7
+No deadlock detected.
+Safe sequence: P1 -> P3 -> P4 -> P0 -> P2
+
+The order with the slide data was P0 -> P2 -> P3 -> P4 -> P1.
+I also checked a state with two processes, one resource type, and zero
+available units. Both processes held one unit and each needed one more.
+The program listed P0 and P1 as unable to finish.

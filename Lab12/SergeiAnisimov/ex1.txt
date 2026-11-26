@@ -1,0 +1,38 @@
+Lab 12 Exercise 1 | Sergei Anisimov, CSE-04
+
+I tested with simulated keyboard events because my WSL environment has
+no /dev/input directory.
+Shortcuts: P+E, C+A+P, O+S, E+X (exit)
+
+To repeat the test, run these commands in the Lab12 directory.
+
+  gcc -std=c11 -Wall -Wextra -Werror ex1.c -o ex1
+  ./ex1
+
+Output from the synthetic test
+
+Available shortcuts:
+P+E: I passed the Exam!
+C+A+P: Get some cappuccino!
+O+S: Operating Systems!
+E+X: exit
+PRESSED 0x0019 (25)
+PRESSED 0x0012 (18)
+I passed the Exam!
+REPEATED 0x0012 (18)
+RELEASED 0x0012 (18)
+RELEASED 0x0019 (25)
+PRESSED 0x002e (46)
+PRESSED 0x001e (30)
+PRESSED 0x0019 (25)
+Get some cappuccino!
+RELEASED 0x002e (46)
+RELEASED 0x001e (30)
+RELEASED 0x0019 (25)
+PRESSED 0x0018 (24)
+PRESSED 0x001f (31)
+Operating Systems!
+RELEASED 0x0018 (24)
+RELEASED 0x001f (31)
+PRESSED 0x0012 (18)
+PRESSED 0x002d (45)
